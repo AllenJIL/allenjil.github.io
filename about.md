@@ -1,42 +1,35 @@
 ---
 layout: page
-title: 关于我 
+title: About Me 
 ---
 
-一个 iOS SDK 开发者，喜欢研究一些新技术。
-<p>
-平时喜欢整理个人博客，逛逛技术论坛。
-<p>
-了解一些 前端 基本概念和 Python 的简单用法。
 
+A Mathematics researcher, love to study new technologies
 <p>
-
-<h3> 我们的博客 </h3>  
+Current learning Data Science and Analysis
+<p>
+Understand som basic concepts in Python, R and C++
 
 <p>
+  
 
-是的，这个博客是我们大家的，目前已经有很大一部分人在使用我的博客模板了，我也很高兴大家使用我的模板。
-
-<p>
-
-如果你想搭建一个跟我一样的博客，可以看我的 
-<a href="/2016/10/jekyll_tutorials1/"> Jekyll 搭建个人博客 </a>
-教程
-
-<p>
-
-有关于博客主题的建议和意见都可以提给我，让我们一起来打造一个精美的主题吧~ 
-
+<h3><strong>Research Interests:</strong></h3>
+- Mathematical Economics
+- Mathematical Finance
+- Partial Differential Equations
 <p> 
 
-博客源码在 <a target="_blank" href='https://github.com/leopardpan/leopardpan.github.io/'>Github</a> 上，你的 Star 是我更新的动力，谢谢~
-
+<h3><strong>Coursework:</strong></h3>
+<ul>
+ 	<li><b>Mathematics courses: </b>
+Calculus, Real Analysis, Vector Analysis, Linear Algebra, Group theory, Number Theory, Discrete Mathematics, Advanced Linear and Multilinear Algebra, Partial Differential Equation, Continuum Mechanics and Mathematical Modeling</li>
+ 	<li><b>Statistics courses: </b>
+Applied Probability, Applied Statistics for Engineers and Scientist</li>
+ 	<li><b>Economics courses: </b>
+Macroeconomic Theory, Microeconomics Theory with Calculus</li>
+</ul>
 <p> 
 
 <p> 
 
-<p> 
-
-
-{% include comments.html %}
 
