@@ -1,7 +1,8 @@
 ---
 layout: post
-title: HTML: Elements and Structure
-description: Notes form www.Codecademy.com
+title: "HTML: Elements and Structure"
+description: "Notes form www.Codecademy.com"
+data: 2018-01-26
 tag: Notes
 ---
 
