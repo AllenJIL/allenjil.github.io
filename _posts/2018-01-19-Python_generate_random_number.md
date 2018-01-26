@@ -16,9 +16,11 @@ tag: Notes
 #
 # <a href="https://github.com/AllenJIL/Python-Scientific-Computing/raw/master/Random.py" target="_blank" rel="noopener">下载 (右键另存为)</a>
 #-----------------------------------------
-
+</p>
+<p>
 import random
-
+</p>
+<p>
 #记账函数(生成相同随机数)
 #-----------------------------------------
 #函数初始化随机数生成器，当a=None时，系统时间当作seed值
@@ -27,7 +29,8 @@ import random
 #getstate 返回一个state，被用于 setstate 恢复生成器内部状态
 #random.getstate()
 #random.setstate(state)
-
+</p>
+<p>
 #整形随机数生成器函数
 #-----------------------------------------
 #浮点随机值 0~1
@@ -39,7 +42,8 @@ print (random.random())
 
 #0~99中3的随机倍数,3为step
 #print (random.randrange(0,99,3))
-
+</p>
+<p>
 #随机序列生成器函数
 #-----------------------------------------
 #随机选择值
@@ -57,7 +61,8 @@ items = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 #weighted_choices = [('Three', 3), ('Two', 2), ('One', 1), ('Four',4)]
 #population = [val for val, cnt in weighted_choices for i in range(cnt)]
 #print (random.choice(population))
-
+</p>
+<p>
 # 基于统计分布函数
 #----------------------------------------
 #范围内均匀分布随机值，随机数概率一样
@@ -104,4 +109,4 @@ return result
 for x in range(1,9):
 print (nextPoisson(8))
 '''
-<p>
+</p>
