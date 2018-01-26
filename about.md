@@ -15,10 +15,12 @@ Understand som basic concepts in Python, R and C++
 
 <h3><strong>Research Interests:</strong></h3>
 - Mathematical Economics
+<p> 
 - Mathematical Finance
+<p> 
 - Partial Differential Equations
 <p> 
-
+<p> 
 <h3><strong>Coursework:</strong></h3>
 <ul>
  	<li><b>Mathematics courses: </b>
