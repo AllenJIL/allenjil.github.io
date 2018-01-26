@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About Me 
+title: About Me
 ---
 
 
@@ -33,4 +33,4 @@ Macroeconomic Theory, Microeconomics Theory with Calculus</li>
 
 <p> 
 
-
+{% include comments.html %}

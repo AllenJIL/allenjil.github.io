@@ -113,3 +113,4 @@ for x in range(1,9): <br />
 print (nextPoisson(8)) <br /> 
 ''' <br /> 
 </p>
+{% include comments.html %}

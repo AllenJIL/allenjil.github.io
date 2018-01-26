@@ -74,3 +74,4 @@ table, td { border: 1px solid black; } Using CSS
 &lt;td colspan="2"&gt; denote the positive integer  number of columns it spans across.&lt;/td&gt; rowspan="2" is the same for row
 
 &nbsp;
+{% include comments.html %}
