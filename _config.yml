@@ -1,35 +1,35 @@
 # Basic
-title: 潘柏信
-subtitle: 个人站
-description: 欢迎来到我的个人站~
+title: Xiuchuan Zhang
+subtitle: Personal Website
+description: Welcom to my Website
 # 头像里面的标题
-avatarTitle: leopardpan
+avatarTitle: xiuchuan
 # 头像里面的描述
-avatarDesc: iOS / 机器学习
-url: "http://baixin.io"
+avatarDesc: Data Science / Math
+url: "http://xiuchuanz.com"
 
 # Comment
-comment:
-    disqus: leopard
+#comment:
+    # disqus: leopard
     # uyan: 2143225  # 有言id,登录有言官网申请
 
 # Social
 social:
-    weibo: 5366874726 
-    github: leopardpan
+    weibo: A_JIL
+    github: AllenJIL
     # twitter: 
-    mail: leopardpan@icloud.com
+    mail: xiuchuanz@qq.com
 
 # 百度统计 
 # 使用博客模板请去掉或者更换 id 
-baidu:
-    id: 8ba1c6be0953b6f9c2ba38e57f615421  
+#baidu:
+#    id: 8ba1c6be0953b6f9c2ba38e57f615421  
 
 # Google Analytics
 # 使用博客模板请去掉或者更换 id
-ga:
-    id: UA-84134159-3   
-    host: auto  
+#ga:
+#    id: UA-84134159-3   
+#    host: auto  
 
 
 # 《----------------- 上面的信息修改成你自己的 ---------------------------》
@@ -53,13 +53,13 @@ cover_color: clear
 
 # The blog button should not be removed.
 blog_button:
-    title: 博客主页
+    title: Blogs
 
 # Navigation buttons in the front page.s
 nav:
-    - {title: 所有文章, description: archive, url: '/archive'}   
-    - {title: 标签, description: tags, url: '/tags'}      
-    - {title: 关于我, description: about, url: '/about'}      
+    - {title: Articles, description: archive, url: '/archive'}   
+    - {title: Tag, description: tags, url: '/tags'}      
+    - {title: About Me, description: about, url: '/about'}      
     
 
 # Pagination
