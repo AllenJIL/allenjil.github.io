@@ -5,7 +5,7 @@ description: "Use Python generate random number"
 date: 2018-01-19
 tag: Notes
 ---
-
+<p>
 # Random
 # 用内置函数生成随机数
 # 删除# 调用测试 用于更好理解
@@ -104,3 +104,4 @@ return result
 for x in range(1,9):
 print (nextPoisson(8))
 '''
+<p>
