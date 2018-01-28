@@ -8,18 +8,21 @@ A Mathematics researcher, love to study new technologies
 <p>
 Current learning Data Science and Analysis
 <p>
-Understand som basic concepts in Python, R and C++
+Understand some basic concepts in Python, R and C++
 
 <p>
   
 
 <h3><strong>Research Interests:</strong></h3>
 <p>
-- Mathematical Economics
-- Mathematical Finance
 - Partial Differential Equations
-</p> 
 <p> 
+- Data Science
+<p>
+- Mathematical Economics 
+<p>
+- Mathematical Finance
+<p>
 <h3><strong>Coursework:</strong></h3>
 <ul>
  	<li><b>Mathematics courses: </b>
