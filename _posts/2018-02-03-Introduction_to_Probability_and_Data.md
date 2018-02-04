@@ -13,20 +13,20 @@ tag: Notes
 ### Introduction to Data
 
 * Data matix: data are organized in
-* Observation(case): row 
+* Observation (case): row 
 * Variable: column 
 
 #### Types of variables
 
-> Numerical
+* Numerical
 	* numerical values (sensible to add, subtract, take averages, etc. with them)
->> continuous: infinite number of values within a given range
->> discrete: specific set of numeric values
+ 	1. continuous: infinite number of values within a given range
+ 	2. discrete: specific set of numeric values
 
-> Categorical 
+* Categorical 
 	* limited number of distinct categories (not sensible to do arithmetic operations)
->>ordinal: inherent ordering
->>Nominal: not ordering
+	1. ordinal: inherent ordering
+	2. Nominal: not ordering
 
 #### Relationships between variables
 
@@ -76,3 +76,9 @@ tag: Notes
 * __placebo effect__: showing change despite being on the placebo
 * __blinding__: experimental units do not know which group they are in
 * __double-blind__: both the experimental units and the researchers do not know the group assignment 
+
+#### Ramdom sampling and random assignment
+| ideal experiment &darr; | Random Assignment | No Random Assignment | most observational studies &darr; |
+|Random Sampling | Causal and Generalizable | not Causal, but Generalizable | Generalizability |
+|No Random Sampling | Causal, but not Generalizable | neither Causal nor Generalizable | Np Generalizability |
+| most experiments &uarr; | Causation | Association | bad observational studies &uarr; |
