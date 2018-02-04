@@ -79,6 +79,7 @@ tag: Notes
 
 #### Ramdom sampling and random assignment
 | ideal experiment &darr; | Random Assignment | No Random Assignment | most observational studies &darr; |
+|:------:|:------:|:------:|:------:|
 |Random Sampling | Causal and Generalizable | not Causal, but Generalizable | Generalizability |
 |No Random Sampling | Causal, but not Generalizable | neither Causal nor Generalizable | Np Generalizability |
 | most experiments &uarr; | Causation | Association | bad observational studies &uarr; |
