@@ -123,7 +123,7 @@ tag: Notes
 	* left skewed: the longer tail is on the left on the negative end
 		* mean < median
 	* symmetric: no skewness is apparent
-		* mean \approx median
+		* mean $\approx$ median
 	* right skewed: the longer tail is on the right, the positive end
 		* mean > median
 
@@ -139,7 +139,7 @@ tag: Notes
 the chosen bin width can alter the story the histogram is telling
 * bin width too wide: might lose interesting details
 * bin width too narrow: might be difficult to get an overall picture of the distribution
-* ideal bin width depends on the data you're working with
+* ideal bin width depends on the data you are working with
 
 ### Dot plot
 
@@ -158,16 +158,16 @@ the chosen bin width can alter the story the histogram is telling
 
 * range: (max - min)
 * variance: roughly the average squared deviation from the mean
-	* sample variance: $$s^2$$
-	* population variance: $$(\sigma)^2$$
-	* $$s^2 = \frac{\sum_{i=1}^{n} (x_i - \bar{x})^2}{n-1}
+	* sample variance: $s^2$
+	* population variance: $(\sigma)^2$
+	* $s^2 = \frac{\sum_{i=1}^{n} (x_i - \bar{x})^2}{n-1}$
 * standard deviation: roughly the average deviation around the mean, and has the same units as the data
-	* sample sd: $$s$$
-	* population sd: $$\sigma$$
+	* sample sd: $s$
+	* population sd: $\sigma$
 * inter-quartile range
 	* range of the middle 50% of the data, distance between the first quartile (25th percentile) and third quartile (the 75th percentile)
 	* most readily available in a box plot. 
-	* $$IQR = Q_3 - Q_1$$
+	* $IQR = Q_3 - Q_1$
 
 ### Robust Statistics
 
@@ -196,30 +196,30 @@ the chosen bin width can alter the story the histogram is telling
 
 ### Exploring Categorical Variables
 
-__Bar plots__
-	Q: How are bar plots different than histograms?
+* __Bar plots__
+	* Q: How are bar plots different than histograms?
 	* barplots for categorical variables, histograms for numerical variables
 	* x-axis on a histogram is a number line, and the ordering od the bars are not interchangeable
-__Segmented bar plot__ 
+* __Segmented bar plot__ 
 	* useful for visualizing conditional frequency distributions
 	* compare relative frequencies to explore the relationship between the variables
-__Relative frequency segmented bar plot__
-__Mosaicplot__
-__Side-by-side box plots__
+* __Relative frequency segmented bar plot__
+* __Mosaicplot__
+* __Side-by-side box plots__
 
 ### Introduction to inference
 
-* null hypothesis($$H_0$$): independent, "There is nothing going on"
-* alternative hypothesis($$H_A$$): dependent, "There is something going on"
+* null hypothesis($H_0$): independent, "There is nothing going on"
+* alternative hypothesis($H_A$): dependent, "There is something going on"
 
 * hypothesis testing framework
-	* start with a null hypothesis($$H_0$$) that represents that status quo
-	* set an alternative hypothesis($$H_A$$) that represents our research question, i.e. what we're testing for
+	* start with a null hypothesis($H_0$) that represents that status quo
+	* set an alternative hypothesis($H_A$) that represents our research question, i.e. what we're testing for
 	* conduct a hypothesis test under the assumption that the null hypothesis is true, either via simulation or using theoretical methods
 		* If the test results suggest that the data do not provide convincing evidence for the alternative hypothesis, we stick with the null hypothesis
 		* If they do, then we reject the null hypothesis in favor of the alternative
 
-### Inference
+### Inference summary
 
 * set a null and an alternative hypothesis
 * simulate the experiment assuming that the null hypothesis is true
