@@ -225,3 +225,46 @@ the chosen bin width can alter the story the histogram is telling
 * simulate the experiment assuming that the null hypothesis is true
 * evaluated the __p_value__: probability of observing an outcome at least as extreme as the one observed in the original data
 * if this probability is low, reject the null hypothesis in favor of the alternative 
+
+### Probability and Distribution
+
+* random process: know what outcomes could happen, but don't know which particular outcome will happen
+
+* P (A) = Probability of event A
+	* 0≤P(A)≤1
+
+* __frequentist interpretation__: The probability of an outcome would occur if we observed the random process an infinite number of times.
+
+* __Bayesian interpretation__: A Bayesian interprets probability as a subjective degree of belief
+
+* largely popularized by revolutionary advance in computational technology and methods during the last twenty years
+
+* __law of large members__: sates that as more observations are collected, the proportion of occurrences with a particular outcome converges to the probably of that outcome
+
+* common misunderstanding: __gambler's fallacy__ (law of averages)
+
+* __disjoint (mortally exclusive)__ events cannot happen at the same time
+	* P(A & B) = 0
+	* __Union of disjoint__ events: P(A or B) = P(A) + P(B) - P(A & B)
+	* Complementary &rarr; disjoint; complementary !&larr; disjoint
+
+* __non-disjoint events__ can happen at the same time
+	* P(A & B) != 0
+
+* sample space: a collection of __all__ possible outcomes of a trial
+
+* __probability distribution__: all possibility outcomes in the sample space, and the probabilities with they occur
+
+* __Rules__:
+	* the events listed must be disjoint
+	* each probability must be between 0 and I
+	* the probabilities must total I
+	* complementary events: two mentally exclusive events whose probabilities add up to l
+
+* __Independence__: P(A|B) = P(A), P(A<sub>1</sub>, ... & A<sub>k<\sub>) = P(A<sub>1</sub>) X ... X P(A<sub>k</sub>)
+
+* __Dependence__: P(A|B) = P(A & B)/ P(B), P(A & B) = P(A|B) X P(B)
+
+* __Posterior Probability__: P(hypothesis | data) &rarr; P(hypothesis is true | observed data)
+
+* __P-value__: P(data | hypothesis) &rarr; P(observed or more extreme outcome | H<sub>0</sub> is true) 
