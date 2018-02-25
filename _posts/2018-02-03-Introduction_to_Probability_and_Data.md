@@ -261,10 +261,10 @@ the chosen bin width can alter the story the histogram is telling
 	* the probabilities must total I
 	* complementary events: two mentally exclusive events whose probabilities add up to l
 
-* __Independence__: P(A|B) = P(A), P(A<sub>1</sub>, ... & A<sub>k<\sub>) = P(A<sub>1</sub>) X ... X P(A<sub>k</sub>)
+* __Independence__: P(A/B) = P(A), P(A<sub>1</sub>, ... & A<sub>k<\sub>) = P(A<sub>1</sub>) X ... X P(A<sub>k</sub>)
 
-* __Dependence__: P(A|B) = P(A & B)/ P(B), P(A & B) = P(A|B) X P(B)
+* __Dependence__: P(A/B) = P(A & B)/ P(B), P(A & B) = P(A/B) X P(B)
 
-* __Posterior Probability__: P(hypothesis | data) &rarr; P(hypothesis is true | observed data)
+* __Posterior Probability__: P(hypothesis / data) &rarr; P(hypothesis is true / observed data)
 
-* __P-value__: P(data | hypothesis) &rarr; P(observed or more extreme outcome | H<sub>0</sub> is true) 
+* __P-value__: P(data / hypothesis) &rarr; P(observed or more extreme outcome / H<sub>0</sub> is true) 
