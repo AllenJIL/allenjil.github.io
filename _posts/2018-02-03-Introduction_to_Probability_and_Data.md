@@ -160,7 +160,7 @@ the chosen bin width can alter the story the histogram is telling
 * variance: roughly the average squared deviation from the mean
 	* sample variance: $s^2$
 	* population variance: $(\sigma)^2$
-	* $s^2 = \frac{\sum_{i=1}^{n} (x_i - \bar{x})^2}{n-1}$
+	* $s^2 = \frac{\sum_{i=1}^{n}     (x_i - \bar{x})^2}{n-1}$
 * standard deviation: roughly the average deviation around the mean, and has the same units as the data
 	* sample sd: $s$
 	* population sd: $\sigma$
@@ -267,4 +267,8 @@ the chosen bin width can alter the story the histogram is telling
 
 * __Posterior Probability__: P(hypothesis / data) &rarr; P(hypothesis is true / observed data)
 
-* __P-value__: P(data / hypothesis) &rarr; P(observed or more extreme outcome / H<sub>0</sub> is true) 
+* __P-value__: P(data / hypothesis) &rarr; P(observed or more extreme outcome / H<sub>0</sub> is true)
+
+
+
+
