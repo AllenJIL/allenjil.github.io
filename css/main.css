@@ -115,6 +115,7 @@ h1 {
 
 h2 {
   font-size: 1.5em; 
+  color: #1E90FF;
   /*background:#B9D3EE;*/
   /*text-align: center;*/
 }
@@ -149,7 +150,9 @@ p {
 }
 
 strong {
-  font-weight: bold; }
+  font-weight: bold;
+  color: #00BFFF;
+  }
 
 em {
   font-style: italic; }

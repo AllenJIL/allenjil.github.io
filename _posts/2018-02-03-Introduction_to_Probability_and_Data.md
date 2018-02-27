@@ -6,12 +6,14 @@ date: 2018-02-03
 tag: Notes
 ---
 [Coursera.org]: <https://www.coursera.org/learn/probability-intro/home/welcome/> "Coursera"
+[Distribution Calculator]: <https://gallery.shinyapps.io/dist_calc/> "Distribution Calculator"
+
 
 >These are the notes by learning the "Introduction to Probability and Data" from [Coursera.org] for future reviews.
 
 **********
 
-## Introduction to Data
+## __Introduction to Data__
 
 * Data matrix: data are organized in
 * Observation (case): row 
@@ -91,13 +93,13 @@ tag: Notes
 
 |   |   |   |   |
 |:------:|:------:|:------:|:------:|
-| ideal experiment &darr; | Random Assignment | No Random Assignment | most observational studies &darr; |
+| ideal experiment $\searrow$ | Random Assignment | No Random Assignment | most observational studies $\swarrow$ |
 |Random Sampling | Causal and Generalizable | not Causal, but Generalizable | Generalizability |
 |No Random Sampling | Causal, but not Generalizable | neither Causal nor Generalizable | Np Generalizability |
-| most experiments &uarr; | Causation | Association | bad observational studies &uarr; |
+| most experiments $\nearrow$; | Causation | Association | bad observational studies $\nwarrow$ |
 
 
-## Exploratory Data Analysis and Introduction to Inference
+## __Exploratory Data Analysis and Introduction to Inference__
 
 ### Scatterplots
 
@@ -226,7 +228,7 @@ the chosen bin width can alter the story the histogram is telling
 * evaluated the __p_value__: probability of observing an outcome at least as extreme as the one observed in the original data
 * if this probability is low, reject the null hypothesis in favor of the alternative 
 
-### Probability and Distribution
+## __Probability and Distribution__
 
 * random process: know what outcomes could happen, but don't know which particular outcome will happen
 
@@ -261,14 +263,91 @@ the chosen bin width can alter the story the histogram is telling
 	* the probabilities must total I
 	* complementary events: two mentally exclusive events whose probabilities add up to l
 
-* __Independence__: P(A/B) = P(A), P(A<sub>1</sub>, ... & A<sub>k<\sub>) = P(A<sub>1</sub>) X ... X P(A<sub>k</sub>)
+* __Independence__: P(A/B) = P(A), P(A<sub>1</sub>, ... & A<sub>k<\sub>) = P(A<sub>1</sub>) &times; ... &times; P(A<sub>k</sub>)
 
-* __Dependence__: P(A/B) = P(A & B)/ P(B), P(A & B) = P(A/B) X P(B)
+* __Dependence__: P(A/B) = P(A & B)/ P(B), P(A & B) = P(A/B) &times; P(B)
 
 * __Posterior Probability__: P(hypothesis / data) &rarr; P(hypothesis is true / observed data)
 
 * __P-value__: P(data / hypothesis) &rarr; P(observed or more extreme outcome / H<sub>0</sub> is true)
 
 
+## __Normal Distribution__
 
+### Normal distribution $N( \mu , \sigma )$
+
+* unimodal and symmetric
+	* bell curve
+* follows very strict guidelines about how variably the data are distributed around the mean
+* Many variables are nearly normal, but none are exactly normal
+* two parameters: mean &mu; and stand deviation &sigma;
+* Changing the center and the spread of the distribution changes the overall shape of the distribution
+<img src="images/Data_science/Stat/Normal_distribution/1.PNG">
+* rules govern the veriability of normally distributed data aroudn the mean
+<img src="images/Data_science/Stat/Normal_distribution/2.PNG">
+
+### Standardizing with Z scores
+
+* __standardized (Z) score__ of an obervation is the number of standard deviations it falls above or below the mean
+	* $Z = \frac{observation - mean}{SD}$
+	* Z score of mean = 0 (normally: median &asymp; 0 )
+	* unusual observation: $\lvertZ\rvert > 2$
+	* defined for distributions of any shape
+
+* when the distribution is __normal__, __Z scores__ can be used to calculate percentiles
+	* __Percentile__ is the percentage of observations that fall below a given data point
+	* graphically, percentile is the area below the probability distribution curve to the left of that observation 
+	* *if the distribution does not follow the nice unimodal symmetric normal shape, you'd need to use calculus for that*
+
+* Methods for Z scores
+	1. Using R: pnorm(-1, mean = 0, sd = 1) (*qnorm for quantiles or cutoff values*)
+	2. [Distribution Calculator]
+	3. Table
+	<img src="images/Data_science/Stat/Normal_distribution/z_scores.PNG">
+
+### Evaluating
+
+* anatomy of a normal probability plot
+	* Data are plotted on the y-axis of a normal probability plot, and theoretical quantiles (following a normal distribution) on the x-axis
+	* If there is a one-to-one relationship between the data and the theoretical quantiles, then the data follow a nearly normal distribution.
+	* Since a one-to-one relationship would appear as a straight line on a scatter plot, the closer the points are to a perfect straight line, the more confident we can be that the data follow a normal model.
+	* Constructing a normal probability plot requires calculating percentiles and corresponding z-scores for each observation, which is tedious. Therefore, we generally rely on software when making these plots.
+
+<img src="images/Data_science/Stat/Normal_distribution/anatomy.PNG">
+
+* Also can using __68-95-99.7% rule__
+
+## __Binomial Distribution__
+
+* __binomial distribution__ describes the probability of having exactly __k__ successes in __n__ independent Bernouilli trials with probability of success __p__
+	* *# of scenarios &times; P(single scenario)*
+	* $P(k = K) = {n \choose k} p^k (1-p)^{(n-k)}$
+		> in __R__: bdinom(k, size, p)
+		> [Distribution Calculator]
+	* __Choose function__: ${n \choose k}=\dfrac{n!}{k!(n−k)!}$
+		> in __R__: choose(n, k)
+
+### Binomial conditions
+
+1. The trials are independent.
+2. The number of trials, n, is fixed.
+3. Each trial outcome can be classified as a success or failure.
+4. The probability of a success, p, is the same for each trial.
+
+* Expected value (mean) of binomial distribution ($\mu = np$) and its standard deviation ($\sigma = \sqrt{np(1-p)}$)
+
+### normal approximation
+
+* __Fact__: when the number of trials increases, the shape of the binomial actually starts looking closer and closer to a full normal distribution
+
+* Calculate the probabilities for each outcome from a to b and sum them up
+	> in __R__: sum(dbinom(a:b, size = n, p =p))
+
+* __Success-failure rule__: a binomial distribution with at least 10 expected successes and 10 expected failures closely follows a normal distribution 
+	* $np \geq 10$
+	* $n( 1-p ) \geq 10$
+
+* Normal approximation to the binomial: If the __success-failure__ condition holds, then 
+	* $ Binomial(n,p) \thicksim Normal(\mu,\sigma) $
+	* where $ \mu = np and \sigma = \sqrt{np(1-p)} $ 
 

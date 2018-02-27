@@ -41,7 +41,7 @@ tag: Notes
 
 &lt;video src="myVideo.mp4" width="#" height="#" controls&gt; Video not supported &lt;/video&gt;
 
-&lt;a href="https://location.com/" target="_blank"&gt;This Is A Link To Website&lt;/a&gt; The target attribute specifies that a link should open in a new window.
+&lt;a href="https://location.com/ " target="_blank"&gt;This Is A Link To Website&lt;/a&gt; The target attribute specifies that a link should open in a new window.
 
 &lt;a href="./index.html"&gt;Displaying index.html&lt;/a&gt;
 
@@ -50,7 +50,7 @@ tag: Notes
 &lt;nav&gt;Navigation is used to wrap these links in order to organize the content on your web page.&lt;/nav&gt; semantic tags
 
 <hr />
-<h1><strong>Table:</strong></h1>
+<h2><strong>Table:</strong></h2>
 &lt;table&gt;&lt;/table&gt; contains all of the tabular data you plan on displaying
 
 &lt;tbody&gt;&lt;tr&gt;&lt;/tr&gt;&lt;/tbody&gt; contain the all of the table's data, excluding the table headings
@@ -74,3 +74,4 @@ table, td { border: 1px solid black; } Using CSS
 &lt;td colspan="2"&gt; denote the positive integer  number of columns it spans across.&lt;/td&gt; rowspan="2" is the same for row
 
 &nbsp;
+

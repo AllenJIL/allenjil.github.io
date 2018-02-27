@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "常用数学符号的 LaTeX 表示方法"
+title: "Mathematical Symbols with LaTeX"
 description: "常用数学符号的 LaTeX 表示方法"
 date: 2018-02-27
 tag: Notes
@@ -10,11 +10,11 @@ tag: Notes
 
 >These are common mathematical symbols from [一份不太简短的 LATEX2e 介绍] for future using.
 
-Common mathematical symbols
+### Common mathematical symbols
+
 
 |		Symbol		|	Command	|
 |		:---:		|	:---:	|
-
 |	$	a_{1}	$	|	a_{1}	|
 |	$	x^{2}	$	|	x^{2}	|
 |	$	e^{-\alpha t}	$	|	e^{-\alpha t}	|
@@ -44,7 +44,7 @@ Common mathematical symbols
 |	$	\prod_\epsilon	$	|	\prod_\epsilon	|
 
 
-## Others:
+### Others:
 
 <img src="/images/symbols_files/1.GIF">
 
@@ -59,3 +59,4 @@ Common mathematical symbols
 <img src="/images/symbols_files/6.GIF">
 
 <img src="/images/symbols_files/7.GIF">
+
