@@ -2,7 +2,7 @@
 layout: post
 title: "Introduction to Probability and Data"
 description: "Note from Coursera.com"
-date: 2018-02-03
+date: 2018-03-01
 tag: Notes
 ---
 [Coursera.org]: <https://www.coursera.org/learn/probability-intro/home/welcome/> "Coursera"
@@ -96,7 +96,7 @@ tag: Notes
 | ideal experiment $\searrow$ | Random Assignment | No Random Assignment | most observational studies $\swarrow$ |
 |Random Sampling | Causal and Generalizable | not Causal, but Generalizable | Generalizability |
 |No Random Sampling | Causal, but not Generalizable | neither Causal nor Generalizable | Np Generalizability |
-| most experiments $\nearrow$; | Causation | Association | bad observational studies $\nwarrow$ |
+| most experiments $\nearrow$ | Causation | Association | bad observational studies $\nwarrow$ |
 
 
 ## __Exploratory Data Analysis and Introduction to Inference__
@@ -282,16 +282,16 @@ the chosen bin width can alter the story the histogram is telling
 * Many variables are nearly normal, but none are exactly normal
 * two parameters: mean &mu; and stand deviation &sigma;
 * Changing the center and the spread of the distribution changes the overall shape of the distribution
-<img src="images/Data_science/Stat/Normal_distribution/1.PNG">
-* rules govern the veriability of normally distributed data aroudn the mean
-<img src="images/Data_science/Stat/Normal_distribution/2.PNG">
+<img src="/images/Data_science/Stat/Normal_distribution/1.PNG">
+* rules govern the variability of normally distributed data around the mean
+<img src="/images/Data_science/Stat/Normal_distribution/2.PNG">
 
 ### Standardizing with Z scores
 
 * __standardized (Z) score__ of an obervation is the number of standard deviations it falls above or below the mean
 	* $Z = \frac{observation - mean}{SD}$
 	* Z score of mean = 0 (normally: median &asymp; 0 )
-	* unusual observation: $\lvertZ\rvert > 2$
+	* unusual observation: $\lvert Z\rvert > 2$
 	* defined for distributions of any shape
 
 * when the distribution is __normal__, __Z scores__ can be used to calculate percentiles
@@ -303,7 +303,7 @@ the chosen bin width can alter the story the histogram is telling
 	1. Using R: pnorm(-1, mean = 0, sd = 1) (*qnorm for quantiles or cutoff values*)
 	2. [Distribution Calculator]
 	3. Table
-	<img src="images/Data_science/Stat/Normal_distribution/z_scores.PNG">
+	<img src="/images/Data_science/Stat/Normal_distribution/z_scores.PNG">
 
 ### Evaluating
 
@@ -313,13 +313,13 @@ the chosen bin width can alter the story the histogram is telling
 	* Since a one-to-one relationship would appear as a straight line on a scatter plot, the closer the points are to a perfect straight line, the more confident we can be that the data follow a normal model.
 	* Constructing a normal probability plot requires calculating percentiles and corresponding z-scores for each observation, which is tedious. Therefore, we generally rely on software when making these plots.
 
-<img src="images/Data_science/Stat/Normal_distribution/anatomy.PNG">
+<img src="/images/Data_science/Stat/Normal_distribution/anatomy.PNG">
 
 * Also can using __68-95-99.7% rule__
 
 ## __Binomial Distribution__
 
-* __binomial distribution__ describes the probability of having exactly __k__ successes in __n__ independent Bernouilli trials with probability of success __p__
+* __binomial distribution__ describes the probability of having exactly __k__ successes in __n__ independent Bernoulli trials with probability of success __p__
 	* *# of scenarios &times; P(single scenario)*
 	* $P(k = K) = {n \choose k} p^k (1-p)^{(n-k)}$
 		> in __R__: bdinom(k, size, p)
@@ -349,5 +349,5 @@ the chosen bin width can alter the story the histogram is telling
 
 * Normal approximation to the binomial: If the __success-failure__ condition holds, then 
 	* $ Binomial(n,p) \thicksim Normal(\mu,\sigma) $
-	* where $ \mu = np and \sigma = \sqrt{np(1-p)} $ 
+	* where $ \mu = np $ and $ \sigma = \sqrt{np(1-p)} $ 
 
