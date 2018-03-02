@@ -322,7 +322,7 @@ the chosen bin width can alter the story the histogram is telling
 * __binomial distribution__ describes the probability of having exactly __k__ successes in __n__ independent Bernoulli trials with probability of success __p__
 	* *# of scenarios &times; P(single scenario)*
 	* $P(k = K) = {n \choose k} p^k (1-p)^{(n-k)}$
-		> in __R__: bdinom(k, size, p)
+		> in __R__: dbinom(k, size, p)
 		> [Distribution Calculator]
 	* __Choose function__: ${n \choose k}=\dfrac{n!}{k!(n−k)!}$
 		> in __R__: choose(n, k)

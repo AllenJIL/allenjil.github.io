@@ -6,7 +6,7 @@ date: 2018-02-27
 tag: Notes
 ---
 
-[一份不太简短的 LATEX2e 介绍]: <http://www.mohu.org/info/lshort-cn.pdf/> "一份不太简短的 LATEX2e 介绍"
+[一份不太简短的 LATEX2e 介绍]: <http://www.mohu.org/info/lshort-cn.pdf> "一份不太简短的 LATEX2e 介绍"
 
 >These are common mathematical symbols from [一份不太简短的 LATEX2e 介绍] for future using.
 
