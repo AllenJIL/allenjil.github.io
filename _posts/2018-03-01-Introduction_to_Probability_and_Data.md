@@ -351,3 +351,4 @@ the chosen bin width can alter the story the histogram is telling
 	* $ Binomial(n,p) \thicksim Normal(\mu,\sigma) $
 	* where $ \mu = np $ and $ \sigma = \sqrt{np(1-p)} $ 
 
+	
