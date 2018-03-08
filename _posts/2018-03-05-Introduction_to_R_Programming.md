@@ -7,12 +7,12 @@ tag: Notes
 ---
 [dplyr]: <www.dplyr.tidyverse.org/> "dplyr"
 
-> R编程 初学者 代码整理
+> R编程 初学者 代码整理  
 > Collecting of R Code (Noob)
 
 **********
 
-## R Packages
+## R Packages  
 
 > install commands like `install.packages` and `install_github`  
 > do `library` function to __load__ them 
@@ -33,6 +33,7 @@ tag: Notes
 * If else: `ifelse(test, yes, no)`
 * Counting streak lengths: `calc_streak(data_file_name)`
 * Table: `table(data)`
+* Search the names for a fragment of the name: `grep("search_name", names(data_file_name), value = TRUE)`
 
 
 ### dplyr
@@ -52,6 +53,7 @@ tag: Notes
 		new_data_file_name <- data_file_name %>%
   		filter(variable_name logical_operator filter_condition)
 		```
+		* find the one is na: `filter(is.na(variable_name))`
 	* `summarise()`: reduces multiple values down to a single summary.
 		```
 		data_file_name %>%
@@ -75,23 +77,23 @@ tag: Notes
 ### ggplot2
 
 * Making graphics: 
-    ```
+	```
     ggplot(data = data_file_name, aes(x = x_aes_name, y = y_aes_name)) + 
 	geom_line() +  
 	geom_point()
-    ```
+	```
 
 * Making side-by-side box plots: `geom_boxplot()`
 
 * Making segmented bar plot:
-    ```
+	```
     ggplot(data = data_file_name, aes(x = x_aes_name, fill = variable_name)) + 
 	geom_bar()
-    ```
+	```
 
 * Making histogram:
-    ```
+	```
     ggplot(data = data_file_name, aes(x = x_aes_name)) + 
 	geom_histogram(binwidth = #number )
-    ```
+	```
 
