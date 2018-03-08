@@ -1,9 +1,9 @@
 # Basic
 title: Xiuchuan Zhang
 subtitle: Personal Website
-description: This is Xiuchuan's personal website. &#10 I plan to post some of my current learning and review notes on it. &#10 If you have any questions or suggestions, welcome to comment in my posts. &#10 &#10 这里是秀川的个人博客。&#10 我打算上传一些现阶段正在复习与学习的笔记在这网站。 &#10 若有任何问题或建议，欢迎在各页面留言。
+description: This is Xiuchuan's personal website. <br/> I plan to post some of my current learning and review notes on it. <br/> If you have any questions or suggestions, welcome to comment in my posts. <br/> 这里是秀川的个人博客。<br/> 我打算上传一些现阶段正在复习与学习的笔记在这网站。 <br/> 若有任何问题或建议，欢迎在各页面留言。
 # 头像里面的标题
-avatarTitle: 秀川 &#10 Xiuchuan
+avatarTitle: 秀川
 # 头像里面的描述
 avatarDesc: Data Science &#10 Math
 url: "http://xiuchuanz.com"
