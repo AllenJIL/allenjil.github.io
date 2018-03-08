@@ -1,9 +1,9 @@
 # Basic
 title: Xiuchuan Zhang
 subtitle: Personal Website
-description: 
+description: This is Xiuchuan's personal website. &#10 I plan to post some of my current learning and review notes on it. &#10 If you have any questions or suggestions, welcome to comment in my posts. &#10 &#10 这里是秀川的个人博客。&#10 我打算上传一些现阶段正在复习与学习的笔记在这网站。 &#10 若有任何问题或建议，欢迎在各页面留言。
 # 头像里面的标题
-avatarTitle: Xiuchuan
+avatarTitle: 秀川 &#10 Xiuchuan
 # 头像里面的描述
 avatarDesc: Data Science &#10 Math
 url: "http://xiuchuanz.com"
@@ -30,16 +30,6 @@ baidu:
 ga:
     id: UA-113138040-1   
     host: auto  
-
-
-# 《----------------- 上面的信息修改成你自己的 ---------------------------》
-#
-#
-#  _post/ 下的文章更换成你自己的文章
-#  帮忙star一下，感谢~😆 地址： https://github.com/leopardpan/leopardpan.github.io
-#
-#
-# 《--------------- 下面的信息可以自行选择是否修改 ------------------------》
 
 
 permalink: /:year/:month/:title/
