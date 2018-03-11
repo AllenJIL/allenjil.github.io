@@ -77,10 +77,10 @@ tag: Machine_Learning
 ### Cost function
 
 * Idea: Choose $ \theta_{0}, \theta_{1} $ so that $ h_{\theta}(x) $ is close to y for our training examples (x,y)  
-	* $ \underset{ \theta_{0}, \theta_{1} }{ \mathrm{minimize} } \dfrac {1}{2m} $ $ \displaystyle \sum _{i=1}^m \left ( \hat{y}^{i}- y^{i} \right)^2 = \dfrac {1}{2m} \displaystyle \sum _{i=1}^m \left (h_\theta (x^{i}) - y^{i} \right)^2 $  
+	* $ \underset{ \theta_{0}, \theta_{1} }{ \mathrm{minimize} } \dfrac {1}{2m} $ $ \displaystyle \sum _{i=1}^m \left ( \hat{y}^{i}- y^{i} \right)^2 = \dfrac {1}{2m} $ $ \displaystyle \sum _{i=1}^m \left (h_\theta (x^{i}) - y^{i} \right)^2 $  
 	* $ h_{\theta}(x^{i}) = \theta_{0} + \theta_{1}x^{i} $  
 
-* __Cost function__: $ J(\theta_0, \theta_1) = \dfrac {1}{2m} $ $ \displaystyle \sum _{i=1}^m \left ( \hat{y}^{i}- y^{i} \right)^2 = \dfrac {1}{2m} \displaystyle \sum _{i=1}^m \left (h_\theta (x^{i}) - y^{i} \right)^2 $  
+* __Cost function__: $ J(\theta_0, \theta_1) = \dfrac {1}{2m} $ $ \displaystyle \sum _{i=1}^m \left ( \hat{y}^{i}- y^{i} \right)^2 = \dfrac {1}{2m} $ $ \displaystyle \sum _{i=1}^m \left (h_\theta (x^{i}) - y^{i} \right)^2 $  
 	* also called __squared error cost function__ or __squared error function__    
 
 * __Goal__: $ \displaystyle \underset{ \theta_{0}, \theta_{1} }{ \mathrm{minimize} } J(\theta_0, \theta_1) $  
