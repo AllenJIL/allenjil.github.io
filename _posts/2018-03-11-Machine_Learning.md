@@ -77,7 +77,7 @@ tag: Machine_Learning
 ### Cost function
 
 * Idea: Choose $ \theta_{0}, \theta_{1} $ so that $ h_{\theta}(x) $ is close to y for our training examples (x,y)  
-	* $ \underset{ \theta_{0}, \theta_{1} }{ \mathrm{minimize} } \dfrac {1}{2m} \displaystyle \sum _{i=1}^m \left ( \hat{y}^{i}- y^{i} \right)^2 = \dfrac {1}{2m} \displaystyle \sum _{i=1}^m \left (h_\theta (x^{i}) - y^{i} \right)^2 $  
+	* $\underset{ \theta_{0}, \theta_{1} }{ \mathrm{minimize} } \dfrac {1}{2m} \displaystyle \sum _{i=1}^m \left ( \hat{y}^{i}- y^{i} \right)^2 = \dfrac {1}{2m} \displaystyle \sum _{i=1}^m \left (h_\theta (x^{i}) - y^{i} \right)^2$  
 	* $ h_{\theta}(x^{i}) = \theta_{0} + \theta_{1}x^{i} $  
 
 * __Cost function__: $ J(\theta_0, \theta_1) = \dfrac {1}{2m} \displaystyle \sum _{i=1}^m \left ( \hat{y}^{i}- y^{i} \right)^2 = \dfrac {1}{2m} \displaystyle \sum _{i=1}^m \left (h_\theta (x^{i}) - y^{i} \right)^2 $  
@@ -102,7 +102,8 @@ tag: Machine_Learning
 		* temp1 := $ \theta_1 := \theta_1 - \alpha \displaystyle \frac{\partial}{\partial \theta_1} J(\theta_0, \theta_1) (\mathrm{for} j = 0 \mathrm{and } j = 1 ) $
 		* $ \theta_0 := $ temp0
 		* $ \theta_1 := $ temp1
-	* __linear regression__: $ \begin{align*} \text{repeat until convergence: } \lbrace & \newline \theta_0 := & \theta_0 - \alpha \frac{1}{m} \sum\limits_{i=1}^{m}(h_\theta(x_{i}) - y_{i}) \newline \theta_1 := & \theta_1 - \alpha \frac{1}{m} \sum\limits_{i=1}^{m}\left((h_\theta(x_{i}) - y_{i}) x_{i}\right) \newline \rbrace& \end{align*} $
+	* __linear regression__: 
+		* repeat until convergence: $\theta_0 := & \theta_0 - \alpha \frac{1}{m} \sum\limits_{i=1}^{m}(h_\theta(x_{i}) - y_{i}) \newline \theta_1 := & \theta_1 - \alpha \frac{1}{m} \sum\limits_{i=1}^{m}\left((h_\theta(x_{i}) - y_{i}) x_{i}\right)$
 
 * "Batch" Gradient Descent:  
 	* "__Batch__": Each step of gradient descent uses all the training examples
