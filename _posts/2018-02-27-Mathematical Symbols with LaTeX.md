@@ -38,16 +38,16 @@ tag: Math
 |	$	\frac{ x^{2} }{ k+1 }	$	|	\frac{ x^{2} }{ k+1 }	|
 |	$	x^{ \frac{2}{k+1} }	$	|	x^{ \frac{2}{k+1} }	|
 |	$	x^{ 1/2 }	$	|	x^{ 1/2 }	|
-|	$	\frac{n!}{k!(n-k)!} = \binom{n}{k}	$	|	\frac{n!}{k!(n-k)!} = \binom{n}{k}	|
+|	$	\frac{n!}{k!(n-k)!}  = \binom{n}{k}	$	|	\frac{n!}{k!(n-k)!}  = \binom{n}{k}	|
 
 |	$	\sum_{i=1}^{n}	$	|	\sum_{i=1}^{n}	|
 |	$	\int_{0}^{\frac{\pi}{2}}	$	|	\int_{0}^{\frac{\pi}{2}}	|
 |	$	\prod_\epsilon	$	|	\prod_\epsilon	|
 
-|	$	\lim_{x \to \infty} \exp(-x) = 0	$	|	\lim_{x \to \infty} \exp(-x) = 0	|
+|	$	\displaystyle\lim_{x \to \infty} \exp(-x) = 0	$	|	\displaystyle\lim_{x \to \infty} \exp(-x) = 0	|
 |	$	\displaystyle\sum_{i=1}^{10} t_i	$	|	\displaystyle\sum_{i=1}^{10} t_i	|
 |	$	\int_0^\infty \mathrm{e}^{-x}\,\mathrm{d}x	$	|	\int_0^\infty \mathrm{e}^{-x}\,\mathrm{d}x	|
-|	$	\hat{f}(x,y) = \underset{(s,t)\in S_{xy}}{\mathrm{median}} \{g(s,t)\}	$	|	\hat{f}(x,y) = \underset{(s,t)\in S_{xy}}{\mathrm{median}} \{g(s,t)\}	|
+|	$	\hat{f}(x,y) = \underset{(s,t)\in S_{xy}}{\mathrm{median}}  \{ g(s,t) \}	$	|	\hat{f}(x,y) = \underset{(s,t)\in S_{xy}}{\mathrm{median}}  \{ g(s,t) \}	|
 
 ### Others:
 

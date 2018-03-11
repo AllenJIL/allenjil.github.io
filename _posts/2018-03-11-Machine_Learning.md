@@ -52,7 +52,7 @@ tag: Machine_Learning
 
 * allows us to approach problems with little or no idea what our results should look like.   
 * We can derive structure from data where we do not necessarily know the effect of the variables.  
-* We can derive this structure by clustering the data based on relationships among the variavles in the data  
+* We can derive this structure by clustering the data based on relationships among the variavles in the data
 * There is no feedback based on the prediction results  
 
 * E.g., Organize computing clusters, social network analysis, market segmentation, astronomical data analysis  
@@ -60,7 +60,7 @@ tag: Machine_Learning
 ### Model representation  
 
 * __Notation__  
-	* m = Number of training examples  
+	* __m__ = Number of training examples  
 	* x's = "input" variable / features  
 	* y's = "output" variable / "target" variable  
 
@@ -77,18 +77,39 @@ tag: Machine_Learning
 ### Cost function
 
 * Idea: Choose $ \theta_{0}, \theta_{1} $ so that $ h_{\theta}(x) $ is close to y for our training examples (x,y)  
-	* __minimize__ $ (\theta_{0}, \theta_{1}) \frac{1}{2m} \sum_{i = 1}^{m} ( h_{\theta}(x^{(i)}) - y^{(i)} ) $  
+	* $ \underset{ \theta_{0}, \theta_{1} }{ \mathrm{minimize} } \dfrac {1}{2m} \displaystyle \sum _{i=1}^m \left ( \hat{y}^{i}- y^{i} \right)^2 = \dfrac {1}{2m} \displaystyle \sum _{i=1}^m \left (h_\theta (x^{i}) - y^{i} \right)^2 $  
 	* $ h_{\theta}(x^{i}) = \theta_{0} + \theta_{1}x^{i} $  
 
-* __Cost function__: J(\theta_0, \theta_1) = \dfrac {1}{2m} \displaystyle \sum _{i=1}^m \left ( \hat{y}^{i}- y^{i} \right)^2 = \dfrac {1}{2m} \displaystyle \sum _{i=1}^m \left (h_\theta (x^{i}) - y^{i} \right)^2
-	* also called __squared error cost function__ or __squared error function__  
+* __Cost function__: $ J(\theta_0, \theta_1) = \dfrac {1}{2m} \displaystyle \sum _{i=1}^m \left ( \hat{y}^{i}- y^{i} \right)^2 = \dfrac {1}{2m} \displaystyle \sum _{i=1}^m \left (h_\theta (x^{i}) - y^{i} \right)^2 $  
+	* also called __squared error cost function__ or __squared error function__    
 
-* __Goal__: 
+* __Goal__: $ \displaystyle \underset{ \theta_{0}, \theta_{1} }{ \mathrm{minimize} } J(\theta_0, \theta_1) $  
 
-* others: Reinforcement learning, recommender systems
-* Practical advice for applying learning algorithms
+* __contour plots__ or __contour figures__  
+<img src="/images/Machine_Learning/contour.PNG">  
 
+### Gradient descent
 
+* __Outline:__
+	* Start with some $ \theta_{0}, \theta_{1} $  
+	* Keep changing $ \theta_{0}, \theta_{1} $ to reduce $ J(\theta_{0}, \theta_{1}) $ until we hopefully end up at a minimum
+
+* __Algorithm__
+	* repeat until convergence { $ \theta_j := \theta_j - \alpha \displaystyle \frac{\partial}{\partial \theta_j} J(\theta_0, \theta_1) (\mathrm{for} j = 0 \mathrm{and } j = 1 ) $ }
+	* &alpha;: learning rate: too small &rarr; slow ; too large &rarr; overshoot; proper &rarr; automatically decrease &alpha; over time  
+	* __Correct simultaneous update__
+		* temp0 := $ \theta_0 := \theta_0 - \alpha \displaystyle \frac{\partial}{\partial \theta_0} J(\theta_0, \theta_1) (\mathrm{for} j = 0 \mathrm{and } j = 1 ) $
+		* temp1 := $ \theta_1 := \theta_1 - \alpha \displaystyle \frac{\partial}{\partial \theta_1} J(\theta_0, \theta_1) (\mathrm{for} j = 0 \mathrm{and } j = 1 ) $
+		* $ \theta_0 := $ temp0
+		* $ \theta_1 := $ temp1
+	* __linear regression__: $ \begin{align*} \text{repeat until convergence: } \lbrace & \newline \theta_0 := & \theta_0 - \alpha \frac{1}{m} \sum\limits_{i=1}^{m}(h_\theta(x_{i}) - y_{i}) \newline \theta_1 := & \theta_1 - \alpha \frac{1}{m} \sum\limits_{i=1}^{m}\left((h_\theta(x_{i}) - y_{i}) x_{i}\right) \newline \rbrace& \end{align*} $
+
+* "Batch" Gradient Descent:  
+	* "__Batch__": Each step of gradient descent uses all the training examples
+
+### others: Reinforcement learning, recommender systems
+
+### Practical advice for applying learning algorithms
 
 
 
