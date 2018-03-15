@@ -139,20 +139,21 @@ $$ \dfrac{1}{2m} \displaystyle\sum_{i=1}^m (h_\theta (x^{i}) - y^{i} )^2 = $$
 	} (simultaneously update for every $ j = 0, \dot, n $ )
 * __New algorithm (n &ge; 1)__:  
 	Repeat {  
-		$$ \theta_j := \theta_j - \alpha \displaystyle \frac{1}{m} \sum\limits_{i=1}^{m}\left((h_\theta(x^{(i)}) - y^{(i)}) x_{j}^{(i)}) $$  
+		$$ \theta_j := \theta_j - \alpha \displaystyle \frac{1}{m} \sum\limits_{i=1}^{m}(h_\theta(x^{(i)}) - y^{(i)}) \cdot x_{j}^{(i)} $$  
 	} (simultaneously update $ \theta_j $ for $ j = 0, \dot, n $ )
 
 * Features Scaling  
 	* Let $ x = \displaystyle \frac{x}{ \mathrm{range} S } $  
 	to get every feature into approximately a $ -1 \leq x \leq 1 $ range 
-	* __Mean normalization__: replace $ x_j \mathrm{with} \frac{x_j - \mu_j}{ \mathrm{range} s_{j} } $ (Do not apply to $ x_0 = 1 $)  
+	* __Mean normalization__: replace $ x_j \mathrm{with} \frac{x_j - \mu_j}{ s_{j} } $ (Do not apply to $ x_0 = 1 $)  
 	into $ -0.5 \leq x_j \leq 0.5 $ range 
 * Learning Rate choose  
-	* "Debugging": plot ( $ \underset{ \theta }{ \mathrm{min} } \ J(\theta) $, No. of iterations)  
+	* "Debugging": plot ( $ \displaystyle\underset{ \theta }{ \mathrm{min} } \ J(\theta) $, No. of iterations)  
 	$ J(\theta) $ should decrease after every iteration &rarr; __converge__ (sufficiently &alpha;)  
-	* Not working &rarr; Use smaller &alpha;; slow converge &rarr; use larger &alpha;  
+	* Not working &rarr; Use smaller &alpha;  
+	slow converge &rarr; use larger &alpha;  
 * Create new feature  
-* Change the behavior or curve of our hypothesis function by making it a quadratic, cubic or square root function (or any other form)  
+* Change the behavior or curve of our hypothesis function by making it a quadratic, cubic or square root function or any other form (__Features Scaling__)  
 
 ### To be continued
 
