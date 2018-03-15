@@ -121,12 +121,12 @@ tag: Machine_Learning
 
 * n = number of features  
 * $ x^{(i)} $ = input (features) of $ i^{th} $ training examples  
-	* $ x^{i} = [ x_{1}^{i} \smallskip x_{2}^{i} \smallskip \dots \smallskip x_{n}^{i} ]^{T} \in \mathbb{R}^{n} $  
+	* $ x^{i} = [ x_{1}^{i} \ x_{2}^{i} \ \dots \ x_{n}^{i} ]^{T} \in \mathbb{R}^{n} $  
 * $ x_{j}^{(i)} $ = value of $ j^{th} $ features in $ i^{th} $ training examples  
 * Hypothesis: 
 $$ h_{\theta}(x^{i}) = \theta_{0} + \theta_{1}x_{1}^{i} + \theta_{2}x_{2}^{i} + \dots + \theta_{n}x_{n}^{i} $$  
-	* $ x = [ x_{0} \smallskip x_{1} \smallskip x_{2} \smallskip \dots \smallskip x_{n} ]^{T} \in \mathbb{R}^{n+1} (x_{0}^{i} = 1) $  
-	* $ \theta = [ \theta_{0} \smallskip \theta_{1} \smallskip \theta_{2} \smallskip \dots \smallskip \theta_{n} ]^{T} \in \mathbb{R}^{n+1} $  
+	* $ x = [ x_{0} \ x_{1} \ x_{2} \ \dots \ x_{n} ]^{T} \in \mathbb{R}^{n+1} (x_{0}^{i} = 1) $  
+	* $ \theta = [ \theta_{0} \ \theta_{1} \ \theta_{2} \ \dots \ \theta_{n} ]^{T} \in \mathbb{R}^{n+1} $  
 	* $ h_{\theta}(x) = \theta_{0}x_{0} + \theta_{1}x_{1} + \theta_{2}x_{2} + \dots + \theta_{n}x_{n}  (x_{0}^{i} = 1) $  
 	__$ h_{\theta}(x) = \theta^{T}x $__
 
