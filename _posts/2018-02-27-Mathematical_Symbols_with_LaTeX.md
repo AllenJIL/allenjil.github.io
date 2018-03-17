@@ -49,6 +49,18 @@ tag: Math
 |	$	\int_0^\infty \mathrm{e}^{-x}\,\mathrm{d}x	$	|	\int_0^\infty \mathrm{e}^{-x}\,\mathrm{d}x	|
 |	$	\hat{f}(x,y) = \underset{(s,t)\in S_{xy}}{\mathrm{median}} $ $ \lbrace g(s,t) \rbrace	$	|	\hat{f}(x,y) = \underset{(s,t)\in S_{xy}}{\mathrm{median}}  \lbrace g(s,t) \rbrace	|
 
+| abc &rarr; $	  $ &larr; abc |	  	|
+| abc &rarr; $	\,	$ &larr; abc |	\,	|
+| abc &rarr; $	\!	$ &larr; abc |	\!	|
+| abc &rarr; $	\:	$ &larr; abc |	\:	|
+| abc &rarr; $	\;	$ &larr; abc |	\;	|
+| abc &rarr; $	\enspace	$ &larr; abc |	\enspace	|
+| abc &rarr; $	\quad	$ &larr; abc |	\quad	|
+| abc &rarr; $	\qquad	$ &larr; abc |	\qquad	|
+| abc &rarr; $	\hspace{3em}	$ &larr; abc |	\hspace{3em}	|
+| abc &rarr; $	\hfill	$ &larr; abc |	\hfill	|
+
+
 ### Others:
 
 <img src="/images/symbols_files/1.GIF">

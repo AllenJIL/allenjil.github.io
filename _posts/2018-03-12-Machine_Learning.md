@@ -128,19 +128,19 @@ $$ h_{\theta}(x^{i}) = \theta_{0} + \theta_{1}x_{1}^{i} + \theta_{2}x_{2}^{i} + 
 	* $ x = [ x_{0} \ x_{1} \ x_{2} \ \dots \ x_{n} ]^{T} \in \mathbb{R}^{n+1} \ \ (x_{0}^{i} = 1) $  
 	* $ \theta = [ \theta_{0} \ \theta_{1} \ \theta_{2} \ \dots \ \theta_{n} ]^{T} \in \mathbb{R}^{n+1} $  
 	* $ h_{\theta}(x) = \theta_{0}x_{0} + \theta_{1}x_{1} + \theta_{2}x_{2} + \dots + \theta_{n}x_{n} \ \  (x_{0} = 1) $  
-	__$ h_{\theta}(x) = \theta^{T}x $__  
+	__$ \ \ \ \ \  = \theta^{T}x $__  
 * Parameters: $ \theta_{0}, \theta_{1}, \dots , \theta_{n} $
-* Cost function: $ J(\theta) = J(\theta_{0}, \theta_{1}, \dots , \theta_{n}) = $ 
-$$ \dfrac{1}{2m} \displaystyle\sum_{i=1}^m (h_\theta (x^{i}) - y^{i} )^2 = $$  
+* Cost function: $ J(\theta) = J(\theta_{0}, \theta_{1}, \dots , \theta_{n}) $ 
+$$ \hspace{3em} \dfrac{1}{2m} \displaystyle\sum_{i=1}^m (h_\theta (x^{i}) - y^{i} )^2 = $$  
 	$$ J(\theta) = \dfrac{1}{2m} \displaystyle\sum_{i=1}^{m}((\sum_{j=0}^{n}\theta_j x^{(i)}_j) - y^{(i)})^2 $$  
 * __Gradient descent__:  
 	Repeat {  
 		$$ \theta_j := \theta_j - \alpha \displaystyle \frac{\partial}{\partial \theta_j} J(\theta) $$  
-	} (simultaneously update for every $ j = 0, \dot, n $ )
+	} (simultaneously update for every $ j = 0, \dots, n $ )
 * __New algorithm (n &ge; 1)__:  
 	Repeat {  
 		$$ \theta_j := \theta_j - \alpha \displaystyle \frac{1}{m} \sum\limits_{i=1}^{m}(h_\theta(x^{(i)}) - y^{(i)}) \cdot x_{j}^{(i)} $$  
-	} (simultaneously update $ \theta_j $ for $ j = 0, \dot, n $ )
+	} (simultaneously update $ \theta_j $ for $ j = 0, \dots, n $ )
 
 * Features Scaling  
 	* Let $ x = \displaystyle \frac{x}{ \mathrm{range} S } $  
@@ -154,6 +154,15 @@ $$ \dfrac{1}{2m} \displaystyle\sum_{i=1}^m (h_\theta (x^{i}) - y^{i} )^2 = $$
 	slow converge &rarr; use larger &alpha;  
 * Create new feature  
 * Change the behavior or curve of our hypothesis function by making it a quadratic, cubic or square root function or any other form (__Features Scaling__)  
+
+### Normal equation
+
+* Definition: Method to solve for &theta; analytically  
+* Formula: $ \displaystyle\theta = (X^{T} X)^{-1} X^{T} y $  
+	* Octave: `pinv(x'*x)*x'*y`  
+	* No need feature scaling  
+	* If n is very large, it works very slow, by compute $ n^3 $  
+
 
 ### To be continued
 
