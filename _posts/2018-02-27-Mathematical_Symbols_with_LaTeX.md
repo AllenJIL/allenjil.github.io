@@ -51,14 +51,11 @@ tag: Math
 
 | abc &rarr; $	  $ &larr; abc |	  	|
 | abc &rarr; $	\,	$ &larr; abc |	\,	|
-| abc &rarr; $	\!	$ &larr; abc |	\!	|
-| abc &rarr; $	\:	$ &larr; abc |	\:	|
 | abc &rarr; $	\;	$ &larr; abc |	\;	|
 | abc &rarr; $	\enspace	$ &larr; abc |	\enspace	|
 | abc &rarr; $	\quad	$ &larr; abc |	\quad	|
 | abc &rarr; $	\qquad	$ &larr; abc |	\qquad	|
 | abc &rarr; $	\hspace{3em}	$ &larr; abc |	\hspace{3em}	|
-| abc &rarr; $	\hfill	$ &larr; abc |	\hfill	|
 
 
 ### Others:

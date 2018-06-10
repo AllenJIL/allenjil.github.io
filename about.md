@@ -6,22 +6,22 @@ title: About Me
 
 A Mathematics researcher, love to study new technologies
 <p>
-Current learning Data Science and Analysis
+Current learning: Machine Learning
 <p>
 Understand some basic concepts in Python, R and C++
 
 <p>
   
 
-<h3><strong>Research Interests:</strong></h3>
+<h3><strong>Interests:</strong></h3>
 <p>
 - Partial Differential Equations
 <p> 
 - Data Science
 <p>
-- Mathematical Economics 
+- Machine Learning
 <p>
-- Mathematical Finance
+- Block Chain
 <p>
 <h3><strong>Coursework:</strong></h3>
 <ul>

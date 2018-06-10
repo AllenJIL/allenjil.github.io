@@ -130,9 +130,9 @@ $$ h_{\theta}(x^{i}) = \theta_{0} + \theta_{1}x_{1}^{i} + \theta_{2}x_{2}^{i} + 
 	* $ h_{\theta}(x) = \theta_{0}x_{0} + \theta_{1}x_{1} + \theta_{2}x_{2} + \dots + \theta_{n}x_{n} \ \  (x_{0} = 1) $  
 	__$ \ \ \ \ \  = \theta^{T}x $__  
 * Parameters: $ \theta_{0}, \theta_{1}, \dots , \theta_{n} $
-* Cost function: $ J(\theta) = J(\theta_{0}, \theta_{1}, \dots , \theta_{n}) $ 
-$$ \hspace{3em} \dfrac{1}{2m} \displaystyle\sum_{i=1}^m (h_\theta (x^{i}) - y^{i} )^2 = $$  
-	$$ J(\theta) = \dfrac{1}{2m} \displaystyle\sum_{i=1}^{m}((\sum_{j=0}^{n}\theta_j x^{(i)}_j) - y^{(i)})^2 $$  
+* Cost function: $ J(\theta) = J(\theta_{0}, \theta_{1}, \dots , \theta_{n}) = $ 
+$$ \dfrac{1}{2m} \displaystyle\sum_{i=1}^m (h_\theta (x^{i}) - y^{i} )^2 $$  
+	$$ \hspace{3em} J(\theta) = \dfrac{1}{2m} \displaystyle\sum_{i=1}^{m}((\sum_{j=0}^{n}\theta_j x^{(i)}_j) - y^{(i)})^2 $$  
 * __Gradient descent__:  
 	Repeat {  
 		$$ \theta_j := \theta_j - \alpha \displaystyle \frac{\partial}{\partial \theta_j} J(\theta) $$  
@@ -163,6 +163,10 @@ $$ \hspace{3em} \dfrac{1}{2m} \displaystyle\sum_{i=1}^m (h_\theta (x^{i}) - y^{i
 	* No need feature scaling  
 	* If n is very large, it works very slow, by compute $ n^3 $  
 
+## Classification
+
+* Classification: y = 0 or 1, $$ h_\theta(x) $$ can be >1 or <0  
+* Logistic Regression: $$ 0 \le h_\theta(x) \le 1 $$
 
 ### To be continued
 
