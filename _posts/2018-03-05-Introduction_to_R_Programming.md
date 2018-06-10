@@ -76,22 +76,22 @@ tag: R
 
 ### ggplot2
 
-* Making graphics: 
+* Making graphics:  
 	```
     ggplot(data = data_file_name, aes(x = x_aes_name, y = y_aes_name)) + 
 	geom_line() +  
 	geom_point()
-	```
+	```  
 
-* Making side-by-side box plots: `geom_boxplot()`
+* Making side-by-side box plots: `geom_boxplot()`  
 
-* Making segmented bar plot:
+* Making segmented bar plot:  
 	```
     ggplot(data = data_file_name, aes(x = x_aes_name, fill = variable_name)) + 
 	geom_bar()
 	```
 
-* Making histogram:
+* Making histogram:  
 	```
     ggplot(data = data_file_name, aes(x = x_aes_name)) + 
 	geom_histogram(binwidth = #number )

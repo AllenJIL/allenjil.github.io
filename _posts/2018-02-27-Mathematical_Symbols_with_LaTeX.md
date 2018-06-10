@@ -38,7 +38,7 @@ tag: Math
 |	$	\frac{ x^{2} }{ k+1 }	$	|	\frac{ x^{2} }{ k+1 }	|
 |	$	x^{ \frac{2}{k+1} }	$	|	x^{ \frac{2}{k+1} }	|
 |	$	x^{ 1/2 }	$	|	x^{ 1/2 }	|
-|	$	\frac{n!}{k!(n-k)!} $ $= \binom{n}{k}	$	|	\frac{n!}{k!(n-k)!}  = \binom{n}{k}	|
+|	$	\displaystyle\frac{n!}{k!(n-k)!} = \binom{n}{k}	$	|	\displaystyle\frac{n!}{k!(n-k)!}  = \binom{n}{k}	|
 
 |	$	\sum_{i=1}^{n}	$	|	\sum_{i=1}^{n}	|
 |	$	\int_{0}^{\frac{\pi}{2}}	$	|	\int_{0}^{\frac{\pi}{2}}	|

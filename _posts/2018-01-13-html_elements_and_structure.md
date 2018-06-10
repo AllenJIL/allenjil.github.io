@@ -6,7 +6,9 @@ date: 2018-01-13
 tag: HTML
 ---
 
-<h2><strong>Elements:</strong></h2>
+<h2><strong>Elements:</strong></h2>  
+
+
 &lt;!DOCTYPE html&gt; This declaration is an instruction. It tells the browser what type of document to expect, along with what version of HTML is being used in the document.
 
 &lt;html&gt;&lt;/html&gt; Anything between the tags will be interpreted as HTML code.
@@ -50,7 +52,8 @@ tag: HTML
 &lt;nav&gt;Navigation is used to wrap these links in order to organize the content on your web page.&lt;/nav&gt; semantic tags
 
 <hr />
-<h2><strong>Table:</strong></h2>
+<h2><strong>Table:</strong></h2>  
+
 &lt;table&gt;&lt;/table&gt; contains all of the tabular data you plan on displaying
 
 &lt;tbody&gt;&lt;tr&gt;&lt;/tr&gt;&lt;/tbody&gt; contain the all of the table's data, excluding the table headings
