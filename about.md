@@ -43,9 +43,8 @@ Applied Probability, Applied Statistics for Engineers and Scientist</li>
 Macroeconomic Theory, Microeconomics Theory with Calculus</li>
 </ul>
 <p> 
-
-**********
-
+	
+<hr />
 <h3><strong>关于我:</strong></h3>
 
 <p> 
