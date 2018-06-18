@@ -175,18 +175,19 @@ $$ \dfrac{1}{2m} \displaystyle\sum_{i=1}^m (h_\theta (x^{i}) - y^{i} )^2 $$
 
 * __Logistic Regression Model__  
 	* Sigmoid(Logistic) function: $$ g(Z) = \displaystyle\frac{1}{1+e^{-z}} $$  
-	* $$ h_\theta(x) = g(\theta^{T}x) = \displaystyle\frac{1}{1+e^{-\theta^{T}x}} $$  
+	* $ h_\theta(x) = g(\theta^{T}x) = \displaystyle\frac{1}{1+e^{-\theta^{T}x}} $  
 	<img src="/images/Machine_Learning/Sigmoid_function.PNG">  
 	* $$ h_\theta(x) = $$ estimated __probability__ that y = 1 on input x  
-	* $$ h_\theta(x) = P(y=1 | x ; \theta) = 1 - P(y=0 | x ; \theta) $$  
+	* $ h_\theta(x) = P(y=1 | x ; \theta) = 1 - P(y=0 | x ; \theta) $  
 
 * __Decision boundary__  
 	* To get discrete 0 or 1 classification, can translate the output of the hypothesis function as:
-		* $$ h_\theta(x) \geq 0.5 \rightarrow y = 1 $$  
-		* $$ h_\theta(x) \leq 0.5 \rightarrow y = 0 $$  
+		* $ h_\theta(x) \geq 0.5 \rightarrow y = 1 $  
+		* $ h_\theta(x) \leq 0.5 \rightarrow y = 0 $  
+	* $$ g(z) \geq 0.5 $$ when $$ z \geq 0 $$ that $$ h_\theta(x) = g(\theta^T x) \geq 0.5 $$ when $$ \theta^T x \geq 0 $$  
 	* From these statements we can say:  
-		* $$ \theta^T x \geq 0 \Rightarrow y = 1 $$  
-		* $$ \theta^T x \leq 0 \Rightarrow y = 0 $$  
+		* $ \theta^T x \geq 0 \Rightarrow y = 1 $  
+		* $ \theta^T x \leq 0 \Rightarrow y = 0 $  
 	<img src="/images/Machine_Learning/Decision_boundary.PNG">  
 	<img src="/images/Machine_Learning/Nonlinear_Decision_boundary.PNG">  
 
