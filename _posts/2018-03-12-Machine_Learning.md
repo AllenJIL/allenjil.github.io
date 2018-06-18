@@ -178,7 +178,7 @@ $$ \dfrac{1}{2m} \displaystyle\sum_{i=1}^m (h_\theta (x^{i}) - y^{i} )^2 $$
 	* $ h_\theta(x) = g(\theta^{T}x) = \displaystyle\frac{1}{1+e^{-\theta^{T}x}} $  
 	<img src="/images/Machine_Learning/Sigmoid_function.PNG">  
 	* $$ h_\theta(x) = $$ estimated __probability__ that y = 1 on input x  
-	* $$ h_\theta(x) = P(y=1 | x ; \theta)$$ $$ = 1 - P(y=0 | x ; \theta) $$  
+	* $$ h_\theta(x) = P(y=1 | x ; \theta) = 1 - P(y=0 | x ; \theta) $$  
 
 * __Decision boundary__  
 	* To get discrete 0 or 1 classification, can translate the output of the hypothesis function as:
