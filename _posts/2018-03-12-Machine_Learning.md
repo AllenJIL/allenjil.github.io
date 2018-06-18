@@ -184,7 +184,6 @@ $$ \dfrac{1}{2m} \displaystyle\sum_{i=1}^m (h_\theta (x^{i}) - y^{i} )^2 $$
 	* To get discrete 0 or 1 classification, can translate the output of the hypothesis function as:
 		* $$ h_\theta(x) \geq 0.5 \rightarrow y = 1 $$  
 		* $$ h_\theta(x) \leq 0.5 \rightarrow y = 0 $$  
-	* $$ g(z) \geq 0.5 when z \geq 0 $$ that $$ h_\theta(x) = g(\theta^T x) \geq 0.5 when \theta^T x \geq 0 $$  
 	* From these statements we can say:  
 		* $$ \theta^T x \geq 0 \Rightarrow y = 1 $$  
 		* $$ \theta^T x \leq 0 \Rightarrow y = 0 $$  
