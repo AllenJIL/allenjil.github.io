@@ -7,7 +7,7 @@ tag: Machine_Learning
 ---
 [Coursera.org]: <https://www.coursera.org/learn/machine-learning/home/welcome/> "Coursera"
 
-> Coursera.org 机器学习 笔记
+> Coursera.org 机器学习 笔记  
 > These are the notes by learning Andrew Ng's "Machine Learning" from [Coursera.org] for future review
 
 **********
@@ -165,8 +165,33 @@ $$ \dfrac{1}{2m} \displaystyle\sum_{i=1}^m (h_\theta (x^{i}) - y^{i} )^2 $$
 
 ## Classification
 
-* Classification: y = 0 or 1, $$ h_\theta(x) $$ can be >1 or <0  
-* Logistic Regression: $$ 0 \le h_\theta(x) \le 1 $$
+* __Binary classification__ problem: y = 0 or 1  
+* Use linear regression:  
+	* To map all predictions greater than 0.5 as a 1 and all less than 0.5 as a 0  
+	* $$ h_\theta(x) $$ can be >1 or <0, so it does not work well  
+* Logistic Regression: make $$ 0 \le h_\theta(x) \le 1 $$
+
+### Logistic Regression  
+
+* __Logistic Regression Model__  
+	* Sigmoid(Logistic) function: $$ g(Z) = \displaystyle\frac{1}{1+e^{-z}} $$  
+	* $$ h_\theta(x) = g(\theta^{T}x) = \displaystyle\frac{1}{1+e^{-\theta^{T}x}} $$  
+	<img src="/images/Machine_Learning/Sigmoid_function.PNG">  
+	* $$ h_\theta(x) = $$ estimated __probability__ that y = 1 on input x  
+	* $$ h_\theta(x) = P(y=1 | x ; \theta) = 1 - P(y=0 | x ; \theta) $$  
+
+* __Decision boundary__  
+	* To get discrete 0 or 1 classification, can translate the output of the hypothesis function as:
+		* $$ h_\theta(x) \geq 0.5 \rightarrow y = 1 $$  
+		* $$ h_\theta(x) \leq 0.5 \rightarrow y = 0 $$  
+	* $$ g(z) \geq 0.5 when z \geq 0 $$ that $$ h_\theta(x) = g(\theta^T x) \geq 0.5 when \theta^T x \geq 0 $$  
+	* From these statements we can say:  
+		* $$ \theta^T x \geq 0 \Rightarrow y = 1 $$  
+		* $$ \theta^T x \leq 0 \Rightarrow y = 0 $$  
+	<img src="/images/Machine_Learning/Decision_boundary.PNG">  
+	<img src="/images/Machine_Learning/Nonlinear_Decision_boundary.PNG">  
+
+
 
 ### To be continued
 
