@@ -173,10 +173,10 @@ $$ \dfrac{1}{2m} \displaystyle\sum_{i=1}^m (h_\theta (x^{i}) - y^{i} )^2 $$
 
 ### Logistic Regression  
 
-* __Logistic Regression Model__  
+* __Clasification and Representation__  
 	* Sigmoid(Logistic) function: $$ g(Z) = \displaystyle\frac{1}{1+e^{-z}} $$  
 	* $ h_\theta(x) = g(\theta^{T}x) = \displaystyle\frac{1}{1+e^{-\theta^{T}x}} $  
-	<img src="/images/Machine_Learning/Sigmoid_function.PNG">  
+<img src="/images/Machine_Learning/Sigmoid_function.PNG">  
 	* $$ h_\theta(x) = $$ estimated __probability__ that y = 1 on input x  
 	* $$ h_\theta(x) = P(y=1 | x ; \theta) = 1 - P(y=0 | x ; \theta) $$  
 
@@ -188,9 +188,51 @@ $$ \dfrac{1}{2m} \displaystyle\sum_{i=1}^m (h_\theta (x^{i}) - y^{i} )^2 $$
 	* From these statements we can say:  
 		* $ \theta^T x \geq 0 \Rightarrow y = 1 $  
 		* $ \theta^T x \leq 0 \Rightarrow y = 0 $  
-	<img src="/images/Machine_Learning/Decision_boundary.PNG">  
-	<img src="/images/Machine_Learning/Nonlinear_Decision_boundary.PNG">  
+<img src="/images/Machine_Learning/Decision_boundary.PNG">  
+<img src="/images/Machine_Learning/Nonlinear_Decision_boundary.PNG">  
 
+* __Cost function__  
+	* $ J(\theta) = \displaystyle\dfrac{1}{m} \sum_{i=1}^m \mathrm{Cost}(h_\theta(x^{(i)}),y^{(i)}) $  
+	* $$ \mathrm{Cost}(h_\theta(x),y) = -\log(h_\theta(x)) $$ if y = 1  
+	* $$ \mathrm{Cost}(h_\theta(x),y) = -\log(1-h_\theta(x)) $$ if y = 0  
+<img src="/images/Machine_Learning/LG_cost_function.PNG">  
+	* Compress: $$ \mathrm{Cost}(h_\theta(x),y) = -y\log(h_\theta(x)) -(1-y)\log(1-h_\theta(x)) $$  
+	* Vectorized implementation:  
+	 $ h = g(X\theta) $  
+	 $ J(\theta) = \frac{1}{m} \cdot (-y^{T}\log(h)-(1-y)^{T}\log(1-h)) $  
+
+* __Gradient Descent__  
+	* _Repeat_ {  
+	general form:  
+	$ \theta_j := \theta_j - \alpha \dfrac{\partial}{\partial \theta_j}J(\theta) $  
+	derivative part using calculus:  
+	$ \theta_j := \theta_j - \frac{\alpha}{m} \sum_{i=1}^m (h_\theta(x^{(i)}) - y^{(i)}) x_j^{(i)} $  
+	}  
+	* Vectorized implementation:  
+	$ \theta := \theta - \frac{\alpha}{m} X^T (g(X\theta) - \vec y $  
+
+* __Optimization algorithm__  
+	* Gradient Descent  
+	* Conjugate gradient  
+	* BFGS  
+	* L-BFGS  
+
+* _Code_ in __Octave__:  
+	`function [jVal, gradient] = costFunction(theta)`  
+	`jVal = [...code to compute J(theta)...];`  
+	`gradient = [...code to compute derivative of J(theta)...];
+end`  
+	* use octave's 'fminunc' optimization algorithm  
+	`options = optimset('GradObj', 'on', 'MaxIter', 100);`  
+	`initialTheta = zeros(2,1);`  
+	`[optTheta, functionVal, exitFlag] = fminunc(@costFunction, initialTheta, options);`  
+
+* Multiclass Classification: __One-vs-all__  
+	* Train a logistic regression classifier $$ h_\theta^{(i)}(x) $$ for each class i to predict the probability that y = i  
+		$ h_\theta^{(i)}(x) = P(y = i| x;\theta) (i=1,2,\dots,n) $
+	* On a new input x, to make a prediction, pick the class i that maximizes  
+		prediction = $$ \displaystyle\underset{i}{\mathrm{max}} h_\theta^{(i)}(x) $$  
+<img src="/images/Machine_Learning/1vall.PNG">  
 
 
 ### To be continued
