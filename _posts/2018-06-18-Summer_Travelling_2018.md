@@ -19,7 +19,8 @@ __Hotel__: Beijing Airport	Zhong Yi Pengao
 ### Day 2	Friday
 
 Beijing West Railway Station 北京火车西站  
-__Train__ to Xi'an (5 hours)
+__Train__ to Xi'an (about 5 hours)  
+Xi'an North Railway Station 西安火车北站  
 
 ## Xi'an 西安
 
@@ -43,7 +44,10 @@ Plans: Terracotta, Banpo, Huashan, Huaqing Palace,
 
 ### Day 6	Tuesday
 
-__Train__ to Qingdao (one day)
+Xi'an North Railway Station 西安火车北站  
+__Train__ to Qingdao (near 9 hours)  
+(12:56 ~ 21:43) or (13:43 ~ 22:32)  
+Qingdao North Railway Station 青岛火车北站  
 
 ## Qingdao 青岛
 
@@ -66,7 +70,10 @@ Plans: Beer Museum, Zhanqiao(Trestle Bridge), May 4th square,
 
 
 __Evening__  
-__Train__ to Jinan (2 hours)
+Qingdao Railway Station 青岛火车站  
+OR Qingdao North Railway Station 青岛火车北站  
+__Train__ to Jinan (3 hours or 4 hours)  
+Jinan Railway Station 济南火车站  
 
 ## Jinan 济南  
 
@@ -85,7 +92,10 @@ __Hotel__: Aman at Summer Palace
 ### Day 11	Sunday
 
 __Morning__  
+Jinan West Railway Station 济南火车西站  
+OR Jinan Railway Station 济南火车站  
 __Train__ to Beijing (2 hours)  
+Beijing South Railway Station 北京火车南站  
 
 __Afternoon__  
 Summer Palace	

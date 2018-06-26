@@ -2,7 +2,7 @@
 layout: post
 title: "Machine Learning"
 description: "Coursera.org 机器学习 笔记"
-date: 2018-03-12
+date: 2018-06-20
 tag: Machine_Learning
 ---
 [Coursera.org]: <https://www.coursera.org/learn/machine-learning/home/welcome/> "Coursera"
@@ -203,13 +203,13 @@ $$ \dfrac{1}{2m} \displaystyle\sum_{i=1}^m (h_\theta (x^{i}) - y^{i} )^2 $$
 
 * __Gradient Descent__  
 	* _Repeat_ {  
-	general form:  
+	_general form_:  
 	$ \theta_j := \theta_j - \alpha \dfrac{\partial}{\partial \theta_j}J(\theta) $  
-	derivative part using calculus:  
+	_derivative part using calculus_:  
 	$ \theta_j := \theta_j - \frac{\alpha}{m} \sum_{i=1}^m (h_\theta(x^{(i)}) - y^{(i)}) x_j^{(i)} $  
 	}  
 	* Vectorized implementation:  
-	$ \theta := \theta - \frac{\alpha}{m} X^T (g(X\theta) - \vec y $  
+	$ \theta := \theta - \frac{\alpha}{m} X^T (g(X\theta) - \vec y) $  
 
 * __Optimization algorithm__  
 	* Gradient Descent  
@@ -217,18 +217,18 @@ $$ \dfrac{1}{2m} \displaystyle\sum_{i=1}^m (h_\theta (x^{i}) - y^{i} )^2 $$
 	* BFGS  
 	* L-BFGS  
 
-* _Code_ in __Octave__:  
+* _Codes_ in __Octave__:  
 	`function [jVal, gradient] = costFunction(theta)`  
 	`jVal = [...code to compute J(theta)...];`  
 	`gradient = [...code to compute derivative of J(theta)...];
 end`  
-	* use octave's 'fminunc' optimization algorithm  
+	* use octave's '_fminunc_' optimization algorithm  
 	`options = optimset('GradObj', 'on', 'MaxIter', 100);`  
 	`initialTheta = zeros(2,1);`  
 	`[optTheta, functionVal, exitFlag] = fminunc(@costFunction, initialTheta, options);`  
 
 * Multiclass Classification: __One-vs-all__  
-	* Train a logistic regression classifier $$ h_\theta^{(i)}(x) $$ for each class i to predict the probability that y = i  
+	* Train a logistic regression classifier $$ h_\theta^{(i)}(x) $$ for each class i to predict the probability that $$ y = i $$  
 		$ h_\theta^{(i)}(x) = P(y = i| x;\theta) (i=1,2,\dots,n) $
 	* On a new input x, to make a prediction, pick the class i that maximizes  
 		prediction = $$ \displaystyle\underset{i}{\mathrm{max}} h_\theta^{(i)}(x) $$  
