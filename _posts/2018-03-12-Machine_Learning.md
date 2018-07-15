@@ -234,6 +234,42 @@ end`
 		prediction = $$ \displaystyle\underset{i}{\mathrm{max}} h_\theta^{(i)}(x) $$  
 <img src="/images/Machine_Learning/1vall.PNG">  
 
+## Overfitting  
+
+<img src="/images/Machine_Learning/overfit.PNG">  
+* "Underfit" ("high bias"): not fit the training data very well  
+* “Just right"  
+* "Overfit" ("high variance"): may fit the trainning set very well, but fail to generalize to new examples  
+
+### Regularization  
+
+* Using the cost function with the extra summation, we can smooth the output of our hypothesis function to reduce overfitting.  
+$ min_\theta\, \dfrac{1}{2m}\, \displaystyle[\sum_{i=1}^m (h_\theta(x^{(i)}) - y^{(i)})^2 + \lambda \sum_{j=1}^n \theta_j^2] $  
+* $$ \lambda $$, or lambda is the __regularization parameter__  
+* If lambda is too large, it may cause underfitting.  
+
+### Linear Regression  
+
+* __Gradient Descent__:  
+	Repeat {
+		$ \theta_0 := \theta_0 - \alpha\, \frac{1}{m} \displaystyle\sum_{i=1}^m (h_\theta(x^{(i)}) - y^{(i)})x_0^{(i)} $  
+		$ \theta_j := \theta_j - \alpha\, [ ( \frac{1}{m}\, \sum_{i=1}^m (h_\theta(x^{(i)}) - y^{(i)})x_j^{(i)}) + \frac{\lambda}{m}\theta_j ] $ 
+		$ j \in \lbrace 1,2...n\rbrace $  
+		$ \Rrightarrow \theta_j := \theta_j (1- \alpha\,\frac{\lambda}{m}) - \alpha\, \frac{1}{m}\, \sum_{i=1}^m (h_\theta(x^{(i)}) $  
+	}
+
+* __Normal Equation__:  
+	$ \theta = ( X^TX + \lambda \cdot L )^{-1} X^Ty $  
+	$ \text{where}\, \, L =  $ 
+	$$ 
+		\begin{bmatrix} 
+		0 & & & & \newline 
+		& 1 & & & \newline 
+		& & 1 & & \newline 
+		& & & \ddots & \newline 
+		& & & & 1 
+		\end{bmatrix}
+	$$  
 
 ### To be continued
 
