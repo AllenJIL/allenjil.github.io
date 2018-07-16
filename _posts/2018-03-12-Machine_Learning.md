@@ -243,7 +243,7 @@ end`
 
 ### Regularization  
 
-* Using the cost function with the extra summation, we can smooth the output of our hypothesis function to reduce overfitting.  
+* Using the __cost function__ with the extra summation, we can smooth the output of our hypothesis function to reduce overfitting.  
 $ min_\theta\, \dfrac{1}{2m}\, \displaystyle[\sum_{i=1}^m (h_\theta(x^{(i)}) - y^{(i)})^2 + \lambda \sum_{j=1}^n \theta_j^2] $  
 * $$ \lambda $$, or lambda is the __regularization parameter__  
 * If lambda is too large, it may cause underfitting.  
@@ -251,11 +251,11 @@ $ min_\theta\, \dfrac{1}{2m}\, \displaystyle[\sum_{i=1}^m (h_\theta(x^{(i)}) - y
 ### Linear Regression  
 
 * __Gradient Descent__:  
-	Repeat {
+	Repeat {  
 		$ \theta_0 := \theta_0 - \alpha\, \frac{1}{m} \displaystyle\sum_{i=1}^m (h_\theta(x^{(i)}) - y^{(i)})x_0^{(i)} $  
 		$ \theta_j := \theta_j - \alpha\, [ ( \frac{1}{m}\, \sum_{i=1}^m (h_\theta(x^{(i)}) - y^{(i)})x_j^{(i)}) + \frac{\lambda}{m}\theta_j ] $ 
-		$ j \in \lbrace 1,2...n\rbrace $  
-		$ \Rrightarrow \theta_j := \theta_j (1- \alpha\,\frac{\lambda}{m}) - \alpha\, \frac{1}{m}\, \sum_{i=1}^m (h_\theta(x^{(i)}) $  
+		$ \quad j \in \lbrace 1,2...n\rbrace $  
+		$ \Rrightarrow \theta_j := \theta_j (1- \alpha\,\frac{\lambda}{m}) - \alpha\, \frac{1}{m}\, \sum_{i=1}^m (h_\theta(x^{(i)}) - y^{(i)})x_j^{(i)}) $  
 	}
 
 * __Normal Equation__:  
@@ -271,7 +271,22 @@ $ min_\theta\, \dfrac{1}{2m}\, \displaystyle[\sum_{i=1}^m (h_\theta(x^{(i)}) - y
 		\end{bmatrix}
 	$$  
 
-### To be continued
+### Logistic Regression  
+
+* __Cost function__:
+	* $ J(\theta) = - \frac{1}{m} \sum_{i=1}^m [ y^{(i)}\, \log (h_\theta (x^{(i)})) + (1 - y^{(i)})\, \log (1 - h_\theta(x^{(i)}))] + \frac{\lambda}{2m}\sum_{j=1}^n \theta_j^2 $  
+	* $$ \sum_{j=1}^n \theta_j^2 $$ means to explicitly exclude the bias term $$ \theta_0 $$  
+
+* __Gradient descent__:  
+	* $ h_\theta(x) = \displaystyle\frac{1}{1+e^{-\theta^{T}x}} $  
+	Repeat {  
+		$ \theta_0 := \theta_0 - \alpha\, \frac{1}{m} \displaystyle\sum_{i=1}^m (h_\theta(x^{(i)}) - y^{(i)})x_0^{(i)} $  
+		$ \theta_j := \theta_j (1- \alpha\,\frac{\lambda}{m}) - \alpha\, \frac{1}{m}\, \sum_{i=1}^m (h_\theta(x^{(i)}) - y^{(i)})x_j^{(i)}) $  
+		$ \quad j \in \lbrace 1,2...n\rbrace $  
+	}
+
+
+## To be continued
 
 * others: Reinforcement learning, recommender systems
 
