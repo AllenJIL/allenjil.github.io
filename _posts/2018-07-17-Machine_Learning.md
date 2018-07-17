@@ -2,7 +2,7 @@
 layout: post
 title: "Machine Learning"
 description: "Coursera.org 机器学习 笔记"
-date: 2018-03-12
+date: 2018-07-17
 tag: Machine_Learning
 ---
 [Coursera.org]: <https://www.coursera.org/learn/machine-learning/home/welcome/> "Coursera"
@@ -196,20 +196,20 @@ $$ \dfrac{1}{2m} \displaystyle\sum_{i=1}^m (h_\theta (x^{i}) - y^{i} )^2 $$
 	* $$ \mathrm{Cost}(h_\theta(x),y) = -\log(h_\theta(x)) $$ if y = 1  
 	* $$ \mathrm{Cost}(h_\theta(x),y) = -\log(1-h_\theta(x)) $$ if y = 0  
 <img src="/images/Machine_Learning/LG_cost_function.PNG">  
-	* Compress: $$ \mathrm{Cost}(h_\theta(x),y) = -y\log(h_\theta(x)) -(1-y)\log(1-h_\theta(x)) $$  
+	* Compress: $ \displaystyle \mathrm{Cost}(h_\theta(x),y) = -y\log(h_\theta(x)) -(1-y)\log(1-h_\theta(x)) $  
 	* Vectorized implementation:  
 	 $ h = g(X\theta) $  
-	 $ J(\theta) = \frac{1}{m} \cdot (-y^{T}\log(h)-(1-y)^{T}\log(1-h)) $  
+	 $ \displaystyle J(\theta) = \frac{1}{m} \cdot (-y^{T}\log(h)-(1-y)^{T}\log(1-h)) $  
 
 * __Gradient Descent__  
 	* _Repeat_ {  
 	_general form_:  
-	$ \theta_j := \theta_j - \alpha \dfrac{\partial}{\partial \theta_j}J(\theta) $  
+	$ \displaystyle \theta_j := \theta_j - \alpha \dfrac{\partial}{\partial \theta_j}J(\theta) $  
 	_derivative part using calculus_:  
-	$ \theta_j := \theta_j - \frac{\alpha}{m} \sum_{i=1}^m (h_\theta(x^{(i)}) - y^{(i)}) x_j^{(i)} $  
+	$ \displaystyle \theta_j := \theta_j - \frac{\alpha}{m} \sum_{i=1}^m (h_\theta(x^{(i)}) - y^{(i)}) x_j^{(i)} $  
 	}  
 	* Vectorized implementation:  
-	$ \theta := \theta - \frac{\alpha}{m} X^T (g(X\theta) - \vec y) $  
+	$\displaystyle \theta := \theta - \frac{\alpha}{m} X^T (g(X\theta) - \vec y) $  
 
 * __Optimization algorithm__  
 	* Gradient Descent  
@@ -231,7 +231,7 @@ end`
 	* Train a logistic regression classifier $$ h_\theta^{(i)}(x) $$ for each class i to predict the probability that $$ y = i $$  
 		$ h_\theta^{(i)}(x) = P(y = i| x;\theta) (i=1,2,\dots,n) $
 	* On a new input x, to make a prediction, pick the class i that maximizes  
-		prediction = $$ \displaystyle\underset{i}{\mathrm{max}} h_\theta^{(i)}(x) $$  
+		prediction = $ \displaystyle\underset{i}{\mathrm{max}} h_\theta^{(i)}(x) $  
 <img src="/images/Machine_Learning/1vall.PNG">  
 
 ## Overfitting  
@@ -252,14 +252,14 @@ $ min_\theta\, \dfrac{1}{2m}\, \displaystyle[\sum_{i=1}^m (h_\theta(x^{(i)}) - y
 
 * __Gradient Descent__:  
 	Repeat {  
-		$ \theta_0 := \theta_0 - \alpha\, \frac{1}{m} \displaystyle\sum_{i=1}^m (h_\theta(x^{(i)}) - y^{(i)})x_0^{(i)} $  
-		$ \theta_j := \theta_j - \alpha\, [ ( \frac{1}{m}\, \sum_{i=1}^m (h_\theta(x^{(i)}) - y^{(i)})x_j^{(i)}) + \frac{\lambda}{m}\theta_j ] $ 
-		$ \quad j \in \lbrace 1,2...n\rbrace $  
-		$ \Rrightarrow \theta_j := \theta_j (1- \alpha\,\frac{\lambda}{m}) - \alpha\, \frac{1}{m}\, \sum_{i=1}^m (h_\theta(x^{(i)}) - y^{(i)})x_j^{(i)}) $  
+		$ \displaystyle\theta_0 := \theta_0 - \alpha\, \frac{1}{m} \displaystyle\sum_{i=1}^m (h_\theta(x^{(i)}) - y^{(i)})x_0^{(i)} $  
+		$ \displaystyle\theta_j := \theta_j - \alpha\, [ ( \frac{1}{m}\, \sum_{i=1}^m (h_\theta(x^{(i)}) - y^{(i)})x_j^{(i)}) + \frac{\lambda}{m}\theta_j ] $ 
+		$ \displaystyle\quad j \in \lbrace 1,2...n\rbrace $  
+		$ \displaystyle\Rrightarrow \theta_j := \theta_j (1- \alpha\,\frac{\lambda}{m}) - \alpha\, \frac{1}{m}\, \sum_{i=1}^m (h_\theta(x^{(i)}) - y^{(i)})x_j^{(i)}) $  
 	}
 
 * __Normal Equation__:  
-	$ \theta = ( X^TX + \lambda \cdot L )^{-1} X^Ty $  
+	$ \displaystyle\theta = ( X^TX + \lambda \cdot L )^{-1} X^Ty $  
 	$ \text{where}\, \, L =  $ 
 	$$ 
 		\begin{bmatrix} 
@@ -274,7 +274,7 @@ $ min_\theta\, \dfrac{1}{2m}\, \displaystyle[\sum_{i=1}^m (h_\theta(x^{(i)}) - y
 ### Logistic Regression  
 
 * __Cost function__:
-	* $ J(\theta) = - \frac{1}{m} \sum_{i=1}^m [ y^{(i)}\, \log (h_\theta (x^{(i)})) + (1 - y^{(i)})\, \log (1 - h_\theta(x^{(i)}))] + \frac{\lambda}{2m}\sum_{j=1}^n \theta_j^2 $  
+	* $ J(\theta) = - \displaystyle\frac{1}{m} \sum_{i=1}^m [ y^{(i)}\, \log (h_\theta (x^{(i)})) + (1 - y^{(i)})\, \log (1 - h_\theta(x^{(i)}))] + \frac{\lambda}{2m}\sum_{j=1}^n \theta_j^2 $  
 	* $$ \sum_{j=1}^n \theta_j^2 $$ means to explicitly exclude the bias term $$ \theta_0 $$  
 
 * __Gradient descent__:  
