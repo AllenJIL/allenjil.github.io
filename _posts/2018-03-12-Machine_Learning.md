@@ -76,15 +76,15 @@ tag: Machine_Learning
 
 ### Cost function
 
-* Idea: Choose $$ \theta_{0}, \theta_{1} $ so that $ h_{\theta}(x) $$ is close to y for our training examples (x,y)  
-	* $$ \underset{ \theta_{0}, \ \theta_{1} }{ \mathrm{minimize} } $$ 
+* Idea: Choose $$ \theta_{0}, \theta_{1} $$ so that $$ h_{\theta}(x) $$ is close to y for our training examples (x,y)  
+	* $ \underset{ \theta_{0}, \ \theta_{1} }{ \mathrm{minimize} } $ 
 	$ \dfrac{1}{2m} \displaystyle\sum_{i=1}^m ( \hat{y}^{i}- y^{i} )^2 = $ 
 	$ \dfrac{1}{2m} \displaystyle\sum _{i=1}^m (h_\theta (x^{i}) - y^{i} )^2 $
 	* $ h_{\theta}(x^{i}) = \theta_{0} + \theta_{1}x^{i} $  
 
 * __Cost function__: $$ J(\theta_0, \theta_1) = $$ 
- $ \dfrac{1}{2m} \displaystyle\sum _{i=1}^m ( \hat{y}^{i}- y^{i} )^2 = $ 
- $ \dfrac{1}{2m} \displaystyle\sum _{i=1}^m (h_\theta (x^{i}) - y^{i} )^2 $  
+$ \dfrac{1}{2m} \displaystyle\sum _{i=1}^m ( \hat{y}^{i}- y^{i} )^2 = $ 
+$ \dfrac{1}{2m} \displaystyle\sum _{i=1}^m (h_\theta (x^{i}) - y^{i} )^2 $  
 	* also called __squared error cost function__ or __squared error function__    
 
 * __Goal__: $$ \displaystyle \underset{ \theta_{0}, \ \theta_{1} }{ \mathrm{minimize} } J(\theta_0, \theta_1) $$  
@@ -177,8 +177,8 @@ $ \dfrac{1}{2m} \displaystyle\sum_{i=1}^m (h_\theta (x^{i}) - y^{i} )^2 $
 	* Sigmoid(Logistic) function: $$ g(Z) = \displaystyle\frac{1}{1+e^{-z}} $$  
 	* $ h_\theta(x) = g(\theta^{T}x) = \displaystyle\frac{1}{1+e^{-\theta^{T}x}} $  
 <img src="/images/Machine_Learning/Sigmoid_function.PNG">  
-	* $$ h_\theta(x) = $$ estimated __probability__ that y = 1 on input x  
-	* $$ h_\theta(x) = P(y=1 | x ; \theta) = 1 - P(y=0 | x ; \theta) $$  
+	* $$ h_\theta(x) = $$ estimated __probability__ that y = 1 on input $$ x $$  
+	* $ h_\theta(x) = P(y=1 | x ; \theta) = 1 - P(y=0 | x ; \theta) $  
 
 * __Decision boundary__  
 	* To get discrete 0 or 1 classification, can translate the output of the hypothesis function as:
