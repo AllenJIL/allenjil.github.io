@@ -76,18 +76,16 @@ tag: Machine_Learning
 
 ### Cost function
 
-* Idea: Choose $$ \theta_{0}, \theta_{1} $$ so that $$ h_{\theta}(x) $$ is close to y for our training examples (x,y)  
-	* $ \underset{ \theta_{0}, \ \theta_{1} }{ \mathrm{minimize} } $ 
-	$ \dfrac{1}{2m} \displaystyle\sum_{i=1}^m ( \hat{y}^{i}- y^{i} )^2 = $ 
-	$ \dfrac{1}{2m} \displaystyle\sum _{i=1}^m (h_\theta (x^{i}) - y^{i} )^2 $
+* Idea: Choose $$ \theta_{0}, \theta_{1} $$ so that $$ h_{\theta}(x) $$ is close to y for our training examples $$ (x,y) $$  
+	* $ \underset{ \theta_{0}, \ \theta_{1} }{ \mathrm{minimize} } \dfrac{1}{2m} \displaystyle\sum_{i=1}^m ( \hat{y}^{i}- y^{i} )^2 = \dfrac{1}{2m} \displaystyle\sum _{i=1}^m (h_\theta (x^{i}) - y^{i} )^2 $
 	* $ h_{\theta}(x^{i}) = \theta_{0} + \theta_{1}x^{i} $  
 
-* __Cost function__: $$ J(\theta_0, \theta_1) = $$ 
-$ \dfrac{1}{2m} \displaystyle\sum _{i=1}^m ( \hat{y}^{i}- y^{i} )^2 = $ 
-$ \dfrac{1}{2m} \displaystyle\sum _{i=1}^m (h_\theta (x^{i}) - y^{i} )^2 $  
+* __Cost function__: 
+$ J(\theta_0, \theta_1) = \dfrac{1}{2m} \displaystyle\sum _{i=1}^m ( \hat{y}^{i}- y^{i} )^2 = \dfrac{1}{2m} \displaystyle\sum _{i=1}^m (h_\theta (x^{i}) - y^{i} )^2 $  
 	* also called __squared error cost function__ or __squared error function__    
 
-* __Goal__: $$ \displaystyle \underset{ \theta_{0}, \ \theta_{1} }{ \mathrm{minimize} } J(\theta_0, \theta_1) $$  
+* __Goal__: 
+$ \displaystyle \underset{ \theta_{0}, \ \theta_{1} }{ \mathrm{minimize} } J(\theta_0, \theta_1) $  
 
 * __contour plots__ or __contour figures__：  
 <img src="/images/Machine_Learning/contour.PNG">  
