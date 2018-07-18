@@ -7,8 +7,12 @@ tag: Math
 ---
 
 [一份不太简短的 LATEX2e 介绍]: <http://www.mohu.org/info/lshort-cn.pdf> "一份不太简短的 LATEX2e 介绍"
+[LaTeX 命令符号]: <https://blog.csdn.net/garfielder007/article/details/51646604> "LaTeX 命令符号"
 
->These are common mathematical symbols from [一份不太简短的 LATEX2e 介绍] for future using.
+> These are common mathematical symbols from [一份不太简短的 LATEX2e 介绍] for future using.  
+> Other sources: [LaTeX 命令符号]  
+
+**********
 
 ### Common mathematical symbols
 

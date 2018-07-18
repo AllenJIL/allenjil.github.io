@@ -168,23 +168,23 @@ $$ \dfrac{1}{2m} \displaystyle\sum_{i=1}^m (h_\theta (x^{i}) - y^{i} )^2 $$
 * __Binary classification__ problem: y = 0 or 1  
 * Use linear regression:  
 	* To map all predictions greater than 0.5 as a 1 and all less than 0.5 as a 0  
-	* $$ h_\theta(x) $$ can be >1 or <0, so it does not work well  
-* Logistic Regression: make $$ 0 \le h_\theta(x) \le 1 $$
+	* $ h_\theta(x) $ can be >1 or <0, so it does not work well  
+* Logistic Regression: make $ 0 \le h_\theta(x) \le 1 $
 
 ### Logistic Regression  
 
 * __Clasification and Representation__  
-	* Sigmoid(Logistic) function: $$ g(Z) = \displaystyle\frac{1}{1+e^{-z}} $$  
+	* Sigmoid(Logistic) function: $ g(Z) = \displaystyle\frac{1}{1+e^{-z}} $  
 	* $ h_\theta(x) = g(\theta^{T}x) = \displaystyle\frac{1}{1+e^{-\theta^{T}x}} $  
 <img src="/images/Machine_Learning/Sigmoid_function.PNG">  
-	* $$ h_\theta(x) = $$ estimated __probability__ that y = 1 on input x  
-	* $$ h_\theta(x) = P(y=1 | x ; \theta) = 1 - P(y=0 | x ; \theta) $$  
+	* $ h_\theta(x) = $ estimated __probability__ that y = 1 on input x  
+	* $ h_\theta(x) = P(y=1 | x ; \theta) = 1 - P(y=0 | x ; \theta) $  
 
 * __Decision boundary__  
 	* To get discrete 0 or 1 classification, can translate the output of the hypothesis function as:
 		* $ h_\theta(x) \geq 0.5 \rightarrow y = 1 $  
 		* $ h_\theta(x) \leq 0.5 \rightarrow y = 0 $  
-	* $$ g(z) \geq 0.5 $$ when $$ z \geq 0 $$ that $$ h_\theta(x) = g(\theta^T x) \geq 0.5 $$ when $$ \theta^T x \geq 0 $$  
+	* $ g(z) \geq 0.5 $ when $ z \geq 0 $ that $ h_\theta(x) = g(\theta^T x) \geq 0.5 $ when $ \theta^T x \geq 0 $  
 	* From these statements we can say:  
 		* $ \theta^T x \geq 0 \Rightarrow y = 1 $  
 		* $ \theta^T x \leq 0 \Rightarrow y = 0 $  
@@ -193,8 +193,8 @@ $$ \dfrac{1}{2m} \displaystyle\sum_{i=1}^m (h_\theta (x^{i}) - y^{i} )^2 $$
 
 * __Cost function__  
 	* $ J(\theta) = \displaystyle\dfrac{1}{m} \sum_{i=1}^m \mathrm{Cost}(h_\theta(x^{(i)}),y^{(i)}) $  
-	* $$ \mathrm{Cost}(h_\theta(x),y) = -\log(h_\theta(x)) $$ if y = 1  
-	* $$ \mathrm{Cost}(h_\theta(x),y) = -\log(1-h_\theta(x)) $$ if y = 0  
+	* $ \mathrm{Cost}(h_\theta(x),y) = -\log(h_\theta(x)) $ if y = 1  
+	* $ \mathrm{Cost}(h_\theta(x),y) = -\log(1-h_\theta(x)) $ if y = 0  
 <img src="/images/Machine_Learning/LG_cost_function.PNG">  
 	* Compress: $ \displaystyle \mathrm{Cost}(h_\theta(x),y) = -y\log(h_\theta(x)) -(1-y)\log(1-h_\theta(x)) $  
 	* Vectorized implementation:  
@@ -275,14 +275,14 @@ $ min_\theta\, \dfrac{1}{2m}\, \displaystyle[\sum_{i=1}^m (h_\theta(x^{(i)}) - y
 
 * __Cost function__:
 	* $ J(\theta) = - \displaystyle\frac{1}{m} \sum_{i=1}^m [ y^{(i)}\, \log (h_\theta (x^{(i)})) + (1 - y^{(i)})\, \log (1 - h_\theta(x^{(i)}))] + \frac{\lambda}{2m}\sum_{j=1}^n \theta_j^2 $  
-	* $$ \sum_{j=1}^n \theta_j^2 $$ means to explicitly exclude the bias term $$ \theta_0 $$  
+	* $ \sum_{j=1}^n \theta_j^2 $ means to explicitly exclude the bias term $ \theta_0 $  
 
 * __Gradient descent__:  
-	* $ h_\theta(x) = \displaystyle\frac{1}{1+e^{-\theta^{T}x}} $  
+	* $ \displaystyle h_\theta(x) = \frac{1}{1+e^{-\theta^{T}x}} $  
 	Repeat {  
-		$ \theta_0 := \theta_0 - \alpha\, \frac{1}{m} \displaystyle\sum_{i=1}^m (h_\theta(x^{(i)}) - y^{(i)})x_0^{(i)} $  
-		$ \theta_j := \theta_j (1- \alpha\,\frac{\lambda}{m}) - \alpha\, \frac{1}{m}\, \sum_{i=1}^m (h_\theta(x^{(i)}) - y^{(i)})x_j^{(i)}) $  
-		$ \quad j \in \lbrace 1,2...n\rbrace $  
+		$ \displaystyle\theta_0 := \theta_0 - \alpha\, \frac{1}{m} \displaystyle\sum_{i=1}^m (h_\theta(x^{(i)}) - y^{(i)})x_0^{(i)} $  
+		$ \displaystyle\theta_j := \theta_j (1- \alpha\,\frac{\lambda}{m}) - \alpha\, \frac{1}{m}\, \sum_{i=1}^m (h_\theta(x^{(i)}) - y^{(i)})x_j^{(i)}) $ 
+		$ \displaystyle\quad j \in \lbrace 1,2...n\rbrace $  
 	}
 
 

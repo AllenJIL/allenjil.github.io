@@ -7,7 +7,7 @@ tag: Travel
 ---
 
 
-## Beijing 北京
+## :smile: Beijing 北京
 
 __Hotel__: Beijing Airport	Zhong Yi Pengao  
 北京中意鹏奥酒店  
