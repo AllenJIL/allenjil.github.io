@@ -44,7 +44,7 @@ tag: Machine_Learning
 
 ### Supervised learning  
 
-* "right answers" given  
+* "Right answers" given  
 * Regression: Predict continuous valued output  
 * Classification: Discrete valued output (0 or 1 or others)  
 
@@ -83,9 +83,9 @@ tag: Machine_Learning
 	* $ h_{\theta}(x^{i}) = \theta_{0} + \theta_{1}x^{i} $  
 
 * __Cost function__: $ J(\theta_0, \theta_1) = $ 
- $ \dfrac{1}{2m} \displaystyle\sum _{i=1}^m ( \hat{y}^{i}- y^{i} )^2 = $ 
- $$ \dfrac{1}{2m} \displaystyle\sum _{i=1}^m (h_\theta (x^{i}) - y^{i} )^2 $$  
-	* also called __squared error cost function__ or __squared error function__    
+$ \dfrac{1}{2m} \displaystyle\sum _{i=1}^m ( \hat{y}^{i}- y^{i} )^2 = $ 
+$ \dfrac{1}{2m} \displaystyle\sum _{i=1}^m (h_\theta (x^{i}) - y^{i} )^2 $  
+	* also called __squared error cost function__ or __squared error function__  
 
 * __Goal__: $ \displaystyle \underset{ \theta_{0}, \ \theta_{1} }{ \mathrm{minimize} } J(\theta_0, \theta_1) $  
 
