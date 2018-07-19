@@ -3,7 +3,7 @@ layout: post
 title: "Mathematical Symbols with LaTeX"
 description: "常用数学符号的 LaTeX 表示方法"
 date: 2018-02-27
-tag: Math
+tag: Symbol
 ---
 
 [一份不太简短的 LATEX2e 介绍]: <http://www.mohu.org/info/lshort-cn.pdf> "一份不太简短的 LATEX2e 介绍"

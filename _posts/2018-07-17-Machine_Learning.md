@@ -83,8 +83,7 @@ tag: Machine_Learning
 	* $ h_{\theta}(x^{i}) = \theta_{0} + \theta_{1}x^{i} $  
 
 * __Cost function__: $ J(\theta_0, \theta_1) = $ 
-$ \dfrac{1}{2m} \displaystyle\sum _{i=1}^m ( \hat{y}^{i}- y^{i} )^2 = $ 
-$ \dfrac{1}{2m} \displaystyle\sum _{i=1}^m (h_\theta (x^{i}) - y^{i} )^2 $  
+$$ \displaystyle \dfrac{1}{2m} \sum _{i=1}^m ( \hat{y}^{i}- y^{i} )^2 =  \dfrac{1}{2m} \sum _{i=1}^m (h_\theta (x^{i}) - y^{i} )^2 $$  
 	* also called __squared error cost function__ or __squared error function__  
 
 * __Goal__: $ \displaystyle \underset{ \theta_{0}, \ \theta_{1} }{ \mathrm{minimize} } J(\theta_0, \theta_1) $  
@@ -178,7 +177,7 @@ $$ \dfrac{1}{2m} \displaystyle\sum_{i=1}^m (h_\theta (x^{i}) - y^{i} )^2 $$
 	* $ h_\theta(x) = g(\theta^{T}x) = \displaystyle\frac{1}{1+e^{-\theta^{T}x}} $  
 <img src="/images/Machine_Learning/Sigmoid_function.PNG">  
 	* $ h_\theta(x) = $ estimated __probability__ that y = 1 on input x  
-	* $ h_\theta(x) = P(y=1 | x ; \theta) = 1 - P(y=0 | x ; \theta) $  
+	* $ h_\theta(x) = P(y=1 \vert x ; \theta) = 1 - P(y=0 \vert x ; \theta) $  
 
 * __Decision boundary__  
 	* To get discrete 0 or 1 classification, can translate the output of the hypothesis function as:
