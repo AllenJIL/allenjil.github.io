@@ -84,6 +84,7 @@ tag: Machine_Learning
 
 * __Cost function__: $ J(\theta_0, \theta_1) = $ 
 $$ \displaystyle \dfrac{1}{2m} \sum _{i=1}^m ( \hat{y}^{i}- y^{i} )^2 =  \dfrac{1}{2m} \sum _{i=1}^m (h_\theta (x^{i}) - y^{i} )^2 $$  
+	* Octave: `J = 1/(2*m)*sum((X*theta .- y).^2)`  
 	* also called __squared error cost function__ or __squared error function__  
 
 * __Goal__: $ \displaystyle \underset{ \theta_{0}, \ \theta_{1} }{ \mathrm{minimize} } J(\theta_0, \theta_1) $  
@@ -105,10 +106,11 @@ $$ \displaystyle \dfrac{1}{2m} \sum _{i=1}^m ( \hat{y}^{i}- y^{i} )^2 =  \dfrac{
 		* temp1 := $ \theta_1 - \alpha \displaystyle \frac{\partial}{\partial \theta_1} J(\theta_0, \ \theta_1) \ \ (\mathrm{for} \ j = 0 \ \mathrm{and} \ j = 1 ) $
 		* $ \theta_0 := $ temp0
 		* $ \theta_1 := $ temp1
-	* __linear regression__: 
-		* repeat until convergence: 
-		* $ \theta_0 := \theta_0 - \alpha \frac{1}{m} \sum\limits_{i=1}^{m}(h_\theta(x_{i}) - y_{i}) $
-		* $ \theta_1 := \theta_1 - \alpha \frac{1}{m} \sum\limits_{i=1}^{m}\left((h_\theta(x_{i}) - y_{i}) x_{i}\right)$
+	* __linear regression__:  
+		* repeat until convergence:  
+		* $ \theta_0 := \theta_0 - \alpha \frac{1}{m} \sum\limits_{i=1}^{m}(h_\theta(x_{i}) - y_{i}) $  
+		* $ \theta_1 := \theta_1 - \alpha \frac{1}{m} \sum\limits_{i=1}^{m}((h_\theta(x_{i}) - y_{i}) x_{i})$  
+		* Octave: `theta = theta - alpha/m*(X'*(X*theta .- y))`  
 
 * "Batch" Gradient Descent:  
 	* "__Batch__": Each step of gradient descent uses all the training examples
@@ -174,6 +176,7 @@ $$ \dfrac{1}{2m} \displaystyle\sum_{i=1}^m (h_\theta (x^{i}) - y^{i} )^2 $$
 
 * __Clasification and Representation__  
 	* Sigmoid(Logistic) function: $ g(Z) = \displaystyle\frac{1}{1+e^{-z}} $  
+	* Octave: `h(j,k) = 1/(1+exp(-z(j,k)))`  
 	* $ h_\theta(x) = g(\theta^{T}x) = \displaystyle\frac{1}{1+e^{-\theta^{T}x}} $  
 <img src="/images/Machine_Learning/Sigmoid_function.PNG">  
 	* $ h_\theta(x) = $ estimated __probability__ that y = 1 on input x  
@@ -199,6 +202,9 @@ $$ \dfrac{1}{2m} \displaystyle\sum_{i=1}^m (h_\theta (x^{i}) - y^{i} )^2 $$
 	* Vectorized implementation:  
 	 $ h = g(X\theta) $  
 	 $ \displaystyle J(\theta) = \frac{1}{m} \cdot (-y^{T}\log(h)-(1-y)^{T}\log(1-h)) $  
+	 Octave: 
+	 	the cost: `J = 1/m * (-y' * log(h)-(1-y)'*log(1-h))`  
+	 	the partial derivatives: `grad = 1/m * X'*(h-y)`
 
 * __Gradient Descent__  
 	* _Repeat_ {  
@@ -275,6 +281,11 @@ $ min_\theta\, \dfrac{1}{2m}\, \displaystyle[\sum_{i=1}^m (h_\theta(x^{(i)}) - y
 * __Cost function__:
 	* $ J(\theta) = - \displaystyle\frac{1}{m} \sum_{i=1}^m [ y^{(i)}\, \log (h_\theta (x^{(i)})) + (1 - y^{(i)})\, \log (1 - h_\theta(x^{(i)}))] + \frac{\lambda}{2m}\sum_{j=1}^n \theta_j^2 $  
 	* $ \sum_{j=1}^n \theta_j^2 $ means to explicitly exclude the bias term $ \theta_0 $  
+	* Octave:  
+		* the cost:  
+			`J = 1/m * (-y' * log(h)-(1-y)'*log(1-h)) + (lambda/(2*m))*theta'*theta`  
+		* the partial derivatives:  
+			`grad = 1/m * X'*(h-y) + (lambda/m)*theta`  
 
 * __Gradient descent__:  
 	* $ \displaystyle h_\theta(x) = \frac{1}{1+e^{-\theta^{T}x}} $  
@@ -283,6 +294,7 @@ $ min_\theta\, \dfrac{1}{2m}\, \displaystyle[\sum_{i=1}^m (h_\theta(x^{(i)}) - y
 		$ \displaystyle\theta_j := \theta_j (1- \alpha\,\frac{\lambda}{m}) - \alpha\, \frac{1}{m}\, \sum_{i=1}^m (h_\theta(x^{(i)}) - y^{(i)})x_j^{(i)}) $ 
 		$ \displaystyle\quad j \in \lbrace 1,2...n\rbrace $  
 	}
+
 
 
 ## To be continued
