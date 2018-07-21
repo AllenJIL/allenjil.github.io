@@ -5,7 +5,7 @@ description: "R编程 初学者 代码整理"
 date: 2018-03-05
 tag: R
 ---
-[dplyr]: <www.dplyr.tidyverse.org/> "dplyr"
+[dplyr]: <https://www.dplyr.tidyverse.org> "dplyr"
 
 > R编程 初学者 代码整理  
 > Collecting of R Code (Noob)
