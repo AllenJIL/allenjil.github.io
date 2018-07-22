@@ -321,7 +321,8 @@ $$
 	$$ 
 		\begin{align*} \displaystyle a_1^{(2)} = g(\Theta_{10}^{(1)}x_0 + \Theta_{11}^{(1)}x_1 + \Theta_{12}^{(1)}x_2 + \Theta_{13}^{(1)}x_3) \newline a_2^{(2)} = g(\Theta_{20}^{(1)}x_0 + \Theta_{21}^{(1)}x_1 + \Theta_{22}^{(1)}x_2 + \Theta_{23}^{(1)}x_3) \newline a_3^{(2)} = g(\Theta_{30}^{(1)}x_0 + \Theta_{31}^{(1)}x_1 + \Theta_{32}^{(1)}x_2 + \Theta_{33}^{(1)}x_3) \newline h_\Theta(x) = a_1^{(3)} = g(\Theta_{10}^{(2)}a_0^{(2)} + \Theta_{11}^{(2)}a_1^{(2)} + \Theta_{12}^{(2)}a_2^{(2)} + \Theta_{13}^{(2)}a_3^{(2)}) \newline \end{align*}
 	$$  
-	* If network has $ s_j $ units in layer $ \displaystyle j, s_{j+1} $ units in layer $ j + 1 $, then $ \Theta^{(j)} $ will be of dimension $ \displaystyle s_{j+1} \times (s_j + 1) $ that $ \displaystyle \Theta^{(j)} \in \Re^{s_{j+1}} \times\ (s_j + 1)} $  
+	* If network has $ s_j $ units in layer $ \displaystyle j, s_{j+1} $ units in layer $ j + 1 $, then $ \Theta^{(j)} $ will be of dimension $ \displaystyle s_{j+1} \times (s_j + 1) $ that  
+	$$ \displaystyle \Theta^{(j)} \in \Re^{s_{j+1}} \times (s_j + 1)} $$  
 
 * Forward propagation: Vectorized implementation  
 	$$ 
@@ -338,7 +339,7 @@ $$
 	* $ \hookrightarrow \displaystyle a^{(j)} = g(z^{(j)} ) $  
 	* __Add__ $ \displaystyle a_0^{(j)} = 1 $  
 	* $ z^{(j+1)} = \Theta^{(j)} a^{(j)} $  
-	* $ \displaystyle h_\Theta(x) = \ a^{(j+1)} = \ g(z^{(j+1)} ) $  
+	* $ \displaystyle h_\Theta(x) = \ a^{(j+1)} = \ g(z^{(j+1)}\ ) $  
 
 * Other network architectures  
 	<img src="/images/Machine_Learning/network_architectures.PNG">  
