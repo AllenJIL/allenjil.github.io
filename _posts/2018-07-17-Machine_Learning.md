@@ -301,7 +301,7 @@ $ min_\theta\, \dfrac{1}{2m}\, \displaystyle[\sum_{i=1}^m (h_\theta(x^{(i)}) - y
 
 ### Model representation  
 
-* Neuron model: Logistic unit  
+* __Neuron__ model: Logistic unit  
 $$ 
 	\begin{bmatrix}x_0 \newline x_1 \newline x_2 \newline \end{bmatrix}\rightarrow\begin{bmatrix}\ \ \ \newline \end{bmatrix}\rightarrow h_\theta(x)
 $$  
@@ -310,7 +310,7 @@ $$
 	<img src="/images/Machine_Learning/Neural_model.PNG">  
 	* 1st layer called "input layer"; last layer called "output layer"; middle layers called "hidden layer"  
 
-* Notations  
+* __Notations__  
 	* $ x_0 = 1 $ is a "bias unit"  
 	$$ 
 		\begin{bmatrix}x_0 \newline x_1 \newline x_2 \newline x_3\end{bmatrix}\rightarrow\begin{bmatrix}a_1^{(2)} \newline a_2^{(2)} \newline a_3^{(2)} \newline \end{bmatrix}\rightarrow h_\theta(x)
@@ -322,9 +322,9 @@ $$
 		\begin{align*} \displaystyle a_1^{(2)} = g(\Theta_{10}^{(1)}x_0 + \Theta_{11}^{(1)}x_1 + \Theta_{12}^{(1)}x_2 + \Theta_{13}^{(1)}x_3) \newline a_2^{(2)} = g(\Theta_{20}^{(1)}x_0 + \Theta_{21}^{(1)}x_1 + \Theta_{22}^{(1)}x_2 + \Theta_{23}^{(1)}x_3) \newline a_3^{(2)} = g(\Theta_{30}^{(1)}x_0 + \Theta_{31}^{(1)}x_1 + \Theta_{32}^{(1)}x_2 + \Theta_{33}^{(1)}x_3) \newline h_\Theta(x) = a_1^{(3)} = g(\Theta_{10}^{(2)}a_0^{(2)} + \Theta_{11}^{(2)}a_1^{(2)} + \Theta_{12}^{(2)}a_2^{(2)} + \Theta_{13}^{(2)}a_3^{(2)}) \newline \end{align*}
 	$$  
 	* If network has $ s_j $ units in layer $ \displaystyle j, s_{j+1} $ units in layer $ j + 1 $, then $ \Theta^{(j)} $ will be of dimension $ \displaystyle s_{j+1} \times (s_j + 1) $ that  
-	$$ \displaystyle \Theta^{(j)} \in \Re^{s_{j+1} \times (s_j + 1)} $$  
+	$$ \Theta^{(j)} \in \displaystyle\Re^{(s_{j+1})\ \times (s_j \ + 1)} $$  
 
-* Forward propagation: Vectorized implementation  
+* __Forward propagation__: Vectorized implementation  
 	$$ 
 		\displaystyle z_k^{(2)} = \Theta_{k,0}^{(1)}\ x_0 + \Theta_{k,1}^{(1)}\ x_1 + \cdots + \Theta_{k,n}^{(1)}\ x_n
 	$$  
