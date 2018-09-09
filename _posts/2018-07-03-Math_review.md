@@ -39,7 +39,7 @@ is zero)
 *  $$ \displaystyle \underbrace{(x + iy)}_{z} + \underbrace{(u + iv)}_{w} = \underbrace{(x + u)}_{\mathrm{Re}(z+w)} + \underbrace{i(y + v)}_{\mathrm{Im}(z+w)} $$  
 	* $ \mathrm{Re}(z + w) = \mathrm{Re}\ z + \mathrm{Re}\ w \ \mathrm{and} \ \mathrm{Im}(z + w) = \mathrm{Im}\ z + \mathrm{Im}\ w $  
 * The __modulus__ of the complex number z = x + iy is the length of the vector z:  
-	* $ \vertz\vert = \sqrt{x^2 + y^2} $  
+	* $ \vert z\vert  = \sqrt{x^2 + y^2} $  
 * $$ (x + iy) \cdot (u + iv) = (xu - yv) + i(xv + yu) \in \mathbb{C} $$  
 * $$ \displaystyle \frac{x + iy}{u + iv} = \frac{xu + yv}{u^2 + v^2} + i\frac{yu - xv}{u^2 + v^2} \ (\mathrm{for} \ u + iv \neq 0) $$  
 
@@ -47,16 +47,16 @@ is zero)
 * If $ z = x + iy $ then $ \overline{z} = x − iy $ is the __complex conjugate__ of z  
 	* $ \overline{\overline{z}} = z $  
 	* $ \overline{z + w} = \overline{z} + \overline{w} $  
-	* $ \vertz\vert = \vert\overline{z}\vert $  
-	* $ z\overline{z} = (x + iy)(x - iy) = x^2 + y^2 = \vertz\vert^2 $  
-	* $ \displaystyle \frac{1}{z} = \frac{\overline{z}}{z\overline{z}} = \frac{\overline{z}}{\vertz\vert^2} $  
-	* $ \vertz \cdot w \vert = \vertz\vert \cdot \vertw\vert $  
+	* $ \vert z\vert  = \vert \overline{z}\vert  $  
+	* $ z\overline{z} = (x + iy)(x - iy) = x^2 + y^2 = \vert z\vert ^2 $  
+	* $ \displaystyle \frac{1}{z} = \frac{\overline{z}}{z\overline{z}} = \frac{\overline{z}}{\vert z\vert ^2} $  
+	* $ \vert z \cdot w \vert  = \vert z\vert  \cdot \vert w\vert  $  
 	* $ \displaystyle \overline{(\frac{z}{w})} = \frac{\overline{z}}{\overline{w}} $  
-	* $ \vertz\vert = 0 iff z = 0 $  
-	* $ −\vertz\vert ≤ \mathrm{Re}\ z ≤ \vertz\vert $  
-	* $ −\vertz\vert ≤ \mathrm{Im} z ≤ \vertz\vert $  
-	* $ \vertz + w\vert ≤ \vertz\vert + \vertw\vert \mathrm{(triangle inequality)} $  
-	* $ z − w\vert ≥ \vertz\vert − \vertw\vert \mathrm{(reverse triangle inequality)} $  
+	* $ \vert z\vert  = 0 iff z = 0 $  
+	* $ −\vert z\vert  ≤ \mathrm{Re}\ z ≤ \vert z\vert  $  
+	* $ −\vert z\vert  ≤ \mathrm{Im} z ≤ \vert z\vert  $  
+	* $ \vert z + w\vert  ≤ \vert z\vert  + \vert w\vert  \mathrm{(triangle inequality)} $  
+	* $ z − w\vert  ≥ \vert z\vert  − \vert w\vert  \mathrm{(reverse triangle inequality)} $  
 
 * __The Fundamental Theorem of Algebra__  
 	If $ a_{0}, a_{1}, \dots , a_{n} $ are complex numbers with $ a_{n} \neq 0 $ , then the polynomial  
