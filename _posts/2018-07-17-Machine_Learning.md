@@ -176,7 +176,7 @@ $$ \dfrac{1}{2m} \displaystyle\sum_{i=1}^m (h_\theta (x^{i}) - y^{i} )^2 $$
 
 * __Clasification and Representation__  
 	* Sigmoid(Logistic) function: $ g(Z) = \displaystyle\frac{1}{1+e^{-z}} $  
-	* Octave: `h(j,k) = 1/(1+exp(-z(j,k)))`  
+	* Octave: `h = 1.0 ./ (1.0 + exp(-z))`  
 	* $ h_\theta(x) = g(\theta^{T}x) = \displaystyle\frac{1}{1+e^{-\theta^{T}x}} $  
 <img src="/images/Machine_Learning/Sigmoid_function.PNG">  
 	* $ h_\theta(x) = $ estimated __probability__ that y = 1 on input x  
@@ -322,7 +322,7 @@ $$
 		\begin{align*} \displaystyle a_1^{(2)} = g(\Theta_{10}^{(1)}x_0 + \Theta_{11}^{(1)}x_1 + \Theta_{12}^{(1)}x_2 + \Theta_{13}^{(1)}x_3) \newline a_2^{(2)} = g(\Theta_{20}^{(1)}x_0 + \Theta_{21}^{(1)}x_1 + \Theta_{22}^{(1)}x_2 + \Theta_{23}^{(1)}x_3) \newline a_3^{(2)} = g(\Theta_{30}^{(1)}x_0 + \Theta_{31}^{(1)}x_1 + \Theta_{32}^{(1)}x_2 + \Theta_{33}^{(1)}x_3) \newline h_\Theta(x) = a_1^{(3)} = g(\Theta_{10}^{(2)}a_0^{(2)} + \Theta_{11}^{(2)}a_1^{(2)} + \Theta_{12}^{(2)}a_2^{(2)} + \Theta_{13}^{(2)}a_3^{(2)}) \newline \end{align*}
 	$$  
 	* If network has $ s_j $ units in layer $ \displaystyle j, s_{j+1} $ units in layer $ j + 1 $, then $ \Theta^{(j)} $ will be of dimension $ \displaystyle s_{j+1} \times (s_j + 1) $ that  
-	$$ \Theta^{(j)} \in \displaystyle\Re^{(s_{j+1})\ \times (s_j \ + 1)} $$  
+	$$ \Theta^{(j)} \in \displaystyle\Re^{s_{(j+1\ )}\ \times (s_j \ + 1)} $$  
 
 * __Forward propagation__: Vectorized implementation  
 	$$ 

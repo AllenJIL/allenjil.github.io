@@ -7,7 +7,7 @@ title: About Me
 
 A Mathematics researcher, love to study new technologies
 <p>
-Current learning: Machine Learning
+Current learning: review mathematics
 <p>
 Understand some basic concepts in Python, R and C++
 <p>
@@ -20,8 +20,6 @@ Understand some basic concepts in Python, R and C++
 - Data Science
 <p>
 - Machine Learning
-<p>
-- Block Chain
 <p>
 
 <h3><strong>Education:</strong></h3>
@@ -50,7 +48,7 @@ Macroeconomic Theory, Microeconomics Theory with Calculus</li>
 <p> 
 数学爱好者, 喜欢新科技
 <p>
-正在学习：机器学习
+正在学习：复习数学
 <p>
 懂得 Python, R, MATLAB 和 C++ 的一些基础运用
 <p>
@@ -62,8 +60,6 @@ Macroeconomic Theory, Microeconomics Theory with Calculus</li>
 - 数据科学
 <p>
 - 机器学习
-<p>
-- 区块链
 <p>
 
 <h3><strong>教育:</strong></h3>
