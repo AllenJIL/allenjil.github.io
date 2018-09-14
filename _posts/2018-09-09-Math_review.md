@@ -35,14 +35,12 @@ tag: Math
 is zero)  
 * The complex plane can be identified with $ \mathbb{R}^{2} $  
 
-
-* $ \displaystyle \underbrace{(x + iy)}_{z} + \underbrace{(u + iv)}_{w} = \underbrace{(x + u)}_{\mathrm{Re}(z+w)} + \underbrace{i(y + v)}_{\mathrm{Im}(z+w)} $  
+* $$ \displaystyle \underbrace{(x + iy)}_{z} + \underbrace{(u + iv)}_{w} = \underbrace{(x + u)}_{\mathrm{Re}(z+w)} + \underbrace{i(y + v)}_{\mathrm{Im}(z+w)} $$  
 	* $ \mathrm{Re}(z + w) = \mathrm{Re}\ z + \mathrm{Re}\ w \ \mathrm{and} \ \mathrm{Im}(z + w) = \mathrm{Im}\ z + \mathrm{Im}\ w $  
-* _Def_: The __modulus__ of the complex number z = x + iy is the length of the vector z:  
+* ___Def___: The __modulus__ of the complex number z = x + iy is the length of the vector z:  
 	* $ \vert z\vert  = \sqrt{x^2 + y^2} $  
 * $ (x + iy) \cdot (u + iv) = (xu - yv) + i(xv + yu) \in \mathbb{C} $  
 * $ \displaystyle \frac{x + iy}{u + iv} = \frac{xu + yv}{u^2 + v^2} + i\frac{yu - xv}{u^2 + v^2} \ (\mathrm{for} \ u + iv \neq 0) $  
-
 
 * If $ z = x + iy $ then $ \overline{z} = x − iy $ is the __complex conjugate__ of z  
 	* $ \overline{\overline{z}} = z $  
@@ -76,7 +74,7 @@ is zero)
 	* $ x = r cos θ $  
 	* $ y = r sin θ $  
 	* $ z = r(cos θ + i sin θ) $  
-* _Def_: The principal argument of z, called __Arg z__, is the value of θ for which $ −π < θ ≤ π $.
+* ___Def___: The principal argument of z, called __Arg z__, is the value of θ for which $ −π < θ ≤ π $.
 	* $ arg z = \lbrace Arg z + 2πk : k = 0, ±1, ±2, . . .\rbrace,\ z \neq 0 $  
 * __Convenient notation__: $ e^{i\theta} = cos θ + i sin θ $  
 	* the polar form of z: $ z = r e^{i\theta} $  
@@ -87,14 +85,14 @@ is zero)
 * $ arg(\overline{z})\ = \ -arg\ z $  
 * $ arg(\frac{1}{z})\ = \ - arg\ z $  
 * $ arg(z_1 z_2)\ = \ arg(z_1) \ + \ arg(z_2) $  
-* $ (e^{i\theta})^3\ = \ e^{i\cdot n\theta} $  
+* $ (e^{i\theta})^n\ = \ e^{i\cdot n\theta} $  
 	- $ (cos θ + i sin θ)^n \ = \ cos(nθ)\ + \ i sin(nθ) $
 
 ### Roots of Complex Numbers  
 
-* _Def_: Let $ w $ be a complex number. An nth root of $ w $ is a complex number $ z $ such that $ z^n = w $  
+* ___Def___: Let $ w $ be a complex number. An nth root of $ w $ is a complex number $ z $ such that $ z^n = w $  
 	- Use the polar form for $ w $ and $ \ z:\ w\ = \ \rho e^{i\varphi}\ \mathrm{and}\ z\ = \ r e^{i\theta} $  
 	- $ z^{n}\ = \ w \ : \ r^{n}e^{in\theta}\ = \ \rho e^{i\varphi}, \mathrm{so} r^n\ = \ \rho \ \mathrm{and} \ e^{in\theta} \ = \ e^{i\varphi} $  
 	- $ r = \sqrt[n]{\rho} \ \mathrm{and} \ n\theta \ = \ \varphi \ + \ 2k\pi, \ k \in \mathbb{Z} $  
-	- $ w^{\frac{1}{n}}\ = \ \sqrt[n]{\rho}\ e^{1(\frac{\varphi}{n} \ + \ \frac{2k\pi}{n})},\ k\ = \ 0, 1, \dots , \ n\ -\ 1 $  
+	- $ \displaystyle w^{\frac{1}{n}}\ = \ \sqrt[n]{\rho}\ e^{1(\frac{\varphi}{n} \ + \ \frac{2k\pi}{n})},\ k\ = \ 0, 1, \dots , \ n - 1 $  
 
