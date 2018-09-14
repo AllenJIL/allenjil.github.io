@@ -67,7 +67,7 @@ is zero)
 
 ### Polar Representation  
 
-* $ r = |z| $: the distance from the origin  
+* $ r = \vert z\vert $: the distance from the origin  
 * $ θ $: the angle  between the positive x-axis and the line segment from 0 to z  
 * $ (r, θ) $ are the polar coordinates of z  
 * Relation between Cartesian and polar coordinates:  
