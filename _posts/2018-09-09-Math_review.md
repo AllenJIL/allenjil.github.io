@@ -37,9 +37,9 @@ is zero)
 
 * 
 $$
-\begin{flalign} 
-\displaystyle \underbrace{(x + iy)}_{z} + \underbrace{(u + iv)}_{w} = \underbrace{(x + u)}_{\mathrm{Re}(z+w)} + \underbrace{i(y + v)}_{\mathrm{Im}(z+w)} 
-\end{flalign} 
+	\begin{flalign} 
+	\displaystyle \underbrace{(x + iy)}_{z} + \underbrace{(u + iv)}_{w} = \underbrace{(x + u)}_{\mathrm{Re}(z+w)} + \underbrace{i(y + v)}_{\mathrm{Im}(z+w)} 
+	\end{flalign} 
 $$  
 	* $ \mathrm{Re}(z + w) = \mathrm{Re}\ z + \mathrm{Re}\ w \ \mathrm{and} \ \mathrm{Im}(z + w) = \mathrm{Im}\ z + \mathrm{Im}\ w $  
 * ___Def:___ The __modulus__ of the complex number z = x + iy is the length of the vector z:  
