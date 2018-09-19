@@ -29,6 +29,26 @@ layout: default
     {% endfor %}
   </ol>
 
+  $(function(){
+    arrMusicID = [28804591,34033985,36492681,37955044,4875911,36496655,25862800,19183595,29732995,21223795,447926025,5264302,526956071];  //musicID array
+    musicID = Math.floor(Math.random()*(arrMusicID.length)) //get a ran num as index
+    $('body').css('height',document.documentElement.clientHeight -5);
+
+    if (!Number.isInteger(arrMusicID[musicID])) return; // load failed, bye~
+
+    var iframe = document.createElement('iframe');
+    iframe.id="bgm";
+    iframe.style = "position: absolute; bottom: 0; left: 30px; border: 0px;";
+    iframe.src = '//music.163.com/outchain/player?type=2&id=' +arrMusicID[musicID]+ '&auto=1&height=32';
+    console.log(iframe.src)
+    iframe.frameborder="no";
+    iframe.marginwidth="0";
+    iframe.marginheight="0";
+    iframe.width=250;
+    iframe.height=52;
+    document.body.appendChild(iframe);
+  });
+
   {% include pagination.html %}
 
 </div>
