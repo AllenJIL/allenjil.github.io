@@ -12,6 +12,28 @@ tag: Machine_Learning
 
 **********
 
+<!-- TOC -->
+- [Machine Learning](#machine-learning)
+	- [Introduction](#introduction)
+- [Machine Learning Algorithms](#machine-learning-algorithms)
+	- [Supervised learning](#supervised-learning)
+	- [Unsupervised learning](#unsupervised-learning)
+	- [Model representation](#model-representation)
+	- [Cost function](#cost-function)
+	- [Gradient descent](#gradient-descent)
+- [Multivariate Linear Regression](#multivariate-linear-regression)
+	- [Multiple Features (variables)](#multiple-features-variables)
+	- [Normal equation](#normal-equation)
+- [Classification](#classification)
+	- [Logistic Regression](#logistic-regression)
+- [Overfitting](#overfitting)
+	- [Regularization](#regularization)
+	- [Logistic Regression](#logistic-regression)
+- [Neural Networks](#neural-networks)
+	- [Model representation](#model-representation)
+- [To be continued](#to-be-continued)
+<!-- /TOC -->
+
 
 ## Machine Learning  
 

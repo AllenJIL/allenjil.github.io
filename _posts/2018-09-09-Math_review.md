@@ -15,7 +15,14 @@ tag: Math
 
 **********
 
-[TOC]
+<!-- TOC -->
+- [Complex Analysis](#complex-analysis)
+	- [Birth](#birth)
+	- [Properties and definitions](#properties-and-definitions)
+	- [Polar Representation](#polar-representation)
+	- [Roots of Complex Numbers](#roots-of-complex-numbers)
+<!-- /TOC -->
+
 
 ## Complex Analysis  
 
