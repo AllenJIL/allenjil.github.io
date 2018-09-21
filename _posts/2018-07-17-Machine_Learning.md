@@ -30,7 +30,7 @@ tag: Machine_Learning
 	- [Regularization](#regularization)
 	- [Logistic Regression](#logistic-regression)
 - [Neural Networks](#neural-networks)
-	- [Model representation](#model-representation)
+	- [Model representation(NN)](#model-representation-nn)
 - [To be continued](#to-be-continued)
 <!-- /TOC -->
 
@@ -101,7 +101,7 @@ tag: Machine_Learning
 * Idea: Choose $ \theta_{0}, \theta_{1} $ so that $ h_{\theta}(x) $ is close to y for our training examples (x,y)  
 	* $ \underset{ \theta_{0}, \ \theta_{1} }{ \mathrm{minimize} } $ 
 	$ \dfrac{1}{2m} \displaystyle\sum_{i=1}^m ( \hat{y}^{i}- y^{i} )^2 = $ 
-	$$ \dfrac{1}{2m} \displaystyle\sum _{i=1}^m (h_\theta (x^{i}) - y^{i} )^2 $$
+	$$ \documentclass[fleqn]{article} \dfrac{1}{2m} \displaystyle\sum _{i=1}^m (h_\theta (x^{i}) - y^{i} )^2 $$
 	* $ h_{\theta}(x^{i}) = \theta_{0} + \theta_{1}x^{i} $  
 
 * __Cost function__: $ J(\theta_0, \theta_1) = $ 
@@ -321,7 +321,7 @@ $ min_\theta\, \dfrac{1}{2m}\, \displaystyle[\sum_{i=1}^m (h_\theta(x^{(i)}) - y
 
 * Origins: Algorithms that try to mimic the brain  
 
-### Model representation  
+### Model representation(NN)  
 
 * __Neuron__ model: Logistic unit  
 $$ 

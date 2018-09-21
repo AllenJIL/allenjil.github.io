@@ -17,14 +17,17 @@ tag: Math
 
 <!-- TOC -->
 - [Complex Analysis](#complex-analysis)
-	- [Birth](#birth)
-	- [Properties and definitions](#properties-and-definitions)
-	- [Polar Representation](#polar-representation)
-	- [Roots of Complex Numbers](#roots-of-complex-numbers)
+	- [Introduction](#introduction)
+		- [Birth](#birth)
+		- [Properties and Definitions](#properties-and-definitions)
+		- [Polar Representation](#polar-representation)
+		- [Roots of Complex Numbers](#roots-of-complex-numbers)
 <!-- /TOC -->
 
 
-## Complex Analysis  
+# Complex Analysis  
+
+## Introduction
 
 ### Birth  
 
@@ -34,7 +37,7 @@ tag: Math
 * About 30 years after the discovery of this formula, Bombelli (1526-1572) consider $ \displaystyle\frac{q^2}{4}-\frac{p^3}{27} < 0 $  
 	* It showed that perfectly real problems require complex arithmetic for their solution.  
 
-### Properties and definitions  
+### Properties and Definitions  
 
 * Complex numbers: expressions of the form $ z = x + iy $, where  
 	* x is called the real part of $z; x = \mathrm{Re} z $  
@@ -105,4 +108,12 @@ $$ \displaystyle \underbrace{(x + iy)}_{z} + \underbrace{(u + iv)}_{w} = \underb
 	- $ z^{n}\ = \ w \ : \ r^{n}e^{in\theta}\ = \ \rho e^{i\varphi}, \mathrm{so} r^n\ = \ \rho \ \mathrm{and} \ e^{in\theta} \ = \ e^{i\varphi} $  
 	- $ r = \sqrt[n]{\rho} \ \mathrm{and} \ n\theta \ = \ \varphi \ + \ 2k\pi, \ k \in \mathbb{Z} $  
 	- $ \displaystyle w^{\frac{1}{n}}\ = \ \sqrt[n]{\rho}\ e^{i(\frac{\varphi}{n} \ + \ \frac{2k\pi}{n})},\ k\ = \ 0, 1, \dots , \ n - 1 $  
+* ___Def:___ The _n_th roots of 1 are called the _nth roots of unity_  
+	- Since $ 1\ =\ 1\ e^{i\dot 0} $, we find that  
+	- $$ 
+	\begin{align*}
+	1^{\frac{1}{n}} &\ =\ \sqrt[n]{1} \dot e^{i(\frac{0}{n}\ + \ \frac{2k\pi}{n})} \\
+    & = e^(i\frac{2\pi k}{n}),\ \mathrm{for} k\ = \ 0, 1, \dots , n\ -\ 1 
+	\end{align*}
+	$$  
 
