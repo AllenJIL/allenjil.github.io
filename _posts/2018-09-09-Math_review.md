@@ -108,12 +108,40 @@ $$ \displaystyle \underbrace{(x + iy)}_{z} + \underbrace{(u + iv)}_{w} = \underb
 	- $ z^{n}\ = \ w \ : \ r^{n}e^{in\theta}\ = \ \rho e^{i\varphi}, \mathrm{so} r^n\ = \ \rho \ \mathrm{and} \ e^{in\theta} \ = \ e^{i\varphi} $  
 	- $ r = \sqrt[n]{\rho} \ \mathrm{and} \ n\theta \ = \ \varphi \ + \ 2k\pi, \ k \in \mathbb{Z} $  
 	- $ \displaystyle w^{\frac{1}{n}}\ = \ \sqrt[n]{\rho}\ e^{i(\frac{\varphi}{n} \ + \ \frac{2k\pi}{n})},\ k\ = \ 0, 1, \dots , \ n - 1 $  
+
 * ___Def:___ The _n_th roots of 1 are called the _nth roots of unity_  
 	- Since $ 1\ =\ 1\ e^{i\dot 0} $, we find that  
-	- $$ 
-	\begin{align*}
-	1^{\frac{1}{n}} &\ =\ \sqrt[n]{1} \dot e^{i(\frac{0}{n}\ + \ \frac{2k\pi}{n})} \\
-    & = e^(i\frac{2\pi k}{n}),\ \mathrm{for} k\ = \ 0, 1, \dots , n\ -\ 1 
-	\end{align*}
+	$$ 
+	\begin{flalign*}
+	\displaystyle 1^{\frac{1}{n}} &\ =\ \sqrt[n]{1}\ \dot\ e^{i(\frac{0}{n}\ + \ \frac{2k\pi}{n}\ )} \\
+    & = e^(i\frac{2\pi k}{n}),\ \mathrm{for}\ k\ = \ 0, 1, \dots , n\ -\ 1 
+	\end{flalign*}
 	$$  
+
+### Topology in the Plane  
+
+* __Sets__ in the Complex Plane
+	- Circles and disks: center $ z_0\ =\ x_0\ +\ i y_0 $, radius $ r $  
+		+ $ B_r(z_0) = {z ∈ \mathbb{C} : z has distance less than r from z_0} disk of radius r, centered
+at z_0 $  
+		+ $ K_r(z_0) = {z ∈ \mathbb{C} : z has distance r from z_0} circle of radius r, centered at z_0 $  
+	- Measure distance  
+		- $$
+		\begin{flalign*}
+		\displaystyle d\ &= \ \sqrt{(x\ - \ x_0)^2\ + \ (y\ - \ y_0)^2} \\
+    	& = \vert (x\ - \ x_0)\ + \ i\ (y\ - \ y_0) \vert \\
+    	& = \vert z\ - \ z_0 \vert
+		\end{flalign*}
+		$$  
+	- so $ B_r(z_0)\ =\ {z\ ∈\ \mathbb{C}\ :\ \vert z\ −\ z_0\vert \ <\ r}\ \mathrm{and} K_r(z_0)\ =\ {z ∈ mathbb{C}\ :\ \vert z\ −\ z_0\vert\ =\ r} $  
+
+* __Interior Points and Boundary Points__  
+	* ___Def:___ Let $ E ⊂ \mathbb{C} $. A point $ z_0 $ is an interior point of $ E $ if there is some $ r > 0 $ such that $ B_r(z_0) ⊂ E $.  
+	* ___Def:___ Let $ E ⊂ \mathbb{C} $. A point $ b $ is a boundary point of $ E $ if every disk around $ b $ contains a point in $ E $ and a point not in $ E $.  
+	The boundary of the set $ E ⊂ \mathbb{C}, ∂E, $ is the set of all boundary points of $ E $.  
+
+* __Open and Closed Sets__  
+	- A set $ U ⊂ \mathbb{C} $ is open if every one of its points is an interior point.
+	- A set $ A ⊂ \mathbb{C} $ is closed if it contains all of its boundary points
+
 
