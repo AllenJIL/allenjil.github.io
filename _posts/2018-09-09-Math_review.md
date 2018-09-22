@@ -22,6 +22,9 @@ tag: Math
 		- [Properties and Definitions](#properties-and-definitions)
 		- [Polar Representation](#polar-representation)
 		- [Roots of Complex Numbers](#roots-of-complex-numbers)
+		- [Topology in the Plane](#topology-in-the-plane)
+	- [Function](#Function)
+		- [Complex Functions](#complex-functions)
 <!-- /TOC -->
 
 
@@ -112,10 +115,10 @@ $$ \displaystyle \underbrace{(x + iy)}_{z} + \underbrace{(u + iv)}_{w} = \underb
 * ___Def:___ The _n_th roots of 1 are called the _nth roots of unity_  
 	- Since $ 1\ =\ 1\ e^{i\dot 0} $, we find that  
 	$$ 
-	\begin{flalign*}
+	\begin{align*}
 	\displaystyle 1^{\frac{1}{n}} &\ =\ \sqrt[n]{1}\ \dot\ e^{i(\frac{0}{n}\ + \ \frac{2k\pi}{n}\ )} \\
     & = e^(i\frac{2\pi k}{n}),\ \mathrm{for}\ k\ = \ 0, 1, \dots , n\ -\ 1 
-	\end{flalign*}
+	\end{align*}
 	$$  
 
 ### Topology in the Plane  
@@ -127,13 +130,13 @@ at z_0 $
 		+ $ K_r(z_0) = {z ∈ \mathbb{C} : z has distance r from z_0} circle of radius r, centered at z_0 $  
 	- Measure distance  
 		- $$
-		\begin{flalign*}
+		\begin{align*}
 		\displaystyle d\ &= \ \sqrt{(x\ - \ x_0)^2\ + \ (y\ - \ y_0)^2} \\
     	& = \vert (x\ - \ x_0)\ + \ i\ (y\ - \ y_0) \vert \\
     	& = \vert z\ - \ z_0 \vert
-		\end{flalign*}
+		\end{align*}
 		$$  
-	- so $ B_r(z_0)\ =\ {z\ ∈\ \mathbb{C}\ :\ \vert z\ −\ z_0\vert \ <\ r}\ \mathrm{and} K_r(z_0)\ =\ {z ∈ mathbb{C}\ :\ \vert z\ −\ z_0\vert\ =\ r} $  
+	- so $ B_r(z_0)\ =\ {z\ ∈\ \mathbb{C}\ :\ \vert z\ −\ z_0\vert \ <\ r}\ \mathrm{and}\ K_r(z_0)\ =\ {z ∈ \mathbb{C}\ :\ \vert z\ −\ z_0\vert\ =\ r} $  
 
 * __Interior Points and Boundary Points__  
 	* ___Def:___ Let $ E ⊂ \mathbb{C} $. A point $ z_0 $ is an interior point of $ E $ if there is some $ r > 0 $ such that $ B_r(z_0) ⊂ E $.  
@@ -143,5 +146,39 @@ at z_0 $
 * __Open and Closed Sets__  
 	- A set $ U ⊂ \mathbb{C} $ is open if every one of its points is an interior point.
 	- A set $ A ⊂ \mathbb{C} $ is closed if it contains all of its boundary points
+	- Examples:  
+		+ $ {z\ ∈\ \mathbb{C}\ :\ \vert z\ −\ z_0 \vert \ <\ r}\ \mathrm{and} {z\ ∈\ \mathbb{C}\ :\ \vert z\ −\ z_0 \vert\ >\ r} $ are open  
+		+ $ \mathbb{C} $ and $ ∅ $ are open  
+		+ $ {z\ ∈\ \mathbb{C}\ :\ \vert z\ −\ z_0 \vert \ ≤\ r}\ \mathrm{and} {z\ ∈\ \mathbb{C}\ :\ \vert z\ −\ z_0 \vert\ =\ r} $ are closed  
+		+ $ C $ and $ ∅ $ are closed  
+		+ $ {z\ ∈\ \mathbb{C}\ :\ \vert z\ −\ z_0 \vert \ <\ r}\ ∪ {z\ ∈\ \mathbb{C}\ :\ \vert z\ −\ z_0 \vert\ =\ r\ \mathrm{and Im} (z\ −\ z_0)\ >\ 0} is neither open nor closed  
 
+* __Closure and Interior__ of a Set  
+	- ___Def:___: Let $ E $ be a set in $ \mathbb{C} $.  
+	The _closure_ of $ E $ is the set $ E $ together with all of its boundary points: $ \closure{E}\ =\ E\ ∪\ ∂E $.  
+	The _interior_ of $ E $ , $ \interior{E} $ is the set of all interior points of $ E $.  
+	- Examples:  
+		+ $ \overline{B_r(z_0)}\ = \ B_r(z_0)\ \cup \ K_r(z_0)\ = \ {z\ \in\ \mathbb{C}\ :\ \vert z\ -\ z_0 \vert \ \leq \ r} $  
+		+ $ \overline{K_r(z_0)}\ = \ K_r(z_0) $  
+		+ $ \overline{B_r(z_0)\ \setminus \ {z_0}}\ = \ {z\ \in\ \mathbb{C}\ :\ \vert z\ -\ z_0 \vert \ \leq \ r} $  
+		+ With $ E\ =\ {z\ \in\ \mathbb{C}\ :\ \vert z\ -\ z_0 \vert \ \leq \ r}, \interior{E}\ = \ B_r(z_0) $  
+		+ With $ E\ =\ K_r(z_0),\ \interior{E}\ = \ \emptyset $  
 
+* __Connectedness__  
+	- ___Def:___ Two sets $ X, Y $ in $ \mathbb{C} $ are separated if there are disjoint open set $ U, V $ so that $ X\ ⊂\ U $ and $ Y\ ⊂\ V $ . A set $ W $ in $ \mathbb{C} $ is connected if it is impossible to find two separated non-empty sets whose union equals $ W $.  
+	- Examples:  
+		+ $ X\ =\ [0, 1) $ and $ Y\ =\ (1, 2] $ are separated  
+		+ Choose $ U\ =\ B_1(0) $ and $ V\ =\ B_1(2) $ . Thus $ X\ ∪\ Y\ =\ [0, 2]\ \setminus \ {1} $ is not connected  
+	- ___Theorem:___ Let $ G $ be an open set in $ \mathbb{C} $ . Then $ G $ is connected if and only if any two points in $ G $ can be joined in $ G $ by successive line segments.
+	- ___Def:___ A set $ A $ in $ \mathbb{C} $ is bounded if there exists a number $ R\ >\ 0 $ such that $ A\ ⊂\ B_R(0) $ . If no such $ R $ exists then $ A $ is called unbounded.
+
+* The Point at Infinity  
+	- In $ \mathbb{R} $ , there are two directions that give rise to $ ±∞ $  
+	- In $ \mathbb{C} $ , there is only one $ ∞ $ which can be attained in many directions.
+
+## Function  
+
+### Complex Functions  
+
+* A function $ f:\ A\ \to\ B $ is a rule that assigns to each element $ A $ of exactly one element of $ B $  
+* 
