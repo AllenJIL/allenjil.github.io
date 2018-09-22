@@ -23,7 +23,7 @@ tag: Math
 		- [Polar Representation](#polar-representation)
 		- [Roots of Complex Numbers](#roots-of-complex-numbers)
 		- [Topology in the Plane](#topology-in-the-plane)
-	- [Function](#Function)
+	- [Function](#function)
 		- [Complex Functions](#complex-functions)
 <!-- /TOC -->
 
@@ -125,13 +125,13 @@ $$ \displaystyle \underbrace{(x + iy)}_{z} + \underbrace{(u + iv)}_{w} = \underb
 
 * __Sets__ in the Complex Plane
 	- Circles and disks: center $ z_0\ =\ x_0\ +\ i y_0 $, radius $ r $  
-		+ $ B_r(z_0) = {z ∈ \mathbb{C} : z has distance less than r from z_0} disk of radius r, centered
-at z_0 $  
-		+ $ K_r(z_0) = {z ∈ \mathbb{C} : z has distance r from z_0} circle of radius r, centered at z_0 $  
+		+ $ B_r(z_0) = {z ∈ \mathbb{C} : z $ has distance less than $ r $ from $ z_0} $ disk of radius $ r $ , centered
+at $ z_0 $  
+		+ $ K_r(z_0) = {z ∈ \mathbb{C} : z $ has distance $ r $ from $ z_0} $ circle of radius $ r $ , centered at $ z_0 $  
 	- Measure distance  
 		- $$
 		\begin{align*}
-		\displaystyle d\ &= \ \sqrt{(x\ - \ x_0)^2\ + \ (y\ - \ y_0)^2} \\
+		\displaystyle d\ & = \ \sqrt{(x\ - \ x_0)^2\ + \ (y\ - \ y_0)^2} \\
     	& = \vert (x\ - \ x_0)\ + \ i\ (y\ - \ y_0) \vert \\
     	& = \vert z\ - \ z_0 \vert
 		\end{align*}
@@ -155,14 +155,14 @@ at z_0 $
 
 * __Closure and Interior__ of a Set  
 	- ___Def:___: Let $ E $ be a set in $ \mathbb{C} $.  
-	The _closure_ of $ E $ is the set $ E $ together with all of its boundary points: $ \closure{E}\ =\ E\ ∪\ ∂E $.  
-	The _interior_ of $ E $ , $ \interior{E} $ is the set of all interior points of $ E $.  
+	The _closure_ of $ E $ is the set $ E $ together with all of its boundary points: $ \overline{E}\ =\ E\ ∪\ ∂E $.  
+	The _interior_ of $ E $ , $ \circ{E} $ is the set of all interior points of $ E $.  
 	- Examples:  
 		+ $ \overline{B_r(z_0)}\ = \ B_r(z_0)\ \cup \ K_r(z_0)\ = \ {z\ \in\ \mathbb{C}\ :\ \vert z\ -\ z_0 \vert \ \leq \ r} $  
 		+ $ \overline{K_r(z_0)}\ = \ K_r(z_0) $  
 		+ $ \overline{B_r(z_0)\ \setminus \ {z_0}}\ = \ {z\ \in\ \mathbb{C}\ :\ \vert z\ -\ z_0 \vert \ \leq \ r} $  
-		+ With $ E\ =\ {z\ \in\ \mathbb{C}\ :\ \vert z\ -\ z_0 \vert \ \leq \ r}, \interior{E}\ = \ B_r(z_0) $  
-		+ With $ E\ =\ K_r(z_0),\ \interior{E}\ = \ \emptyset $  
+		+ With $ E\ =\ {z\ \in\ \mathbb{C}\ :\ \vert z\ -\ z_0 \vert \ \leq \ r}, \circ{E}\ = \ B_r(z_0) $  
+		+ With $ E\ =\ K_r(z_0),\ \circ{E}\ = \ \emptyset $  
 
 * __Connectedness__  
 	- ___Def:___ Two sets $ X, Y $ in $ \mathbb{C} $ are separated if there are disjoint open set $ U, V $ so that $ X\ ⊂\ U $ and $ Y\ ⊂\ V $ . A set $ W $ in $ \mathbb{C} $ is connected if it is impossible to find two separated non-empty sets whose union equals $ W $.  
@@ -181,4 +181,46 @@ at z_0 $
 ### Complex Functions  
 
 * A function $ f:\ A\ \to\ B $ is a rule that assigns to each element $ A $ of exactly one element of $ B $  
-* 
+* $ f^n(z) $ (read: "Eff n") is called the nth iterate of f  
+
+* __Sequences and Limits__ of Complex Numbers
+	- ___Def:___ A sequence {sn} of complex numbers converges to $ s ∈ \mathbb{C} $ if for every $ ε > 0 $ there exists an index $ N ≥ 1 $ such that  
+	$$ \vert s_n\ −\ s\vert \ <\ ε\ \mathrm{for all}\ n\ ≥\ N. $$  
+	We write  
+	$$ \displaystyle\lim_{x \to \infty}\ s_n\ =\ s. $$  
+
+* __Rules__ for Limits  
+	1. Convergent sequences are bounded.  
+	2. If $ {s_n} $ converges to $ s $ and $ {t_n} $ converges to $ t $ , then  
+		+ $ s_n\ +\ t_n\ \to \ s\ +\ t $  
+		+ $ s_n\ \dot \ t_n\ \to \ s\ \dot \ t $ (in particular: $ a\ \dot \ s_n \ \to \ a\ \dot \ s $ for any $ a \in \mathbb{C} $ )  
+		+ $ \displaystyle \frac{s_n}{t_n}\ \to \ \frac{s}{t} $ , provided $ t\ \neq \ 0 $  
+
+* __Facts__  
+	- A sequence of complex numbers, $ {s_n} $, converges to $ 0 $ iff the sequence $ {\vert s_n \vert} $ of absolute values converges to $ 0 $  
+	- A sequence of complex numbers, $ {s_n} $, with $ s_n\ =\ x_n\ +\ i y_n $ , converges to $ s\ =\ x\ +\ i y $ iff $ x_n\ \to \ x $ and $ y_n\ \to \ y $ as $ n\ \to \ \infty $  
+
+* ___Squeeze Theorem:___ Suppose that $ {r_n} $ , $ {s_n} $ and $ {t_n} $ are sequences of real numbers such that $ r_n\ ≤\ s_n\ ≤\ t_n $ for all $ n $ . If both sequences $ {r_n} $ and $ {t_n} $ converge to the same limit, $ L $ , then the sequence $ {s_n} $ converges to the limit $ L $ as well.  
+
+* ___Theorem:___ A bounded, monotone sequence of real numbers converges  
+
+
+* Limits of Complex Functions  
+	- ___Def:___ The complex-valued function $ f(z) $ has limit $ L $ as $ z\ \to \ z_0 $ if the values of $ f(z) $ are near $ L $ as $ z\ \to \ z_0 $ .
+	- Also: $ \displaystyle \lim_{z \to z_0}\ f(z)\ = \ L $ if for all $ ε\ >\ 0 $ there exists $ δ\ >\ 0 $ such that
+$ \vert f(z)\ −\ L\vert \ <\ ε $ whenever $ 0\ <\ \vert z\ −\ z_0\vert \ <\ δ $  
+
+* __Facts__  
+	- If $ f $ has a limit at $ z_0 $ then $ f $ is bounded near $ z_0 $ .  
+	- If $ f(z)\ \to \ L $ and $ g(z)\ \to \ M $ as $ z\ \to \ z_0 $ then  
+		+ $ f(z)\ + \ g(z) \ \to \ L \ + \ M $ as $ z\ \to \ z_0 $  
+		+ $ f(z)\ \dot \ g(z) \ \to \ L \ \dot \ M $ as $ z\ \to \ z_0 $  
+		+ $ \displaystyle \frac{f(z)}{g(z)} \ \to \ \frac{L}{M} $ as $ z\ \to \ z_0 $, provided that $ M\ \neq \ 0 $  
+
+* __Continuity__  
+	- ___Def:___ The function $ f $ is continuous at $ z_0 $ if $ f(z)\ \to \ f(z_0) $ as $ z\ \to \ z_0 $ .  
+	- This definition implicitly says that:  
+		+ $ f $ is defined at $ z_0 $  
+		+ $ f $ has a limit as $ z\ \to \ z_0 $  
+		+ The limit equals $ f(z_0) $  
+
