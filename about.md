@@ -7,7 +7,7 @@ title: About Me
 
 A Mathematics researcher, love to study new technologies
 <p>
-Current learning: review mathematics
+Current study in Cambridge: Applied Mathematics
 <p>
 Understand some basic concepts in Python, R and C++
 <p>
@@ -17,7 +17,7 @@ Understand some basic concepts in Python, R and C++
 <p>
 - Partial Differential Equations
 <p> 
-- Data Science
+- Inverse Problems in Imaging
 <p>
 - Machine Learning
 <p>
@@ -34,7 +34,8 @@ Understand some basic concepts in Python, R and C++
 <h3><strong>Coursework:</strong></h3>
 <ul>
  	<li><b>Mathematics courses: </b>
-Calculus, Real Analysis, Vector Analysis, Linear Algebra, Group theory, Number Theory, Discrete Mathematics, Advanced Linear and Multilinear Algebra, Partial Differential Equation, Continuum Mechanics and Mathematical Modeling</li>
+Topics in Convex Optimisation, Distribution Theory & Applications, Boundary Value Problems for Linear PDEs, Inverse Problems in Imaging, Analysis of PDE (in Cambridge)  
+Calculus, Real Analysis, Vector Analysis, Linear Algebra, Group theory, Number Theory, Discrete Mathematics, Advanced Linear and Multilinear Algebra, Partial Differential Equation, Continuum Mechanics and Mathematical Modeling (in PSU)</li>
  	<li><b>Statistics courses: </b>
 Applied Probability, Applied Statistics for Engineers and Scientist</li>
  	<li><b>Economics courses: </b>
@@ -48,7 +49,7 @@ Macroeconomic Theory, Microeconomics Theory with Calculus</li>
 <p> 
 数学爱好者, 喜欢新科技
 <p>
-正在学习：复习数学
+正在剑桥大学学习：应用数学
 <p>
 懂得 Python, R, MATLAB 和 C++ 的一些基础运用
 <p>
@@ -57,7 +58,7 @@ Macroeconomic Theory, Microeconomics Theory with Calculus</li>
 <p>
 - 偏微分方程
 <p> 
-- 数据科学
+- Inverse Problems in Imaging
 <p>
 - 机器学习
 <p>
@@ -68,7 +69,7 @@ Macroeconomic Theory, Microeconomics Theory with Calculus</li>
 	- 理学学士学位  (数学专业 系荣誉)
 <p> 
 - 英国剑桥大学 (2018 -2019):
-	- 应用数学高级研究硕士
+	- 应用数学硕士
 <p>
 
 <h3><strong>课程:</strong></h3>
