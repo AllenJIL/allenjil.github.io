@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Mathematics Reviews Linear Analysis"
-description: "数学复习 Linear Analysis"
+title: "Mathematics Reviews (Linear Analysis)"
+description: "数学复习 (Linear Analysis)"
 date: 2018-12-16
 tag: Math
 ---
@@ -32,7 +32,7 @@ tag: Math
 		- [Operator Norm](#operator-norm)
 		- [Dual Space /reflexive](#dual-space)
 		- [Adjoint map](#adjoint-map)
-		- [Finite-dimensional v.s.](#f.d)
+		- [Finite-dimensional v.s.](#fd)
 		- [Partially Ordered Set (poset)](#poset)
 		- [Totally Ordered (Chain)](#totally-ordered)
 		- [Extend](#extend)
@@ -70,13 +70,13 @@ $$ f(v) \leq p(v) \; \forall v \in V $$
 
 ### Finit Dimentional  
 
-* Let V be a normed v.s. s.t. $ \bar{B_1(0)} is compact. Then V is __finite-dimentional__  
+* Let V be a normed v.s. s.t. $ \bar{B_1(0)} $ is compact. Then V is __finite-dimentional__  
 
 ## Definitions  
 
 ### Normed Vector Space  
 
-* __Normed Vector Space__ is a vector space (v.s.) V with a norm $ \lVert \cdot \rVert \ : \ V \to \mathbb{R}, \ v \mapsto \lVert v \rVert $ satisfying:  
+* __Normed Vector Space__ is a vector space (v.s.) V with a norm $ \lVert \ccdot \rVert \ : \ V \to \mathbb{R}, \ v \mapsto \lVert v \rVert $ satisfying:  
 	1. $ \lVert v \rVert \geqslant \ \mathrm{for all} \ v \in V \ \mathrm{and} \ \lVert v \rVert = 0 \ \mathrm{iff} \ v = 0 $ (pos. def)  
 	2. $ \lVert \lambda v \rVert = \lvert \lambda \rvert \lVert v \rVert $ for every $ \lambda \in \mathbb{k} $ and $ v \in V $ (pos. homogeneity)  
 	3. $ \lVert v \ + \ w \rVert \ \leqslant \ \lVert v \rVert + \lVert w \rVert $ for every $ v, w \in V $ (triangle ineq.)  
@@ -112,7 +112,7 @@ $$ f(v) \leq p(v) \; \forall v \in V $$
 
 * T is __bounded__ if $ T(B) $ is bounded for any bounded $ B \subset V $
 
-Fact:  
+___Fact___:  
 * If V,W are __normed v.s.__, a linear map $ T : V \to W $ is bounded iff  
 	there is a $ \lambda > 0 $ s.t. $ T (B_1(0)) \subseteq B_\lambda (0) $  
 	i.e. $ \lVert TV \rVert \leq \lambda \; \forall \; v \in V $ with $ \lVert v \rVert \leq 1 $  
@@ -125,10 +125,10 @@ Fact:
 * Denote by $ \mathfrak{L} (V, W) $ the space of linear maps $ V \to W $  
 	by $ \mathfrak{B} (V, W) $ the space of __bounded__ linear maps $ V \to W $  
 
-Fact:  
-* The operator norm $ \lVert \dot \rVert $ is a norm on $ \mathfrak{B} (V, W) $  
+___Fact___:  
+* The operator norm $ \lVert \cdot \rVert $ is a norm on $ \mathfrak{B} (V, W) $  
 
-Prop:  
+___Prop___:  
 * Let V,W be __normed v.s.__  
 	Then a linear map $ T : V \to W $ is __bounded__ iff it is countinous  
 
@@ -141,7 +141,7 @@ Prop:
 	The __double dual__ of V is the dual space of $ V^{\star} $  
 	i.e. $ V^{\star \star} = (V^{\star})^{\star} $  
 
-Fact:
+___Fact___:
 * The map $ \phi : V \to V^{\star \star} $ , $ v \mapsto \tilde{v} $ where $ \tilde{v} (f) = f(v) $ is bounded and linear  
 * A Banach space is __reflexive__ if $ \phi $ is bijection  
 
@@ -151,17 +151,17 @@ Fact:
 	Then the __adjoint map__ $ T^{\star} : W^{\star} \to V^{\star} $ is defined by  
 	$ [T^{\star} f] v = f (T v) \; \mathrm{for} \; f \in W^{\star}, v \in V $  
 
-Fact:
+___Fact___:
 * $ T^\star f $ is indeed in $ V^\star = \mathfrak{B} (V, \mathbb{K}) $ and $ \lVert T^\star \rVert \leq \lVert T \rVert $   
 
-### f.d  
+### fd  
 
 * Any __finite-dimensional vector space__ can be identified with $ \mathbb{K}^n $ by choosing a basis. there __n__ is the dimension  
-* Two norms $ \lVert \dot \rVert $ and $ \lvert \lVert \dot \rVert \rvert $ on a vector space V are __equivalent__ iff  
+* Two norms $ \lVert \cdot \rVert $ and $ \lvert \lVert \cdot \rVert \rvert $ on a vector space V are __equivalent__ iff  
 	there exists a constant $ C > 0 $ s.t.  
 	$ C^{-1} \lvert \lVert v \rVert \rvert \leq \lVert v \rVert \leq C \lvert \lVert v \rVert \rvert $ for all $ v \in V $  
-prop:  
-* All norms on a f.d.v.s. are ___equivalent__  
+___Prop___:  
+* All norms on a f.d.v.s. are __equivalent__  
 * In any f.d.v.s., the closed unit ball is __compact__  
 * Every f.d. normed v.s. is a __Banach space__  
 * Let V be a normed v.s. and $ W \subset V $ be a f.d. subspace, then W is __closed__  
