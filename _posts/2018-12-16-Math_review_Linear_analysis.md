@@ -233,9 +233,9 @@ __Compact Support__:
 __Essential Support__:  
 *   If X is a top. measure space with a Borel measure μ  
    the __essential support__ of a measurable function $ f : X \to \mathbb{R} $, written __ess supp(f)__, is defined to be 
-   the smallest closed subset $ F $ of $ X $ such that $ f = 0 $ μ-almost everywhere outside $ F $  
-   Equivalently, ess supp(f) is the complement of the largest open set on which f = 0 μ-almost everywhere
-   $ \displaystyle ess supp(f) := X \setminus \bigcup \lbrace \Omega \subset X \mid \Omega $ is open and $ f = 0 $ μ-almost everywhere in $ \Omega \rbrace $  
+   the __smallest closed__ subset $ F $ of $ X $ such that $ f = 0 $ μ-almost everywhere outside $ F $  
+   Equivalently, __ess supp(f)__ is the complement of the largest open set on which f = 0 μ-almost everywhere
+   $ \displaystyle \mathrm{ess supp}(f) := X \setminus \bigcup \lbrace \Omega \subset X \mid \Omega $ is open and $ f = 0 $ μ-almost everywhere in $ \Omega \rbrace $  
 
 __Support Function__:  
 * The __support function__ $ h_A : \mathbb{R}^n \to \mathbb{R} $ of a non-empty closed convex set A in $ \mathbb{R}^n $ is given by  
@@ -246,11 +246,11 @@ In convex analysis and mathematical optimization, the __supporting functional__ 
 * Let X be a locally convex top. space and $ C \subset X $ be a convex set, then  
 	the continuous linear functional $ \phi : X \to \mathbb{R} $ is a __supporting functional__ of C at the point $ x_0 $  
 	if $ \phi(x) \leq \phi(x_0) $ for every $ x \in C $  
-* If $ \h_C : X^\star \to \mathbb{R} $ is a __support function__ of the set C, then  
+* If $ h_C : X^\star \to \mathbb{R} $ is a __support function__ of the set C, then  
 	if $ h_C (x^\star) = x^\star (x_0) $ , it follows that  
-	$ h_C $ defines a supporting functional $ \phi : X \to \mathbb{R} $ of $ C $ at the point $ x_0 $ s.t.  
+	$ h_C $ defines a __supporting functional__ $ \phi : X \to \mathbb{R} $ of $ C $ at the point $ x_0 $ s.t.  
 	$ \phi(x) = x^\star (x) $ for any $ x \in X $  
-* If $ \phi $ is a supporting functional of the convex set C at the point $ x_{0} \in C $ such that  
-	$ \phi (x_{0}) = \sigma = \sup_{x \in C} \phi (x) > \inf_{x \in C} \phi (x) $  
-	then $ H = \phi^{-1} (\sigma ) $ defines a supporting hyperplane to C at $ x_{0} $  
+* If $ \phi $ is a __supporting functional__ of the convex set C at the point $ x_{0} \in C $ such that  
+	$ \displaystyle \phi (x_{0}) = \sigma = \sup_{x \in C} \phi (x) > \inf_{x \in C} \phi (x) $  
+	then $ H = \phi^{-1} (\sigma ) $ defines a __supporting hyperplane__ to C at $ x_{0} $  
 
