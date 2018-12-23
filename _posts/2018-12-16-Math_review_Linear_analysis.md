@@ -5,10 +5,12 @@ description: "数学复习 (Linear Analysis)"
 date: 2018-12-16
 tag: Math
 ---
-[Linear Analysis Lecture Notes]:<http://www.statslab.cam.ac.uk/~rb812/teaching/la2017/notes.pdf> "Linear Analysis Lecture Nites"
+[Linear Analysis Lecture Notes]:<http://www.statslab.cam.ac.uk/~rb812/teaching/la2017/notes.pdf> "Linear Analysis Lecture Notes"
+[Linear Analysis Part II]:<https://www.dpmms.cam.ac.uk/~md384/snmeiwseis-ga.pdf>"Linear Analysis Part II"
 
-> This review is for myself further learning to find def. & thm. easier  
-> Some notes form [Linear Analysis Lecture Notes] for further lectures  
+
+> This review is for myself further learning to find notations def. & thm. easier  
+> Some notes from [Linear Analysis Lecture Notes] and [Linear Analysis Part II]  
 > Some notes from wikipedia  
 > f.d.v.s $ \to $ finite dimentional vector space  
 > top. $ \to $ topological  
@@ -24,6 +26,8 @@ tag: Math
 		- [d(,)](#matric)
 		- [L(,), B(,)](#space)
 		- [supp(f)](#set-theoretic-support)
+		- [Inner product](#inner-product)
+		- [](#)
 	- [Theorems and Definitions](#theorems-and-definitions)
 		- [Normed Vector Space](#normed-vector-space)
 		- [Vector Space Operation](#vector-space-operation)
@@ -42,6 +46,9 @@ tag: Math
 		- [Extend](#extend)
 		- [Hahn-Banach](#hahn-banach)
 		- [Support](#support)
+		- [Dense](#dense)
+		- [Baire Category Theorem](#baire-category-theorem)
+		- [Meagre](#meagre)
 		- [](#)
 <!-- /TOC -->
 
@@ -68,6 +75,12 @@ tag: Math
 * The __set-theoretic support__ of $ f ： X \to \mathbb{R} $ where X arbitrary set, written __supp(f)__, is the set of points in X where f is non-zero  
 	$ supp(f) = \{ x \in X \mid f(x) \neq 0 \} $  
 	* If $ f(x) = 0 $ for all but a finite number of points x in X, then f is said to have __finite support__  
+
+### Inner product  
+
+* __$ f_v(w) $__ $ = < w, v > $  
+
+
 
 ## Theorems and Definitions  
 
@@ -109,7 +122,7 @@ tag: Math
 
 * T is __bounded__ if $ T(B) $ is bounded for any bounded $ B \subset V $
 
-___Fact___:  
+___Fact___.  
 * If V,W are __normed v.s.__, a linear map $ T : V \to W $ is bounded iff  
 	there is a $ \lambda > 0 $ s.t. $ T (B_1(0)) \subseteq B_\lambda (0) $  
 	i.e. $ \lVert TV \rVert \leq \lambda \; \forall \; v \in V $ with $ \lVert v \rVert \leq 1 $  
@@ -122,10 +135,10 @@ ___Fact___:
 * Denote by $ \mathfrak{L} (V, W) $ the space of linear maps $ V \to W $  
 	by $ \mathfrak{B} (V, W) $ the space of __bounded__ linear maps $ V \to W $  
 
-___Fact___:  
+___Fact___.  
 * The operator norm $ \lVert \cdot \rVert $ is a norm on $ \mathfrak{B} (V, W) $  
 
-___Prop___:  
+___Prop___.  
 * Let V,W be __normed v.s.__  
 	Then a linear map $ T : V \to W $ is __bounded__ iff it is countinous  
 
@@ -138,7 +151,7 @@ ___Prop___:
 	The __double dual__ of V is the dual space of $ V^{\star} $  
 	i.e. $ V^{\star \star} = (V^{\star})^{\star} $  
 
-___Fact___:
+___Fact___.
 * The map $ \phi : V \to V^{\star \star} $ , $ v \mapsto \tilde{v} $ where $ \tilde{v} (f) = f(v) $ is bounded and linear  
 * A Banach space is __reflexive__ if $ \phi $ is bijection  
 
@@ -148,7 +161,7 @@ ___Fact___:
 	Then the __adjoint map__ $ T^{\star} : W^{\star} \to V^{\star} $ is defined by  
 	$ [T^{\star} f] v = f (T v) \; \mathrm{for} \; f \in W^{\star}, v \in V $  
 
-___Fact___:
+___Fact___.
 * $ T^\star f $ is indeed in $ V^\star = \mathfrak{B} (V, \mathbb{K}) $ and $ \lVert T^\star \rVert \leq \lVert T \rVert $   
 
 ### Finite Dimentional  
@@ -158,13 +171,13 @@ ___Fact___:
 	there exists a constant $ C > 0 $ s.t.  
 	$ C^{-1} \lvert \lVert v \rVert \rvert \leq \lVert v \rVert \leq C \lvert \lVert v \rVert \rvert $ for all $ v \in V $  
 
-___Prop___:  
+___Prop___.  
 * All norms on a f.d.v.s. are __equivalent__  
 * In any f.d.v.s., the closed unit ball is __compact__  
 * Every f.d. normed v.s. is a __Banach space__  
 * Let V be a normed v.s. and $ W \subset V $ be a f.d. subspace, then W is __closed__  
 
-___Thm___:  
+___Thm___.  
 * Let V be a normed v.s. s.t. $ \overline{B_1(0)} $ is compact. Then V is __finite-dimentional__  
 
 ### Sublinear  
@@ -196,7 +209,7 @@ i.e.
 * a set $ S \subset V $ is __linearly independent__ if any __finite__ subset is  
 * A __basis__ of V is a set $ B \subset V $ that is __linearly independent__ and such that every element of V is a __finite__ linear combination of elements in B  
 
-___Prop___:  
+___Prop___.  
 * Let $ V \neq \lbrace 0 \rbrace $ be a vector space and $ S \subset V $ linearly independent. Then V has a basis B s.t. $ S \subset B $  
 
 ### Extend  
@@ -210,13 +223,24 @@ $$ g(v) \leq p(v) \; \forall v \in W $$
 Then there is $ f : V \to \mathbb{R} $ linear s.t. $ f\lvert_w = g $ and  
 $$ f(v) \leq p(v) \; \forall v \in V $$  
 
-___Cor___:  
+___Cor___.  
 * Let $ V \in \mathbb{K} $ be a normed v.s., $ W \subset V $ a subspace  
 	For any $ g \in W^\star $ there exists $ f\in V^{star} $  
 	s.t. $ f\lvert_{W} = g $ and $ \lVert f \rVert \leq \lVert g \rVert $  
 * Let V be a normed vector space and $ v \in V $  
 	Then $ \exists f_v \in V^\star $ s.t. $ \lVert f_v \rVert = 1 $ and $ f_v (V) = \lVert v \rVert $  
 	* Here $ f_v $ is called a __support functional__ for V  
+* Let V be a normed v.s. and $ v \in V $ , then  
+	$ v = 0 \Leftrightarrow f(v) = 0 \; \forall \; f \in V^\star $  
+	In particular, $ V^\star \neq 0 $  
+* Let V be a normed v.s., $ v, w \in V , \ v \neq w $ . Then  
+	there exists $ f \in V^\star $ s.t. $ f(v) \neq f(w) $  
+
+___Prop___.  
+* The map $ \phi : V \to V^{\star \star } $ is an isometry ($ d_Y(f(x),f(y)) = d_X(x,y) $ for a map $ f: X \to Y $) that  
+	$ \lVert \phi (v) \rVert = \lVert v \ rVert $  
+* Let V, W be a normed v.s.  
+	For any $ T \in \mathfrak{B} (V, W) $ , the dual map $ T^\star \in \mathfrak{B} (W^\star, V^\star ) satisifies $ \lVert T^\star \rVert = \lVert T \rVert $  
 
 ### Support  
 
@@ -253,4 +277,51 @@ In convex analysis and mathematical optimization, the __supporting functional__ 
 * If $ \phi $ is a __supporting functional__ of the convex set C at the point $ x_{0} \in C $ such that  
 	$ \displaystyle \phi (x_{0}) = \sigma = \sup_{x \in C} \phi (x) > \inf_{x \in C} \phi (x) $  
 	then $ H = \phi^{-1} (\sigma ) $ defines a __supporting hyperplane__ to C at $ x_{0} $  
+
+
+### Dense  
+
+* If X is a metric space, the $ Y \subset X $ is __dense__ if $ \overline{Y} = X $  
+	i.e. $ Y \cap B_r (X) \neq \varnothing \; \forall \; x \in X , r > 0 $  
+
+### Baire Category Theorem  
+
+* Let X be a __complete__ metric space.  
+	For any sequence of __open dense__ subsets $ U_j \subset X $ , $ \displaystyle\bigcap_j U_j $ is dense in $ X $  
+
+___cor___.  
+* Let $ X $ be a complete metric space. Let $ A_j \subset X $ be a sequence of __closed__ subsets s.t.   
+	$ \bigcup_j A_j $ has nonempty interior, i.e. it contains some ball  
+	Then at least one of the $ A_j $ has nonempty interior  
+
+### Interior  
+
+* The point x is an interior point of S. The point y is on the boundary of S  
+	<img src="/images/Mathreviews/interior.PNG">  
+* __Interior point__  
+	If $ S $ is a subset of a Euclidean space, then $ x $ is an interior point of $ S $ if there exists an open ball centered at $ x $  which is completely contained in S
+
+
+### Meagre  
+
+* Let X be a metric space  
+	1. A subset $ Y \subset X $ is __nowhere dense __ if $ int( \overline{Y} ) = \varnothing $ ,  
+		( if the interior of its closure is empty )  
+		i.e. , if $ Y $ is not dense in any ball  
+	2. A subset $ Z \subset X is __meagre__ or of the __first category__ if  
+		there are countably many set $ Y_j \subset X $ that are nowhere dense and $ Z = \bigcup_j Y_j $  
+		( if it is a union of countably many nowhere dense subsets )  
+	3. A subset $ U \subset X $ is __nonmeagre__ or of the __second category__ if 	
+		it is not meagre  
+		(  it contains a countable union of open and dense sets )  
+	4. A subset $ R \subset X $  is __residual__ if  
+		its complement is meagre  
+
+___fact___.  
+* $ Y \subset X $ is nowhere dense  
+	$ \Leftrightarrow \; \overline{Y} $ is nowhere dense  
+	$ \Leftrightarrow \; X \backslash \overline{Y} $ is open dense  
+
+___Cor___.  
+* Let $ X $ be a complete metric space. Then $ X $ is of second category  
 
