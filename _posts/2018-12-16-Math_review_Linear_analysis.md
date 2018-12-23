@@ -297,7 +297,7 @@ ___cor___.
 ### Interior  
 
 * The point x is an interior point of S. The point y is on the boundary of S  
-	<img src="/images/Mathreviews/interior.PNG">  
+	<img src="/images/Mathreviews/interior.png">  
 * __Interior point__  
 	If $ S $ is a subset of a Euclidean space, then $ x $ is an interior point of $ S $ if there exists an open ball centered at $ x $  which is completely contained in S
 
