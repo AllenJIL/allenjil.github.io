@@ -366,8 +366,8 @@ ___Cor___.
 
 * Principle of __uniform boundedness__  
   Let X be a __complete__ metric space  
-  Let $ (f_\lambda)_{\lambda \in \wedge} $ be a family of __continuous__ functions $ f_\lambda : X \to \mathbb{R} $  
-  If $ (f_\lambda)_{\lambda \in \wedge} $ is __pointwise bounded__,  
+  Let $ (f_\lambda)\sb{\lambda \in \wedge} $ be a family of __continuous__ functions $ f_\lambda : X \to \mathbb{R} $  
+  If $ (f_\lambda)\sb{\lambda \in \wedge} $ is __pointwise bounded__,  
   i.e., $ \sup_{\lambda \in \wedge} \lvert f_\lambda (x) \rvert \leq \infty $ for every $ x \in X $,  
   then there is a ball $ B_r (X_c) \subset X $ s.t.  
   $ ( f_\lambda ) $ is __uniformly bounded__ on $ B_r(X_0) $  
@@ -375,7 +375,7 @@ ___Cor___.
 
 * __Banach-Steinhaus Theorem__  
   Let $ V $ be a __Banach__ Space and $ W $ a normed v.s.  
-  Let $ (T_\lambda)_{\lambda \in \wedge} \subset \mathfrak{B}(V,W) $ be pointwise bounded,  
+  Let $ (T_\lambda)\sb{\lambda \in \wedge} \subset \mathfrak{B}(V,W) $ be pointwise bounded,  
   i.e., $ \sup_{\lambda \in \wedge} \lVert T_\lambda v \rVert \; \forall \; v \in V $  
   Then $ ( T_\lambda) $ is uniformly bounded  
   i.e., $ \sup_{\lambda \in \wedge} \lVert T_\lambda \rVert \leq \infty $  
