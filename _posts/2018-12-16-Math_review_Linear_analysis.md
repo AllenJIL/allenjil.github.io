@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "Mathematics Reviews (Linear Analysis)"
-description: "数学复习 (Linear Analysis)"
+title: "Mathematics Reviews (Analysis)"
+description: "数学复习 (Analysis)"
 date: 2018-12-16
 tag: Math
 ---
 [Linear Analysis Lecture Notes]:<http://www.statslab.cam.ac.uk/~rb812/teaching/la2017/notes.pdf> "Linear Analysis Lecture Notes"
-[Linear Analysis Part II]:<https://www.dpmms.cam.ac.uk/~md384/snmeiwseis-ga.pdf>"Linear Analysis Part II"
+[Linear Analysis Part II]:<https://www.dpmms.cam.ac.uk/~md384/snmeiwseis-ga.pdf> "Linear Analysis Part II"
 
 
 > This review is for myself further learning to find notations def. & thm. easier  
@@ -87,7 +87,7 @@ tag: Math
 ### Normed Vector Space  
 
 * __Normed Vector Space__ is a vector space (v.s.) V with a norm $ \lVert \cdot \rVert \ : \ V \to \mathbb{R}, \ v \mapsto \lVert v \rVert $ satisfying:  
-	1. $ \lVert v \rVert \geqslant \ \mathrm{for all} \ v \in V \ \mathrm{and} \ \lVert v \rVert = 0 \ \mathrm{iff} \ v = 0 $ (pos. def)  
+	1. $ \lVert v \rVert \geqslant \ \forall \ v \in V \ \mathrm{and} \ \lVert v \rVert = 0 \ \mathrm{iff} \ v = 0 $ (pos. def)  
 	2. $ \lVert \lambda v \rVert = \lvert \lambda \rvert \lVert v \rVert $ for every $ \lambda \in \mathbb{k} $ and $ v \in V $ (pos. homogeneity)  
 	3. $ \lVert v \ + \ w \rVert \ \leqslant \ \lVert v \rVert + \lVert w \rVert $ for every $ v, w \in V $ (triangle ineq.)  
 
@@ -123,6 +123,7 @@ tag: Math
 * T is __bounded__ if $ T(B) $ is bounded for any bounded $ B \subset V $
 
 ___Fact___.  
+
 * If V,W are __normed v.s.__, a linear map $ T : V \to W $ is bounded iff  
 	there is a $ \lambda > 0 $ s.t. $ T (B_1(0)) \subseteq B_\lambda (0) $  
 	i.e. $ \lVert TV \rVert \leq \lambda \; \forall \; v \in V $ with $ \lVert v \rVert \leq 1 $  
@@ -136,9 +137,11 @@ ___Fact___.
 	by $ \mathfrak{B} (V, W) $ the space of __bounded__ linear maps $ V \to W $  
 
 ___Fact___.  
+
 * The operator norm $ \lVert \cdot \rVert $ is a norm on $ \mathfrak{B} (V, W) $  
 
 ___Prop___.  
+
 * Let V,W be __normed v.s.__  
 	Then a linear map $ T : V \to W $ is __bounded__ iff it is countinous  
 
@@ -151,9 +154,15 @@ ___Prop___.
 	The __double dual__ of V is the dual space of $ V^{\star} $  
 	i.e. $ V^{\star \star} = (V^{\star})^{\star} $  
 
-___Fact___.
+___Fact___.  
+
 * The map $ \phi : V \to V^{\star \star} $ , $ v \mapsto \tilde{v} $ where $ \tilde{v} (f) = f(v) $ is bounded and linear  
 * A Banach space is __reflexive__ if $ \phi $ is bijection  
+
+* __Dual operators__  
+
+  Define the __dual operator__ of $ T $ by $ T^\star : X^\star \to Y^\star , T^\star (g) = g \circ T $ for $ g \in Y^\star $  
+
 
 ### Adjoint Map  
 
@@ -161,7 +170,8 @@ ___Fact___.
 	Then the __adjoint map__ $ T^{\star} : W^{\star} \to V^{\star} $ is defined by  
 	$ [T^{\star} f] v = f (T v) \; \mathrm{for} \; f \in W^{\star}, v \in V $  
 
-___Fact___.
+___Fact___.  
+
 * $ T^\star f $ is indeed in $ V^\star = \mathfrak{B} (V, \mathbb{K}) $ and $ \lVert T^\star \rVert \leq \lVert T \rVert $   
 
 ### Finite Dimentional  
@@ -172,12 +182,14 @@ ___Fact___.
 	$ C^{-1} \lvert \lVert v \rVert \rvert \leq \lVert v \rVert \leq C \lvert \lVert v \rVert \rvert $ for all $ v \in V $  
 
 ___Prop___.  
+
 * All norms on a f.d.v.s. are __equivalent__  
 * In any f.d.v.s., the closed unit ball is __compact__  
 * Every f.d. normed v.s. is a __Banach space__  
 * Let V be a normed v.s. and $ W \subset V $ be a f.d. subspace, then W is __closed__  
 
 ___Thm___.  
+
 * Let V be a normed v.s. s.t. $ \overline{B_1(0)} $ is compact. Then V is __finite-dimentional__  
 
 ### Sublinear  
@@ -210,6 +222,7 @@ i.e.
 * A __basis__ of V is a set $ B \subset V $ that is __linearly independent__ and such that every element of V is a __finite__ linear combination of elements in B  
 
 ___Prop___.  
+
 * Let $ V \neq \lbrace 0 \rbrace $ be a vector space and $ S \subset V $ linearly independent. Then V has a basis B s.t. $ S \subset B $  
 
 ### Extend  
@@ -218,12 +231,13 @@ ___Prop___.
 
 ### Hahn Banach  
 
-* Let V be a real vector space, a subspace $ W \subset V , p : V \to \mathbb{R} \mathrm{sublinear}, g: W \to \mathbb{R} $ linear s.t.  
+* Let V be a real vector space, a subspace $ W \subset V , p : V \to \mathbb{R} \; \mathrm{sublinear}, g: W \to \mathbb{R} $ linear s.t.  
 $$ g(v) \leq p(v) \; \forall v \in W $$  
-Then there is $ f : V \to \mathbb{R} $ linear s.t. $ f\lvert_w = g $ and  
+Then there is $ f : V \to \mathbb{R} $ linear s.t. $ f\lvert_W = g $ and  
 $$ f(v) \leq p(v) \; \forall v \in V $$  
 
 ___Cor___.  
+
 * Let $ V \in \mathbb{K} $ be a normed v.s., $ W \subset V $ a subspace  
 	For any $ g \in W^\star $ there exists $ f\in V^{star} $  
 	s.t. $ f\lvert_{W} = g $ and $ \lVert f \rVert \leq \lVert g \rVert $  
@@ -237,24 +251,29 @@ ___Cor___.
 	there exists $ f \in V^\star $ s.t. $ f(v) \neq f(w) $  
 
 ___Prop___.  
-* The map $ \phi : V \to V^{\star \star } $ is an isometry ($ d_Y(f(x),f(y)) = d_X(x,y) $ for a map $ f: X \to Y $) that  
-	$ \lVert \phi (v) \rVert = \lVert v \ rVert $  
+
+* The map $ \phi : V \to V^{\star \star } $ is an isometry  
+	($ d_Y(f(x),f(y)) = d_X(x,y) $ for a map $ f: X \to Y $) that  
+	$ \lVert \phi (v) \rVert = \lVert v \rVert $  
 * Let V, W be a normed v.s.  
-	For any $ T \in \mathfrak{B} (V, W) $ , the dual map $ T^\star \in \mathfrak{B} (W^\star, V^\star ) satisifies $ \lVert T^\star \rVert = \lVert T \rVert $  
+	For any $ T \in \mathfrak{B} (V, W) $ , the dual map $ T^\star \in \mathfrak{B} (W^\star, V^\star ) $ satisifies $ \lVert T^\star \rVert = \lVert T \rVert $  
 
 ### Support  
 
 * If the domain of f is a top. space, the support of f is the smallest closed set containing all points not mapped to zero  
 
 __Closed Support__:  
+
 * The support of f is defined topologically as the closure of the subset of X where f is non-zero  
 	i.e. $ supp(f) := \overline{\lbrace x \in X \mid f(x) \neq 0 \rbrace} $ $ = \overline{f^{-1}(\lbrace 0 \rbrace^c)} $  
 
 __Compact Support__:  
+
 * The closed support is a compact subset of $ X $  
 * If $ X $ is the real line, or n-dimensional Euclidean space, then a function has compact support iff it has bounded support  
 
 __Essential Support__:  
+
 *   If X is a top. measure space with a Borel measure μ  
    the __essential support__ of a measurable function $ f : X \to \mathbb{R} $, written __ess supp(f)__, is defined to be 
    the __smallest closed__ subset $ F $ of $ X $ such that $ f = 0 $ μ-almost everywhere outside $ F $  
@@ -262,11 +281,13 @@ __Essential Support__:
    $ \displaystyle \mathrm{ess supp}(f) := X \setminus \bigcup \lbrace \Omega \subset X \mid \Omega $ is open and $ f = 0 $ μ-almost everywhere in $ \Omega \rbrace $  
 
 __Support Function__:  
+
 * The __support function__ $ h_A : \mathbb{R}^n \to \mathbb{R} $ of a non-empty closed convex set A in $ \mathbb{R}^n $ is given by  
 	$ h_A (x) = sup \lbrace x \cdot a : a \in A \rbrace , \; x \in \mathbb{R}^n $  
 
 __Supporting Functional__:  
 In convex analysis and mathematical optimization, the __supporting functional__ is a generalization of the supporting hyperplane of a set  
+
 * Let X be a locally convex top. space and $ C \subset X $ be a convex set, then  
 	the continuous linear functional $ \phi : X \to \mathbb{R} $ is a __supporting functional__ of C at the point $ x_0 $  
 	if $ \phi(x) \leq \phi(x_0) $ for every $ x \in C $  
@@ -290,6 +311,7 @@ In convex analysis and mathematical optimization, the __supporting functional__ 
 	For any sequence of __open dense__ subsets $ U_j \subset X $ , $ \displaystyle\bigcap_j U_j $ is dense in $ X $  
 
 ___cor___.  
+
 * Let $ X $ be a complete metric space. Let $ A_j \subset X $ be a sequence of __closed__ subsets s.t.   
 	$ \bigcup_j A_j $ has nonempty interior, i.e. it contains some ball  
 	Then at least one of the $ A_j $ has nonempty interior  
@@ -300,15 +322,25 @@ ___cor___.
 	<img src="/images/Mathreviews/interior.png">  
 * __Interior point__  
 	If $ S $ is a subset of a Euclidean space, then $ x $ is an interior point of $ S $ if there exists an open ball centered at $ x $  which is completely contained in S
-
+* __Interior of a set__  
+  The interior of a set $ S $ is the set of all interior points of $ S $  
+  it is denoted $ int(S) $, $ Int(S) $ or $ S^o $  
+  and has the following properties:  
+  * $ int(S) $ is an open subset of $ S $  
+  * $ int(S) $ is the union of all open sets contained in $ S $  
+  * $ int(S) $ is the largest open set contained in $ S $  
+  * A set $ S $ is open iff $ S = int(S) $  
+  *  $ int(int(S)) = int(S) $ (idempotence)  
+  * If $ S $ is a subset of $ T $, then $ int(S) $ is a subset of $ int(T) $  
+  * If $ A $ is an open set, then $ A $ is a subset of $ S $ iff $ A $ is a subset of $ int(S) $  
 
 ### Meagre  
 
 * Let X be a metric space  
-	1. A subset $ Y \subset X $ is __nowhere dense __ if $ int( \overline{Y} ) = \varnothing $ ,  
+	1. A subset $ Y \subset X $ is __nowhere dense__ if $ int( \overline{Y} ) = \varnothing $ ,  
 		( if the interior of its closure is empty )  
 		i.e. , if $ Y $ is not dense in any ball  
-	2. A subset $ Z \subset X is __meagre__ or of the __first category__ if  
+	2. A subset $ Z \subset X $ is __meagre__ or of the __first category__ if  
 		there are countably many set $ Y_j \subset X $ that are nowhere dense and $ Z = \bigcup_j Y_j $  
 		( if it is a union of countably many nowhere dense subsets )  
 	3. A subset $ U \subset X $ is __nonmeagre__ or of the __second category__ if 	
@@ -318,10 +350,42 @@ ___cor___.
 		its complement is meagre  
 
 ___fact___.  
+
 * $ Y \subset X $ is nowhere dense  
 	$ \Leftrightarrow \; \overline{Y} $ is nowhere dense  
 	$ \Leftrightarrow \; X \backslash \overline{Y} $ is open dense  
 
 ___Cor___.  
+
 * Let $ X $ be a complete metric space. Then $ X $ is of second category  
+* Let $ X $ be a complete metric space. Then residual sets are non-meagre and dense  
+* Let $ X $ be a complete metric space and $ U \subset X $ open.  
+  Then $ U = \varnothing $ or $ U $ is of the second category  
+
+### Uniform Boundedness  
+
+* Principle of __uniform boundedness__  
+  Let X be a __complete__ metric space  
+  Let $ (f_\lambda)_{\lambda \in \wedge} $ be a family of __continuous__ functions $ f_\lambda : X \to \mathbb{R} $  
+  If $ (f_\lambda)_{\lambda \in \wedge} $ is __pointwise bounded__,  
+  i.e., $ \sup_{\lambda \in \wedge} \lvert f_\lambda (x) \rvert \leq \infty $ for every $ x \in X $,  
+  then there is a ball $ B_r (X_c) \subset X $ s.t.  
+  $ ( f_\lambda ) $ is __uniformly bounded__ on $ B_r(X_0) $  
+  i.e., $ \sup_{\lambda \in \wedge} \sup_{x \in B_r (x_0)} \lvert f_\lambda (x) \rvert \leq \infty $  
+
+* __Banach-Steinhaus Theorem__  
+  Let $ V $ be a __Banach__ Space and $ W $ a normed v.s.  
+  Let $ (T_\lambda)_{\lambda \in \wedge} \subset \mathfrak{B}(V,W) $ be pointwise bounded,  
+  i.e., $ \sup_{\lambda \in \wedge} \lVert T_\lambda v \rVert \; \forall \; v \in V $  
+  Then $ ( T_\lambda) $ is uniformly bounded  
+  i.e., $ \sup_{\lambda \in \wedge} \lVert T_\lambda \rVert \leq \infty $  
+
+### Open Mapping Theorem  
+
+* A map between topological spaces is __open__ iff it maps open ses to open sets  
+
+* __Open Mapping Theorem__  
+  Let $ V, W $ be Banach Spaces and $ T \in \mathfrak{B} (V, W) $  
+  1. if $ T $ is surjective, then $ T $ is open  
+  2. if $ T $ is bijective, then $ T^{-1} \in \mathfrak{B}(W, V) $  
 
