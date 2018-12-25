@@ -30,6 +30,7 @@ tag: Math
 		- [Jections](#jections)
 		- [](#)
 	- [Theorems and Definitions](#theorems-and-definitions)
+		- [Morphism](#morphism)
 		- [Normed Vector Space](#normed-vector-space)
 		- [Vector Space Operation](#vector-space-operation)
 		- [Topological Vector Space](#topological-vector-space)
@@ -94,12 +95,60 @@ tag: Math
 
 ### Morphism  
 
-* __Monomorphism (or Monic)__  
-  A function $ f : A \to B $ is a __monomorphism (or monic)__ if holds:  
-  for all sets $ Z $ and all functions $ \alpha^\prime, \alpha^{\prime\prime} : Z \to A $  
-  $ f \circ \alpha^\prime = f \circ \alpha^{\prime\prime} \to \alpha^\prime = \alpha^{\prime\prime} $  
+* A ___category___ __$ \mathsf{C} $__ consists of  
+  * a class $ Obj(\mathsf{C}) $ of objects of the category  
+  * for every two objects $ A $, $ B $ of $ \mathsf{C} $, a set __$ Hom_\mathsf{C} (A, B) $__ of morphisms, with the properties below:  
+    1. For every object $ A $ of $ \mathsf{C} $, $ \exists $ one morphism $ 1_A \in Hom_\mathsf{C} (A, A) $ the identity of $ A $  
+    2. One can compose morphism:  
+      Two morphisms $ f \in Hom_\mathsf{C}(A, B) $ and $ g \in Hom_\mathsf{C}(B, C) $ determine a morphism $ gf \in Hom_\mathsf{C}(A, C) $  
+      There is a function (of sets)  
+      $ Hom_\mathsf{C}(A, B) \times Hom_\mathsf{C}(B, C) \to Hom_\mathsf{C}(A, C) $  
+      and the image of the pair $ (f, g) $ is denoted $ g f $  
+    3. Associative: $ h \in Hom_\mathsf{C}(C, D) $  
+      $ (hg)f = h(gf) $  
+    4. Identity morphisms are identities  
+      $ f 1_A = f, \; \; 1_B f = f $  
+    5. the sets $ Hom_\mathsf{C} (A, B), \; Hom_\mathsf{C} (C, D) $ be disjoint unless $ A = C, B = D $  
 
-* A function is injective iff it is a monomorphism  
+
+* __Homomorphism__  
+  A homomorphism is a map between two algebraic structures of the same type, that preserves the operations of the structures  
+  Formally, a map $ {\displaystyle f:A\to B} $ preserves an operation $ \mu $ of arity $ k $, defined on both $ A $ and $ B $ if  
+  $\displaystyle f(\mu _{A}(a_{1},\ldots ,a_{k}))=\mu _{B}(f(a_{1}),\ldots ,f(a_{k})), $  
+  for all elements $ a_1, ..., a_k \in A $  
+
+* __Endomorphsim__  
+  A morphism od an object $ A $ of a category $ \mathsf{C} $ to itself  
+  $ Hom_\mathsf{C}(A, A) $ is denoted $ End_\mathsf{C} (A) $  
+
+* __Monomorphism (or Monic)__  
+  * A function $ f : A \to B $ is a __monomorphism (or monic)__ if holds:  
+  for all sets $ Z $ and all functions $ \alpha^\prime, \alpha^{\prime\prime} : Z \to A $  
+  (for all objects $ Z $ of $ \mathsf{C} $ and all morphisms $ \alpha^\prime, \alpha^{\prime\prime} \in Hom_\mathsf{C}(Z, A) $ )  
+  $ f \circ \alpha^\prime = f \circ \alpha^{\prime\prime} \to \alpha^\prime = \alpha^{\prime\prime} $  
+  * A function is injective iff it is a monomorphism  
+
+* __Epimorphism__  
+  * for all objects $ Z $ of $ \mathsf{C} $ and all morphisms $ \beta^\prime, \beta^{\prime\prime} \in Hom_\mathsf{C}(B, Z) $   
+  $ \beta^\prime \circ f = \beta^{\prime\prime} \circ f \to \beta^\prime = \beta^{\prime\prime} $  
+  * A function is surjective iff it is epimorphism  
+
+* __Isomorphism__  
+  * A morphism $ f \in Hom_\mathsf{C} (A, B) $ is __isomorphism__ if it has a (two sided) __inverse__ under composition: that is  
+  if $ \exists g \in Hom_\mathsf{C}(B, A) $ s.t. $ gf = 1_A, fg = 1_B $  
+  * The inverse of an __isomorphism__ is unique  
+  * ___prop___.  
+    * Each identity $ 1_A $ is an isomorphism and is its own inverse  
+    * If $ f $ is an isomorphism, then $ f^{-1} $ is also and $ (f^{-1})^{-1} = f $  
+    If $ f, g $ are isomorphisms, the $ gf $ is also and $ (gf)^{-1} = f^{-1}g^{-1} $  
+
+* __Endomorphism__  
+  An __endomorphism__ is a homomorphism whose __domain = codomain__, or  
+  A morphism whose source is equal to the target  
+  <img src="/images/Mathreviews/codomain.PNG">  
+
+* Automorphism  
+  An __automorphism__ is an endomorphism also an isomorphism  
 
 ### Normed Vector Space  
 
