@@ -88,7 +88,7 @@ tag: Math
 * Injections $ \hookrightarrow $  
 * Surjections $ \twoheadrightarrow $  
 * Bijections $ \xrightarrow{\sim} $  
-  <img src="/images/Mathreviews/jections.png">  
+  <img src="/images/Mathreviews/jections.PNG">  
 
 ## Theorems and Definitions  
 
