@@ -156,6 +156,7 @@ tag: Math
 	1. $ \lVert v \rVert \geqslant \ \forall \ v \in V \ \mathrm{and} \ \lVert v \rVert = 0 \ \mathrm{iff} \ v = 0 $ (pos. def)  
 	2. $ \lVert \lambda v \rVert = \lvert \lambda \rvert \lVert v \rVert $ for every $ \lambda \in \mathbb{k} $ and $ v \in V $ (pos. homogeneity)  
 	3. $ \lVert v \ + \ w \rVert \ \leqslant \ \lVert v \rVert + \lVert w \rVert $ for every $ v, w \in V $ (triangle ineq.)  
+* If $ V $ is a __separable normed__ space, then $ V $ embeds isometrically into $ l_\infty $   
 
 ### Vector Space Operation  
 
@@ -180,6 +181,9 @@ tag: Math
 	i.e. every Cauchy sequence converges  
 * Let V be a normed space and W a Banach space. Then $ \mathfrak{B} (V, W) $ is a __Banach space__  
 * Let V be a normed v.s. then $ V^{\star} $ is a __Banach space__  
+* __Vector-valued Liouville's Theorem__  
+  Let X be a comple Banach Space, and $ f: \mathbb{C} \to X $ a bounded analytic function  
+  then $ f $ is __constant__  
 
 ### Linear Map  
 
