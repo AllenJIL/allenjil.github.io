@@ -27,6 +27,7 @@ tag: Math
 		- [L(,), B(,)](#space)
 		- [supp(f)](#set-theoretic-support)
 		- [Inner product](#inner-product)
+		- [Jections](#jections)
 		- [](#)
 	- [Theorems and Definitions](#theorems-and-definitions)
 		- [Normed Vector Space](#normed-vector-space)
@@ -36,7 +37,7 @@ tag: Math
 		- [Banach Space](#banach-space)
 		- [Linear Map](#linear-map)
 		- [Operator Norm](#operator-norm)
-		- [Dual Space /reflexive](#dual-space)
+		- [Dual Space](#dual-space)
 		- [Adjoint map](#adjoint-map)
 		- [Finite-dimensional v.s.](#finite-dimentional)
 		- [Sublinear](#sublinear)
@@ -49,6 +50,8 @@ tag: Math
 		- [Dense](#dense)
 		- [Baire Category Theorem](#baire-category-theorem)
 		- [Meagre](#meagre)
+		- [Uniform Boundedness](#uniform-boundedness)
+		- [Open Mapping Theorem](#open-mapping-theorem)
 		- [](#)
 <!-- /TOC -->
 
@@ -80,9 +83,23 @@ tag: Math
 
 * __$ f_v(w) $__ $ = < w, v > $  
 
+### Jections  
 
+* Injections $ \hookrightarrow $  
+* Surjections $ \twoheadrightarrow $  
+* Bijections $ \xrightarrow{\sim} $  
+  <img src="/images/Mathreviews/jections.png">  
 
 ## Theorems and Definitions  
+
+### Morphism  
+
+* __Monomorphism (or Monic)__  
+  A function $ f : A \to B $ is a __monomorphism (or monic)__ if holds:  
+  for all sets $ Z $ and all functions $ \alpha^\prime, \alpha^{\prime\prime} : Z \to A $  
+  $ f \circ \alpha^\prime = f \circ \alpha^{\prime\prime} \to \alpha^\prime = \alpha^{\prime\prime} $  
+
+* A function is injective iff it is a monomorphism  
 
 ### Normed Vector Space  
 
@@ -153,6 +170,15 @@ ___Prop___.
 * Let V be a normed v.s.  
 	The __double dual__ of V is the dual space of $ V^{\star} $  
 	i.e. $ V^{\star \star} = (V^{\star})^{\star} $  
+  $ V^{\star\star} $ is also called __bidual__ or the __second dual__ of $ V $  
+  For each $ x \in X $, define $ \hat{x} : X^\star \to $ scalars by $ \hat{x}(f) = f(x) $  
+  then $ \hat{x} $ is linear, and $ \lvert \hat{x} (f) \rvert = \lvert f(x) \rvert \leq \lVert f \rVert \cdot \lVert x \rVert $  
+  so $ \hat{x} \in X^{\star\star} $ with $ \lVert \hat{x} \rVert \leq \Vert f \rVert $  
+
+* If X be a normed space  
+	The dual space $ X^\star $ is the space of all __bounded linear functionals__ on $ X $  
+	This is a normed space with norm $ \lVert f \rVert = \sup\{\lvert f(x) \rvert : x \in B_X \} $ , where $ B_X = \{ x \in X : \lVert x \rVert \leq 1\} $  
+  $ X^\star $ is always complete  
 
 ___Fact___.  
 
@@ -366,8 +392,8 @@ ___Cor___.
 
 * Principle of __uniform boundedness__  
   Let X be a __complete__ metric space  
-  Let $ (f_\lambda)\sb{\lambda \in \wedge} $ be a family of __continuous__ functions $ f_\lambda : X \to \mathbb{R} $  
-  If $ (f_\lambda)\sb{\lambda \in \wedge} $ is __pointwise bounded__,  
+  Let $ (f_\lambda)\mid_{\lambda \in \wedge} $ be a family of __continuous__ functions $ f_\lambda : X \to \mathbb{R} $  
+  If $ (f_\lambda)\mid_{\lambda \in \wedge} $ is __pointwise bounded__,  
   i.e., $ \sup_{\lambda \in \wedge} \lvert f_\lambda (x) \rvert \leq \infty $ for every $ x \in X $,  
   then there is a ball $ B_r (X_c) \subset X $ s.t.  
   $ ( f_\lambda ) $ is __uniformly bounded__ on $ B_r(X_0) $  
@@ -375,7 +401,7 @@ ___Cor___.
 
 * __Banach-Steinhaus Theorem__  
   Let $ V $ be a __Banach__ Space and $ W $ a normed v.s.  
-  Let $ (T_\lambda)\sb{\lambda \in \wedge} \subset \mathfrak{B}(V,W) $ be pointwise bounded,  
+  Let $ (T_\lambda)\mid_{\lambda \in \wedge} \subset \mathfrak{B}(V,W) $ be pointwise bounded,  
   i.e., $ \sup_{\lambda \in \wedge} \lVert T_\lambda v \rVert \; \forall \; v \in V $  
   Then $ ( T_\lambda) $ is uniformly bounded  
   i.e., $ \sup_{\lambda \in \wedge} \lVert T_\lambda \rVert \leq \infty $  
