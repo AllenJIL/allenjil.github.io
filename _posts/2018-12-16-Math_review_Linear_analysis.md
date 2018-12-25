@@ -147,7 +147,7 @@ tag: Math
   A morphism whose source is equal to the target  
   <img src="/images/Mathreviews/codomain.PNG">  
 
-* Automorphism  
+* __Automorphism__  
   An __automorphism__ is an endomorphism also an isomorphism  
 
 ### Normed Vector Space  
@@ -237,6 +237,14 @@ ___Fact___.
 * __Dual operators__  
 
   Define the __dual operator__ of $ T $ by $ T^\star : X^\star \to Y^\star , T^\star (g) = g \circ T $ for $ g \in Y^\star $  
+  This is well-defined as $ g \circ T $ is a composition of bounded linear operators  
+  Furthermore, $ T^\star $ is linear and bounded, since  
+  $$ 
+  \begin{align*}
+  \lVert T^\star \rVert & = \sup_{g \in B_{Y^\star}} \lVert T^\star g \rVert = \sup_{g \in B_{Y^\star}} \sup_{x \in B_{X}} \lvert \langle x, T^\star y \rangle \rvert \\
+  & =\sup_{x \in B_{X}} \sup_{g \in B_{Y^\star}} \lvert \langle T^\star y \rangle \rvert = \sup_{x \in B_X}  \lVert T x \rVert =  \lVert T \rVert 
+  \end{align*}
+  $$  
 
 
 ### Adjoint Map  
