@@ -98,7 +98,7 @@ tag: Math
 * A ___category___ $ \mathsf{C} $ consists of  
   * a class $ Obj(\mathsf{C}) $ of objects of the category  
   * for every two objects $ A $, $ B $ of $ \mathsf{C} $, a set $ Hom_\mathsf{C} (A, B) $ of morphisms, with the properties below:  
-    1. For every object $ A $ of $ \mathsf{C} $, $ \exists $ one morphism $ 1_A \in Hom_\mathsf{C} (A, A) $ the identity of $ A $  
+    1. For every object $ A $ of $ \mathsf{C} $, $ \exists 1_A \in Hom_\mathsf{C} (A, A) $ the identity of $ A $  
     2. One can compose morphism:  
       Two morphisms $ f \in Hom_\mathsf{C}(A, B) $ and $ g \in Hom_\mathsf{C}(B, C) $ determine a morphism $ gf \in Hom_\mathsf{C}(A, C) $  
       There is a function (of sets)  
