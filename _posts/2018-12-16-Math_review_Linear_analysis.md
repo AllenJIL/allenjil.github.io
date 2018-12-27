@@ -98,7 +98,7 @@ tag: Math
 * A ___category___ $ \mathsf{C} $ consists of  
   * a class $ Obj(\mathsf{C}) $ of objects of the category  
   * for every two objects $ A $, $ B $ of $ \mathsf{C} $, a set $ Hom_\mathsf{C} (A, B) $ of morphisms, with the properties below:  
-    1. For every object $ A $ of $ \mathsf{C} $, $ \exists \one_A $ $ \in Hom_\mathsf{C} (A, A) $ the identity of $ A $  
+    1. For every object $ A $ of $ \mathsf{C} $, $ \exists \mathbb{1}_A $ $ \in Hom_\mathsf{C} (A, A) $ the identity of $ A $  
     2. One can compose morphism:  
       Two morphisms $ f \in Hom_\mathsf{C}(A, B) $ and $ g \in Hom_\mathsf{C}(B, C) $ determine a morphism $ gf \in Hom_\mathsf{C}(A, C) $  
       There is a function (of sets)  
@@ -107,7 +107,7 @@ tag: Math
     3. Associative: $ h \in Hom_\mathsf{C}(C, D) $  
       $ (hg)f = h(gf) $  
     4. Identity morphisms are identities  
-      $ f \one_A = f, \; \; \one_B f = f $  
+      $ f \mathbb{1}_A = f, \; \; \mathbb{1}_B f = f $  
     5. the sets $ Hom_\mathsf{C} (A, B), \; Hom_\mathsf{C} (C, D) $ be disjoint unless $ A = C, B = D $  
 
 
@@ -135,10 +135,10 @@ tag: Math
 
 * __Isomorphism__  
   * A morphism $ f \in Hom_\mathsf{C} (A, B) $ is __isomorphism__ if it has a (two sided) __inverse__ under composition: that is  
-  if $ \exists g \in Hom_\mathsf{C}(B, A) $ s.t. $ gf = \one_A, fg = \one_B $  
+  if $ \exists g \in Hom_\mathsf{C}(B, A) $ s.t. $ gf = \mathbb{1}_A, fg = \mathbb{1}_B $  
   * The inverse of an __isomorphism__ is unique  
   * ___prop___.  
-    * Each identity $ \one_A $ is an isomorphism and is its own inverse  
+    * Each identity $ \mathbb{1}_A $ is an isomorphism and is its own inverse  
     * If $ f $ is an isomorphism, then $ f^{-1} $ is also and $ (f^{-1})^{-1} = f $  
     If $ f, g $ are isomorphisms, the $ gf $ is also and $ (gf)^{-1} = f^{-1}g^{-1} $  
 
