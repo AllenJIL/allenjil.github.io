@@ -98,7 +98,7 @@ tag: Math
 * A ___category___ $ \mathsf{C} $ consists of  
   * a class $ Obj(\mathsf{C}) $ of objects of the category  
   * for every two objects $ A $, $ B $ of $ \mathsf{C} $, a set $ Hom_\mathsf{C} (A, B) $ of morphisms, with the properties below:  
-    1. For every object $ A $ of $ \mathsf{C} $, $ \exists 1_A \; \in Hom_\mathsf{C} (A, A) $ the identity of $ A $  
+    1. For every object $ A $ of $ \mathsf{C} $, $ \exists 1_A $ $ \in Hom_\mathsf{C} (A, A) $ the identity of $ A $  
     2. One can compose morphism:  
       Two morphisms $ f \in Hom_\mathsf{C}(A, B) $ and $ g \in Hom_\mathsf{C}(B, C) $ determine a morphism $ gf \in Hom_\mathsf{C}(A, C) $  
       There is a function (of sets)  
@@ -114,7 +114,7 @@ tag: Math
 * __Homomorphism__  
   A homomorphism is a map between two algebraic structures of the same type, that preserves the operations of the structures  
   Formally, a map $ {\displaystyle f:A\to B} $ preserves an operation $ \mu $ of arity $ k $, defined on both $ A $ and $ B $ if  
-  $\displaystyle f(\mu _{A}(a_{1},\ldots ,a_{k}))=\mu_{B}(f(a_{1}),\ldots ,f(a_{k})), $  
+  $\displaystyle f(\mu_{A}(a_{1},\ldots ,a_{k}))=\mu_{B}(f(a_{1}),\ldots ,f(a_{k})), $  
   for all elements $ a_1, ..., a_k \in A $  
 
 * __Endomorphsim__  
