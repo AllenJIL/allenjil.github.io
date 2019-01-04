@@ -28,7 +28,7 @@ tag: Math
 		- [supp(f)](#set-theoretic-support)
 		- [Inner product](#inner-product)
 		- [Jections](#jections)
-		- [](#)
+		- [Taylor's Series](#taylor-series)
 	- [Theorems and Definitions](#theorems-and-definitions)
 		- [Morphism](#morphism)
 		- [Normed Vector Space](#normed-vector-space)
@@ -55,20 +55,20 @@ tag: Math
 		- [Open Mapping Theorem](#open-mapping-theorem)
 		- [](#)
 - [Convex Optimisation](#convex)
-	- [](#)
-		- [](#)
+	- [0](#0)
+		- [1](#1)
 - [Distribution Theory & Applications](#distribution)
-	- [](#)
-		- [](#)
+	- [2](#2)
+		- [3](#3)
 - [Boundary Value Problems for Linear PDEs](#boundary)
-	- [](#)
+	- [Complex Variables](#complex-variables)
 		- [](#)
 - [Inverse Problems in Imaging](#inverse)
-	- [](#)
-		- [](#)
+	- [6](#6)
+		- [7](#7)
 - [Analysis of PDE](#analysis-of-pde)
-	- [](#)
-		- [](#)
+	- [8](#8)
+		- [9](#9)
 <!-- /TOC -->
 
 
@@ -105,6 +105,13 @@ tag: Math
 * Surjections $ \twoheadrightarrow $  
 * Bijections $ \xrightarrow{\sim} $  
   <img src="/images/Mathreviews/jections.PNG">  
+
+### Taylor Series
+
+* __Analytic real function__ can be expanded in terms of an infinite series:  
+	$$ f(x) = \displaystyle \sum_{m=0}^\infty \frac{(x-x_0)^m}{m!} \frac{d^m}{dx^m} f(x_0) $$  
+	where this series is valid provided that $ \lvert x - x_0 \rvert < R $ and $ R $ is called the radius of convergence  
+
 
 ## Theorems and Definitions  
 
@@ -497,6 +504,10 @@ ___Cor___.
 # Distribution  
 
 # Boundary  
+
+## Complex Variables  
+
+[Taylor's Series](#taylor-series)  
 
 # Inverse  
 
