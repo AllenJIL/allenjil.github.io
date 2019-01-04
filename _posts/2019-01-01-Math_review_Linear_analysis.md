@@ -2,7 +2,7 @@
 layout: post
 title: "Mathematics Reviews (2019)"
 description: "数学复习 (2019)"
-date: 2018-12-16
+date: 2019-01-01
 tag: Math
 ---
 [Linear Analysis Lecture Notes]:<http://www.statslab.cam.ac.uk/~rb812/teaching/la2017/notes.pdf> "Linear Analysis Lecture Notes"
