@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Mathematics Reviews (Analysis)"
-description: "数学复习 (Analysis)"
+title: "Mathematics Reviews (2019)"
+description: "数学复习 (2019)"
 date: 2018-12-16
 tag: Math
 ---
@@ -53,6 +53,21 @@ tag: Math
 		- [Meagre](#meagre)
 		- [Uniform Boundedness](#uniform-boundedness)
 		- [Open Mapping Theorem](#open-mapping-theorem)
+		- [](#)
+- [Convex Optimisation](#convex)
+	- [](#)
+		- [](#)
+- [Distribution Theory & Applications](#distribution)
+	- [](#)
+		- [](#)
+- [Boundary Value Problems for Linear PDEs](#boundary)
+	- [](#)
+		- [](#)
+- [Inverse Problems in Imaging](#inverse)
+	- [](#)
+		- [](#)
+- [Analysis of PDE](#analysis-of-pde)
+	- [](#)
 		- [](#)
 <!-- /TOC -->
 
@@ -477,3 +492,12 @@ ___Cor___.
   1. if $ T $ is surjective, then $ T $ is open  
   2. if $ T $ is bijective, then $ T^{-1} \in \mathfrak{B}(W, V) $  
 
+# Convex  
+
+# Distribution  
+
+# Boundary  
+
+# Inverse  
+
+# Analysis of PDE  
