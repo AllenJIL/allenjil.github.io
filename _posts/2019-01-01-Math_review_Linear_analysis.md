@@ -7,11 +7,14 @@ tag: Math
 ---
 [Linear Analysis Lecture Notes]:<http://www.statslab.cam.ac.uk/~rb812/teaching/la2017/notes.pdf> "Linear Analysis Lecture Notes"
 [Linear Analysis Part II]:<https://www.dpmms.cam.ac.uk/~md384/snmeiwseis-ga.pdf> "Linear Analysis Part II"
-
+[Boundary Value Problems for Linear PDEs]:<http://www.damtp.cam.ac.uk/user/kk364/> "Boundary Value Problems for Linear PDEs"
 
 > This review is for myself further learning to find notations def. & thm. easier  
-> Some notes from [Linear Analysis Lecture Notes] and [Linear Analysis Part II]  
-> Some notes from wikipedia  
+> Source of notes:  
+	> Wikipedia  
+	> [Linear Analysis Lecture Notes]  
+	> [Linear Analysis Part II]  
+	> [Boundary Value Problems for Linear PDEs]  
 > f.d.v.s $ \to $ finite dimentional vector space  
 > top. $ \to $ topological  
 > s.t. $ \to $ such that  
@@ -28,7 +31,7 @@ tag: Math
 		- [supp(f)](#set-theoretic-support)
 		- [Inner product](#inner-product)
 		- [Jections](#jections)
-		- [Taylor's Series](#taylor-series)
+		- [Complex](#complex)
 	- [Theorems and Definitions](#theorems-and-definitions)
 		- [Morphism](#morphism)
 		- [Normed Vector Space](#normed-vector-space)
@@ -62,7 +65,16 @@ tag: Math
 		- [3](#3)
 - [Boundary Value Problems for Linear PDEs](#boundary)
 	- [Complex Variables](#complex-variables)
-		- [](#)
+		- [Analytic](#analytic)
+		- [Cauchy–Riemann equations](#cauchy-riemann-equations)
+		- [Holomorphic](#holomorphic)
+		- [dbar-Derivative](#dbar-derivative)
+		- [Cauchy's Theorem](#cauchy's-theorem)
+		- [Green's Theorem](#green's-theorem)
+		- [Residue Theorem](#residue-theorem)
+		- [Taylor's Series](#taylor-series)
+		- [Principal Value integrals](#principal-value-integrals)
+		- [Jordan’s Lemma](#jordan’s-lemma)
 - [Inverse Problems in Imaging](#inverse)
 	- [6](#6)
 		- [7](#7)
@@ -106,11 +118,15 @@ tag: Math
 * Bijections $ \xrightarrow{\sim} $  
   <img src="/images/Mathreviews/jections.PNG">  
 
-### Taylor Series
+### complex  
 
-* __Analytic real function__ can be expanded in terms of an infinite series:  
-	$$ f(x) = \displaystyle \sum_{m=0}^\infty \frac{(x-x_0)^m}{m!} \frac{d^m}{dx^m} f(x_0) $$  
-	where this series is valid provided that $ \lvert x - x_0 \rvert < R $ and $ R $ is called the radius of convergence  
+* $ \lvert z \rvert = \sqrt{x^2 + y^2} = \rho $ the length of the complex number z  
+* $ x = \rho \cos \theta , \; y = \rho \sin \theta $  
+  $ z = \rho (\cos \theta + i \sin \theta) $  
+* __Crucial identity__  
+  $  e^{i\theta}= \cos \theta + i \sin \theta $  
+  $ z = \rho e^{i\theta} ,\; \rho > 0 ,\; \theta $ real  
+  $ e^{i\theta + 2i\pi m} = e^{i\theta},\; m \in \mathbb{Z}$  
 
 
 ## Theorems and Definitions  
@@ -205,7 +221,7 @@ tag: Math
 * Let V be a normed space and W a Banach space. Then $ \mathfrak{B} (V, W) $ is a __Banach space__  
 * Let V be a normed v.s. then $ V^{\star} $ is a __Banach space__  
 * __Vector-valued Liouville's Theorem__  
-  Let X be a comple Banach Space, and $ f: \mathbb{C} \to X $ a bounded analytic function  
+  Let X be a comple Banach Space, and $ f: \mathbb{C} \to X $ a bounded [analytic](#analytic) function  
   then $ f $ is __constant__  
 
 ### Linear Map  
@@ -507,7 +523,114 @@ ___Cor___.
 
 ## Complex Variables  
 
-[Taylor's Series](#taylor-series)  
+### Analytic  
+
+* $ f(z) = u(x, y) + iv(x, y) $ where $ u , v $ are real functions  
+  We called $ f(z) $ an [analytic](#analytic) at point $ z_0 $  
+  if it is differentiable in a neighbourhood of $ z_0 $   
+* $ f(z) $ is [analytic](#analytic) iff functions $ u , v $ satisfy [Cauchy–Riemann equations](#cauchy-riemann-equations)  
+* $ f $ is an [analytic](#analytic) function iff [dbar-Derivative](#dbar-derivative)  
+$\displaystyle \frac{\partial f}{\partial \bar{z}} = 0 $ or $ \displaystyle \frac{\partial f}{\partial z} = u_x - i u_y = v_y + i v_x $  
+
+* __Liouville’s theorem__:  
+  If $ f(z) $ is everywhere analytic (in the finite complex plane) and bounded (including infinity), then $ f(z) $ is a constant.  
+
+* __Rouche’s theorem__:  
+  Let $ f(z) $ and $ g(z) $ be analytic on and inside a simple contour $ C $.  
+  If $ |f(z)| > |g(z)| $ on $ C $, then $ f(z) $ and $ f(z) + g(z) $ have the same number of zeros inside the contour $ C $.  
+
+* __Morera’s theorem__:  
+  If $ f(z) $ is continuous in a domain $ D $ and if  
+  $ \displaystyle \oint_C f(z) dz = 0 $  
+  for every simple closed contour $ C $ lying in $ D $,  
+  then $ f(z) $ is analytic in $ D $.  
+
+* __Maximum Principle__:  
+  If $ f(z) $ is analytic in a bounded region $ D $  
+  and $ \lvert f(z) \rvert $ is continuous in the closed region $ \bar{D} $,  
+  then $ \lvert f(z)\rvert $ obtains its maximum on the boundary of the region  
+  
+* __Minimum Principle__:  
+  If, in addition, it is _non-zero_ at all points of $ D $, then $ \lvert f(z) \rvert $ obtains its minimum on the boundary of the region.  
+
+* __Laurent Series__:  
+  A function $ f(z) $ analytic in an annulus(环) $ R1 < \lvert z - z_0 \rvert < R2 $ may be presented by the expansion  
+  $ f(z) = \displaystyle\sum_{m=-\infty}^{\infty} A_m(z-z_0)^m $  
+  where $ A_m = \displaystyle \frac{1}{2i\pi} \oint_C \frac{f(z)dz}{(z-z_0)^{m+1}} $  
+  and $ C $ is any simple closed contour in the region of analyticity enclosing the inner boundary $ \lvert z - z_0 \rvert = R_1 $.  
+
+### Cauchy Riemann equations  
+
+* The __Cauchy–Riemann equations__ on a pair of real-valued functions of two real variables $ u(x,y) $ and $ v(x,y) $ are the two equations:  
+  1. $ \displaystyle \frac{\partial u}{\partial x} = \frac{\partial v}{\partial y} $  
+  2. $ \displaystyle \frac{\partial u}{\partial y} = - \frac{\partial v}{\partial x} $  
+  That $ u_x = v_y , \; u_y = - v_x $  
+
+### Holomorphic  
+
+* __Holomorphy__ is the property of a complex function of being differentiable at every point of an open and connected subset of $ C $ (a domain in $ C $)  
+* If f is _complex-differentiable_ at every point $ z_0 $ in an open set $ U $, we say that $ f $ is __holomorphic__ on $ U $.  
+  We say that $ f $ is __holomorphic__ at the point $ z_0 $ if it is __holomorphic__ on some neighbourhood of $ z_0 $.  
+* In complex analysis, a function that is complex-differentiable in a whole domain (__holomorphic__) is the same as an [analytic](#analytic) function  
+  __NOT__ true for real differentiable functions  
+* Any __holomorphic__ function is actually infinitely differentiable and equal to its own Taylor series (analytic)  
+
+### dbar Derivative  
+
+* the __dbar-derivative__ with respect to $ \bar{z} $  
+  i.e. the derivative with respect to the _complex conjugate_ of $ z $  
+  The equations $ z = x + iy , \; \bar{z} = x - iy  $  
+  imply $ x = \displaystyle \frac{z+\bar{z}}{2} , \; y = \frac{z-\bar{z}}{2i} $  
+  Chain rule yields  
+  $ \displaystyle \frac{\partial}{\partial z} = \frac{1}{2} (\frac{\partial}{\partial x}-i\frac{\partial}{\partial y}) , \; \displaystyle \frac{\partial}{\partial \bar{z}} = \frac{1}{2} (\frac{\partial}{\partial x}+i\frac{\partial}{\partial y}) $  
+
+### Cauchy's Theorem  
+
+* Suppose that $ f(z) $ is [analytic](#analytic) in the domain $ D $.  
+  Then, the integral of $ f(z) $ along the boundary of $ D $ __vanishes__.  
+
+### Green's Theorem  
+
+* Let $ C $ be a positively oriented, piecewise smooth, simple closed curve in a plane, and let $ D $ be the region bounded by $ C $.  
+  If $ L $ and $ M $ are functions of $ (x, y) $ defined on an open region containing $ D $ and have continuous partial derivatives there, then  
+  $ \displaystyle \oint_C (L dx + M dy) = \int \int_D (\frac{\partial M}{\partial x} - \frac{\partial L}{\partial y}) dx dy $  
+  where the path of integration along C is __anticlockwise__  
+
+### Residue Theorem  
+
+* Suppose that the function $ f(z) $ is [analytic](#analytic) in the domain $ D $,  
+  except at the single point $ z_0 $ where the function has a pole with __residue__ $ g(z_0) $, namely in the neighborhood of $ z_0 $, this function can be written as  
+  $ f(z) = \displaystyle \frac{g(z)}{z - z_0} $ 
+  where $ g(z) $ is analytic.  
+  Then, the integral of $ f(z) $ along the boundary of $ D $ equals $ 2i\pi g(z_0) $  
+
+### Taylor Series
+
+* __Analytic real function__ can be expanded in terms of an infinite series:  
+	$$ f(x) = \displaystyle \sum_{m=0}^\infty \frac{(x-x_0)^m}{m!} \frac{d^m}{dx^m} f(x_0) $$  
+	where this series is valid provided that $ \lvert x - x_0 \rvert < R $ and $ R $ is called the radius of convergence  
+
+* __Complexification__  
+  Let $ f(z) $ be [analytic](#analytic) for  $ \lvert z - z_0 \rvert < R $  
+  Then $ f(z) = \displaystyle \sum_{m=0}^\infty \frac{(z-z_0)^m}{m!} \frac{d^m}{dz^m} f(x_0) $  
+  implies $ f(\zeta) = \displaystyle \frac{1}{2i\pi}\oint_{\partial D} \frac{f(z)dz}{z-\zeta} $  
+  implies $ \displaystyle \frac{d^m}{d\zeta^m} f(\zeta) = \frac{m!}{2i\pi}\oint_{\partial D} \frac{f(z)dz}{(z-\zeta)^{m+1}} $  
+
+### Principal Value integrals:  
+  Let $ 0 < a < b $ and $ z_0 \in (a, b) $ be a pole of $ f(z) $.  
+  The __principal value integral__ is given as  
+  $ \displaystyle PV\int_a^b f(z) dz = \lim_{\epsilon \to 0} (\int_{a}^{z_0 - \epsilon} + \int_{z_0 + \epsilon}^{b}) f(z) dz $  
+  This notion is extended to integration over curves in the complex plane.  
+    * In the simplest cases equip the above contour of integration with a small semicircle center at $ z_0 $ and radius $ \epsilon $, denoted by $ C_\epsilon $ . Then using the parametrisation $ z_0 + \epsilon e^{i\theta} $ and letting $ \epsilon \to 0 $ , compute the contribution of this pole  
+
+### Jordan’s Lemma  
+
+* Let $ C_R $ denote the semi-circle of radius $ R $ in the upper half complex $ z $-plane centered at the origin.  
+  Assume that the analytic function $ f(z) $ vanishes on $ C_R $ as $ R \to \infty $ , namely  
+  $ \lvert f(z) \rvert < K (R),\; z \in C_R $  
+  and $ K(R) \to 0 $ as $ R \to \infty $  
+  Then, $ \displaystyle\int_{C_R} e^{iaz} f(z) dz \to 0 $ as $ R \to \infty $ for $ a > 0 $  
+  
 
 # Inverse  
 
