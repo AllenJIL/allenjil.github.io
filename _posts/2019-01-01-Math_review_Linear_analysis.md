@@ -10,14 +10,11 @@ tag: Math
 [Boundary Value Problems for Linear PDEs]:<http://www.damtp.cam.ac.uk/user/kk364/> "Boundary Value Problems for Linear PDEs"
 
 > This review is for myself further learning to find notations def. & thm. easier  
-> Source of notes:  
+> Source of the notes:  
 	> Wikipedia  
 	> [Linear Analysis Lecture Notes]  
 	> [Linear Analysis Part II]  
 	> [Boundary Value Problems for Linear PDEs]  
-> f.d.v.s $ \to $ finite dimentional vector space  
-> top. $ \to $ topological  
-> s.t. $ \to $ such that  
 
 
 **********
@@ -69,20 +66,28 @@ tag: Math
 		- [Cauchy–Riemann equations](#cauchy-riemann-equations)
 		- [Holomorphic](#holomorphic)
 		- [dbar-Derivative](#dbar-derivative)
-		- [Cauchy's Theorem](#cauchy's-theorem)
-		- [Green's Theorem](#green's-theorem)
+		- [Cauchy's Theorem](#cauchy-theorem)
+		- [Green's Theorem](#green-theorem)
 		- [Residue Theorem](#residue-theorem)
 		- [Taylor's Series](#taylor-series)
 		- [Principal Value integrals](#principal-value-integrals)
-		- [Jordan’s Lemma](#jordan’s-lemma)
+		- [Jordan’s Lemma](#jordan-lemma)
 - [Inverse Problems in Imaging](#inverse)
 	- [6](#6)
 		- [7](#7)
 - [Analysis of PDE](#analysis-of-pde)
 	- [8](#8)
 		- [9](#9)
+- [Calculus](#calculus)
 <!-- /TOC -->
 
+************************
+
+> f.d.v.s $ \to $ finite dimentional vector space  
+> top. $ \to $ topological  
+> s.t. $ \to $ such that  
+
+************************
 
 # Linear Analysis  
 
@@ -515,9 +520,15 @@ ___Cor___.
   1. if $ T $ is surjective, then $ T $ is open  
   2. if $ T $ is bijective, then $ T^{-1} \in \mathfrak{B}(W, V) $  
 
+************************
+
 # Convex  
 
+************************
+
 # Distribution  
+
+************************
 
 # Boundary  
 
@@ -584,12 +595,12 @@ $\displaystyle \frac{\partial f}{\partial \bar{z}} = 0 $ or $ \displaystyle \fra
   Chain rule yields  
   $ \displaystyle \frac{\partial}{\partial z} = \frac{1}{2} (\frac{\partial}{\partial x}-i\frac{\partial}{\partial y}) , \; \displaystyle \frac{\partial}{\partial \bar{z}} = \frac{1}{2} (\frac{\partial}{\partial x}+i\frac{\partial}{\partial y}) $  
 
-### Cauchy's Theorem  
+### Cauchy Theorem  
 
 * Suppose that $ f(z) $ is [analytic](#analytic) in the domain $ D $.  
   Then, the integral of $ f(z) $ along the boundary of $ D $ __vanishes__.  
 
-### Green's Theorem  
+### Green Theorem  
 
 * Let $ C $ be a positively oriented, piecewise smooth, simple closed curve in a plane, and let $ D $ be the region bounded by $ C $.  
   If $ L $ and $ M $ are functions of $ (x, y) $ defined on an open region containing $ D $ and have continuous partial derivatives there, then  
@@ -623,7 +634,7 @@ $\displaystyle \frac{\partial f}{\partial \bar{z}} = 0 $ or $ \displaystyle \fra
   This notion is extended to integration over curves in the complex plane.  
     * In the simplest cases equip the above contour of integration with a small semicircle center at $ z_0 $ and radius $ \epsilon $, denoted by $ C_\epsilon $ . Then using the parametrisation $ z_0 + \epsilon e^{i\theta} $ and letting $ \epsilon \to 0 $ , compute the contribution of this pole  
 
-### Jordan’s Lemma  
+### Jordan Lemma  
 
 * Let $ C_R $ denote the semi-circle of radius $ R $ in the upper half complex $ z $-plane centered at the origin.  
   Assume that the analytic function $ f(z) $ vanishes on $ C_R $ as $ R \to \infty $ , namely  
@@ -631,7 +642,22 @@ $\displaystyle \frac{\partial f}{\partial \bar{z}} = 0 $ or $ \displaystyle \fra
   and $ K(R) \to 0 $ as $ R \to \infty $  
   Then, $ \displaystyle\int_{C_R} e^{iaz} f(z) dz \to 0 $ as $ R \to \infty $ for $ a > 0 $  
   
+************************
 
 # Inverse  
 
+************************
+
 # Analysis of PDE  
+
+
+************************
+
+# Calculus  
+
+<img src="/images/Calculus/Calculus1.PNG">  
+<img src="/images/Calculus/Calculus2.PNG">  
+<img src="/images/Calculus/Calculus3.PNG">  
+<img src="/images/Calculus/Calculus4.PNG">  
+<img src="/images/Calculus/Calculus5.PNG">  
+<img src="/images/Calculus/Calculus6.PNG">  
