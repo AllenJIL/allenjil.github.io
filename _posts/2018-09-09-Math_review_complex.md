@@ -124,10 +124,10 @@ $$ \displaystyle \underbrace{(x + iy)}_{z} + \underbrace{(u + iv)}_{w} = \underb
 ### Topology in the Plane  
 
 * __Sets__ in the Complex Plane
-	- Circles and disks: center $ z_0\ =\ x_0\ +\ i y_0 $, radius $ r $  
-		+ $ B_r(z_0) = {z ∈ \mathbb{C} : z $ has distance less than $ r $ from $ z_0} $ disk of radius $ r $ , centered
-at $ z_0 $  
-		+ $ K_r(z_0) = {z ∈ \mathbb{C} : z $ has distance $ r $ from $ z_0} $ circle of radius $ r $ , centered at $ z_0 $  
+	- Circles and disks: center $ z_0\ =\ x_0\ +\ i y_0 $, radius $ r $.  
+		* $ B_r(z_0) = \{z \in \mathbb{C} : z $ has distance less than $ r $ from $ z_0\} $ disk of radius $ r $ , centered
+at $ z_0 $.  
+		* $ K_r(z_0) = \{z \in \mathbb{C} : z $ has distance $ r $ from $ z_0\} $ circle of radius $ r $ , centered at $ z_0 $  
 	- Measure distance  
 		- $$
 		\begin{align*}
@@ -151,7 +151,7 @@ at $ z_0 $
 		+ $ \mathbb{C} $ and $ ∅ $ are open  
 		+ $ {z\ ∈\ \mathbb{C}\ :\ \vert z\ −\ z_0 \vert \ ≤\ r}\ \mathrm{and} {z\ ∈\ \mathbb{C}\ :\ \vert z\ −\ z_0 \vert\ =\ r} $ are closed  
 		+ $ C $ and $ ∅ $ are closed  
-		+ $ {z\ ∈\ \mathbb{C}\ :\ \vert z\ −\ z_0 \vert \ <\ r}\ ∪ {z\ ∈\ \mathbb{C}\ :\ \vert z\ −\ z_0 \vert\ =\ r\ \mathrm{and Im} (z\ −\ z_0)\ >\ 0} is neither open nor closed  
+		+ $ {z\ ∈\ \mathbb{C}\ :\ \vert z\ −\ z_0 \vert \ <\ r}\ ∪ {z\ ∈\ \mathbb{C}\ :\ \vert z\ −\ z_0 \vert\ =\ r\ \mathrm{and Im} (z\ −\ z_0)\ >\ 0} $ is neither open nor closed  
 
 * __Closure and Interior__ of a Set  
 	- ___Def:___: Let $ E $ be a set in $ \mathbb{C} $.  
