@@ -5,7 +5,7 @@ title: About Me
 
 
 
-A Mathematics researcher, love to study new technologies
+A Mathematics fan, love to learn new stuff
 <p>
 Current study in Cambridge: Applied Mathematics
 <p>
@@ -47,7 +47,7 @@ Macroeconomic Theory, Microeconomics Theory with Calculus</li>
 <h3><strong>关于我:</strong></h3>
 
 <p> 
-数学爱好者, 喜欢新科技
+我是一个数学爱好者, 喜欢新鲜玩意儿
 <p>
 正在剑桥大学学习：应用数学
 <p>
@@ -75,7 +75,8 @@ Macroeconomic Theory, Microeconomics Theory with Calculus</li>
 <h3><strong>课程:</strong></h3>
 <ul>
  	<li><b>数学: </b>
-微积分，实分析，向量分析，线性代数，群论，数论，离散数学，高级线性和多线性代数，偏微分方程，连续介质力学和数学建模</li>
+凸优化，分布理论与应用，线性偏微分方程的边值问题，成像中的反问题，偏微分方程分析（剑桥）</b>
+微积分，实分析，向量分析，线性代数，群论，数论，离散数学，高级线性和多线性代数，偏微分方程，连续介质力学和数学建模（波特兰）</li>
  	<li><b>统计学: </b>
 应用概率, 工程师和科学家的应用统计</li>
  	<li><b>经济学: </b>
