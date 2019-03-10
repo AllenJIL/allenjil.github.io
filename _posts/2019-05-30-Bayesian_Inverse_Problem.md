@@ -30,8 +30,10 @@ tag: Math
 
 
 ************************
+### Added information  
 
-
+$ S \in \mathbb{N} H^S(\mathbb{T}^d) =\{U \in L^2 (\mathbb{T}^d) \| D^\alpha u \in L^1(\mathbb{T}^d) \ \ \forall \| \alpha\| \leq S \} $   
+$ S \in \mathbb{N} H^S(\mathbb{T}^d) =\{U \in S^\prime (\mathbb{T}^d) \| (1 + \| \dot \| ^2 )^{S/2} \mathcal{F} u \in L^2 (\mathbb{T}^d) \} $   
 
 ************************
 
