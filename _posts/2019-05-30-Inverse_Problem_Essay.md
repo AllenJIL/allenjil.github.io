@@ -50,12 +50,12 @@ A few example references are given below, and more will be provided depending on
 ### Idea  
 
 * treating the method discussed as the first iteration of a krylov method and construct subsequent iterations towards least-square inversion.  
-* In stead pf BiSAR geometry, also can consider distributed static transmitters and receivers as well  
+* In stead of BiSAR geometry, also can consider distributed static transmitters and receivers as well  
 
 
-> Regularization by projection with a posteriori discretization level choice for linear and nonlinear ill-posed problems  
+> Regularization by projection with a posteriori discretization level choice for linear and non-linear ill-posed problems  
 >   * numerical implementation of regularization  
->   * finite-dimensional system of linear or nonlinear equations  
+>   * finite-dimensional system of linear or non-linear equations  
 >   * priori and posterior discretization  
 
 > On Krylov projection methods and Tikhonov regularization  
@@ -68,9 +68,10 @@ A few example references are given below, and more will be provided depending on
 >   * based on the Lanczos process and TSVD regularization  
 >   * truncated SVD to stabilize the iteration  
 >   * least-square projection and dual least-square method  
->   * behavior of hybrid metbods  
+>   * behaviour of hybrid methods  
 
-
+* sentences  
+    - "Regularization" in the language of mathematical analysis is the process to build smoother approximate functions through convolution with test function  
 
 
 ************************
