@@ -21,11 +21,11 @@ tag: Math
 - [Introduction to Krylov subspace methods](#introduction-to-krylov-subspace-methods)
 - [Foundations of image science](#foundations-of-image-science)
     - [Classification by](#classification-by)
-    - [Notation \(FOIS\)](#notation-fois)
-- [Fundamentals of Radar Imaging](#fundamentals-of-radar-imaging)
+- [Image Reconstruction](#image-reconstruction)
+    - [Transform](#transform)
     - [Ambiguity Function](#ambiguity-function)
 - [Bibliography](#bibliography)
-    - [Image Reconstruction](#image-reconstruction)
+    - [Image Reconstruction](#image-reconstruction-1)
     - [Krylov Subspace Methods](#krylov-subspace-methods)
     - [Inverse Problems in Imaging](#inverse-problems-in-imaging)
     - [Bayesian Inverse Problems](#bayesian-inverse-problems)
@@ -168,20 +168,55 @@ A few example references are given below, and more will be provided depending on
     - object and image are both continuous (or discrete) functions, then $ \mathcal{H} $ is referred to a continuous-to-continuous CC (or discrete-to-discrete DD) operator  
     - If $ \mathcal{H} $ is linear, then the relation between object and image is an integral (or matrix-vector multiplication)  
 
-### Notation (FOIS)  
-
-* object space: $ \mathbb{U} $  
-* object vector: $ f $  
-* data space: $ \mathbb${V} $ (image space when direct)  
-* mapping operator: $ \mathcal{H} : g = \mathcal{H} f $  
-* 
 
 ************************
 
-## Fundamentals of Radar Imaging  
+## Image Reconstruction  
+
+> The summary of what you learned during the lecture  
+
+### Transform  
+
+$ S^{n-1} $ : Unit sphere in $ \mathbb{R}^n $  
+$ \theta \in S^{n-1},\ s,\sigma \in \mathbb{R}^1 $  
+$ s \in \mathbb{R}^1 $ distance from the origin  
+$ H(\theta,s) = H(-\theta,-s) = \{ x \in \mathbb{R}^n : x\cdot \theta = s \} $ the hyperplane perpendicular to $ \theta $  
+$ C^n = \{(\theta,s)\} $ : Unit cylinder in $ \mathbb{R}^n $  
+$ \mathcal{S}(C^n) = \{\displaystyle g \in \mathsf{C}^\infty (C^n): s^l \frac{\partial^k}{\partial s^k} g(\theta,s)\ \mathrm{bounded},\ l,k = 0,1, \cdots \} $  
+$ (I^\alpha f)^\wedge (\xi) = \lvert \xi \rvert^{-\alpha} \hat{f} (\xi),\ \alpha < n $ Riesz potential $ I^\alpha $ in $ \mathbb{R}^n $  
+$ (I^\alpha g)^\wedge (\theta,\sigma) = \lvert \sigma \rvert^{-\alpha} \hat{g} (\theta, \sigma),\ \alpha < 1 $ Riesz potential $ I^\alpha $ on $ C^n $  
+
+
+* Radon Transform  
+    - $ (\mathcal{R} f) (\theta, s) = \int_{H(\theta,s)} f(x) dx $  
+    - $ (\mathcal{R} f) (\theta, s) = \int_{\mathbb{R}^n} f(x)\delta(x\cdot \theta - s ) dx $  
+
+* Ray Transform  
+    - $ (\mathcal{P} f) (\theta, s) = \int_{\infty}^{\infty} f(x + t\theta) dt $  
+
+* Theorem  
+    - $ f_r,g_r \in \mathcal{S}(\mathbb{R}^n);\ f_c,g_c \in \mathcal{S}(C^n) $  
+    - $ (\mathcal{R} f)^\wedge (\theta,\sigma) = (2\pi)^{(n-1)/2}\hat{f}(\sigma \theta) $  
+    - $ (\mathcal{R}D^\alpha f)^\wedge (\theta,\sigma) = \theta^\alpha (D^{\lvert \alpha \rvert}\mathcal{R}f)^\wedge (\theta, \sigma) $  
+    - $ \mathcal{R} f_r * \mathcal{R} g_r = \mathcal{R} (f_r * g_r) $ left in $ C^n $, right in $ \mathbb{R}^n $  
+    - __back-projection__ operator $ \mathcal{R}^* $  
+        + $ (\mathcal{R}^* g_c)(x) = \int_{S^{n-1}} g_c(\theta, x\cdot \theta) d\theta $  
+    - $ (\mathcal{R}^* g_c) * f_r = \mathcal{R}^* (g_c * \mathcal{R}f_r) $  
+        + $ g * \mathcal{R}f $ filter  
+        + $\mathcal{R}^* g $ Point Spread function(PSF)  
+
+    - $ (I^\alpha g)^\wedge (\theta,\sigma) = \displaystyle \frac{(-i \ \mathrm{sgn} \sigma)^{-\alpha}}{(2\pi)^\alpha} (\sigma^{i2\pi})^{-\alpha} \hat{g} (\theta, \sigma) $  
+    - $ f(x) = \displaystyle \frac{1}{2} (2\pi)^{1-n}I^{-\alpha}\mathcal{R}^* [I^{\alpha-n+1}\mathcal{R}f]  (x) $  
+        + $ I^{-\alpha} $ in image; $ I^{\alpha-n+1} $ in data  
+
+* wiener filter  
+    1. Signal & noise (additive) are stationary linear stochastic processes with __known__ spectral characteristics 
+    2. Minimize expected mean square error (MMSE)  
+    3. filter must be physically realizable/causal  
+
 
 ### Ambiguity Function  
-    - $ \mathcal{X}(\tau , f) = \int_{-\inft}^{\inft} s(t)s*(t - \tau) e^{i2\pi ft} dt $  
+  - $ \mathcal{X}(\tau , f) = \int_{-\infty}^{\infty} s(t)s*(t - \tau) e^{i2\pi ft} dt $  
 
 
 
