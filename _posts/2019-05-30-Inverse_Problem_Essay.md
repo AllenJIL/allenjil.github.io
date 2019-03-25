@@ -43,7 +43,7 @@ tag: Math
 Many inverse problems in mathematical physics can be formally expressed as  
 $$ Ax = y ,$$  
 where A is an operator from a normed vector space X into a normed vector space $ Y , y \in Y $ is given data, often measured data, and $ x \in X $ is the unknown. Usually such problems are ill-posed, and various methods are used to ensure existence and uniqueness, as well as stability of the solution, which is referred to as ‘regularisation’.  
-Regularisation can in some cases be achieved by projection onto ﬁnite-dimensional subspaces $ A_n \subset X $. Krylov subspace methods are iterative methods in which the solution is sought by successive approximations $ x_n \in K_n $, where $ K_n $ is the Krylov subspace $ span \{ d, Bd, ··· B_{n−1}d\} $, with B and d dependent on A and y. The Conjugate Gradient method and its variants are examples of Krylov subspace methods, and other have also been used, sometimes together with Tikhonov regularisation.  
+Regularisation can in some cases be achieved by projection onto ﬁnite-dimensional subspaces $ A_n \subset X $. Krylov subspace methods are iterative methods in which the solution is sought by successive approximations $ x_n \in K_n $, where $ K_n $ is the Krylov subspace $ span \lbrace  d, Bd, ··· B_{n−1}d\rbrace $, with B and d dependent on A and y. The Conjugate Gradient method and its variants are examples of Krylov subspace methods, and other have also been used, sometimes together with Tikhonov regularisation.  
 This essay should explore the regularising properties of Krylov subspace methods, focusing on some particular issues according to personal interests and background. This could also be, for example, applications of Krylov methods to practical inverse problems.  
 A few example references are given below, and more will be provided depending on the choice of focus.
 
@@ -180,16 +180,19 @@ A few example references are given below, and more will be provided depending on
 $ S^{n-1} $ : Unit sphere in $ \mathbb{R}^n $  
 $ \theta \in S^{n-1},\ s,\sigma \in \mathbb{R}^1 $  
 $ s \in \mathbb{R}^1 $ distance from the origin  
-$ H(\theta,s) = H(-\theta,-s) = \{ x \in \mathbb{R}^n : x\cdot \theta = s \} $ the hyperplane perpendicular to $ \theta $  
-$ C^n = \{(\theta,s)\} $ : Unit cylinder in $ \mathbb{R}^n $  
-$ \mathcal{S}(C^n) = \{\displaystyle g \in \mathsf{C}^\infty (C^n): s^l \frac{\partial^k}{\partial s^k} g(\theta,s)\ \mathrm{bounded},\ l,k = 0,1, \cdots \} $  
+$ H(\theta,s) = H(-\theta,-s) = \lbrace  x \in \mathbb{R}^n : x\cdot \theta = s \rbrace $ the hyperplane perpendicular to $ \theta $  
+$ C^n = \lbrace (\theta,s)\rbrace $ : Unit cylinder in $ \mathbb{R}^n $  
+$ \mathcal{S}(C^n) = \lbrace \displaystyle g \in \mathsf{C}^\infty (C^n): s^l \frac{\partial^k}{\partial s^k} g(\theta,s)\ \mathrm{bounded},\ l,k = 0,1, \cdots \rbrace $  
 $ (I^\alpha f)^\wedge (\xi) = \lvert \xi \rvert^{-\alpha} \hat{f} (\xi),\ \alpha < n $ Riesz potential $ I^\alpha $ in $ \mathbb{R}^n $  
 $ (I^\alpha g)^\wedge (\theta,\sigma) = \lvert \sigma \rvert^{-\alpha} \hat{g} (\theta, \sigma),\ \alpha < 1 $ Riesz potential $ I^\alpha $ on $ C^n $  
 
+* Delta function  
+    - $ \delta(s-x\cdot \theta) = \displaystyle \int_{\mathbb{R}^1}e^{i2\pi(s-x\cdot \theta)\sigma} d\sigma $  
 
 * Radon Transform  
     - $ (\mathcal{R} f) (\theta, s) = \int_{H(\theta,s)} f(x) dx $  
     - $ (\mathcal{R} f) (\theta, s) = \int_{\mathbb{R}^n} f(x)\delta(x\cdot \theta - s ) dx $  
+    - $ (\mathcal{R} f) (\theta, s) = \int_{\theta^\perp} f(s\theta + y) dy\ \mathrm{where} \ \theta^\perp = \lbrace x \in \mathbb{R}^n : x \cdot \theta = 0 \rbrace $  
 
 * Ray Transform  
     - $ (\mathcal{P} f) (\theta, s) = \int_{\infty}^{\infty} f(x + t\theta) dt $  
