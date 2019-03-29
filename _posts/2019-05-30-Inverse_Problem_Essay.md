@@ -22,8 +22,12 @@ tag: Math
 - [Foundations of image science](#foundations-of-image-science)
     - [Classification by](#classification-by)
 - [Image Reconstruction](#image-reconstruction)
+    - [Fourier Analysis](#fourier-analysis)
     - [Transform](#transform)
-    - [Ambiguity Function](#ambiguity-function)
+    - [Wiener filter](#wiener-filter)
+    - [Cone Beam Transform](#cone-beam-transform)
+    - [Radar Imaging](#radar-imaging)
+    - [Seismic Imaging](#seismic-imaging)
 - [Bibliography](#bibliography)
     - [Image Reconstruction](#image-reconstruction-1)
     - [Krylov Subspace Methods](#krylov-subspace-methods)
@@ -54,21 +58,21 @@ A few example references are given below, and more will be provided depending on
 
 
 > Regularization by projection with a posteriori discretization level choice for linear and non-linear ill-posed problems  
->   * numerical implementation of regularization  
->   * finite-dimensional system of linear or non-linear equations  
->   * priori and posterior discretization  
+>   \star numerical implementation of regularization  
+>   \star finite-dimensional system of linear or non-linear equations  
+>   \star priori and posterior discretization  
 
 > On Krylov projection methods and Tikhonov regularization  
->   * framework of large-scale linear discrete ill-posed problems  
->   * tikhonov regularized problem  
->   * restoration  
+>   \star framework of large-scale linear discrete ill-posed problems  
+>   \star tikhonov regularized problem  
+>   \star restoration  
 
 > On Lanczos Based Methods for the Regularization of Discrete Ill-Posed Problems Hanke  
->   * hybrid methods for the solution of linear ill-posed problems  
->   * based on the Lanczos process and TSVD regularization  
->   * truncated SVD to stabilize the iteration  
->   * least-square projection and dual least-square method  
->   * behaviour of hybrid methods  
+>   \star hybrid methods for the solution of linear ill-posed problems  
+>   \star based on the Lanczos process and TSVD regularization  
+>   \star truncated SVD to stabilize the iteration  
+>   \star least-square projection and dual least-square method  
+>   \star behaviour of hybrid methods  
 
 * sentences  
     - "Regularization" in the language of mathematical analysis is the process to build smoother approximate functions through convolution with test function  
@@ -175,6 +179,25 @@ A few example references are given below, and more will be provided depending on
 
 > The summary of what you learned during the lecture  
 
+### Fourier Analysis  
+
+$ D^k = \displaystyle (\frac{\partial}{\partial x_1})^{k_1} \cdots (\frac{\partial}{\partial x_n})^{k_n} $  
+$ x^k = x_1^{k_1} \cdots x_n^{k_n} $  
+$ \lvert k \rvert = k_1 + \cdots + k_n $  
+
+* Fourier transform  
+    - $ \hat{f}(\xi) = (2\pi)^{-n/2}\displaystyle \int_{\mathbb{R}^n} e^{-i x \cdot \xi} f(x) dx, \; f \in L_1 (\mathbb{R}^n) $   
+* Inverse Fourier transform  
+    - $ \tilde{f}(\xi) = (2\pi)^{-n/2}\displaystyle \int_{\mathbb{R}^n} e^{i x \cdot \xi} f(x) dx, \; f \in L_1 (\mathbb{R}^n) $  
+* Properties of Ft  
+    - $ f = \hat{\tilde{f}} $  
+    - $ \hat{f}(r\xi) = r^{-n} \hat{f} (r^{-1}\xi) $  
+    - $ \hat{f}(\xi + y) = e^{i\xi\cdot y}\hat{f}(\xi) $  
+    - $ (D^k f)^\wedge (\xi) = i^{\lvert k \rvert} \xi^k \hat{f}(\xi) $  
+    - $ (x^k f)^\wedge = i^{\lvert k \rvert} D^k \hat{f} $  
+    - $ (f \star g)^\wedge = (2\pi)^{-n/2} \hat{f}\hat{g} $  
+    - $ (fg)^\wedge = (2\pi)^{-n/2}(\hat{f}\star \hat{g}) $  
+
 ### Transform  
 
 $ S^{n-1} $ : Unit sphere in $ \mathbb{R}^n $  
@@ -201,11 +224,13 @@ $ (I^\alpha g)^\wedge (\theta,\sigma) = \lvert \sigma \rvert^{-\alpha} \hat{g} (
     - $ f_r,g_r \in \mathcal{S}(\mathbb{R}^n);\ f_c,g_c \in \mathcal{S}(C^n) $  
     - $ (\mathcal{R} f)^\wedge (\theta,\sigma) = (2\pi)^{(n-1)/2}\hat{f}(\sigma \theta) $  
     - $ (\mathcal{R}D^\alpha f)^\wedge (\theta,\sigma) = \theta^\alpha (D^{\lvert \alpha \rvert}\mathcal{R}f)^\wedge (\theta, \sigma) $  
-    - $ \mathcal{R} f_r * \mathcal{R} g_r = \mathcal{R} (f_r * g_r) $ left in $ C^n $, right in $ \mathbb{R}^n $  
+    - $ \mathcal{R} f_r \star \mathcal{R} g_r = \mathcal{R} (f_r \star g_r) $ left in $ C^n $, right in $ \mathbb{R}^n $  
     - __back-projection__ operator $ \mathcal{R}^* $  
         + $ (\mathcal{R}^* g_c)(x) = \int_{S^{n-1}} g_c(\theta, x\cdot \theta) d\theta $  
-    - $ (\mathcal{R}^* g_c) * f_r = \mathcal{R}^* (g_c * \mathcal{R}f_r) $  
-        + $ g * \mathcal{R}f $ filter  
+    - $ \mathcal{R}, \mathcal{R}^* $ also form a dual paire in the sense of integral geometry:  
+        + $ \mathcal{R} $ integrates over all points in a plane, $ \mathcal{R}^* $ integrates over all planes through a point  
+    - $ (\mathcal{R}^* g_c) \star f_r = \mathcal{R}^* (g_c \star \mathcal{R}f_r) $  
+        + $ g \star \mathcal{R}f $ filter  
         + $\mathcal{R}^* g $ Point Spread function(PSF)  
 
     - $ (I^\alpha g)^\wedge (\theta,\sigma) = \displaystyle \frac{(-i \ \mathrm{sgn} \sigma)^{-\alpha}}{(2\pi)^\alpha} (\sigma^{i2\pi})^{-\alpha} \hat{g} (\theta, \sigma) $  
@@ -218,10 +243,32 @@ $ (I^\alpha g)^\wedge (\theta,\sigma) = \lvert \sigma \rvert^{-\alpha} \hat{g} (
     3. filter must be physically realizable/causal  
 
 
-### Ambiguity Function  
-  - $ \mathcal{X}(\tau , f) = \int_{-\infty}^{\infty} s(t)s*(t - \tau) e^{i2\pi ft} dt $  
+*  Ambiguity Function  
+
+    - $ \mathcal{X}(\tau , f) = \int_{-\infty}^{\infty} s(t)s*(t - \tau) e^{i2\pi ft} dt $  
+
+### Wiener filter  
+
+    1. Signal & noise (additive) are stationary linear stochastic processes with __known__ spectral characteristics 
+    2. Minimize expected mean square error criteria (MMSE)  
+    3. filter must be physically realizable/causal  
+
+### Cone Beam Transform  
+
+    $ (\mathcal{D} f)(r,y(t)) = \int_{0}^{\infty} f(y(t)+rs) ds = (\mathcal{D} f)(\hat{r},y(t))/{\lvert r \rvert} $ homogeneous of order -1    
 
 
+### Radar Imaging  
+
+    * Electromagnetic Wave Propagation  
+        - Perfect electrical conductor  
+    * Inverse Synthetic-Aperture Radar (ISAR)  
+    * Synthetic-Aperture Radar (SAR)  
+        - Resolution ~ PSF  
+    * Bistatic SAR  
+        - Forward Modelling
+
+### Seismic Imaging  
 
 
 ************************
