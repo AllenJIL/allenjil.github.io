@@ -6,6 +6,8 @@ date: 2019-05-30
 tag: Math
 ---
 [Lecture Notes]:<http://store.maths.cam.ac.uk/DAMTP/yk362/teaching/201819_Michaelmas_InverseProblemsImaging/lecture_notes_current.pdf> "Lecture Notes"
+[Fatou's lemma]:<https://en.wikipedia.org/wiki/Fatou%27s_lemma#Standard_statement_of_Fatou's_lemma> "Fatou's lemma"
+
 
 > This note is taken from the lecture notes in the Part III course of University of Cambridge in 2019   
 > Source of the notes:  
@@ -22,9 +24,19 @@ tag: Math
 - [Introduction](#introduction)
 - [Well-Posed](#well-posed)
 - [Differentiation](#differentiation)
+- [Fatou lemma](#fatou-lemma)
 - [Generalised Solutions](#generalised-solutions)
 - [Regularisation Theory](#regularisation-theory)
 - [Variational Regularisation](#variational-regularisation)
+- [Characteristic function](#characteristic-function)
+- [Proper](#proper)
+- [Convex](#convex)
+- [Fenchel conjugat](#fenchel-conjugat)
+- [Lower-semicontinuous l.s.c](#lower-semicontinuous-lsc)
+- [Subdifferential](#subdifferential)
+- [Minimiser](#minimiser)
+- [Coercive](#coercive)
+- [Level set](#level-set)
 - [Dual Perspective](#dual-perspective)
 - [Numerical Optimisation Methods](#numerical-optimisation-methods)
 - [Example](#example)
@@ -86,6 +98,12 @@ tag: Math
     $ K(x,\xi) $ is the point-spread function (PSF) which models the optics of the camera  
     
 
+### Fatou lemma  
+
+[Fatou's lemma]  
+
+
+
 ************************
 
 ## Generalised Solutions    
@@ -104,6 +122,65 @@ tag: Math
 ## Variational Regularisation  
 
 
+### Characteristic function  
+
+* Let $ \mathcal{C} \subset \mathcal{U} $ be a set.  
+    The function $ \mathcal{X}_\mathcal{C} : \mathcal{U} \to \bar{\mathbb{R}} $,  
+    $$ \displaystyle \mathcal{X}_\mathcal{C}(u) = {\begin{cases}0 &{\text{if }} u \in \mathcal{C},\\ \infty &{\text{if }} u \in \mathcal{U}\backslash \mathcal{C}\end{cases}} $$  
+    is called the __characteristic function__ of the set $ \mathcal{C} $  
+* The __CF__ $ \mathcal{X}_\mathcal{C}(u) $ is convex iff $ \mathcal{C} $ is a convex set  
+
+***************
+
+Let $ E : \mathcal{U} \to \bar{\mathbb{R}} $ be a functional. 
+
+### Proper  
+
+* A functional E is called __proper__ if  
+    the effective domain dom(E) is _not empty_  
+
+### Convex  
+
+* A functional E is called __convex__ if  
+    $ E (\lambda u + (1 - \lambda) v) \leq \lambda (u) + (1-\lambda) E(v) $  
+    for all $ \lambda \in (0,1) $ and all $ u,v \in dom(E) w/ u \neq v $  
+* It is called _strictly_ convex if the inequality is strict  
+
+### Fenchel conjugat  
+
+* The functional E is called the __Fenchel conjugate__ of E, such that  
+    $ E^* (p) = \displaystyle \sup_{u\in \mathcal{U}} [<u,p> - E(u)] $  
+* For any functional $ E : \mathcal{U} \to \bar{\mathbb{R}} $ the following inequallity holds:  
+    $ E^{* *} := (E^*)* \leq E $  
+
+### Lower-semicontinuous l.s.c  
+
+* If E is proper, l.s.c and convex, then  
+    $ E^{* * } = E $  
+
+### Subdifferential  
+
+* A functional E is called subdifferentiable at $ u \in \mathcal{U} $, if there exists an element $ p \in \mathcal{U}^* $ such that  
+    $ E(v) \geq E(u) + <p,v-u> \ \forall v \in \mathcal{U} $  
+* $ p $ also called a subgradient at position $ u $  
+* the collection of all subgradients at position $ u $ is called subdifferential of $ E $ at $ u $, such that  
+    $ \partial E(u) := \lbrace p \in \mathcal{U}^* \mid E(v) \geq E(u) + <p, v-u>, \ \forall v \in \mathcal{U} \rbrace $  
+
+### Minimiser  
+
+* We call $ u^* $ a minimiser of $ E $ such that  
+    $ u^* \in \mathcal{U} $ solves the minimisation problem $ \displaystyle \min_{u \in \mathcal{U}} E (u) $  
+    if and only if $ E(u^* ) \leq \infty $ and $ E(u^* ) \leq E(u), \ \forall u \in \mathcal{U} $  
+
+### Coercive  
+
+* A functional E is called __coercive__, if for all $ \lbrace u_j \rbrace_{j\in \mathbb{N}} $ with $ \lVert u_j \rVert_\mathcal{U} \to \infty $ we have $ E(u_j) \to \infty $  
+
+### Level set  
+
+* $ L_c (f) = \lbrace (x_1, \cdots, x_n ) \mid f(x_1 , \cdots x_n ) = c \rbrace $  
+* __Sub-level set__ of f is  
+    - $ L_c^- (f) = \lbrace (x_1, \cdots, x_n ) \mid f(x_1 , \cdots x_n ) \leq c \rbrace $  
 
 ************************
 

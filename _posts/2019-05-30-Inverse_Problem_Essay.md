@@ -24,10 +24,6 @@ tag: Math
 - [Image Reconstruction](#image-reconstruction)
     - [Fourier Analysis](#fourier-analysis)
     - [Transform](#transform)
-    - [Wiener filter](#wiener-filter)
-    - [Cone Beam Transform](#cone-beam-transform)
-    - [Radar Imaging](#radar-imaging)
-    - [Seismic Imaging](#seismic-imaging)
 - [Bibliography](#bibliography)
     - [Image Reconstruction](#image-reconstruction-1)
     - [Krylov Subspace Methods](#krylov-subspace-methods)
@@ -247,19 +243,13 @@ $ (I^\alpha g)^\wedge (\theta,\sigma) = \lvert \sigma \rvert^{-\alpha} \hat{g} (
 
     - $ \mathcal{X}(\tau , f) = \int_{-\infty}^{\infty} s(t)s*(t - \tau) e^{i2\pi ft} dt $  
 
-### Wiener filter  
+* Cone Beam Transform  
 
-    1. Signal & noise (additive) are stationary linear stochastic processes with __known__ spectral characteristics 
-    2. Minimize expected mean square error criteria (MMSE)  
-    3. filter must be physically realizable/causal  
-
-### Cone Beam Transform  
-
-    $ (\mathcal{D} f)(r,y(t)) = \int_{0}^{\infty} f(y(t)+rs) ds = (\mathcal{D} f)(\hat{r},y(t))/{\lvert r \rvert} $ homogeneous of order -1    
+   - $ (\mathcal{D} f)(r,y(t)) = \int_{0}^{\infty} f(y(t)+rs) ds = (\mathcal{D} f)(\hat{r},y(t))/{\lvert r \rvert} $ homogeneous of order -1    
 
 
-### Radar Imaging  
-
+* Radar Imaging  
+    
     * Electromagnetic Wave Propagation  
         - Perfect electrical conductor  
     * Inverse Synthetic-Aperture Radar (ISAR)  
@@ -268,7 +258,7 @@ $ (I^\alpha g)^\wedge (\theta,\sigma) = \lvert \sigma \rvert^{-\alpha} \hat{g} (
     * Bistatic SAR  
         - Forward Modelling
 
-### Seismic Imaging  
+* Seismic Imaging  
 
 
 ************************
