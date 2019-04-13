@@ -1,0 +1,40 @@
+{
+    "scope": "text.html.markdown,text.html",
+
+    "completions":
+    [
+      { "trigger": "\\ve", "contents": "\\lvert ${1:x} \\rvert"},
+      { "trigger": "\\Ve", "contents": "\\lVert ${1:x} \\rVert"},
+      { "trigger": "\\bra", "contents": "\\lbrace ${1:x} \\rbrace"},
+      { "trigger": "\\disp", "contents": "\\displaystyle"},
+      { "trigger": "\\fra", "contents": "\\frac{${1:code}}{${2:code}}"},
+      { "trigger": "\\dfra", "contents": "\\displaystyle \\frac{${1:code}}{${2:code}}"},
+      { "trigger": "\\sum", "contents": "\\displaystyle \\sum_{${1:down}}^{${2:up}}"},
+      { "trigger": "\\int", "contents": "\\int_{${1:\\mathbb\\{R\\}^n}}"},
+      { "trigger": "\\dint", "contents": "\\displaystyle \\int_{${1:\\mathbb\\{R\\}^n}}"},
+      { "trigger": "\\lim", "contents": "\\displaystyle \\lim_{${1:down}}"},
+      { "trigger": "\\al", "contents": "\\alpha"},
+      { "trigger": "\\be", "contents": "\\beta"},
+      { "trigger": "\\ga", "contents": "\\gamma"},
+      { "trigger": "\\ep", "contents": "\\epsilon"},
+      { "trigger": "\\la", "contents": "\\longleftarrow"},
+      { "trigger": "\\ra", "contents": "\\longrightarrow"},
+      { "trigger": "\\sl", "contents": "\\backslash"},
+      { "trigger": "\\mb", "contents": "\\mathbb{${1:R}}"},
+      { "trigger": "\\mc", "contents": "\\mathcal{${1:C}}"},
+      { "trigger": "\\mf", "contents": "\\mathfrak{${1:F}}"},
+      { "trigger": "\\ms", "contents": "\\mathsf{${1:R}}"},
+      { "trigger": "\\mrm", "contents": "\\mathrm{${1:where}}"},
+      { "trigger": "\\fa", "contents": "\\ \\forall \\ "},
+      { "trigger": "\\te", "contents": "\\ \\exists \\ "},
+      { "trigger": "\\pa", "contents": "\\partial"},
+      { "trigger": "\\cup", "contents": "\\cup_\\{${1:k}=0\\}^\\{${2:\\infty}\\}"},
+      { "trigger": "\\cap", "contents": "\\cap_\\{${1:k}=0\\}^\\{${2:\\infty}\\}"},
+
+      { "trigger": "hlink", "contents": "[${1:title}]:<${2:link}> \"${1:title}\""},
+      { "trigger": "mdpost", "contents": "---\nlayout: post\ntitle: \"${1:title}\"\ndescription: \"${2:description}\"\ndate: 2019-${3:month}-${4:date}\ntag: ${5:tage}\n---\n"},
+
+
+
+    ]
+}

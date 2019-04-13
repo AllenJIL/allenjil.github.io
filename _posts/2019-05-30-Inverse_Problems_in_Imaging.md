@@ -15,28 +15,28 @@ tag: Math
     [Lecture Notes]  
 
 
-
 **********
 
 <!-- MarkdownTOC -->
 
 - [Notation](#notation)
 - [Introduction](#introduction)
-- [Well-Posed](#well-posed)
-- [Differentiation](#differentiation)
-- [Fatou lemma](#fatou-lemma)
+    - [Well-Posed](#well-posed)
+    - [Differentiation](#differentiation)
+    - [Fatou lemma](#fatou-lemma)
 - [Generalised Solutions](#generalised-solutions)
+    - [Orthogonal decomposition](#orthogonal-decomposition)
 - [Regularisation Theory](#regularisation-theory)
 - [Variational Regularisation](#variational-regularisation)
-- [Characteristic function](#characteristic-function)
-- [Proper](#proper)
-- [Convex](#convex)
-- [Fenchel conjugat](#fenchel-conjugat)
-- [Lower-semicontinuous l.s.c](#lower-semicontinuous-lsc)
-- [Subdifferential](#subdifferential)
-- [Minimiser](#minimiser)
-- [Coercive](#coercive)
-- [Level set](#level-set)
+    - [Characteristic function](#characteristic-function)
+    - [Proper](#proper)
+    - [Convex](#convex)
+    - [Fenchel conjugat](#fenchel-conjugat)
+    - [Lower-semicontinuous l.s.c](#lower-semicontinuous-lsc)
+    - [Subdifferential](#subdifferential)
+    - [Minimiser](#minimiser)
+    - [Coercive](#coercive)
+    - [Level set](#level-set)
 - [Dual Perspective](#dual-perspective)
 - [Numerical Optimisation Methods](#numerical-optimisation-methods)
 - [Example](#example)
@@ -46,16 +46,17 @@ tag: Math
 
 ************************
 
-### Notation  
+<a id="notation"></a>
+## Notation  
 
 * $ A $ bounded linear operators  
 
 * $ A \in \mathcal{L}(\mathcal{U}, \mathcal{V})  with  
-    $$ \displaystyle \lVert A \rVert_{\mathcal{L}(\mathcal{U}, \mathcal{V})} := \sup_{u \in \mathcal{U} \backslash \{ 0 \}} \frac{\lVert A u \rVert_\mathcal{V}}{\lVert u \rVert_\mathcal{U}} = \sup_{\lVert u \rVert_\mathcal{U} \leq 1} \lVert Au \rVert_\mathcal{V} \leq \infty $$  
+    $$ \displaystyle \lVert A \rVert_{\mathcal{L}(\mathcal{U}, \mathcal{V})} := \sup_{u \in \mathcal{U} \backslash \lbrace 0 \rbrace} \frac{\lVert A u \rVert_\mathcal{V}}{\lVert u \rVert_\mathcal{U}} = \sup_{\lVert u \rVert_\mathcal{U} \leq 1} \lVert Au \rVert_\mathcal{V} \leq \infty $$  
 * For $ A : \mathcal{U} \to \mathcal{V} $  
-    - $ \mathcal{D}(A) := U $ the __domain__  
-    - $ \mathcal{N}(A) := \{ u \in \mathcal{U} \mid Au = 0 \} $ the __kernel__  
-    - $ \mathcal{R}(A) := \{ f \in \mathcal{V} \mid f = Au, u \in \mathcal{U} \} $ the __range__  
+    - $ \mathsf{D}(A) := U $ the __domain__  
+    - $ \mathsf{N}(A) := \lbrace u \in \mathcal{U} \mid Au = 0 \rbrace $ the __kernel__  
+    - $ \mathsf{R}(A) := \lbrace f \in \mathcal{V} \mid f = Au, u \in \mathcal{U} \rbrace $ the __range__  
 
 * A is __continuous__ at $ u \in \mathcal{U} $  
     - if $ \forall ε > 0 \exists δ > 0 $ with  
@@ -64,9 +65,10 @@ tag: Math
     - $ \langle Au, v \rangle_\mathcal{V} = \langle u, A^*v \rangle_\mathcal{U} \ \forall \ u \in \mathcal{U}, v \in \mathcal{V} $  
 
 * For a subset $ \mathcal{X} \subset \mathcal{U} $, the __orthogonal complement__ of $ \mathcal{X} $ is defined by  
-    - $ \mathcal{X}^\perp := \{ u \in \mathcal{U} \mid \langle u,v\rangle_\mathcal{U} = 0 \ \forall \ v \in \mathcal{X} \} $  
+    - $ \mathcal{X}^\perp := \lbrace  u \in \mathcal{U} \mid \langle u,v\rangle_\mathcal{U} = 0 \ \forall \ v \in \mathcal{X} \rbrace $  
 
 
+<a id="introduction"></a>
 ## Introduction  
 
 * Operator equations  
@@ -76,6 +78,7 @@ tag: Math
     $ f $ are the measured data  
     $ u $ is the quantity we want to reconstruct from data  
 
+<a id="well-posed"></a>
 ### Well-Posed  
 
 * The well-posed problem  if  
@@ -84,6 +87,7 @@ tag: Math
     3. the solution depends continuously on the data
         i.e. small errors in the data f result in small errors in the reconstruction  
 
+<a id="differentiation"></a>
 ### Differentiation  
 
 * Evaluation the derivative of a function $ f \in L^2 [0, \pi /2 ] $  
@@ -98,6 +102,7 @@ tag: Math
     $ K(x,\xi) $ is the point-spread function (PSF) which models the optics of the camera  
     
 
+<a id="fatou-lemma"></a>
 ### Fatou lemma  
 
 [Fatou's lemma]  
@@ -106,22 +111,31 @@ tag: Math
 
 ************************
 
+<a id="generalised-solutions"></a>
 ## Generalised Solutions    
 
+<a id="orthogonal-decomposition"></a>
+### Orthogonal decomposition  
 
+* For $ A \in \mathcal{L}(\mathcal{U},\mathcal{V}) $, we have  
+    - $ \mathsf{R}^\perp(A) = \mathsf{N}(A^* ) $ then $ \overline{\mathsf{R}(A)} = \mathsf{N}(A^* )^\perp $  
+    - $ \mathsf{R}^\perp(A^* ) = \mathsf{N}(A) $ then $ \overline{\mathsf{R}(A^* )} = \mathsf{N}(A)^\perp $   
 
 
 ************************
 
+<a id="regularisation-theory"></a>
 ## Regularisation Theory    
 
 
 
 ************************
 
+<a id="variational-regularisation"></a>
 ## Variational Regularisation  
 
 
+<a id="characteristic-function"></a>
 ### Characteristic function  
 
 * Let $ \mathcal{C} \subset \mathcal{U} $ be a set.  
@@ -134,11 +148,13 @@ tag: Math
 
 Let $ E : \mathcal{U} \to \bar{\mathbb{R}} $ be a functional. 
 
+<a id="proper"></a>
 ### Proper  
 
 * A functional E is called __proper__ if  
     the effective domain dom(E) is _not empty_  
 
+<a id="convex"></a>
 ### Convex  
 
 * A functional E is called __convex__ if  
@@ -146,18 +162,21 @@ Let $ E : \mathcal{U} \to \bar{\mathbb{R}} $ be a functional.
     for all $ \lambda \in (0,1) $ and all $ u,v \in dom(E) w/ u \neq v $  
 * It is called _strictly_ convex if the inequality is strict  
 
+<a id="fenchel-conjugat"></a>
 ### Fenchel conjugat  
 
 * The functional E is called the __Fenchel conjugate__ of E, such that  
     $ E^* (p) = \displaystyle \sup_{u\in \mathcal{U}} [<u,p> - E(u)] $  
 * For any functional $ E : \mathcal{U} \to \bar{\mathbb{R}} $ the following inequallity holds:  
-    $ E^{* *} := (E^*)* \leq E $  
+    $ E^{* * } := (E^* )* \leq E $  
 
+<a id="lower-semicontinuous-lsc"></a>
 ### Lower-semicontinuous l.s.c  
 
 * If E is proper, l.s.c and convex, then  
     $ E^{* * } = E $  
 
+<a id="subdifferential"></a>
 ### Subdifferential  
 
 * A functional E is called subdifferentiable at $ u \in \mathcal{U} $, if there exists an element $ p \in \mathcal{U}^* $ such that  
@@ -166,16 +185,19 @@ Let $ E : \mathcal{U} \to \bar{\mathbb{R}} $ be a functional.
 * the collection of all subgradients at position $ u $ is called subdifferential of $ E $ at $ u $, such that  
     $ \partial E(u) := \lbrace p \in \mathcal{U}^* \mid E(v) \geq E(u) + <p, v-u>, \ \forall v \in \mathcal{U} \rbrace $  
 
+<a id="minimiser"></a>
 ### Minimiser  
 
 * We call $ u^* $ a minimiser of $ E $ such that  
     $ u^* \in \mathcal{U} $ solves the minimisation problem $ \displaystyle \min_{u \in \mathcal{U}} E (u) $  
     if and only if $ E(u^* ) \leq \infty $ and $ E(u^* ) \leq E(u), \ \forall u \in \mathcal{U} $  
 
+<a id="coercive"></a>
 ### Coercive  
 
 * A functional E is called __coercive__, if for all $ \lbrace u_j \rbrace_{j\in \mathbb{N}} $ with $ \lVert u_j \rVert_\mathcal{U} \to \infty $ we have $ E(u_j) \to \infty $  
 
+<a id="level-set"></a>
 ### Level set  
 
 * $ L_c (f) = \lbrace (x_1, \cdots, x_n ) \mid f(x_1 , \cdots x_n ) = c \rbrace $  
@@ -184,18 +206,21 @@ Let $ E : \mathcal{U} \to \bar{\mathbb{R}} $ be a functional.
 
 ************************
 
+<a id="dual-perspective"></a>
 ## Dual Perspective  
 
 
 
 ************************
 
+<a id="numerical-optimisation-methods"></a>
 ## Numerical Optimisation Methods  
 
 
 
 ************************
 
+<a id="example"></a>
 ## Example  
 
 

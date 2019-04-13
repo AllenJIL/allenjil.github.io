@@ -32,12 +32,15 @@ tag: Math
 
 <!-- /MarkdownTOC -->
 
+<a id="essay"></a>
 ## Essay  
 
+<a id="krylov-subspace-methods-for-the-regularisation-of-inverse-problems"></a>
 ### Krylov Subspace Methods for the Regularisation of Inverse Problems  
 
 * Instructor: Dr O. Rath Spivack
 
+<a id="instruction"></a>
 ### Instruction  
 
 Many inverse problems in mathematical physics can be formally expressed as  
@@ -47,6 +50,7 @@ Regularisation can in some cases be achieved by projection onto ﬁnite-dimensio
 This essay should explore the regularising properties of Krylov subspace methods, focusing on some particular issues according to personal interests and background. This could also be, for example, applications of Krylov methods to practical inverse problems.  
 A few example references are given below, and more will be provided depending on the choice of focus.
 
+<a id="idea"></a>
 ### Idea  
 
 * treating the method discussed as the first iteration of a krylov method and construct subsequent iterations towards least-square inversion.  
@@ -54,21 +58,21 @@ A few example references are given below, and more will be provided depending on
 
 
 > Regularization by projection with a posteriori discretization level choice for linear and non-linear ill-posed problems  
->   \star numerical implementation of regularization  
->   \star finite-dimensional system of linear or non-linear equations  
->   \star priori and posterior discretization  
+>   * numerical implementation of regularization  
+>   * finite-dimensional system of linear or non-linear equations  
+>   * priori and posterior discretization  
 
 > On Krylov projection methods and Tikhonov regularization  
->   \star framework of large-scale linear discrete ill-posed problems  
->   \star tikhonov regularized problem  
->   \star restoration  
+>   * framework of large-scale linear discrete ill-posed problems  
+>   * tikhonov regularized problem  
+>   * restoration  
 
 > On Lanczos Based Methods for the Regularization of Discrete Ill-Posed Problems Hanke  
->   \star hybrid methods for the solution of linear ill-posed problems  
->   \star based on the Lanczos process and TSVD regularization  
->   \star truncated SVD to stabilize the iteration  
->   \star least-square projection and dual least-square method  
->   \star behaviour of hybrid methods  
+>   * hybrid methods for the solution of linear ill-posed problems  
+>   * based on the Lanczos process and TSVD regularization  
+>   * truncated SVD to stabilize the iteration  
+>   * least-square projection and dual least-square method  
+>   * behaviour of hybrid methods  
 
 * sentences  
     - "Regularization" in the language of mathematical analysis is the process to build smoother approximate functions through convolution with test function  
@@ -76,6 +80,7 @@ A few example references are given below, and more will be provided depending on
 
 ************************
 
+<a id="abbreviation"></a>
 ## Abbreviation  
 
 * __MWF__ - multistage Wiener filters  
@@ -92,6 +97,7 @@ A few example references are given below, and more will be provided depending on
 * __BiSAR__ - bi-static synthetic aperture radar  
 * __SVD__ - singular-value decomposition  
 
+<a id="introduction-to-krylov-subspace-methods"></a>
 ## Introduction to Krylov subspace methods  
 
 * Large sparse linear systems of equations or large sparse matrix eigenvalue problems appear in most applications of scientific computing.
@@ -101,8 +107,10 @@ A few example references are given below, and more will be provided depending on
 
 
 
+<a id="foundations-of-image-science"></a>
 ## Foundations of image science  
 
+<a id="classification-by"></a>
 ### Classification by  
 
 * kind of radiation or field  
@@ -171,10 +179,12 @@ A few example references are given below, and more will be provided depending on
 
 ************************
 
+<a id="image-reconstruction"></a>
 ## Image Reconstruction  
 
 > The summary of what you learned during the lecture  
 
+<a id="fourier-analysis"></a>
 ### Fourier Analysis  
 
 $ D^k = \displaystyle (\frac{\partial}{\partial x_1})^{k_1} \cdots (\frac{\partial}{\partial x_n})^{k_n} $  
@@ -194,6 +204,7 @@ $ \lvert k \rvert = k_1 + \cdots + k_n $
     - $ (f \star g)^\wedge = (2\pi)^{-n/2} \hat{f}\hat{g} $  
     - $ (fg)^\wedge = (2\pi)^{-n/2}(\hat{f}\star \hat{g}) $  
 
+<a id="transform"></a>
 ### Transform  
 
 $ S^{n-1} $ : Unit sphere in $ \mathbb{R}^n $  
@@ -264,9 +275,11 @@ $ (I^\alpha g)^\wedge (\theta,\sigma) = \lvert \sigma \rvert^{-\alpha} \hat{g} (
 ************************
 
 
+<a id="bibliography"></a>
 ## Bibliography  
 
 
+<a id="image-reconstruction-1"></a>
 ### Image Reconstruction  
 
 1. F. Natterer and F. Wuebbeling. Mathematical Methods in Image Reconstruction. Mathematical Modeling and Computation. Society for Industrial and Applied Mathematics, 2001.  
@@ -275,6 +288,7 @@ $ (I^\alpha g)^\wedge (\theta,\sigma) = \lvert \sigma \rvert^{-\alpha} \hat{g} (
 4. H.H. Barrett and K.J. Myers. Foundations of image science. Wiley series in pure and applied optics. Wiley-Interscience, 2004.  
 5. H.P. Langtangen. A Primer on Scientiﬁc Programming with Python. Texts in Computational Science and Engineering. Springer Berlin Heidelberg, 2009.  
 
+<a id="krylov-subspace-methods"></a>
 ### Krylov Subspace Methods  
 
 6. B. Kaltenbacher. Regularization by projection with a posteriori discretization level choice for linear and nonlinear ill-posed problems. Inverse Problems, 16(5): 1523-1539, 2000.  
@@ -283,6 +297,7 @@ $ (I^\alpha g)^\wedge (\theta,\sigma) = \lvert \sigma \rvert^{-\alpha} \hat{g} (
 9. S. Gazzola, P. Novati and M. R. Russo, On Krylov projection methods and Tikhonov regularization, Electronic Transactions on Numerical Analysis (2015) 44, p. 83-123  
 
 
+<a id="inverse-problems-in-imaging"></a>
 ### Inverse Problems in Imaging  
 
 10. H. W. Engl, M. Hanke and A. Neubauer. Regularization of Inverse Problems. Vol. 375, Springer Science & Business Media, 1996, ISBN: 9780792341574  
@@ -290,6 +305,7 @@ $ (I^\alpha g)^\wedge (\theta,\sigma) = \lvert \sigma \rvert^{-\alpha} \hat{g} (
 12. A. Chambolle, T. Pock, An introduction to continuous optimization for imaging, Acta Numerica, 25, 161-319 (2016)  
 
 
+<a id="bayesian-inverse-problems"></a>
 ### Bayesian Inverse Problems  
 
 13. M. Dashti and A.M. Stuart, The Bayesian approach to inverse problems, Handbook of Uncertainty Quantiﬁcation. Springer, 2017  

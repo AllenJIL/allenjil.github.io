@@ -37,12 +37,15 @@ tag: Math
 
 ************************
 
+<a id="common-formul"></a>
 ## Common Formul  
 
+<a id="quick-finding"></a>
 ### Quick Finding  
 
 ************************
 
+<a id="notations"></a>
 ## Notations  
 
 * $ C^0_b(Z) $ is the space of all continuous and bounded functions on $ Z $  
@@ -57,8 +60,10 @@ tag: Math
 
 ************************
 
+<a id="background-on-measure-theory"></a>
 ## Background on Measure Theory   
 
+<a id="sigma-algebra-properties"></a>
 ### sigma-algebra properties  
 
 * A σ-algebra, Σ, on a space $ X $ is a collection of subsets of $ X $ with the following properties:  
@@ -66,6 +71,7 @@ tag: Math
     2. (closure under complements) if $ A \in \Sigma $ then $ A^c = X \setminus A \in \Sigma $ ;  
     3. (closure under countable unions) if $ \{ A_i \}^\infty_{i=1} \subset \Sigma $ then $ \cup^\infty_{i=1} A_i \in \Sigma $.  
 
+<a id="measure-properties"></a>
 ### measure properties  
 
 * A measure $ \mu $ is a function from $ \Sigma $ to $ \mathbb{R} \cup \{ + \infty \} $ satisfying the following properties:  
@@ -74,25 +80,31 @@ tag: Math
     3. (countable additivity) for any $ \{ A_i \}^\infty_{i=1} $ are pairwise disjoint, $ \mu (\cup^\infty_{i=1} A_i) = \sum^\infty_{i=1} \mu (A_i) $.  
     A measure $ \mu $ is a probability measure $ \mathcal{P}(X) $ if $ \mu(X) = 1 $.  
 
+<a id="borel-sigma-algebra"></a>
 ### Borel sigma-algebra  
 
 * The __Borel σ-algebra__ on a topological space is the smallest σ-algebra that contains all the open sets in X  
 
 * The __Borel measure__ is any measure $ \mu : \mathcal{B}(X) \to \[0, + \infty \] $  
 
+<a id="formulation"></a>
 ## Formulation  
 
 
 
+<a id="special-cases"></a>
 ## Special Cases  
 
 
+<a id="kantorovich-duality"></a>
 ## Kantorovich Duality  
 
 
+<a id="semi-discrete-optimal-transport"></a>
 ## Semi-Discrete Optimal Transport  
 
 
+<a id="existence-and-characterisation-of-transport-maps"></a>
 ## Existence and Characterisation of Transport Maps  
 
 
