@@ -13,6 +13,10 @@ tag: Sublime Text 技巧
 [Completions]:<http://sublimetext.info/docs/en/extensibility/completions.html> "Completions"
 
 
+作为不是一个学计算机的学生，之前打文档的时候一直不知道可以用代码片段snipperts直接呼出使用，减少代码的出错几率与提高效率。因为要经常打 $\LaTeX$ 数学公式，后来忍无可忍，在网上找了下教程[Mitchell]，并自己做了一个[My completions](#my-completions) (__completions__为一个文件包含多个snippets)，使用了一段时间，感觉挺好用的就分享给大家。  
+
+**************
+
 <!-- MarkdownTOC -->
 
 - [Snippet](#snippet)
@@ -21,8 +25,6 @@ tag: Sublime Text 技巧
 - [My completions](#my-completions)
 
 <!-- /MarkdownTOC -->
-
-作为不是一个学计算机的学生，之前打文档的时候一直不知道可以用代码片段snipperts直接呼出使用，减少代码的出错几率与提高效率。因为要经常打 $\LaTeX$ 数学公式，后来忍无可忍，在网上找了下教程[Mitchell]，并自己做了一个[My completions](#my-completions)(__completions__为一个文件包含多个snippets)，使用了一段时间，感觉挺好用的就分享给大家。  
 
 **************
 
@@ -123,6 +125,8 @@ Completions的文件后缀为`.sublime-completions`，路径放在：`.\Data\Pac
     ```
     这个时候，插入的内容是有默认值的，如果不用改变，直接`Tab`到下一个位置即可  
 
+********************
+
 <a id="my-completions"></a>
 ### My completions  
 
@@ -159,7 +163,8 @@ Completions的文件后缀为`.sublime-completions`，路径放在：`.\Data\Pac
       { "trigger": "\\mc", "contents": "\\mathcal{${1:C}}"},
       { "trigger": "\\mf", "contents": "\\mathfrak{${1:F}}"},
       { "trigger": "\\ms", "contents": "\\mathsf{${1:R}}"},
-      { "trigger": "\\mrm", "contents": "\\mathrm{${1:where}}"},
+      { "trigger": "\\where", "contents": "\\ \\mathrm{${1:where}} \\ "},
+      { "trigger": "\\with", "contents": "\\ \\mathrm{${1:with}} \\ "},
 
       { "trigger": "\\fa", "contents": "\\ \\forall \\ "},
       { "trigger": "\\te", "contents": "\\ \\exists \\ "},
@@ -171,10 +176,12 @@ Completions的文件后缀为`.sublime-completions`，路径放在：`.\Data\Pac
       { "trigger": "hlink", "contents": "[${1:title}]:<${2:link}> \"${1:title}\""},
       { "trigger": "mdpost", "contents": "---\nlayout: post\ntitle: \"${1:title}\"\ndescription: \"${2:description}\"\ndate: 2019-${3:month}-${4:date}\ntag: ${5:tage}\n---\n"},
       { "trigger": "dlfile", "contents": "<a href=\"/files/${1:文件}\" target=\"_blank\">${1:文件}下载</a>"},
+      
     ]
 }
 ```
 
-此代码会持续性更新 13/04/2019 18:20 UK 
+此代码会持续性更新 13/04/2019 19:14 UK  
+
 <a href="/files/math.sublime-completions" target="_blank">math.sublime-completions下载</a> 13/04/2019 18:26 UK  
 
