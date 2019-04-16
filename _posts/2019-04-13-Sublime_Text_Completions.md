@@ -13,7 +13,7 @@ tag: Sublime Text 技巧
 [Completions]:<http://sublimetext.info/docs/en/extensibility/completions.html> "Completions"
 
 
-作为不是一个学计算机的学生，之前打文档的时候一直不知道可以用代码片段snipperts直接呼出使用，减少代码的出错几率与提高效率。因为要经常打 $\LaTeX$ 数学公式，后来忍无可忍，在网上找了下教程[Mitchell]，并自己做了一个[My completions](#my-completions) (__completions__为一个文件包含多个snippets)，使用了一段时间，感觉挺好用的就分享给大家。  
+作为不是一个学计算机的学生，之前打文档的时候一直不知道可以用代码片段snipperts直接呼出使用，减少代码的出错几率与提高效率。因为要经常打 $\LaTeX$ 数学公式，后来忍无可忍，在网上找了下教程[Mitchell]，并自己做了一个[My completions](#my-completions)(completions为一个文件包含多个snippets)，使用了一段时间，感觉挺好用的就分享给大家。  
 
 **************
 
@@ -138,37 +138,49 @@ Completions的文件后缀为`.sublime-completions`，路径放在：`.\Data\Pac
 
     "completions":
     [
-      { "trigger": "\\ve", "contents": "\\lvert ${1:x} \\rvert"},
-      { "trigger": "\\Ve", "contents": "\\lVert ${1:x} \\rVert"},
-      { "trigger": "\\bra", "contents": "\\lbrace ${1:x} \\rbrace"},
+      { "trigger": "\\ve", "contents": "\\lvert $1 \\rvert"},
+      { "trigger": "\\Ve", "contents": "\\lVert $1 \\rVert"},
+      { "trigger": "\\bra", "contents": "\\lbrace $1 \\rbrace"},
 
       { "trigger": "\\disp", "contents": "\\displaystyle"},
-      { "trigger": "\\fra", "contents": "\\frac{${1:code}}{${2:code}}"},
-      { "trigger": "\\dfra", "contents": "\\displaystyle \\frac{${1:code}}{${2:code}}"},
+      { "trigger": "\\fra", "contents": "\\frac{$1}{$2}"},
+      { "trigger": "\\dfra", "contents": "\\displaystyle \\frac{$1}{$2}"},
       { "trigger": "\\sum", "contents": "\\displaystyle \\sum_{${1:down}}^{${2:up}}"},
       { "trigger": "\\int", "contents": "\\int_{${1:\\mathbb\\{R\\}^n}}"},
       { "trigger": "\\dint", "contents": "\\displaystyle \\int_{${1:\\mathbb\\{R\\}^n}}"},
-      { "trigger": "\\lim", "contents": "\\displaystyle \\lim_{${1:down}}"},
+      { "trigger": "\\lim", "contents": "\\displaystyle \\lim_{$1}"},
 
       { "trigger": "\\al", "contents": "\\alpha"},
       { "trigger": "\\be", "contents": "\\beta"},
+      { "trigger": "\\de", "contents": "\\delta"},
       { "trigger": "\\ga", "contents": "\\gamma"},
       { "trigger": "\\ep", "contents": "\\epsilon"},
+      { "trigger": "\\pa", "contents": "\\partial"},
+      { "trigger": "\\da", "contents": "\\dagger"},
+      { "trigger": "\\pe", "contents": "\\perp"},
+      { "trigger": "\\vp", "contents": "\\varphi"},
+      { "trigger": "\\tilde", "contents": "\\widetilde{$1}"},
+      { "trigger": "\\hat", "contents": "\\widehat{$1}"},
+      { "trigger": "\\bar", "contents": "\\overline{$1}"},
 
       { "trigger": "\\la", "contents": "\\longleftarrow"},
       { "trigger": "\\ra", "contents": "\\longrightarrow"},
       { "trigger": "\\sl", "contents": "\\backslash"},
+      { "trigger": "\\arrow", "contents": "\\xrightarrow[${2:bottom}]{${1:above}}"},
 
-      { "trigger": "\\mb", "contents": "\\mathbb{${1:R}}"},
-      { "trigger": "\\mc", "contents": "\\mathcal{${1:C}}"},
-      { "trigger": "\\mf", "contents": "\\mathfrak{${1:F}}"},
-      { "trigger": "\\ms", "contents": "\\mathsf{${1:R}}"},
-      { "trigger": "\\where", "contents": "\\ \\mathrm{${1:where}} \\ "},
-      { "trigger": "\\with", "contents": "\\ \\mathrm{${1:with}} \\ "},
+      { "trigger": "\\mb", "contents": "\\mathbb{$1}"},
+      { "trigger": "\\mc", "contents": "\\mathcal{$1}"},
+      { "trigger": "\\mf", "contents": "\\mathfrak{$1}"},
+      { "trigger": "\\ms", "contents": "\\mathsf{$1}"},
+      { "trigger": "\\mr", "contents": "\\ \\mathrm{$1} \\ "},
 
+      { "trigger": "\\where", "contents": "\\ \\mathrm{where} \\ "},
+      { "trigger": "\\with", "contents": "\\ \\mathrm{with} \\ "},
+      { "trigger": "\\as", "contents": "\\ \\mathrm{as} \\ "},
+      { "trigger": "\\and", "contents": "\\ \\mathrm{and} \\ "},
       { "trigger": "\\fa", "contents": "\\ \\forall \\ "},
       { "trigger": "\\te", "contents": "\\ \\exists \\ "},
-      { "trigger": "\\pa", "contents": "\\partial"},
+      
 
       { "trigger": "\\cup", "contents": "\\cup_\\{${1:k}=0\\}^\\{${2:\\infty}\\}"},
       { "trigger": "\\cap", "contents": "\\cap_\\{${1:k}=0\\}^\\{${2:\\infty}\\}"},
@@ -181,7 +193,7 @@ Completions的文件后缀为`.sublime-completions`，路径放在：`.\Data\Pac
 }
 ```
 
-此代码会持续性更新 13/04/2019 19:14 UK  
+此代码会持续性更新 14/04/2019 21:24 UK  
 
 <a href="/files/math.sublime-completions" target="_blank">math.sublime-completions下载</a> 13/04/2019 18:26 UK  
 
