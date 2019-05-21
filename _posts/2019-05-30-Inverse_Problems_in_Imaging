@@ -61,7 +61,7 @@ tag: Math
 <a id="notation"></a>
 ## Notation
 
-* $ A $ bounded linear operators  
+* Let $ A $ be bounded linear operators  
 
 * $ A \in \mathcal{L}(\mathcal{U}, \mathcal{V}) $  with  
     $$ \displaystyle \lVert A \rVert_{\mathcal{L}(\mathcal{U}, \mathcal{V})} := \sup_{u \in \mathcal{U} \backslash \lbrace 0 \rbrace} \frac{\lVert A u \rVert_\mathcal{V}}{\lVert u \rVert_\mathcal{U}} = \sup_{\lVert u \rVert_\mathcal{U} \leq 1} \lVert Au \rVert_\mathcal{V} \leq \infty $$  
@@ -189,7 +189,7 @@ tag: Math
     with  
     $$ \mathsf{N}(A^\dagger) = \mathsf{R}(A)^\perp $$.  
 
-* ___Thm 1.___ Let $ A \in \mathcal{L}(\mathcal{U},\mathcal{V}). Then $ A ^\dagger $ is continuous, i.e. $ A ^\dagger \in \mathcal{L}(\mathsf{D},\mathcal{U}), if and only iff $ \mathsf{R}(A) is closed $.  
+* ___Thm 1.___ Let $ A \in \mathcal{L}(\mathcal{U},\mathcal{V}) $. Then $ A ^\dagger $ is continuous, i.e. $ A ^\dagger \in \mathcal{L}(\mathsf{D},\mathcal{U}) $, if and only iff $ \mathsf{R}(A) $ is closed.  
 
 * ___Lemma 1.___ The MP inverse $ A^\dagger $ satisfies $ \mathsf{R}(A^\dagger) = \mathsf{N}(A)^\perp $ and the MP equations  
     1. $ A A^\dagger A = A $ ,  
@@ -203,7 +203,7 @@ tag: Math
 
 * ___Thm 3.___ Let $ A \in \mathcal{K}(\mathcal{U},\mathcal{V}) $ with an infinite dimensional range. Then, the MPi of $ A $ is discontinuous  
 
-* __Thm 4.__ Let $ A \in \mathcal{K}(\mathcal{U},\mathcal{V}) $ with singular system $ \lbrace (\sigma_j, x_j, y_j) \rbrace_{j\in\mathbb{N}} $ and $ f \in \mathsf{D} (A^\dagger) $  
+* ___Thm 4.___ Let $ A \in \mathcal{K}(\mathcal{U},\mathcal{V}) $ with singular system $ \lbrace (\sigma_j, x_j, y_j) \rbrace_{j\in\mathbb{N}} $ and $ f \in \mathsf{D} (A^\dagger) $  
     then the Moore-Penrose inverse of $ A $ can be written as  
     $ A^\dagger f = \displaystyle \sum_{j = 1}^{\infty} \sigma_j^{-1} \langle f,y_j \rangle x_j $  
 
@@ -265,7 +265,7 @@ Let $ E : \mathcal{U} \to \overline{\mathbb{R}} $ be a functional.
 ### 4.3. Convex
 
 * A functional E is called __convex__ if  
-    $ E (\lambda u + (1 - \lambda) v) \leq \lambda (u) + (1-\lambda) E(v) $  
+    $ E (\lambda u + (1 - \lambda) v) \leq \lambda E(u) + (1-\lambda) E(v) $  
     for all $ \lambda \in (0,1) $ and all $ u,v \in dom(E) \ \mathrm{with} \  u \neq v $  
 * It is called _strictly_ convex if the inequality is strict  
 
@@ -273,7 +273,7 @@ Let $ E : \mathcal{U} \to \overline{\mathbb{R}} $ be a functional.
 ### 4.4. Fenchel conjugat
 
 * The functional E is called the __Fenchel conjugate__ of E, such that  
-    $ E^* (p) = \displaystyle \sup_{u\in \mathcal{U}} [<u,p> - E(u)] $  
+    $ E^* (p) = \displaystyle \sup_{u\in \mathcal{U}} \lbrace \langle p,u \rangle - E(u)\rbrace $  
 * For any functional $ E : \mathcal{U} \to \overline{\mathbb{R}} $ the following inequallity holds:  
     $ E^{* * } := (E^* )^* \leq E $  
 
@@ -343,7 +343,7 @@ In general, the __Bregman distances__ are not symmetric that $ D^q_E (u,v) = 0 $
 
 * Suppose that the fidelity term is such that the optimisation problem  
     $$ \displaystyle\min_{u\in\mathcal{U}} \mathcal{F}(Au,f) $$  
-    has a solution for any $ f \in \mathcal{V}. Let  
+    has a solution for any $ f \in \mathcal{V} $. Let  
     - $ u^\dagger_\mathcal{J} \in \arg \min_{u\in\mathcal{U}} \mathcal{F}(Au,f) $ and  
     - $ \mathcal{J}(u^\dagger_\mathcal{J})\leq \mathcal{J}(\tilde{u})\ \forall \ \tilde{u}\in \arg \min_{u\in\mathcal{U}}\mathcal{F}(Au,f) $  
     Then $ u^\dagger_\mathcal{J} $ is called a $ \mathcal{J} $ -minimising solution of $ Au = f $  
