@@ -268,7 +268,7 @@ We visualize distributions to show the possible values that we can expect to see
 ### 3.15. Themes
 
 - Seaborn has five different themes: (1)"darkgrid", (2)"whitegrid", (3)"dark", (4)"white", and (5)"ticks"  
-` sns.set_style("dark") `  
+`sns.set_style("dark")`  
 
 ****************
 <a id="4-seaborn-faceting"></a>
@@ -297,7 +297,7 @@ It's a multivariate technique which is very easy to use
 ### 4.2. Pair Plot
 
 * Default `pairplot` return scatter plots in the main entries and a histogram in the diagonal.  
-	- `sns.pairplot(df[['X1Y3','X2Y2','X3Y1']]) `  
+	- `sns.pairplot(df[['X1Y3','X2Y2','X3Y1']])`  
 
 ****************
 
@@ -319,17 +319,22 @@ It's a multivariate technique which is very easy to use
 
 [3.6. sns.heatmap](#36-snsheatmap)  
 
-* `ef = (df.loc[:,['Val_1','Val_2','Val_3','Val_4','Val_5']].applymap(lambda v: int(v) if str.isdecimal(v) else np.nan).dropna()).corr() `  
-	`sns.heatmap(ef, annot = True)`  
+* 
+```
+ef = (df.loc[:,['Val_1','Val_2','Val_3','Val_4','Val_5']].applymap(lambda v: int(v) if str.isdecimal(v) else np.nan).dropna()).corr()   
+	sns.heatmap(ef, annot = True)  
+```
 
 <a id="53-parallel-coordinates"></a>
-### 5.3. Parallel Coordinates
+### 5.3. Parallel Coordinates  
 
-`from pandas.plotting import parallel_coordinates`  
-`ef = (df.iloc[:,12:17].loc[df['Val'].isin(['val_1','val_2'])].applymap(lambda v: int(v) if str.isdecimal(v) else np.nan).dropna())`  
-`ef['Val'] = df['Val']`  
-`ef = ef.sample(200)`  
-`parallel_coordinates(ef,'Val')`
+```
+from pandas.plotting import parallel_coordinates  
+ef = (df.iloc[:,12:17].loc[df['Val'].isin(['val_1','val_2'])].applymap(lambda v: int(v) if str.isdecimal(v) else np.nan).dropna())  
+ef['Val'] = df['Val']  
+ef = ef.sample(200)  
+parallel_coordinates(ef,'Val')
+```
 
 ****************
 
@@ -342,6 +347,7 @@ It's a multivariate technique which is very easy to use
 `plotly` is an open-source plotting library which has moving parts  
 
 `from plotly.offline import init_notebook_mode, iplot`  
+
 `init_notebook_mode(connected=True)`  
 
 `import plotly.graph_objs as go`  
@@ -359,16 +365,20 @@ It's a multivariate technique which is very easy to use
 <a id="63-go-choropleth"></a>
 ### 6.3. go Choropleth
 
-`df = df['country'].replace('US','United States').value_counts()`  
-`iplot([go.Choropleth(locationmod = 'count')]) `
+```
+df = df['country'].replace('US','United States').value_counts()  
+iplot([go.Choropleth(locationmod = 'count')]) 
+```
 
 <a id="64-go-surface"></a>
 ### 6.4. go Surface
 
-`df = df.assign(n=0).group(['X','Y'])['n'].count().reset_index() `  
-`df = df[df['Y']<100]`  
-`df = df.pivot(index='X', columns = 'points', values = 'n').fillna(0).values.tolist()`  
-`iplot([go.Surface(z=v)])`  
+```
+df = df.assign(n=0).group(['X','Y'])['n'].count().reset_index()   
+df = df[df['Y']<100]  
+df = df.pivot(index='X', columns = 'points', values = 'n').fillna(0).values.tolist()  
+iplot([go.Surface(z=v)])  
+```
 
 <a id="7-grammar-of-graphics"></a>
 ## 7. Grammar of Graphics
@@ -382,79 +392,97 @@ It's a multivariate technique which is very easy to use
 <a id="71-scatter-plot"></a>
 ### 7.1. Scatter plot
 
-`(ggplot(df)` # initialize the plot with input data `df`  
-`	+ aes('X','Y')` # aes(aesthetic)  
-`	+ geom_point()` # plot type  
-`	)`  
+```
+(ggplot(df) # initialize the plot with input data df  
+	+ aes('X','Y') # aes(aesthetic)  
+	+ geom_point() # plot type  
+	)  
+```
 
 <a id="72-add-regression-line"></a>
 ### 7.2. Add regression line
 
-`(ggplot(df)` # initialize the plot with input data `df`  
-`	+ aes('X','Y')` # aes(aesthetic)  
-`	+ geom_point()` # plot type scatter  
-`	+ stat_smooth()` # add a regression line  
-`	)`
+```
+(ggplot(df) # initialize the plot with input data df  
+	+ aes('X','Y') # aes(aesthetic)  
+	+ geom_point() # plot type scatter  
+	+ stat_smooth() # add a regression line  
+	)
+```
 
 <a id="73-add-color"></a>
 ### 7.3. Add color
 
-`(ggplot(df)` # initialize the plot with input data `df`  
-`	+ geom_point()` # plot type scatter  
-`	+ aes(color='X')` # color the X variable points  
-`	+ aes('X','Y')` # aes(aesthetic)  
-`	+ stat_smooth()` # regression line  
-`	)`
+```
+(ggplot(df) # initialize the plot with input data df  
+	+ geom_point() # plot type scatter  
+	+ aes(color='X') # color the X variable points  
+	+ aes('X','Y') # aes(aesthetic)  
+	+ stat_smooth() # regression line  
+	)
+```
 
 <a id="74-add-facet"></a>
-### 7.4. Add facet
+### 7.4. Add facet  
 
-`(ggplot(df)` # initialize the plot with input data `df`  
-`	+ geom_point()` # plot type scatter  
-`	+ aes(color='X')` # color the X variable points  
-`	+ aes('X','Y')` # aes(aesthetic)  
-`	+ stat_smooth()` # regression line  
-`	+ facet_wrap('~Var')` # facet wrap Variable  
-`	)`
+```
+(ggplot(df) # initialize the plot with input data df  
+	+ geom_point() # plot type scatter  
+	+ aes(color='X') # color the X variable points  
+	+ aes('X','Y') # aes(aesthetic)  
+	+ stat_smooth() # regression line  
+	+ facet_wrap('~Var') # facet wrap Variable  
+	)
+```
 
 <a id="75-aes"></a>
 ### 7.5. Aes
 
 aes can be writed as a layer parameter  
-`(ggplot(df)`  
-`	+ geom_point(aes('X', 'Y'))`  
-`	)`  
+```
+(ggplot(df)  
+	+ geom_point(aes('X', 'Y'))  
+	)  
+```
 
 also in overall data  
 
-`(ggplot(df, aes('X', 'Y'))`  
-`	+ geom_point()`  
-`	)`  
+```
+(ggplot(df, aes('X', 'Y'))  
+	+ geom_point()  
+	)  
+```
 
 <a id="76-bar-plot"></a>
 ### 7.6. Bar plot
 
-`(ggplot(Top5_Val)`  
-`	+ aes('X')`  
-`	+ geom_bar()` # bar plot  
-`)`  
+```
+(ggplot(Top5_Val)  
+	+ aes('X')  
+	+ geom_bar() # bar plot  
+)  
+```
 
 <a id="77-histogram"></a>
 ### 7.7. histogram
 
-`(...`  
-`	+geom_histogram(bins=20)` # numbers of bins  
-`)`  
+```
+(...  
+	+geom_histogram(bins=20) # numbers of bins  
+)  
+```
 
 <a id="78-2d-histogram"></a>
 ### 7.8. 2D histogram
 
-`(ggplot(Top5_Val)`  
-`	+ aes('X','Y')`  
-`	+ geom_bin2d(bins=20)` # numbers of bins  
-`	+ coord_fixed(ratio=1)` # box height  
-`	+ ggtitle("Top Five Most Common Vals"` # give it titles  
-`	)`  
+```
+(ggplot(Top5_Val)  
+	+ aes('X','Y')  
+	+ geom_bin2d(bins=20) # numbers of bins  
+	+ coord_fixed(ratio=1) # box height  
+	+ ggtitle("Top Five Most Common Vals" # give it titles  
+	)  
+```
 
 <a id="8-time-series-plotting"></a>
 ## 8. Time-series plotting
@@ -466,6 +494,7 @@ The two most common and basic ways to show up the datas
 It often used on stock prices  
 
 `stocks = pd.read_csv("../input/prices.csv", parse_dates=['date'])`  
+
 `stocks = stocks[stocks['symbol'] == "GOOG"].set_index('date')`  
 
 * line plot visualizing  
