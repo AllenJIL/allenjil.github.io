@@ -199,8 +199,10 @@ There are many different chart types that you can use to understand relationship
 ### 3.6. sns.heatmap
 - Heatmaps can be used to find color-coded patterns in tables of numbers.
 sns.scatterplot - Scatter plots show the relationship between two continuous variables; if color-coded, we can also show the relationship with a third categorical variable.  
-	+ `ef = (df.loc[:,['Val_1','Val_2','Val_3','Val_4','Val_5']].applymap(lambda v: int(v) if str.isdecimal(v) else np.nan).dropna()).corr() `  
-	+ `sns.heatmap(ef, annot = True)`  
+```python
+ef = (df.loc[:,['Val_1','Val_2','Val_3','Val_4','Val_5']].applymap(lambda v: int(v) if str.isdecimal(v) else np.nan).dropna()).corr()  
+sns.heatmap(ef, annot = True)  
+```
 
 <a id="37-snsregplot"></a>
 ### 3.7. sns.regplot
@@ -209,8 +211,11 @@ sns.scatterplot - Scatter plots show the relationship between two continuous var
 <a id="38-snslmplot"></a>
 ### 3.8. sns.lmplot
 - This command is useful for drawing multiple regression lines, if the scatter plot contains multiple, color-coded groups.  
-	+ `sns.lmplot(x='X', y='Y', hue='Val', markers=['o', 'x', '*'], data = df.loc[df['Val']isin(['val_1','val_2','val_3'])], fit_reg=False)`  
-		<img src="/images/python/plot/lmplot.png">  
+```python
+	sns.lmplot(x='X', y='Y', hue='Val', markers=['o', 'x', '*'], data = df.loc[df['Val']isin(['val_1','val_2','val_3'])], fit_reg=False)
+```
+
+<img src="/images/python/plot/lmplot.png">  
 
 <a id="39-snsswarmplot"></a>
 ### 3.9. sns.swarmplot
@@ -247,7 +252,7 @@ We visualize distributions to show the possible values that we can expect to see
 ### 3.14. sns.boxplot
 
 * **Boxplot** is great for summarizing the shape od may datasets  
-	```
+	```python
 	sns.boxplot(
     	x='X',
     	y='Y',
@@ -256,7 +261,7 @@ We visualize distributions to show the possible values that we can expect to see
 	```
 
 * **Violin Plot** cleverly replaces the box in the boxplot with a kernel density estimate for the data  
-	```
+	```python
 	sns.violinplot(
     	x='X',
     	y='Y',
@@ -268,12 +273,12 @@ We visualize distributions to show the possible values that we can expect to see
 ### 3.15. Themes
 
 - Seaborn has five different themes: (1)"darkgrid", (2)"whitegrid", (3)"dark", (4)"white", and (5)"ticks"  
+
 `sns.set_style("dark")`  
 
 ****************
 <a id="4-seaborn-faceting"></a>
 ## 4. Seaborn Faceting
-
 
 Faceting is the act of breaking data variables up across multiple subplots, and combining those subplots into a single figure  
 It's a multivariate technique which is very easy to use  
@@ -320,7 +325,7 @@ It's a multivariate technique which is very easy to use
 [3.6. sns.heatmap](#36-snsheatmap)  
 
 * 
-```
+```python
 ef = (df.loc[:,['Val_1','Val_2','Val_3','Val_4','Val_5']].applymap(lambda v: int(v) if str.isdecimal(v) else np.nan).dropna()).corr()   
 	sns.heatmap(ef, annot = True)  
 ```
@@ -328,7 +333,7 @@ ef = (df.loc[:,['Val_1','Val_2','Val_3','Val_4','Val_5']].applymap(lambda v: int
 <a id="53-parallel-coordinates"></a>
 ### 5.3. Parallel Coordinates  
 
-```
+```python
 from pandas.plotting import parallel_coordinates  
 ef = (df.iloc[:,12:17].loc[df['Val'].isin(['val_1','val_2'])].applymap(lambda v: int(v) if str.isdecimal(v) else np.nan).dropna())  
 ef['Val'] = df['Val']  
@@ -346,11 +351,13 @@ parallel_coordinates(ef,'Val')
 `seaborn` and `pandas` focus on building 'static' visualizations  
 `plotly` is an open-source plotting library which has moving parts  
 
-`from plotly.offline import init_notebook_mode, iplot`  
+```python
+from plotly.offline import init_notebook_mode, iplot  
 
-`init_notebook_mode(connected=True)`  
+init_notebook_mode(connected=True)  
 
-`import plotly.graph_objs as go`  
+import plotly.graph_objs as go  
+```
 
 <a id="61-go-scatter"></a>
 ### 6.1. go Scatter
@@ -360,12 +367,15 @@ parallel_coordinates(ef,'Val')
 <a id="62-go-heatmap"></a>
 ### 6.2. go Heatmap
 
-`iplot([go.Histogram2dContour(x=df.head(500)['X'],y=df.head(500)['Y'],contours=go.Contours(coloring='heatmap')),go.Scatter(x=df.head(1000)['X'],y=df.head(1000)['Y'],mode='markers')]) `  
+```python
+iplot([go.Histogram2dContour(x=df.head(500)['X'],y=df.head(500)['Y'],contours=go.Contours(coloring='heatmap')),go.Scatter(x=df.head(1000)['X'],y=df.head(1000)['Y'],mode='markers')]) 
+```
+
 
 <a id="63-go-choropleth"></a>
 ### 6.3. go Choropleth
 
-```
+```python
 df = df['country'].replace('US','United States').value_counts()  
 iplot([go.Choropleth(locationmod = 'count')]) 
 ```
@@ -373,7 +383,7 @@ iplot([go.Choropleth(locationmod = 'count')])
 <a id="64-go-surface"></a>
 ### 6.4. go Surface
 
-```
+```python
 df = df.assign(n=0).group(['X','Y'])['n'].count().reset_index()   
 df = df[df['Y']<100]  
 df = df.pivot(index='X', columns = 'points', values = 'n').fillna(0).values.tolist()  
@@ -383,16 +393,18 @@ iplot([go.Surface(z=v)])
 <a id="7-grammar-of-graphics"></a>
 ## 7. Grammar of Graphics
 
-`from plotnine import *`  
+```python
+from plotnine import *  
 
-`Top5_Val = df[df['Val'].isin(df['Val'].value_counts().head(5).index)]`  
+Top5_Val = df[df['Val'].isin(df['Val'].value_counts().head(5).index)]  
 
-`df = Top5_Val.head(1000).dropna()`  
+df = Top5_Val.head(1000).dropna()  
+```
 
 <a id="71-scatter-plot"></a>
 ### 7.1. Scatter plot
 
-```
+```python
 (ggplot(df) # initialize the plot with input data df  
 	+ aes('X','Y') # aes(aesthetic)  
 	+ geom_point() # plot type  
@@ -402,7 +414,7 @@ iplot([go.Surface(z=v)])
 <a id="72-add-regression-line"></a>
 ### 7.2. Add regression line
 
-```
+```python
 (ggplot(df) # initialize the plot with input data df  
 	+ aes('X','Y') # aes(aesthetic)  
 	+ geom_point() # plot type scatter  
@@ -413,7 +425,7 @@ iplot([go.Surface(z=v)])
 <a id="73-add-color"></a>
 ### 7.3. Add color
 
-```
+```python
 (ggplot(df) # initialize the plot with input data df  
 	+ geom_point() # plot type scatter  
 	+ aes(color='X') # color the X variable points  
@@ -425,7 +437,7 @@ iplot([go.Surface(z=v)])
 <a id="74-add-facet"></a>
 ### 7.4. Add facet  
 
-```
+```python
 (ggplot(df) # initialize the plot with input data df  
 	+ geom_point() # plot type scatter  
 	+ aes(color='X') # color the X variable points  
@@ -439,7 +451,7 @@ iplot([go.Surface(z=v)])
 ### 7.5. Aes
 
 aes can be writed as a layer parameter  
-```
+```python
 (ggplot(df)  
 	+ geom_point(aes('X', 'Y'))  
 	)  
@@ -447,7 +459,7 @@ aes can be writed as a layer parameter
 
 also in overall data  
 
-```
+```python
 (ggplot(df, aes('X', 'Y'))  
 	+ geom_point()  
 	)  
@@ -456,7 +468,7 @@ also in overall data
 <a id="76-bar-plot"></a>
 ### 7.6. Bar plot
 
-```
+```python
 (ggplot(Top5_Val)  
 	+ aes('X')  
 	+ geom_bar() # bar plot  
@@ -466,7 +478,7 @@ also in overall data
 <a id="77-histogram"></a>
 ### 7.7. histogram
 
-```
+```python
 (...  
 	+geom_histogram(bins=20) # numbers of bins  
 )  
@@ -475,7 +487,7 @@ also in overall data
 <a id="78-2d-histogram"></a>
 ### 7.8. 2D histogram
 
-```
+```python
 (ggplot(Top5_Val)  
 	+ aes('X','Y')  
 	+ geom_bin2d(bins=20) # numbers of bins  
@@ -493,23 +505,33 @@ The two most common and basic ways to show up the datas
 
 It often used on stock prices  
 
-`stocks = pd.read_csv("../input/prices.csv", parse_dates=['date'])`  
+```python
+stocks = pd.read_csv("../input/prices.csv", parse_dates=['date'])  
 
-`stocks = stocks[stocks['symbol'] == "GOOG"].set_index('date')`  
+stocks = stocks[stocks['symbol'] == "GOOG"].set_index('date')  
+```
 
 * line plot visualizing  
-	`shelter_outcomes['date_of_birth'].value_counts().sort_values().plot.line()` # output the simple ine plot  
+```python
+shelter_outcomes['date_of_birth'].value_counts().sort_values().plot.line() # output the simple ine plot  
+```
+
 * resample  
-	`shelter_outcomes['date_of_birth'].value_counts().resample('Y').sum().plot.line()` # aggregated by 'year'  
+```python
+shelter_outcomes['date_of_birth'].value_counts().resample('Y').sum().plot.line() # aggregated by 'year'  
+```
 
 <a id="81-lag-plot"></a>
 ### 8.1. Lag plot
 
 * A lag plot compares data points from each observation in the dataset against data points from a previous observation  
 
-`from pandas.plotting import lag_plot`  
+```python
+from pandas.plotting import lag_plot  
 
-`lag_plot(stocks['volume'].tail(250))` # volume(number of trades conducted)  
+lag_plot(stocks['volume'].tail(250)) # volume(number of trades conducted)  
+
+```
 
 <img src="/images/python/plot/lag_plot.png">  
 
@@ -519,9 +541,11 @@ It often used on stock prices
 The autocorrelation plot is a multivariate summarization-type plot that lets you check every periodicity at the same time.  
 It does this by computing a summary statistic—the correlation score—across every possible lag in the dataset.  
 
-`from pandas.plotting import autocorrelation_plot`  
+```python
+from pandas.plotting import autocorrelation_plot  
 
-`autocorrelation_plot(stocks['volumne'])` # volume(number of trades conducted)  
+autocorrelation_plot(stocks['volumne']) # volume(number of trades conducted)  
+```
 
 <img src="/images/python/plot/autocor_plot.png">  
 
