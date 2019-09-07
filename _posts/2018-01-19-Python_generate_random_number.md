@@ -3,7 +3,7 @@ layout: post
 title: "Python 内置函数生成随机数"
 description: "Use Python generate random number"
 date: 2018-01-19
-tag: Python
+tag: program
 ---
 <p>
 # Random <br /> 

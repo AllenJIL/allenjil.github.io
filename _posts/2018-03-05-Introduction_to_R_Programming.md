@@ -3,7 +3,7 @@ layout: post
 title: "Introduction to R Programming"
 description: "R编程 初学者 代码整理"
 date: 2018-03-05
-tag: R
+tag: program
 ---
 [dplyr]: <https://www.dplyr.tidyverse.org> "dplyr"
 

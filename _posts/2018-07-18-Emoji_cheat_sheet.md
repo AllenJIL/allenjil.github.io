@@ -3,7 +3,7 @@ layout: post
 title: "Emoji cheat sheet"
 description: "Emoji cheat sheet"
 date: 2018-07-18
-tag: HTML
+tag: Symbol
 ---
 [EMOJI CHEAT SHEET]: <https://www.webpagefx.com/tools/emoji-cheat-sheet/> "EMOJI CHEAT SHEET"
   

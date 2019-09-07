@@ -3,7 +3,7 @@ layout: post
 title: "HTML 特殊符号整理"
 description: "HTML 特殊符号整理"
 date: 2018-02-26
-tag: HTML
+tag: Symbol
 ---
 
 ## Math Symbols 数学符号						

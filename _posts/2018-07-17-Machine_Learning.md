@@ -3,7 +3,7 @@ layout: post
 title: "Machine Learning"
 description: "Coursera.org 机器学习 笔记"
 date: 2018-07-17
-tag: Machine_Learning
+tag: program
 ---
 [Coursera.org]: <https://www.coursera.org/learn/machine-learning/home/welcome/> "Coursera"
 

@@ -125,9 +125,9 @@ $$ \displaystyle \underbrace{(x + iy)}_{z} + \underbrace{(u + iv)}_{w} = \underb
 
 * __Sets__ in the Complex Plane
 	- Circles and disks: center $ z_0\ =\ x_0\ +\ i y_0 $, radius $ r $.  
-		* $ B_r(z_0) = \{z \in \mathbb{C} : z $ has distance less than $ r $ from $ z_0\} $ disk of radius $ r $ , centered
+		* $ B_r(z_0) = {z \in \mathbb{C} : z $ has distance less than $ r $ from $ z_0} $ disk of radius $ r $ , centered
 at $ z_0 $.  
-		* $ K_r(z_0) = \{z \in \mathbb{C} : z $ has distance $ r $ from $ z_0\} $ circle of radius $ r $ , centered at $ z_0 $  
+		* $ K_r(z_0) = {z \in \mathbb{C} : z $ has distance $ r $ from $ z_0} $ circle of radius $ r $ , centered at $ z_0 $  
 	- Measure distance  
 		- $$
 		\begin{align*}

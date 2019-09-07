@@ -3,7 +3,7 @@ layout: post
 title: "Introduction to Probability and Data"
 description: "Note from Coursera.com"
 date: 2018-03-01
-tag: Stat
+tag: Math
 ---
 [Coursera.org]: <https://www.coursera.org/learn/probability-intro/home/welcome/> "Coursera"
 [Distribution Calculator]: <https://gallery.shinyapps.io/dist_calc/> "Distribution Calculator"

@@ -3,7 +3,7 @@ layout: post
 title: "HTML: Elements and Structure"
 description: "Notes form www.Codecademy.com"
 date: 2018-01-13
-tag: HTML
+tag: program
 ---
 
 <h2><strong>Elements:</strong></h2>  
