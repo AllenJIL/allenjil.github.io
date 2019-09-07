@@ -1,0 +1,354 @@
+---
+layout: post
+title: "SIIM Healthcare Competition"
+description: "SIIM Healthcare Competition 2019-09 Novice"
+date: 2019-08-27
+tag: Kaggle
+---
+[SIIM Healthcare Competition]: <https://www.kaggle.com/xiuchuanz/siim-healthcare-competition-2019-09-novice/> "SIIM Healthcare Competition"
+[TensorFlow 2.0]: <https://colab.research.google.com/github/tensorflow/docs/blob/r2.0rc/site/en/r2/tutorials/quickstart/advanced.ipynb#scrollTo=JqFRS6K07jJs> "TensorFlow 2.0"
+[tf.train]:<https://www.tensorflow.org/api_guides/python/train#Optimizers> "tf.train"
+
+
+
+> Most notes and code are from:  
+> [SIIM Healthcare Competition]  
+> [TensorFlow 2.0]  
+ 
+
+**********
+<!-- MarkdownTOC -->
+
+- [Import Library](#import-library)
+- [DICOM](#dicom)
+- [TensorFLow](#tensorflow)
+    - [Starter](#starter)
+
+<!-- /MarkdownTOC -->
+
+**********
+
+<a id="import-library"></a>
+## Import Library  
+
+```python
+import numpy as np # linear algebra
+import pandas as pd # data processing
+
+import os
+# path
+input_dir = '../input/siim-acr-pneumothorax-segmentation' 
+data_dir = '../input/siim-acr-pneumothorax-segmentation-data/pneumothorax' 
+test_path = os.path.join(data_dir,'dicom-images-test')
+train_path = os.path.join(data_dir,'dicom-images-train')
+train_rle = os.path.join(data_dir,'train-rle.csv')
+
+import glob # Search
+train_fns = sorted(glob.glob(os.path.join(train_path, '*/*/*.dcm')))[:]
+test_fns = sorted(glob.glob(os.path.join(test_path, '*/*/*.dcm')))[:]
+
+import pydicom # DICOM
+
+# plots
+from matplotlib import cm  
+from matplotlib import pyplot as plt  
+
+# Show progress  
+from tqdm import tqdm_notebook  
+
+import sys  
+sys.path.insert(0, input_dir)  
+
+from mask_functions import rle2mask  
+```
+
+```python
+# Load requirements from the Keras library
+from keras import applications  
+from keras.preprocessing.image import ImageDataGenerator  
+from keras import optimizers
+from keras.models import Sequential  
+from keras.layers import Dropout, Flatten, Dense, GlobalAveragePooling2D  
+from keras.models import Model  
+from keras.optimizers import Adam  
+
+# Tensorflow  
+import tensorflow as tf
+```
+
+```python
+# Dimensions of images  
+img_width, img_height = 128, 128
+
+# epochs = number of passes of through training data  
+# batch_size = number images processed at same time
+train_samples = 65
+validation_samples = 10 
+epochs = 30
+batch_size = 512
+```
+
+```python
+# build the Inception V3 network, use pretrained weights from ImageNet  
+# remove top fully connected layers by include_top = False  
+
+base_model = applications.InceptionV3(include_top=False, weights='imagenet', input_shape=(img_width, img_height, 3))
+```
+
+```python
+# build a classifier model to put on top of the convolutional model
+# This consists of a global average pooling layer and a fully connected layer with 256 nodes 
+# Then apply dropout and sigmoid activation
+
+model_top = Sequential()
+model_top.add(GlobalAveragePooling2D(input_shape=base_model.output_shape[1:],data_format=None)),
+model_top.add(Dense(256,activation='relu'))
+model_top.add(Dropout(0.5))
+model_top.add(Dense(1,activation='sigmoid'))
+model = Model(inputs=base_model.input, outputs=model_top(base_model.output))
+
+# Compile model using Adam optimizer with common values and binary cross entropy loss
+# Use low learning rate (lr) for transfer learning
+model.compile(optimizer=Adam(lr=0.0001,beta_1=0.9,beta_2=0.999, epsilon=1e-08,decay=0.0),loss='binary_crossentropy',metrics=['accuracy'])
+```
+
+```python
+# Some on-the-fly augmentation options  
+train_datagen = ImageDataGenerator(
+    rescale = 1./255, # rescale pixel values to 0-1 to aid CNN processing
+    shear_range = 0.2, # 0-1
+    zoom_range = 0.2, # 0-1 
+    rotation_range = 20, # 0-180 range, degrees of rotation  
+    width_shift_range = 0.2, # 0-1 range horizontal translation  
+    height_shift_range = 0.2, # 0-1 range vertical translation 
+    horizontal_flip=True # set True or False
+    )
+
+val_datagen = ImageDataGenerator(
+    rescale = 1./255) # Rescale
+```
+
+<a id="dicom"></a>
+## DICOM  
+
+```python
+def show_dcm_info(dataset):
+    print("Filename.........:", file_path)
+    print("Storage type.....:", dataset.SOPClassUID)
+    print()
+
+    pat_name = dataset.PatientName
+    display_name = pat_name.family_name + ", " + pat_name.given_name
+    print("Patient's name......:", display_name)
+    print("Patient id..........:", dataset.PatientID)
+    print("Patient's Age.......:", dataset.PatientAge)
+    print("Patient's Sex.......:", dataset.PatientSex)
+    print("Modality............:", dataset.Modality)
+    print("Body Part Examined..:", dataset.BodyPartExamined)
+    print("View Position.......:", dataset.ViewPosition)
+    
+    if 'PixelData' in dataset:
+        rows = int(dataset.Rows)
+        cols = int(dataset.Columns)
+        print("Image size.......: {rows:d} x {cols:d}, {size:d} bytes".format(
+            rows=rows, cols=cols, size=len(dataset.PixelData)))
+        if 'PixelSpacing' in dataset:
+            print("Pixel spacing....:", dataset.PixelSpacing)
+
+def plot_pixel_array(dataset, figsize=(10,10)):
+    plt.figure(figsize=figsize)
+    plt.imshow(dataset.pixel_array, cmap=plt.cm.bone)
+    plt.show()
+```
+
+```python
+for file_path in glob.glob(os.path.join(input_dir,'sample images/*.dcm')):
+    dataset = pydicom.dcmread(file_path)
+    show_dcm_info(dataset)
+    plot_pixel_array(dataset)
+    break
+```
+
+```python
+df = pd.read_csv('../input/siim-acr-pneumothorax-segmentation/sample images/train-rle-sample.csv', header=None, index_col=0)
+
+start = 5   # Starting index of images
+num_img = 4 # Total number of images to show
+
+fig, ax = plt.subplots(nrows=1, ncols=num_img, sharey=True, figsize=(num_img*10,10))
+for q, file_path in enumerate(glob.glob('../input/siim-acr-pneumothorax-segmentation/sample images/*.dcm')[start:start+num_img]):
+    dataset = pydicom.dcmread(file_path)
+    #print(file_path.split('/')[-1][:-4])
+    ax[q].imshow(dataset.pixel_array, cmap=plt.cm.bone)
+    if df.loc[file_path.split('/')[-1][:-4],1] != '-1':
+        mask = rle2mask(df.loc[file_path.split('/')[-1][:-4],1], 1024, 1024).T
+        ax[q].set_title('See Marker')
+        ax[q].imshow(mask, alpha=0.3, cmap="Greens")
+    else:
+        ax[q].set_title('Nothing to see')
+```
+
+```python
+rle_df = pd.read_csv(train_rle, index_col='ImageId')
+rle_df.columns
+```
+
+```python
+im_height = 1024
+im_width = 1024
+im_chan = 1
+# Get train images and masks
+X_train = np.zeros((len(train_fns), im_height, im_width, im_chan), dtype=np.uint8)
+Y_train = np.zeros((len(train_fns), im_height, im_width, 1), dtype=np.bool)
+print('Getting train images and masks ... ')
+sys.stdout.flush()
+for n, _id in tqdm_notebook(enumerate(train_fns), total=len(train_fns)):
+    dataset = pydicom.read_file(_id)
+    X_train[n] = np.expand_dims(dataset.pixel_array, axis=2)
+    try:
+        if '-1' in rle_df.loc[_id.split('/')[-1][:-4],' EncodedPixels']:
+            Y_train[n] = np.zeros((1024, 1024, 1))
+        else:
+            if type(rle_df.loc[_id.split('/')[-1][:-4],' EncodedPixels']) == str:
+                Y_train[n] = np.expand_dims(rle2mask(rle_df.loc[_id.split('/')[-1][:-4],' EncodedPixels'], 1024, 1024), axis=2)
+            else:
+                Y_train[n] = np.zeros((1024, 1024, 1))
+                for x in rle_df.loc[_id.split('/')[-1][:-4],' EncodedPixels']:
+                    Y_train[n] =  Y_train[n] + np.expand_dims(rle2mask(x, 1024, 1024), axis=2)
+    except KeyError:
+        print(f"Key {_id.split('/')[-1][:-4]} without mask, assuming healthy patient.")
+        Y_train[n] = np.zeros((1024, 1024, 1)) # Assume missing masks are empty masks.
+
+print('Done!')
+```
+
+```python
+im_height = 128
+im_width = 128
+X_train = X_train.reshape((-1, im_height, im_width, 1))
+Y_train = Y_train.reshape((-1, im_height, im_width, 1))
+```
+
+```python  
+def dice_coef(y_true, y_pred, smooth=1):
+    y_true_f = K.flatten(y_true)
+    y_pred_f = K.flatten(y_pred)
+    intersection = K.sum(y_true_f * y_pred_f)
+    return (2. * intersection + smooth) / (K.sum(y_true_f) + K.sum(y_pred_f) + smooth)
+```
+
+```python  
+inputs = Input((None, None, im_chan))
+
+c1 = Conv2D(8, (3, 3), activation='relu', padding='same') (inputs)
+c1 = Conv2D(8, (3, 3), activation='relu', padding='same') (c1)
+p1 = MaxPooling2D((2, 2)) (c1)
+
+c2 = Conv2D(16, (3, 3), activation='relu', padding='same') (p1)
+c2 = Conv2D(16, (3, 3), activation='relu', padding='same') (c2)
+p2 = MaxPooling2D((2, 2)) (c2)
+
+c3 = Conv2D(32, (3, 3), activation='relu', padding='same') (p2)
+c3 = Conv2D(32, (3, 3), activation='relu', padding='same') (c3)
+p3 = MaxPooling2D((2, 2)) (c3)
+
+c4 = Conv2D(64, (3, 3), activation='relu', padding='same') (p3)
+c4 = Conv2D(64, (3, 3), activation='relu', padding='same') (c4)
+p4 = MaxPooling2D(pool_size=(2, 2)) (c4)
+
+c5 = Conv2D(64, (3, 3), activation='relu', padding='same') (p4)
+c5 = Conv2D(64, (3, 3), activation='relu', padding='same') (c5)
+p5 = MaxPooling2D(pool_size=(2, 2)) (c5)
+
+c55 = Conv2D(128, (3, 3), activation='relu', padding='same') (p5)
+c55 = Conv2D(128, (3, 3), activation='relu', padding='same') (c55)
+
+u6 = Conv2DTranspose(64, (2, 2), strides=(2, 2), padding='same') (c55)
+u6 = concatenate([u6, c5])
+c6 = Conv2D(64, (3, 3), activation='relu', padding='same') (u6)
+c6 = Conv2D(64, (3, 3), activation='relu', padding='same') (c6)
+
+u71 = Conv2DTranspose(32, (2, 2), strides=(2, 2), padding='same') (c6)
+u71 = concatenate([u71, c4])
+c71 = Conv2D(32, (3, 3), activation='relu', padding='same') (u71)
+c61 = Conv2D(32, (3, 3), activation='relu', padding='same') (c71)
+
+u7 = Conv2DTranspose(32, (2, 2), strides=(2, 2), padding='same') (c61)
+u7 = concatenate([u7, c3])
+c7 = Conv2D(32, (3, 3), activation='relu', padding='same') (u7)
+c7 = Conv2D(32, (3, 3), activation='relu', padding='same') (c7)
+
+u8 = Conv2DTranspose(16, (2, 2), strides=(2, 2), padding='same') (c7)
+u8 = concatenate([u8, c2])
+c8 = Conv2D(16, (3, 3), activation='relu', padding='same') (u8)
+c8 = Conv2D(16, (3, 3), activation='relu', padding='same') (c8)
+
+u9 = Conv2DTranspose(8, (2, 2), strides=(2, 2), padding='same') (c8)
+u9 = concatenate([u9, c1], axis=3)
+c9 = Conv2D(8, (3, 3), activation='relu', padding='same') (u9)
+c9 = Conv2D(8, (3, 3), activation='relu', padding='same') (c9)
+
+outputs = Conv2D(1, (1, 1), activation='sigmoid') (c9)
+
+model = Model(inputs=[inputs], outputs=[outputs])
+model.compile(optimizer='adam', loss='binary_crossentropy', metrics=[dice_coef])
+model.summary()
+```
+
+```python  
+model.fit(X_train, Y_train, validation_split=.5, batch_size=512, epochs=1)
+```
+
+<a id="tensorflow"></a>
+## TensorFLow  
+
+<a id="starter"></a>
+### Starter  
+
+```python  
+mnist = tf.keras.datasets.mnist
+
+(x_train, y_train), (x_test, y_test) = mnist.load_data()
+x_train, x_test = x_train / 255.0, x_test / 255.0
+```
+
+```python  
+model = tf.keras.models.Sequential([
+  tf.keras.layers.Flatten(input_shape=(28, 28)),
+  tf.keras.layers.Dense(128, activation='relu'),
+  tf.keras.layers.Dropout(0.2),
+  tf.keras.layers.Dense(10, activation='softmax')
+])
+
+model.compile(optimizer='adam',
+              loss='sparse_categorical_crossentropy',
+              metrics=['accuracy'])
+```
+
+```python  
+model.fit(x_train, y_train, epochs=5)
+
+model.evaluate(x_test, y_test)
+```
+
+
+```python  
+
+```
+
+```python  
+
+```
+
+```python  
+
+```
+
+```python  
+
+```
+
+
+
+**************
+

@@ -2,7 +2,7 @@
 layout: post
 title: "Embeddings"
 description: "Cheating page of Embeddings"
-date: 2019-08-12
+date: 2019-08-17
 tag: Kaggle
 ---
 [Embeddings]: <https://www.kaggle.com/learn/embedding> "Embeddings"
@@ -87,7 +87,7 @@ This code will show that '138,493 distinct users rated 26,744 different movies (
 
 * Good idea: **Embedding layers** `keras.Model`  
     - Here is the code:  
-    ```python  
+```python  
     hidden_units = (32,4)  
     movie_embedding_size = 8  
     user_embedding_size = 8  
@@ -114,10 +114,10 @@ This code will show that '138,493 distinct users rated 26,744 different movies (
         outputs = out,
         )  
     model.summary(line_length = 88)  
-    ```
+```
 
     - Minimize squared error ('MSE') [tf.train]  
-    ```python  
+```python  
     model.compile(
         # 'adam' or 'SGD' will load one of keras's optimizers  
         # They seem to be much slower on problems like this, because they don't efficiently handle sparse gradient updates.  
@@ -125,6 +125,6 @@ This code will show that '138,493 distinct users rated 26,744 different movies (
         loss = 'MSE',  
         metrics = ['MAE'],
         )
-    ```
+```
 
     

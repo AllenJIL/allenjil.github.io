@@ -26,20 +26,34 @@
   
   <meta name="google-site-verification" content="1-1ZlHoRvM0T2FqPbW2S-qLgYXN6rsn52kErlMPd_gw" />
 
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+  <link rel="dns-prefetch" href="//cdn.bootcss.com" />
+  <link rel="dns-prefetch" href="//secure.gravatar.com" />
+  <link rel="dns-prefetch" href="//cdn.mathjax.org" />
+
+
 <!-- 数学公式 -->
 
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({
     showProcessingMessages: false,
+    messageStyle: "none",
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
     tex2jax: {
         inlineMath:  [ ["$", "$"] ],
         displayMath: [ ["$$","$$"] ],
         skipTags: ['script', 'noscript', 'style', 'textarea', 'pre','code','a'],
         ignoreClass:"comment-content"
     },
+    "HTML-CSS": {
+        availableFonts: ["STIX","TeX"],
+        showMathMenu: false
+    }
 });
+MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
 </script>
-<script type="text/javascript" async src="/MathJax/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script type="text/javascript" async src="https://cdn.bootcss.com/mathjax/2.7.6/latest.js?config=TeX-MML-AM_CHTML"></script>
 
 <!-- 站点统计 -->
   <script 
