@@ -99,8 +99,8 @@ tf.one_hot([0,2,3,2],4, on_value=5, off_value=0)
     - minval, maxval: 最小与最大值
 
 * tf.random.normal 随机正态分布
-    - mean: 正态分布的均值
-    - stddev: 正态分布的标准差
+    - mean: 正态分布的均值
+    - stddev: 正态分布的标准差
     - tf.random.truncated_normal 截断正态分布
 
 
