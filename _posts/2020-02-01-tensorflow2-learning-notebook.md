@@ -9,7 +9,6 @@ tag: TensorFlow
 
 [Others NN or RNN]:<https://blog.csdn.net/zhuiyuanzhongjia/article/details/80465171> "Others"
 
-# Tensorflow 2.0 Learning Notebook
 ---- Tensorflow 2.0 学习笔记
 
 After continuously touching Machine Learning stuffs, I want to learn it deeply. In previous, I only took others' models and just run them to get the proper answer which I expected. Currently, the large infectious disease outbreak in China, I try to use the few days break to review and learn the tensorflow to have a better understanding on it.
@@ -25,11 +24,31 @@ print('The version of Tensorflow is ',tf.__version__)
     The version of Tensorflow is  2.0.0
     
 
-## Basic Create
+<!-- MarkdownTOC -->
+
+- [1. Basic Create](#1-basic-create)
+    - [1.1. Basic](#11-basic)
+    - [1.2. Distribution](#12-distribution)
+    - [1.3. Loop](#13-loop)
+- [2. Mathematic Symbols with tf](#2-mathematic-symbols-with-tf)
+    - [2.1. math](#21-math)
+    - [2.2. Linear Algebra](#22-linear-algebra)
+- [3. Functions 函数](#3-functions-%E5%87%BD%E6%95%B0)
+    - [3.1. Basic](#31-basic)
+    - [3.2. Loss Function 损失函数](#32-loss-function-%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0)
+    - [3.3. Neural Network](#33-neural-network)
+
+<!-- /MarkdownTOC -->
+
+
+
+<a id="1-basic-create"></a>
+## 1. Basic Create
 
 ******************
 
-### Basic
+<a id="11-basic"></a>
+### 1.1. Basic
 
 * tf.constant 简单的定义
     - scalar 标量
@@ -93,7 +112,8 @@ tf.one_hot([0,2,3,2],4, on_value=5, off_value=0)
 * tf.print(): `print()` in Tensorflow
 * tf.summary...: summary tag used for TensorBoard
 
-### Distribution
+<a id="12-distribution"></a>
+### 1.2. Distribution
 
 * tf.random.unifrom 随机均匀分布
     - minval, maxval: 最小与最大值
@@ -120,7 +140,8 @@ tf.print('Normal distribution: \n', random_normal_2_2)
      [-0.508329332 1.42963946]]
     
 
-### Loop
+<a id="13-loop"></a>
+### 1.3. Loop
 
 * 使用 tf.while_loop 实现 for loop
     - cond: 返回 bool 值
@@ -136,11 +157,13 @@ tf.print('For 5 loops: ', tf.while_loop(cond, body, [1,scalar],name='for5loop'))
     For 5 loops:  (5, 16)
 
 
-## Mathematic Symbols with tf
+<a id="2-mathematic-symbols-with-tf"></a>
+## 2. Mathematic Symbols with tf
 
 ***********************
 
-### math
+<a id="21-math"></a>
+### 2.1. math
 
 Using tf.math
 
@@ -213,7 +236,8 @@ tf.math.cosh(matrix)
 * tf.math.real(input, name=None) 取实数
 * tf.signal.fft(input, name=None) Fast Fourier transform 傅里叶变换
 
-### Linear Algebra
+<a id="22-linear-algebra"></a>
+### 2.2. Linear Algebra
 
 Using tf.linalg
 
@@ -253,11 +277,13 @@ tf.print('Multiply(matrix): \n', tf.matmul(matrix,matrix2,name='matrixmulti'))
      [20 13]]
 
 
-## Functions 函数
+<a id="3-functions-%E5%87%BD%E6%95%B0"></a>
+## 3. Functions 函数
 
 **************
 
-### Basic
+<a id="31-basic"></a>
+### 3.1. Basic
 
 * params: `input_tensor, axis=None, keepdims=False, name=None`
     - `keepdims`: 是否保留原维度
@@ -326,7 +352,8 @@ tf.print('Get vector unique: \n', tf.unique(vector))
      Unique(y=[1 2 3 4], idx=[0 0 1 ... 1 0 1])
     
 
-### Loss Function 损失函数
+<a id="32-loss-function-%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0"></a>
+### 3.2. Loss Function 损失函数
 
 * L2 Norm
     - tf.nn.l2_loss(x): $ \frac{\sum {t^2}}{2} $
@@ -341,7 +368,8 @@ tf.print('Cross entropy: ', tf.nn.softmax_cross_entropy_with_logits(matrix,matri
     Cross entropy:  [2.939785 6.19283152]
 
 
-### Neural Network
+<a id="33-neural-network"></a>
+### 3.3. Neural Network
 
 * tf.sigmoid(x) sigmoid 激活: $ \frac{1}{(1+e^{-x})} $
     - 还可用其他形式:  tf.nn.sigmoid(x), tf.math.sigmoid(x)
