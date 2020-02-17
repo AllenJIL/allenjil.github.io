@@ -39,7 +39,7 @@ tag: program
 |算术运算符|Arithmetic operators|`__add__` &larr; +<br>`__sub__` &larr; -<br>`__mul__` &larr; $ \times $<br>`__truediv__` &larr; /<br>`__floordiv__` &larr; //<br>`__mod__` &larr; %<br>`__divmod__` &larr; divmod()<br>`__pow__` &larr; $ ** $<br>`__round__` &larr; round()|
 |反向算术运算符|Reversed arithmetic operators|`__radd__`<br>`__rsub__`<br>`__rmul__`<br>`__rtruediv__`<br>`__rfloordiv__`<br>`__rmod__`<br>`__rdivmod__`<br>`__rpow__`|
 |增量赋值算术运算符|Augmented assignment arithmetic operators|`__iadd__`<br>`__isub__`<br>`__imul__`<br>`__itruediv__`<br>`__ifloordiv__`<br>`__imod__`<br>`__ipow__`|
-|位运算符|Bitwise operators|`__invert__` &larr; ~<br>`__lshift__` &larr; <<<br>`__rshift__` &larr; >><br>`__and__` &larr; &<br>`__or__` &larr; \\ |<br>`__xor__` &larr; ^|
+|位运算符|Bitwise operators|`__invert__` &larr; ~<br>`__lshift__` &larr; <<<br>`__rshift__` &larr; >><br>`__and__` &larr; &<br>`__or__` &larr; $ \lvert $<br>`__xor__` &larr; ^|
 |反向位运算符|Reversed bitwise operators|`__rlshift__`<br>`__rrshift__`<br>`__rand__`<br>`__rxor__`<br>`__ror__`|
 |增量赋值位运算符|ugmented assignment bitwise operators|`__ilshift__`<br>`__irshift__`<br>`__iand__`<br>`__ixor__`<br>`__ior__`|
 
