@@ -9,7 +9,7 @@ tag: program
 [Data Model]:<https://docs.python.org/3/reference/datamodel.html> "Data Model"
 
 > source:  
->   - Data Model  
+>   - [Data Model]  
 >   - Book: Fluent Python
 
 ********
