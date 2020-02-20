@@ -15,7 +15,9 @@ tag: program
 ********
 
 
-### 表1-1：跟运算符无关的特殊方法 <br> Table 1-1. Special method names (operators excluded)
+### 表1-1：
+
+** 跟运算符无关的特殊方法 ** <br> ** Special method names (operators excluded)**  
 
 |类别|Category|方法名(Method names)|
 |:--:|:--:|:--:|
@@ -33,7 +35,9 @@ tag: program
 
 ********
 
-### 表1-2：跟运算符相关的特殊方法 <br> Table 1-2. Special method names for operators
+### 表1-2：
+
+** 跟运算符相关的特殊方法 ** <br> ** Special method names for operators ** 
 
 |类别|Category|方法名和对应的运算符(Method names and related operators)|
 |:--:|:--:|:--:|
