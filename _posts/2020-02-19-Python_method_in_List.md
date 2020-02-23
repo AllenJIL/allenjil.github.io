@@ -42,7 +42,7 @@ tag: program
 |`s.__mul__(n) `|●|●|●|  |` s * n` &rarr; n 个 s 的重复拼接 <br>  repeated concatenation |
 |`s.__imul__(n) `|●|  |●|  |` s *= n` &rarr; 就地重复拼接 <br>  in-place repeated concatenation |
 |`s.__rmul__(n) `|●|●|●|  |` n * s` &rarr; 反向拼接 * <br>  reversed repeated concatenationa |
-|`s.pop([p]) `|●|  |●||` 删除最后或者是（可选的）位于 p 的元素` &rarr; 并返回它的值 <br>  Remove and return last item or item at optional position p |
+|`s.pop([p]) `|●|  |●|| 删除最后或者是（可选的）位于 p 的元素 并返回它的值 <br>  Remove and return last item or item at optional position p |
 |`s.remove(e) `|●|  |●|●| 删除 s 中的第一次出现的 e <br>  Remove first occurrence of element e by value |
 |`s.reverse() `|●|  |●|●| 就地把 s 的元素倒序排列 <br>  Reverse the order of the items in place |
 |`s.__reversed__() `|●|  |  |●| 返回 s 的倒序迭代器 <br>  Get iterator to scan items from last to first |
