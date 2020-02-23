@@ -1,7 +1,7 @@
 ---
 layout: post
-title: 'Method in List'
-description: '列表的方法和属性'
+title: 'Python Method in List'
+description: 'Python 列表的方法和属性'
 date: 2020-02-19
 tag: program
 ---
