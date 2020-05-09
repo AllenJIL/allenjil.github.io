@@ -1259,37 +1259,37 @@ $$\begin{aligned}\displaystyle F\big[R(\tau)\big] = F(j\omega) F^* (j\omega)= \l
 ### 2.3.0. 常用函数的傅里叶变换汇总
 
 $$\begin{aligned}
-\displaystyle f({\color{blue}t}) \longleftarrow& \longrightarrow F({\color{blue}j\omega}) \\
-F(j t) \longleftarrow& \longrightarrow {\color{blue}2\pi }f(-\omega)\\
-f({\color{blue}\alpha} t) \longleftarrow& \longrightarrow {\color{blue}\frac{1}{\lvert \alpha \rvert}}F(j\frac{\omega}{{\color{blue}\alpha}})\\
-{\color{blue}a}\cdot f_1 + {\color{blue}b}\cdot f_2 \longleftarrow& \longrightarrow {\color{blue}a}\cdot F_1 + {\color{blue}b}\cdot F_2 \\
-f(t {\color{blue}\pm t_0}) \longleftarrow& \longrightarrow  {\color{blue}e^{\pm j \omega t_0}}F(j\omega)\\
-f(t {\color{blue}\pm t_0}) \longleftarrow& \longrightarrow \lvert F(j\omega)\rvert {\color{blue}e^{j[\varphi(\omega)\pm \omega t_0]}}\\
-{\color{blue}e^{\mp j\omega_0 t}}f(t)\longleftarrow& \longrightarrow F\big[j(\omega{\color{blue}\pm\omega_0})\big]\\
-f_1(t) {\color{blue}\star} f_2(t) \longleftarrow& \longrightarrow F_1(j\omega){\color{blue}\cdot} F_2(j\omega)\\
-f_1(t){\color{blue}\cdot} f_2(t) \longleftarrow& \longrightarrow {\color{blue}\frac{1}{2\pi}}F_1(j\omega){\color{blue}\star} F_2(j\omega)\\
-f^{{\color{blue}(n)}} (t) \longleftarrow& \longrightarrow {\color{blue}(j\omega)^n} F(j\omega)\\
+\displaystyle f(\color{blue}{t}) \longleftarrow& \longrightarrow F(\color{blue}{j\omega}) \\
+F(j t) \longleftarrow& \longrightarrow \color{blue}{2\pi }f(-\omega)\\
+f(\color{blue}{\alpha} t) \longleftarrow& \longrightarrow \color{blue}{\frac{1}{\lvert \alpha \rvert}}F(j\frac{\omega}{\color{blue}{\alpha}})\\
+\color{blue}{a}\cdot f_1 + \color{blue}{b}\cdot f_2 \longleftarrow& \longrightarrow \color{blue}{a}\cdot F_1 + \color{blue}{b}\cdot F_2 \\
+f(t \color{blue}{\pm t_0}) \longleftarrow& \longrightarrow  \color{blue}{e^{\pm j \omega t_0}}F(j\omega)\\
+f(t \color{blue}{\pm t_0}) \longleftarrow& \longrightarrow \lvert F(j\omega)\rvert \color{blue}{e^{j[\varphi(\omega)\pm \omega t_0]}}\\
+\color{blue}{e^{\mp j\omega_0 t}}f(t)\longleftarrow& \longrightarrow F\big[j(\omega\color{blue}{\pm\omega_0})\big]\\
+f_1(t) \color{blue}{\star} f_2(t) \longleftarrow& \longrightarrow F_1(j\omega)\color{blue}{\cdot} F_2(j\omega)\\
+f_1(t)\color{blue}{\cdot} f_2(t) \longleftarrow& \longrightarrow \color{blue}{\frac{1}{2\pi}}F_1(j\omega)\color{blue}{\star} F_2(j\omega)\\
+f^{\color{blue}{(n)}} (t) \longleftarrow& \longrightarrow \color{blue}{(j\omega)^n} F(j\omega)\\
 \int^{t}_{-\infty} f(x) dx \longleftarrow& \longrightarrow \pi F(0)\delta(\omega) + \frac{F(j\omega)}{j\omega}\\
-{\color{blue}(-jt)^n} f (t) \longleftarrow& \longrightarrow F^{{\color{blue}(n)}}(j\omega)\\
-\pi f(0)\delta(t) + \frac{f(t)}{{\color{red}-}jt} \longleftarrow& \longrightarrow \int^{\omega}_{-\infty}F(jx)dx\\
+\color{blue}{(-jt)^n} f (t) \longleftarrow& \longrightarrow F^{\color{blue}{(n)}}(j\omega)\\
+\pi f(0)\delta(t) + \frac{f(t)}{\color{red}{-}jt} \longleftarrow& \longrightarrow \int^{\omega}_{-\infty}F(jx)dx\\
  e^{-\alpha t} \varepsilon(t)\longleftarrow& \longrightarrow \frac{1}{\alpha + j\omega}\\
 e^{-\alpha \lvert t\rvert} \longleftarrow& \longrightarrow \frac{2\alpha}{\alpha^2 + \omega^2} \\
-g_{\color{blue}\tau}(t) \longleftarrow& \longrightarrow {\color{blue}\tau} \text{Sa} \Big\lgroup \displaystyle \frac{\omega{\color{blue}\tau}}{2} \Big\rgroup\\
-{\color{red}1} \longleftarrow& \longrightarrow {\color{blue}2\pi}\delta{(\omega)}\\
-{\color{red}\delta} \longleftarrow& \longrightarrow 1 \\
-\delta^{\color{blue}\prime} \longleftarrow& \longrightarrow {\color{blue}j\omega} \\
-\delta^{{\color{blue}(n)}} \longleftarrow& \longrightarrow (j\omega)^{\color{blue}n} \\
-{\color{red}\varepsilon}(t)\longleftarrow& \longrightarrow \pi \delta(\omega) + \frac{1}{j\omega}\\
-{\color{blue}\text{sgn}}(t)\longleftarrow& \longrightarrow \frac{2}{j\omega}\\
-\downarrow R(\tau) \longleftarrow& \longrightarrow {\color{red}E}(\omega) \downarrow \\
+g_\color{blue}{\tau}(t) \longleftarrow& \longrightarrow \color{blue}{\tau} \text{Sa} \Big\lgroup \displaystyle \frac{\omega\color{blue}{\tau}}{2} \Big\rgroup\\
+\color{red}{1} \longleftarrow& \longrightarrow \color{blue}{2\pi}\delta{(\omega)}\\
+\color{red}{\delta} \longleftarrow& \longrightarrow 1 \\
+\delta^\color{blue}{\prime} \longleftarrow& \longrightarrow \color{blue}{j\omega} \\
+\delta^{\color{blue}{(n)}} \longleftarrow& \longrightarrow (j\omega)^\color{blue}{n} \\
+\color{red}{\varepsilon}(t)\longleftarrow& \longrightarrow \pi \delta(\omega) + \frac{1}{j\omega}\\
+\color{blue}{\text{sgn}}(t)\longleftarrow& \longrightarrow \frac{2}{j\omega}\\
+\downarrow R(\tau) \longleftarrow& \longrightarrow \color{red}{E}(\omega) \downarrow \\
 {\int^{\infty}_{-\infty}f(t)f(t-\tau)dt} \longleftarrow& \longrightarrow \lvert F(j\omega) \rvert ^2\\
-\downarrow  R(\tau) \longleftarrow& \longrightarrow  {\color{red}P}(\omega)\downarrow \\
+\downarrow  R(\tau) \longleftarrow& \longrightarrow  \color{red}{P}(\omega)\downarrow \\
 \lim_{T\to\infty} \big[ \frac{1}{T} \int^{\frac{T}{2}}_{-\frac{T}{2}} f(t)f(t-\tau)dt \big] \longleftarrow& \longrightarrow \lim_{T\to\infty} \frac{\lvert F_T(j\omega)\rvert ^2}{T}\\
-e^{j{\color{blue}\omega_0} t} \longleftarrow& \longrightarrow 2\pi \delta (\omega {\color{blue}- \omega_0}) \\
+e^{j\color{blue}{\omega_0} t} \longleftarrow& \longrightarrow 2\pi \delta (\omega \color{blue}{- \omega_0}) \\
 e^{-j\omega_0 t} \longleftarrow& \longrightarrow 2\pi \delta (\omega + \omega_0) \\
-{\color{blue}\cos} ( \omega_0 t )\longleftarrow& \longrightarrow \pi \big[ \delta(\omega + \omega_0) {\color{blue}+} \delta(\omega-\omega_0)\big] \\
-{\color{blue}\sin} (\omega_0 t) \longleftarrow& \longrightarrow {\color{blue}j}\pi \big[ \delta(\omega + \omega_0){\color{blue} -} \delta(\omega-\omega_0)\big] \\
-f_{\color{blue}T}(t) \longleftarrow& \longrightarrow F_{\color{blue}T}(j\omega)\\
+\color{blue}{\cos} ( \omega_0 t )\longleftarrow& \longrightarrow \pi \big[ \delta(\omega + \omega_0) \color{blue}{+} \delta(\omega-\omega_0)\big] \\
+\color{blue}{\sin} (\omega_0 t) \longleftarrow& \longrightarrow \color{blue}{j}\pi \big[ \delta(\omega + \omega_0)\color{blue}{ -} \delta(\omega-\omega_0)\big] \\
+f_\color{blue}{T}(t) \longleftarrow& \longrightarrow F_\color{blue}{T}(j\omega)\\
 \delta_T(t) \star f_0(t) \longleftarrow& \longrightarrow \Omega \delta_\Omega(\omega) F_0(j\omega)\\
 \delta_T(t) \star f_0(t) \longleftarrow& \longrightarrow \Omega \sum_{n=-\infty}^{\infty} F_0(jn\Omega) \delta (\omega- n\Omega)\\
 \sum_{n=-\infty}^{\infty} F_n e^{jn\Omega t} \longleftarrow& \longrightarrow 2\pi \sum_{n=-\infty}^{\infty} F_n \delta (\omega- n\Omega) \\
@@ -1328,14 +1328,14 @@ $$y(t) = f(t) \star h(t)$$
 * 设 LTI 系统的冲激响应为 $h(t)$ ，当激励是角频率 $\omega$ 的基本信号 $e^{j\omega t}$ 时，其响应  
     $$y(t) = h(t) \star e^{j\omega t}$$  
     * 根据卷积定义, 可得  
-    $$\begin{aligned}y(t) & = \int^{\infty}_{-\infty} h(\tau) e^{j\omega(t-\tau)} d\tau \\ &= {\color{blue}\int^{\infty}_{-\infty} h(\tau) e^{-j\omega \tau} d\tau} \cdot e^{j\omega t} \\  &= {\color{blue}\mathfrak{F} \big[ h(t)\big] } \cdot e^{j\omega t} \\ &= {\color{blue}H(j\omega)} \cdot e^{j\omega t} \end{aligned}$$  
+    $$\begin{aligned}y(t) & = \int^{\infty}_{-\infty} h(\tau) e^{j\omega(t-\tau)} d\tau \\ &= \color{blue}{\int^{\infty}_{-\infty} h(\tau) e^{-j\omega \tau} d\tau} \cdot e^{j\omega t} \\  &= \color{blue}{\mathfrak{F} \big[ h(t)\big] } \cdot e^{j\omega t} \\ &= \color{blue}{H(j\omega)} \cdot e^{j\omega t} \end{aligned}$$  
 
 * $h(t)$ 的傅里叶变换，记为 $H(j\omega)$ ，常称为系统的频率响应函数。  
     $$H(j\omega)= \mathfrak{F} \big[ h(t)\big] =\int^{\infty}_{-\infty} h(\tau) e^{-j\omega \tau} d\tau $$  
     
 * $H(j\omega)$ 反映了响应 $y(t)$ 的幅度和相位  
 
-$$e^{j\omega t} \to \boxed{h(t)} \to {\color{blue}H(j\omega)} \cdot e^{j\omega t}$$  
+$$e^{j\omega t} \to \boxed{h(t)} \to \color{blue}{H(j\omega)} \cdot e^{j\omega t}$$  
 
 
 <a id="312-%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2%E5%88%86%E6%9E%90%E6%B3%95"></a>
@@ -1344,10 +1344,10 @@ $$e^{j\omega t} \to \boxed{h(t)} \to {\color{blue}H(j\omega)} \cdot e^{j\omega t
 * 一般信号  
     $$\begin{aligned}\displaystyle 
     e^{j\omega t}  &\to \boxed{h(t)} \to H(j\omega) \cdot e^{j\omega t}\; \downarrow \text{齐次性}\\ 
-    \frac{1}{2\pi}  F(j\omega) d \omega \cdot {\color{blue} e^{j\omega t} }&\to  \boxed{h(t)} \to \frac{1}{2\pi} F(j\omega) d\omega \cdot{\color{blue} H(j\omega) e^{j\omega t}}\; \downarrow \text{可加性} \\ 
+    \frac{1}{2\pi}  F(j\omega) d \omega \cdot \color{blue}{ e^{j\omega t} }&\to  \boxed{h(t)} \to \frac{1}{2\pi} F(j\omega) d\omega \cdot\color{blue}{ H(j\omega) e^{j\omega t}}\; \downarrow \text{可加性} \\ 
     \frac{1}{2\pi} \int^{\infty}_{-\infty} F(j\omega)e^{j\omega t} d \omega & \to \boxed{h(t)} \to \frac{1}{2\pi} \int^{\infty}_{-\infty} H(j\omega)F(j\omega) \cdot e^{j\omega t} d\omega \\ 
     f(t) &\to \boxed{h(t)} \to y(t) = \mathfrak{F}^{-1} \big[F(j\omega)H(j\omega)\big]\\
-    F(j\omega)  &\to \boxed{H(j\omega)} \to {\color{red}Y(j\omega)=F(j\omega)\cdot H(j\omega)} \\
+    F(j\omega)  &\to \boxed{H(j\omega)} \to \color{red}{Y(j\omega)=F(j\omega)\cdot H(j\omega)} \\
     f(t) &\to \boxed{h(t)} \to y(t) = f(t) \star h(t)\\
     \end{aligned}$$  
 
@@ -1369,9 +1369,9 @@ $$e^{j\omega t} \to \boxed{h(t)} \to {\color{blue}H(j\omega)} \cdot e^{j\omega t
     $$f_T(t) = \displaystyle \sum^{\infty}_{n=-\infty} F_n e^{jn\Omega t}$$  
 
 * 系统零状态响应:  
-    $$\begin{aligned}\displaystyle y(t) = h(t) \star f_T(t) &= \sum^{\infty}_{n=-\infty} F_n \big[h(t) \star e^{jn\Omega t} \big]\\ \Big\{e^{jn\Omega t} \to \boxed{h(t)} \to H(jn\Omega) \cdot e^{jn\Omega t}\Big\} & = \sum^{\infty}_{n=-\infty}{\color{blue} F_n H (jn\Omega)} e^{jn\Omega t}\\ & = \sum^{\infty}_{n=-\infty} {\color{blue}Y_n} e^{jn\Omega t}\end{aligned}$$   
+    $$\begin{aligned}\displaystyle y(t) = h(t) \star f_T(t) &= \sum^{\infty}_{n=-\infty} F_n \big[h(t) \star e^{jn\Omega t} \big]\\ \Big\{e^{jn\Omega t} \to \boxed{h(t)} \to H(jn\Omega) \cdot e^{jn\Omega t}\Big\} & = \sum^{\infty}_{n=-\infty}\color{blue}{ F_n H (jn\Omega)} e^{jn\Omega t}\\ & = \sum^{\infty}_{n=-\infty} \color{blue}{Y_n} e^{jn\Omega t}\end{aligned}$$   
 
-    $$F_n \to \boxed{H(jn\Omega)} \to{\color{red}Y_n=F_n\cdot H(jn\Omega)}$$  
+    $$F_n \to \boxed{H(jn\Omega)} \to\color{red}{Y_n=F_n\cdot H(jn\Omega)}$$  
 
 * 步骤:  
     1. 求周期输入信号 $f_T(t)$ 的傅里叶系数 $F_n$ ;  
@@ -1386,7 +1386,7 @@ $$e^{j\omega t} \to \boxed{h(t)} \to {\color{blue}H(j\omega)} \cdot e^{j\omega t
     $$H(j\omega) = \lvert H(j\omega) \rvert e^{j\theta(\varphi)}$$  
     $$H(jn\Omega) = \lvert H(jn\Omega)\rvert e^{j\theta(n\Omega)} = H(j\omega)\big\vert_{\omega = n\Omega}$$  
     * 可推导出:  
-    $$y(t) = \displaystyle \frac{A_0}{2} {\color{green}\overset{\text{直流增益}}{H(0)}}+ \sum^{\infty}_{n=1} A_n {\color{green}\overset{\text{幅值相乘}}{\lvert H(jn\Omega)\rvert}} \cos\big[n\Omega t + \varphi_n {\color{green} \overset{\text{相位相加}}{+ \theta(n\Omega)}} \big]$$  
+    $$y(t) = \displaystyle \frac{A_0}{2} \color{green}{\overset{\text{直流增益}}{H(0)}}+ \sum^{\infty}_{n=1} A_n \color{green}{\overset{\text{幅值相乘}}{\lvert H(jn\Omega)\rvert}} \cos\big[n\Omega t + \varphi_n \color{green}{ \overset{\text{相位相加}}{+ \theta(n\Omega)}} \big]$$  
 
 
 <a id="314-%E9%A2%91%E7%8E%87%E5%93%8D%E5%BA%94%E5%87%BD%E6%95%B0"></a>
@@ -1458,15 +1458,15 @@ $$e^{j\omega t} \to \boxed{h(t)} \to {\color{blue}H(j\omega)} \cdot e^{j\omega t
 * 定义:  
     * 信号无失真传输是指系统的输出信号与输入信号相比，只有幅度的大小和出现时间的先后不同，而没有波形上的变化。  
     * 输入信号 $f(t)$ ，经过无失真传输后，输出信号应为  
-        $$y(t) = K f(t- {\color{blue}t_d})$$  
+        $$y(t) = K f(t- \color{blue}{t_d})$$  
     * 其频谱关系为  
-        $$Y(j\omega) = K {\color{blue}e^{-j\omega t_d}} F(j\omega)$$  
+        $$Y(j\omega) = K \color{blue}{e^{-j\omega t_d}} F(j\omega)$$  
 
 * 条件:  
-    1. 对 ${\color{red}h(t)}$ 的要求:  
-        $$h(t) = K \delta(t - {\color{blue}t_d})$$  
-    2. 对 ${\color{red}H(j\omega)}$ 的要求:  
-        $$H(j\omega) = \displaystyle\frac{Y(j\omega)}{F(j\omega)} = K {\color{blue}e^{-j\omega t_d}}$$  
+    1. 对 $\color{red}{h(t)}$ 的要求:  
+        $$h(t) = K \delta(t - \color{blue}{t_d})$$  
+    2. 对 $\color{red}{H(j\omega)}$ 的要求:  
+        $$H(j\omega) = \displaystyle\frac{Y(j\omega)}{F(j\omega)} = K \color{blue}{e^{-j\omega t_d}}$$  
         即  
         $$\lvert H(j\omega) \rvert = K,\; \theta(\omega) = -\omega t_d$$  
 
@@ -1526,7 +1526,7 @@ $$e^{j\omega t} \to \boxed{h(t)} \to {\color{blue}H(j\omega)} \cdot e^{j\omega t
     $$h(t) = 0, \; t<0$$
 
 * 频域特性:  
-    $$\begin{aligned}\underset{{\color{red}\text{(必要条件)}}}{{\color{blue}\text{佩利-维纳准则}}} \begin{cases}
+    $$\begin{aligned}\underset{\color{red}{\text{(必要条件)}}}{\color{blue}{\text{佩利-维纳准则}}} \begin{cases}
     &\displaystyle\int^{\infty}_{\infty}\lvert H(j\omega) \rvert ^2 d\omega < \infty \\ &\text{平方可积条件} \\ \\
     &\displaystyle\int^{\infty}_{\infty}\frac{\lvert \ln \lvert H(j\omega) \rvert \rvert}{1+\omega^2}  d\omega < \infty 
     \end{cases} \end{aligned}$$
@@ -1538,7 +1538,7 @@ $$e^{j\omega t} \to \boxed{h(t)} \to {\color{blue}H(j\omega)} \cdot e^{j\omega t
     4. 佩利-维纳准则是系统**物理可实现的必要条件**，而不是充分条件。  
 
 * 几种常见的实际滤波器  
-    * ${\color{red}理想滤波器}, \; {\color{blue}实际滤波器}$
+    * $\color{red}{理想滤波器}, \; \color{blue}{实际滤波器}$
 ![几种常见的实际滤波器](https://img-blog.csdnimg.cn/20200318225740293.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1ZhcmFscGhh,size_16,color_FFFFFF,t_70)
 
 ### 二次抑制载波振幅调制接收系统  
@@ -1572,11 +1572,11 @@ $$e^{j\omega t} \to \boxed{h(t)} \to {\color{blue}H(j\omega)} \cdot e^{j\omega t
     $$\begin{aligned}f(t)= \frac{\text{Sa(t)}}{\pi}  &\longleftrightarrow g_2(\omega)=F(j\omega) \\
     s(t) = cos(500t)  &\longleftrightarrow \pi \big[\delta(\omega+500)+\delta(\omega-500)\big]=S(j\omega)\end{aligned}$$  
     
-    $$\begin{aligned}y(t) & = f(t){\color{blue} \times} s(t){\color{blue} \times} s(t) \star h(t)\\
-    Y(j\omega) & = {\color{blue}\frac{1}{4 \pi^2}} F(j\omega) {\color{blue}\star} S(j\omega) {\color{blue}\star} S(j\omega) \cdot H(j\omega) \\
-    &= \frac{1}{4 \pi^2} g_2(\omega) {\color{blue}\star} \pi \big[\delta(\omega+500)+\delta(\omega-500)\big] {\color{blue}\star} \pi \big[\delta(\omega+500)+\delta(\omega-500)\big] \cdot H(j\omega) \\
-    &= \frac{1}{4 {\color{green}\pi^2}} g_2(\omega) {\color{blue}\star} {\color{green}\pi^2} \big[\delta(\omega+1000)+2\delta+\delta(\omega-1000)\big] \cdot H(j\omega)  \\
-    &= \frac{1}{4} g_2(\omega) {\color{blue}\star} \big[\delta(\omega+1000)+2\delta+\delta(\omega-1000)\big] \cdot g_2(\omega)  \\
+    $$\begin{aligned}y(t) & = f(t)\color{blue}{ \times} s(t)\color{blue}{ \times} s(t) \star h(t)\\
+    Y(j\omega) & = \color{blue}{\frac{1}{4 \pi^2}} F(j\omega) \color{blue}{\star} S(j\omega) \color{blue}{\star} S(j\omega) \cdot H(j\omega) \\
+    &= \frac{1}{4 \pi^2} g_2(\omega) \color{blue}{\star} \pi \big[\delta(\omega+500)+\delta(\omega-500)\big] \color{blue}{\star} \pi \big[\delta(\omega+500)+\delta(\omega-500)\big] \cdot H(j\omega) \\
+    &= \frac{1}{4 \color{green}{\pi^2}} g_2(\omega) \color{blue}{\star} \color{green}{\pi^2} \big[\delta(\omega+1000)+2\delta+\delta(\omega-1000)\big] \cdot H(j\omega)  \\
+    &= \frac{1}{4} g_2(\omega) \color{blue}{\star} \big[\delta(\omega+1000)+2\delta+\delta(\omega-1000)\big] \cdot g_2(\omega)  \\
     &= \frac{1}{2}g_2(\omega)\\
     y(t) & = \frac{Sa(t)}{2\pi} = \frac{1}{2}f(t) \end{aligned}$$  
     
@@ -1772,7 +1772,7 @@ $$H(j\omega)=g_2(\omega) \longleftrightarrow \frac{\sin(t)}{t\pi} = \frac{\text{
 
 * 根据时域与频域的**对偶性**，可推出**频域取样定理**  
 
-* 一个在时域区间 $(-t_m,t_m)$ 以外为 $0$ 的 ${\color{blue}\text{时限信号}f(t)}$ 的频谱函数 $F(j\omega)$ ，可唯一地由其在均匀频率间隔 $f_s[{\color{blue}f_s<1/(2t_m)}]$ 上的样值点 $F(jn\omega_s)$ 确定。  
+* 一个在时域区间 $(-t_m,t_m)$ 以外为 $0$ 的 $\color{blue}{\text{时限信号}f(t)}$ 的频谱函数 $F(j\omega)$ ，可唯一地由其在均匀频率间隔 $f_s[\color{blue}{f_s<1/(2t_m)}]$ 上的样值点 $F(jn\omega_s)$ 确定。  
     $$F(j\omega) =\displaystyle \sum^{\infty}_{n=-\infty} F(j\frac{n\pi}{t_m}) \text{Sa} (\omega t_m -n\pi), \; t_m = \frac{1}{2f_s}$$  
 
 <a id="413-python-%E5%AE%9E%E7%8E%B0sa%E4%BF%A1%E5%8F%B7%E7%9A%84%E9%87%87%E6%A0%B7%E5%92%8C%E6%81%A2%E5%A4%8D"></a>
@@ -1882,11 +1882,11 @@ $$H(j\omega)=g_2(\omega) \longleftrightarrow \frac{\sin(t)}{t\pi} = \frac{\text{
 
 |变换<br>Transform|时域|<font color=red>时域</font>特性<br><font color=red>Time Domain</font>|频域|<font color=red>频域</font>特性<br><font color=red>Frequency Domain</font>|  
 |:----------:|:----------:|:----------:|:----------:|:----------:|  
-|**傅里叶变换**<br>(FT)<br>Fourier Transform|![FT1](https://img-blog.csdnimg.cn/20200323180621837.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1ZhcmFscGhh,size_16,color_FFFFFF,t_70#pic_center)|连续<br><font color=green>非周期</font><br>$$\displaystyle x({\color{red}t}) = \frac{1}{2\pi}\int^{\infty}_{-\infty}X(j\omega)e^{j\omega {\color{red}t}}d\omega$$|![FT2](https://img-blog.csdnimg.cn/20200323180650608.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1ZhcmFscGhh,size_16,color_FFFFFF,t_70#pic_center)|连续<br><font color=green>非周期</font><br>$$\displaystyle X({\color{red}j\omega}) = \int^{\infty}_{-\infty}x(t)e^{{\color{red}-j\omega} t}dt$$|  
-|**傅里叶级数**<br>(FS)<br>Fourier Series|![FS1](https://img-blog.csdnimg.cn/20200323180724406.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1ZhcmFscGhh,size_16,color_FFFFFF,t_70#pic_center)|连续<br><font color=blue>周期</font><br>$$\displaystyle \tilde{x}({\color{red}t}) = \sum^{\infty}_{k = -\infty} X(jk\Omega)e^{jk\Omega {\color{red}t}}$$|![FS2](https://img-blog.csdnimg.cn/20200323180743702.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1ZhcmFscGhh,size_16,color_FFFFFF,t_70#pic_center)|离散<br><font color=green>非周期</font><br>$$\displaystyle X( {\color{red}jk\Omega}) = \frac{1}{T} \int^{T}_{0} \tilde{x}(t) e^{{\color{red}-jk\Omega} t} dt$$|  
-|**离散时间傅里叶变换**<br>(DTFT)<br>Discrete Time Fourier Transform|![DTFT1](https://img-blog.csdnimg.cn/20200323180807186.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1ZhcmFscGhh,size_16,color_FFFFFF,t_70#pic_center)|离散<br><font color=green>非周期</font><br>$$\displaystyle x[{\color{red}n}] = \frac{1}{2\pi}\int^{\pi}_{-\pi}X(j\omega)e^{j\omega {\color{red}n}}d\omega$$|![DTFT2](https://img-blog.csdnimg.cn/2020032318082686.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1ZhcmFscGhh,size_16,color_FFFFFF,t_70#pic_center)|连续<br><font color=blue>周期</font><br> $$\displaystyle X(e^{ {\color{red}j\omega}}) = \sum^{\infty}_{n=-\infty} x[n] e^{{\color{red}-j\omega} n}$$|  
-|**离散傅里叶级数**<br>(DFS)<br>Discrete Fourier Series|![DFS1](https://img-blog.csdnimg.cn/20200323180846117.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1ZhcmFscGhh,size_16,color_FFFFFF,t_70#pic_center)|离散<br><font color=blue>周期</font><br>$$\displaystyle \tilde{x}[{\color{red}n}] = \sum^{N-1}_{k=0} \tilde{X}[k]e^{j\frac{2\pi}{N}k{\color{red}n}}$$<br>$$-\infty < {\color{red}n}< +\infty$$|![DFS2](https://img-blog.csdnimg.cn/20200323180904945.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1ZhcmFscGhh,size_16,color_FFFFFF,t_70#pic_center)|离散<br><font color=blue>周期</font><br>$$\displaystyle \tilde{X}[{\color{red}k}] = \frac{1}{N}\sum^{N-1}_{n=0} \tilde{x}[n]e^{ {\color{red}-}j\frac{2\pi}{N}{\color{red}k}n}$$<br>$$-\infty < {\color{red}k}< +\infty$$|  
-|**离散傅里叶变换**<br>(DFT)<br>Discrete Fourier Transform|![DFT1](https://img-blog.csdnimg.cn/20200323180925221.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1ZhcmFscGhh,size_16,color_FFFFFF,t_70#pic_center)|离散<br><font color=green>非周期</font><br>$$\displaystyle x[{\color{red}n}] = \frac{1}{N} \sum^{N-1}_{k=0} X[k]e^{j\frac{2\pi}{N}k{\color{red}n}}$$  $$0 < {\color{red}n}< N-1$$|![DFT2](https://img-blog.csdnimg.cn/20200323180943283.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1ZhcmFscGhh,size_16,color_FFFFFF,t_70#pic_center)|离散<br><font color=green>非周期</font><br>$$\displaystyle X[{\color{red}k}] = \sum^{N-1}_{n=0} x[n]e^{ {\color{red}-}j\frac{2\pi}{N}{\color{red}k}n}$$  $$0 < {\color{red}k}< N-1$$|   
+|**傅里叶变换**<br>(FT)<br>Fourier Transform|![FT1](https://img-blog.csdnimg.cn/20200323180621837.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1ZhcmFscGhh,size_16,color_FFFFFF,t_70#pic_center)|连续<br><font color=green>非周期</font><br>$$\displaystyle x(\color{red}{t}) = \frac{1}{2\pi}\int^{\infty}_{-\infty}X(j\omega)e^{j\omega \color{red}{t}}d\omega$$|![FT2](https://img-blog.csdnimg.cn/20200323180650608.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1ZhcmFscGhh,size_16,color_FFFFFF,t_70#pic_center)|连续<br><font color=green>非周期</font><br>$$\displaystyle X(\color{red}{j\omega}) = \int^{\infty}_{-\infty}x(t)e^{\color{red}{-j\omega} t}dt$$|  
+|**傅里叶级数**<br>(FS)<br>Fourier Series|![FS1](https://img-blog.csdnimg.cn/20200323180724406.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1ZhcmFscGhh,size_16,color_FFFFFF,t_70#pic_center)|连续<br><font color=blue>周期</font><br>$$\displaystyle \tilde{x}(\color{red}{t}) = \sum^{\infty}_{k = -\infty} X(jk\Omega)e^{jk\Omega \color{red}{t}}$$|![FS2](https://img-blog.csdnimg.cn/20200323180743702.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1ZhcmFscGhh,size_16,color_FFFFFF,t_70#pic_center)|离散<br><font color=green>非周期</font><br>$$\displaystyle X( \color{red}{jk\Omega}) = \frac{1}{T} \int^{T}_{0} \tilde{x}(t) e^{\color{red}{-jk\Omega} t} dt$$|  
+|**离散时间傅里叶变换**<br>(DTFT)<br>Discrete Time Fourier Transform|![DTFT1](https://img-blog.csdnimg.cn/20200323180807186.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1ZhcmFscGhh,size_16,color_FFFFFF,t_70#pic_center)|离散<br><font color=green>非周期</font><br>$$\displaystyle x[\color{red}{n}] = \frac{1}{2\pi}\int^{\pi}_{-\pi}X(j\omega)e^{j\omega \color{red}{n}}d\omega$$|![DTFT2](https://img-blog.csdnimg.cn/2020032318082686.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1ZhcmFscGhh,size_16,color_FFFFFF,t_70#pic_center)|连续<br><font color=blue>周期</font><br> $$\displaystyle X(e^{ \color{red}{j\omega}}) = \sum^{\infty}_{n=-\infty} x[n] e^{\color{red}{-j\omega} n}$$|  
+|**离散傅里叶级数**<br>(DFS)<br>Discrete Fourier Series|![DFS1](https://img-blog.csdnimg.cn/20200323180846117.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1ZhcmFscGhh,size_16,color_FFFFFF,t_70#pic_center)|离散<br><font color=blue>周期</font><br>$$\displaystyle \tilde{x}[\color{red}{n}] = \sum^{N-1}_{k=0} \tilde{X}[k]e^{j\frac{2\pi}{N}k\color{red}{n}}$$<br>$$-\infty < \color{red}{n}< +\infty$$|![DFS2](https://img-blog.csdnimg.cn/20200323180904945.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1ZhcmFscGhh,size_16,color_FFFFFF,t_70#pic_center)|离散<br><font color=blue>周期</font><br>$$\displaystyle \tilde{X}[\color{red}{k}] = \frac{1}{N}\sum^{N-1}_{n=0} \tilde{x}[n]e^{ \color{red}{-}j\frac{2\pi}{N}\color{red}{k}n}$$<br>$$-\infty < \color{red}{k}< +\infty$$|  
+|**离散傅里叶变换**<br>(DFT)<br>Discrete Fourier Transform|![DFT1](https://img-blog.csdnimg.cn/20200323180925221.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1ZhcmFscGhh,size_16,color_FFFFFF,t_70#pic_center)|离散<br><font color=green>非周期</font><br>$$\displaystyle x[\color{red}{n}] = \frac{1}{N} \sum^{N-1}_{k=0} X[k]e^{j\frac{2\pi}{N}k\color{red}{n}}$$  $$0 < \color{red}{n}< N-1$$|![DFT2](https://img-blog.csdnimg.cn/20200323180943283.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1ZhcmFscGhh,size_16,color_FFFFFF,t_70#pic_center)|离散<br><font color=green>非周期</font><br>$$\displaystyle X[\color{red}{k}] = \sum^{N-1}_{n=0} x[n]e^{ \color{red}{-}j\frac{2\pi}{N}\color{red}{k}n}$$  $$0 < \color{red}{k}< N-1$$|   
 
 * 说明: 
     * 除离散傅里叶变换外，若某个信号在时域（或频域）内是周期的，则经变换   （或反变换）后其变换结果在频域（或时域）内是离散的；若信号在时域（或频域）内是离散的，则其变换（或反变换）结果在频域（或时域）内是周期的。
@@ -2101,18 +2101,18 @@ plt.show()
 
 ### 6.1.1 双边拉普拉斯变换的定义  
 
-* 有些函数不满足绝对可积条件，求解傅里叶变换困难。为此，可用一衰减因 ${\color{blue}e^{-\sigma t}}$ (${\color{red}\sigma}$ 为实常数）乘信号 $f(t)$, <font color = blue>适当选取 $\sigma$ 的值</font>， 使乘积信号 $f(t) e^{-\sigma t}$ 当 $t\to \infty$ 时 信号幅度趋近于 $0$, 从而使 $f(t) e^{-\sigma t}$ 的傅里叶变换存在。  
-    $$\begin{aligned}F_b ({\color{red}\sigma} + j \omega) & =\mathfrak{F}\big[ f(t) {\color{red}e^{-\sigma t} }\big] \\ & = \int^{\infty}_{-\infty}f(t) {\color{red}e^{-\sigma t}} e^{-j\omega t}dt \\ & = \int^{\infty}_{-\infty}f(t) e^{-({\color{red}\sigma} + j\omega)t} dt \end{aligned}$$  
+* 有些函数不满足绝对可积条件，求解傅里叶变换困难。为此，可用一衰减因 $\color{blue}{e^{-\sigma t}}$ ($\color{red}{\sigma}$ 为实常数）乘信号 $f(t)$, <font color = blue>适当选取 $\sigma$ 的值</font>， 使乘积信号 $f(t) e^{-\sigma t}$ 当 $t\to \infty$ 时 信号幅度趋近于 $0$, 从而使 $f(t) e^{-\sigma t}$ 的傅里叶变换存在。  
+    $$\begin{aligned}F_b (\color{red}{\sigma} + j \omega) & =\mathfrak{F}\big[ f(t) \color{red}{e^{-\sigma t} }\big] \\ & = \int^{\infty}_{-\infty}f(t) \color{red}{e^{-\sigma t}} e^{-j\omega t}dt \\ & = \int^{\infty}_{-\infty}f(t) e^{-(\color{red}{\sigma} + j\omega)t} dt \end{aligned}$$  
 
 * 相应的傅里叶逆变换为:  
-    $$f(t){\color{red}e^{-\sigma t}} = \frac{1}{2\pi} \int^{\infty}_{-\infty} F_b ({\color{red}\sigma} + j\omega) e^{j\omega t} d \omega$$  
-    $$f(t) = \frac{1}{2\pi} \int^{\infty}_{-\infty} F_b ({\color{red}\sigma} + j\omega) e^{({\color{red}\sigma} +j\omega) t} d \omega$$  
+    $$f(t)\color{red}{e^{-\sigma t}} = \frac{1}{2\pi} \int^{\infty}_{-\infty} F_b (\color{red}{\sigma} + j\omega) e^{j\omega t} d \omega$$  
+    $$f(t) = \frac{1}{2\pi} \int^{\infty}_{-\infty} F_b (\color{red}{\sigma} + j\omega) e^{(\color{red}{\sigma} +j\omega) t} d \omega$$  
 
 
 
-* 令 ${\color{red}s = \sigma + j\omega}, \; d \omega = ds/j$ 有:  
-    $$F_b ({\color{red}s}) = \int^{\infty}_{-\infty}f(t) e^{-{\color{red}s}t} dt$$  
-    $$f({\color{red}t}) = \frac{1}{2\pi {\color{blue}j}} \int^{{\color{blue}\sigma+ j}\infty}_{{\color{blue}\sigma -j}\infty} F_b ({\color{blue}s}) e^{{\color{blue}s}{\color{red} t}} d {\color{blue}s}$$  
+* 令 $\color{red}{s = \sigma + j\omega}, \; d \omega = ds/j$ 有:  
+    $$F_b (\color{red}{s}) = \int^{\infty}_{-\infty}f(t) e^{-\color{red}{s}t} dt$$  
+    $$f(\color{red}{t}) = \frac{1}{2\pi \color{blue}{j}} \int^{\color{blue}{\sigma+ j}\infty}_{\color{blue}{\sigma -j}\infty} F_b (\color{blue}{s}) e^{\color{blue}{s}\color{red}{ t}} d \color{blue}{s}$$  
     
 * $F_b(s)$ 称为 $f(t)$ 的**双边拉氏变换**（或**象函数**），  
 * $f(t)$ 称为$F_b(s)$ 的**双边拉氏逆变换**（或**原函数**）  
@@ -2142,7 +2142,7 @@ plt.show()
 * **双边拉氏变换必须标出收敛域**。  
 
 * 对于双边拉普拉斯变换而言，$F_b(s)$ 和收敛域一起，可以唯一地确定 $f(t)$。即  
-    $$f(t) \overset{\text{一一对应}}{\longleftrightarrow} F_b(S) + {\color{blue} \text{收敛域}}$$  
+    $$f(t) \overset{\text{一一对应}}{\longleftrightarrow} F_b(S) + \color{blue}{ \text{收敛域}}$$  
     
 * 不同的信号可以有相同的 $F_b(s)$ ，但收敛域不同。  
 
@@ -2157,7 +2157,7 @@ plt.show()
     $$\mathfrak{L}[f(t)] = F(s) \overset{\text{def}}{=} \int^{\infty}_{0} f(t) e^{-st} dt$$  
 * $f(t) = \mathfrak{L}^{-1}[F(s)]$  
     $$\mathfrak{L}^{-1}[F(s)] =f(t) \overset{\text{def}}{=} \Big[\frac{1}{2\pi j} \int^{\sigma+ j\infty}_{\sigma -j\infty} F_b (s) e^{s t} d s\Big]\varepsilon(t)$$
-    $${\color{red}f(t)\overset{\text{1-to-1}}{\longleftrightarrow} F(s)}$$
+    $$\color{red}{f(t)\overset{\text{1-to-1}}{\longleftrightarrow} F(s)}$$
 
 
 
@@ -2222,7 +2222,7 @@ f_T(t) \longleftarrow & \longrightarrow \frac{1}{1-e^{-sT}} \int^{T}_{0} f_T(t) 
 
 * 若  
 	$$\begin{aligned} \displaystyle  
-    f(t) \longleftarrow & \longrightarrow F(s), \; &{\color{red} 实数 \alpha >0}  ,\; \mathcal{Re}[s]>\sigma_0\\ 
+    f(t) \longleftarrow & \longrightarrow F(s), \; &\color{red}{ 实数 \alpha >0}  ,\; \mathcal{Re}[s]>\sigma_0\\ 
     f(\alpha t) \longleftarrow & \longrightarrow \frac{1}{\alpha}F(\frac{s}{\alpha}) ,\; &\mathcal{Re}[s]>\alpha\sigma_0\\  \end{aligned}$$  
     
 
@@ -2230,9 +2230,9 @@ f_T(t) \longleftarrow & \longrightarrow \frac{1}{1-e^{-sT}} \int^{T}_{0} f_T(t) 
 
 * 若  
 	$$\begin{aligned} \displaystyle  
-    f(t) \longleftarrow & \longrightarrow F(s),\; \mathcal{Re}[s]>\sigma_0,\; &{\color{red} 实常数 t_0 >0}  ,\; \mathcal{Re}[s]>\sigma_0\\ 
-    f(t-t_0){\color{red}\varepsilon(t-t_0)} \longleftarrow & \longrightarrow e^{-st_0} F(s) ,\; & \mathcal{Re}[s]>\sigma_0\\ 
-    f(\alpha t-t_0){\color{red}\varepsilon(\alpha t-t_0)} \longleftarrow & \longrightarrow \frac{1}{\alpha} e^{-\frac{t_0}{\alpha} s} F(\frac{s}{\alpha}) ,\; &{\color{red} 实数 \alpha >0}  ,\; \mathcal{Re}[s]>\sigma_0\\ \end{aligned}$$  
+    f(t) \longleftarrow & \longrightarrow F(s),\; \mathcal{Re}[s]>\sigma_0,\; &\color{red}{ 实常数 t_0 >0}  ,\; \mathcal{Re}[s]>\sigma_0\\ 
+    f(t-t_0)\color{red}{\varepsilon(t-t_0)} \longleftarrow & \longrightarrow e^{-st_0} F(s) ,\; & \mathcal{Re}[s]>\sigma_0\\ 
+    f(\alpha t-t_0)\color{red}{\varepsilon(\alpha t-t_0)} \longleftarrow & \longrightarrow \frac{1}{\alpha} e^{-\frac{t_0}{\alpha} s} F(\frac{s}{\alpha}) ,\; &\color{red}{ 实数 \alpha >0}  ,\; \mathcal{Re}[s]>\sigma_0\\ \end{aligned}$$  
 
 * 若 $f(t)$ 为 **因果信号**,   
 	$$f(t-t_0)\longleftarrow \longrightarrow e^{-st_0} F(s)$$  
@@ -2242,7 +2242,7 @@ f_T(t) \longleftarrow & \longrightarrow \frac{1}{1-e^{-sT}} \int^{T}_{0} f_T(t) 
 
 * 若  
 	$$\begin{aligned} \displaystyle  
-    f(t) \longleftarrow & \longrightarrow F(s), \; &{\color{red} 复常数 s_\alpha = \sigma_\alpha+ j\omega_\alpha}  ,\; \mathcal{Re}[s]>\sigma_0\\ 
+    f(t) \longleftarrow & \longrightarrow F(s), \; &\color{red}{ 复常数 s_\alpha = \sigma_\alpha+ j\omega_\alpha}  ,\; \mathcal{Re}[s]>\sigma_0\\ 
     f(t)e^{s_\alpha t} \longleftarrow & \longrightarrow F(s-s_\alpha),\; &\mathcal{Re}[s]>\sigma_0+\sigma_\alpha\\  \end{aligned}$$  
     
 ### 6.2.5. 时域微分特性  
@@ -2331,11 +2331,11 @@ $$f(t) = \mathfrak{L}^{-1}[F(s)] \longleftrightarrow \mathfrak{L} [f(t)] = F(s) 
     3. 部分分式展开 --结合。  
 
 * 若象函数 $F(s)$ 是 $s$ 的有理分式, 可写为:  
-    $${\color{blue}F(s) = \displaystyle \frac{b_m s^m + b_{m-1}s^{m-1} + \cdots + b_1 s + b_0}{s^n + a_{n-1}s^{n-1} + \cdots +a_1s+a_0}}$$
+    $$\color{blue}{F(s) = \displaystyle \frac{b_m s^m + b_{m-1}s^{m-1} + \cdots + b_1 s + b_0}{s^n + a_{n-1}s^{n-1} + \cdots +a_1s+a_0}}$$
 
 * 若<font color=blue> $m\geq n$ （假分式）</font>，可用多项式除法将象函数 $F(s)$ 分解为  
-    $${\color{blue}有理多项式 P(s)+ 有理真分式}$$   
-    $${\color{blue}F(s) = P(s) + \frac{B_0(s)}{A(s)}}$$
+    $$\color{blue}{有理多项式 P(s)+ 有理真分式}$$   
+    $$\color{blue}{F(s) = P(s) + \frac{B_0(s)}{A(s)}}$$
 
 * $P(s)$ 的拉普拉斯逆变换由<font color=blue>冲激函数及其各阶导数构成。</font>  
     * 例: $P(s)\to a_1 s^2 + a_2 s + a_3 \to a_1\delta^{\prime\prime}(t) + a_2 \delta^{\prime}(t) +a_3\delta(t)$
@@ -2346,7 +2346,7 @@ $$f(t) = \mathfrak{L}^{-1}[F(s)] \longleftrightarrow \mathfrak{L} [f(t)] = F(s) 
 ### 6.3.2. 部分分式展开法  
 
 * 若 $F(s)$ 是 $s$ 的<font color=blue>实系数**有理真分式**</font> $(m<n)$，则  
-    $${\color{blue}F(s) = \displaystyle \frac{B(s)}{A(s)} = \displaystyle \frac{b_m s^m + b_{m-1}s^{m-1} + \cdots + b_1 s + b_0}{s^n + a_{n-1}s^{n-1} + \cdots +a_1s+a_0}}$$  
+    $$\color{blue}{F(s) = \displaystyle \frac{B(s)}{A(s)} = \displaystyle \frac{b_m s^m + b_{m-1}s^{m-1} + \cdots + b_1 s + b_0}{s^n + a_{n-1}s^{n-1} + \cdots +a_1s+a_0}}$$  
     * 式中 $A(s)$ 称为 $F(s)$ 的 <font color=red>特征多项式</font> (characteristic polynomial)，方程 $A(s)=0$ 称为 <font color=red>特征方程</font>，它的根称为 <font color=red>特征根</font>，也称为 $F(s)$ 的 <font color=red>固有频率</font>（或自然频率）。$n$个特征根 $p_i$ 称为 $F(s)$ 的 <font color=red>极点</font>  
     
 1. $F(s)$ 为单极点（单根）  
@@ -2468,9 +2468,9 @@ $$F(s) \to \boxed{H(s)} \to Y(s)= F(s)\cdot H(s)$$
 * 求得:  
     $$\big[\sum^{n}_{i=0}a_i s^i\big]Y(s) - \sum^{n}_{i=0}a_i \big[\sum^{i-1}_{p=0}s^{i-1-p} y^{(p)}(0_-)\big] = \big[\sum^{m}_{j=0}b_j s^j\big]F(s)$$
 
-    $$\begin{aligned}Y(s) & = \displaystyle \overset{{\color{blue}Y_{zi}(s)}}{\displaystyle\frac{\displaystyle\sum^{n}_{i=0}a_i \big[\displaystyle\sum^{i-1}_{p=0}s^{i-1-p} y^{(p)}(0_-)\big]}{\displaystyle\sum^{n}_{i=0}a_i s^i}} + \overset{{\color{blue}Y_{zs}(s)}}{\displaystyle\frac{\displaystyle\sum^{m}_{j=0}b_j s^j}{\displaystyle\sum^{n}_{i=0}a_i s^i}F(s)} \\ & = \displaystyle \frac{M(s)}{A(s)} + \frac{B(s)}{A(s)}F(s)\end{aligned}$$
+    $$\begin{aligned}Y(s) & = \displaystyle \overset{\color{blue}{Y_{zi}(s)}}{\displaystyle\frac{\displaystyle\sum^{n}_{i=0}a_i \big[\displaystyle\sum^{i-1}_{p=0}s^{i-1-p} y^{(p)}(0_-)\big]}{\displaystyle\sum^{n}_{i=0}a_i s^i}} + \overset{\color{blue}{Y_{zs}(s)}}{\displaystyle\frac{\displaystyle\sum^{m}_{j=0}b_j s^j}{\displaystyle\sum^{n}_{i=0}a_i s^i}F(s)} \\ & = \displaystyle \frac{M(s)}{A(s)} + \frac{B(s)}{A(s)}F(s)\end{aligned}$$
 
-	$${\color{blue} Y_{zi}(s) + Y_{zs}(s) = Y(s)  \to y(t) = y_{zi}(t) + y_{zs} (t) }$$
+	$$\color{blue}{ Y_{zi}(s) + Y_{zs}(s) = Y(s)  \to y(t) = y_{zi}(t) + y_{zs} (t) }$$
 
 
 * <font color = red>步骤 </font>:  
@@ -2796,7 +2796,7 @@ $$H(s) = \frac{b_2s^2+b_1s+b_0}{s^2 + a_1s + a_0}$$
     
 * 解:  
 
-$$H(s) = \frac{b_2 + \frac{b_1}{s} + \frac{b_0}{s^2}}{1{\color{blue}-\underset{-\sum L_J}{(-\frac{a_1}{s} - \frac{a_0}{s^2})}}}$$
+$$H(s) = \frac{b_2 + \frac{b_1}{s} + \frac{b_0}{s^2}}{1\color{blue}{-\underset{-\sum L_J}{(-\frac{a_1}{s} - \frac{a_0}{s^2})}}}$$
 
 * 由梅森公式：流图包含3条开路和两个相接触环。  
     
@@ -2925,9 +2925,9 @@ $$\begin{aligned}连续 \;\; &\Big\vert\;\; 离散 \\ 时域\; f(t)\star h(t) &\
 * 两边取[双边拉普拉斯变换](https://blog.csdn.net/Varalpha/article/details/105096437)，时移性质，得：  
     $$F_{Sb}(s) = \sum^{\infty}_{k=-\infty} f(kT)e^{-kTs}$$  
 
-* 令 ${\color{red}z=e^{sT}}$, 上式将成为复变量 $z$ 的函数, 用 $F(z)$ 表示；$f(kT)\to f(k)$, 得  
-    $$F_b(z) = \sum^{\infty}_{k=-\infty} f(k) z^{-k}\; 称为 {\color{blue}序列 f(k)}的{\color{red}双边 z 变换}$$  
-    $$F(z) = \sum^{\infty}_{{\color{red}k=0}} f(k) z^{-k}\; 称为 {\color{blue}序列 f(k)}的{\color{red}单边 z 变换}$$  
+* 令 $\color{red}{z=e^{sT}}$, 上式将成为复变量 $z$ 的函数, 用 $F(z)$ 表示；$f(kT)\to f(k)$, 得  
+    $$F_b(z) = \sum^{\infty}_{k=-\infty} f(k) z^{-k}\; 称为 \color{blue}{序列 f(k)}的\color{red}{双边 z 变换}$$  
+    $$F(z) = \sum^{\infty}_{\color{red}{k=0}} f(k) z^{-k}\; 称为 \color{blue}{序列 f(k)}的\color{red}{单边 z 变换}$$  
 
 
 * 若 $f(k)$ 为因果序列，则单边、双边 $z$ 变换相等，否则不同。今后在不致混淆的情况下，统称它们为 $z$ 变换。   
@@ -3146,9 +3146,9 @@ $$f(k) = \frac{1}{2\pi j} \oint_c F(z) z^{k-1} dz, \; -\infty < k < \infty$$
 $$F(z) = \displaystyle \frac{B(z)}{A(z)} = \displaystyle \frac{b_m z^m + b_{m-1}z^{m-1} + \cdots + b_1 z + b_0}{z^n + a_{n-1}z^{n-1} + \cdots +a_1z+a_0}, \; m\leq n$$  
 
     1. $F(z)$ 为<font color = blue>单极点 </font>，且不为零  
-$$\displaystyle {\color{blue}\frac{F(z)}{z}} = \frac{K_0}{z}+\frac{K_1}{z-z_1}+ \cdots + \frac{K_i}{z-z_i}+ \cdots + \frac{K_n}{z-z_n}$$  
+$$\displaystyle \color{blue}{\frac{F(z)}{z}} = \frac{K_0}{z}+\frac{K_1}{z-z_1}+ \cdots + \frac{K_i}{z-z_i}+ \cdots + \frac{K_n}{z-z_n}$$  
 $$K_i = (z - z_i) \frac{F(z)}{z} \big\vert _{z=z_i}$$  
-$$F(z) = K_0 + \sum^{n}_{i=1}\frac{K_i {\color{blue}z}}{{\color{blue}z-z_i}}$$
+$$F(z) = K_0 + \sum^{n}_{i=1}\frac{K_i \color{blue}{z}}{\color{blue}{z-z_i}}$$
         	* 根据收敛域， 将上式划分为 $F_1(z)(\lvert z \rvert >\alpha)$ 和 $F_2(z)(\lvert z\rvert < \beta)$ 两部分，由如下已知变换对，来求原函数。  
 $$\begin{aligned} \displaystyle \delta(k) \longleftarrow & \longrightarrow 1,\; 整个 z 平面 \\
 a^k \varepsilon(k) \longleftarrow & \longrightarrow \frac{z}{z-a},\; \lvert z \rvert > \lvert a \rvert  \\
@@ -3165,7 +3165,7 @@ $$若 \lvert z \rvert < \alpha, \; f(k) = -2 \lvert k_1 \rvert \alpha^k \cos(\be
     1. $F(z)$ 有<font color = blue>重极点</font>（重根）  
         * 若 $A(z) = 0$ 在 $z=p_1$ 处有 $r$ 重根,  
 $$F(z) = F_a(z) + F_b(z) = \frac{K_{11}z}{(z-a)^r}+ \frac{K_{12}z}{(z-a)^{r-1}}+ \cdots + \frac{K_{1r}z}{(z-a)}+F_b(z)$$  
-$$K_{1i} = \displaystyle \frac{1}{(i-1)!} \frac{d^{i-1}}{dz^{i-1}}[{\color{red}(z - a)^r \frac{F(z)}{z}}] \Big\vert _{z=a}$$  
+$$K_{1i} = \displaystyle \frac{1}{(i-1)!} \frac{d^{i-1}}{dz^{i-1}}[\color{red}{(z - a)^r \frac{F(z)}{z}}] \Big\vert _{z=a}$$  
         * $F(z)$ 展开式中含 $\displaystyle\frac{z}{(z-a)^r}$ 项 ($r>1$), 则逆变换为:  
         * 若 $\lvert z \rvert >\alpha$, 对应原序列为因果序列:  
 $$\frac{k(k-1)\cdots (k-r+2)}{(r-1)!}a^{k-r+1} \varepsilon(k)$$  
@@ -3227,7 +3227,7 @@ $$f(t) = f_1(t) + f_2(t) + \cdots + f_N(t) = \sum^{N}_{i=1}f_i(t) = \sum^{N}_{i=
     * 容易求得，其拉普拉斯变换为：  
 $$F(s) = \sum^{N}_{i=1} \frac{A_i}{s-p_i}$$  
     * 对应的采样离散序列 $f(k)$ 由 N 项指数序列相加而成  
-$$f(k) = f_1(k) + f_2(k) + \cdots + f_N(k) = \sum^{N}_{i=1}f_i(k) = \sum^{N}_{i=1} A_i {\color{red}e^{p_i kT}} \varepsilon (k)$$  
+$$f(k) = f_1(k) + f_2(k) + \cdots + f_N(k) = \sum^{N}_{i=1}f_i(k) = \sum^{N}_{i=1} A_i \color{red}{e^{p_i kT}} \varepsilon (k)$$  
     * 它的z变换为  
 $$F(z) = \sum^{N}_{i=1}\frac{A_i z}{z- e^{p_i T}}$$  
 $$F(s) = \sum^{N}_{i=1}\frac{A_i}{z- p_i}$$  
@@ -3294,7 +3294,7 @@ $$H(z) = \mathcal{Z}[h(k)]$$
 
 * 分解:  
 
-$$f({\color{red}k}) = \frac{1}{2\pi j} \oint_c \frac{F(z)}{z} z^{ {\color{red}k}} dz, \; -\infty < k < \infty$$
+$$f(\color{red}{k}) = \frac{1}{2\pi j} \oint_c \frac{F(z)}{z} z^{ \color{red}{k}} dz, \; -\infty < k < \infty$$
 
 * 基本信号 $z^k$ :  
 
@@ -3306,7 +3306,7 @@ $$f(k) \to \boxed{h(k)} \to y_f(k)$$
 
 $$\frac{1}{2\pi j} \frac{F(z)}{z}\cdot z^k \to \frac{1}{2\pi j} \frac{F(z)}{z} \cdot z^k H(z)$$  
 $$\oint_c\frac{1}{2\pi j} \frac{F(z)}{z}\cdot z^k dz \to \oint_c\frac{1}{2\pi j} \frac{F(z)}{z} \cdot z^k H(z) dz$$  
-$$\oint_c\frac{1}{2\pi j} \frac{F(z)}{z}\cdot z^k dz \to \oint_c\frac{1}{2\pi j} \frac{ {\color{blue}F(z)\cdot H(z)} }{z} \cdot z^k dz$$  
+$$\oint_c\frac{1}{2\pi j} \frac{F(z)}{z}\cdot z^k dz \to \oint_c\frac{1}{2\pi j} \frac{ \color{blue}{F(z)\cdot H(z)} }{z} \cdot z^k dz$$  
 $$Y_f(z) = F(z) \cdot H(z)$$  
 * 回顾 转换成时域  
 $$f(k)\star h(k) \leftrightarrow F(z) \cdot H(z)$$
@@ -3345,16 +3345,16 @@ $$P_i, \; i =1,2,\cdots, m$$
     * 在实轴上:  
     
         1. 一阶极点:  
-            $$\frac{Az}{z-a}\leftrightarrow A {\color{blue}a^k\downarrow} \varepsilon(k),\; \lvert a \rvert <1$$  
+            $$\frac{Az}{z-a}\leftrightarrow A \color{blue}{a^k\downarrow} \varepsilon(k),\; \lvert a \rvert <1$$  
         2. 二阶极点:  
-            $$\frac{Az}{(z-a)^2}\leftrightarrow A{\color{blue}ka^{k-1}\downarrow} \varepsilon(k),\; \lvert a \rvert <1$$  
+            $$\frac{Az}{(z-a)^2}\leftrightarrow A\color{blue}{ka^{k-1}\downarrow} \varepsilon(k),\; \lvert a \rvert <1$$  
     
     * 不在实轴上:  
     
         1. 一阶极点:  
-            $$\frac{Az}{z-r e^{j\beta}} + \frac{A^*z}{z-re^{-j\beta}}\leftrightarrow 2\lvert A \rvert {\color{blue}r^k\downarrow} \cos(\beta k + \theta) \varepsilon(k),\; r<1$$  
+            $$\frac{Az}{z-r e^{j\beta}} + \frac{A^*z}{z-re^{-j\beta}}\leftrightarrow 2\lvert A \rvert \color{blue}{r^k\downarrow} \cos(\beta k + \theta) \varepsilon(k),\; r<1$$  
         2. 二阶极点:  
-            $$\frac{Az}{(z-r e^{j\beta})^2} + \frac{A^*z}{(z-re^{-j\beta})^2}\leftrightarrow 2\lvert A \rvert {\color{blue}r^{k-1}\downarrow} \cos(\beta (k-1) + \theta) \varepsilon(k),\; r<1$$  
+            $$\frac{Az}{(z-r e^{j\beta})^2} + \frac{A^*z}{(z-re^{-j\beta})^2}\leftrightarrow 2\lvert A \rvert \color{blue}{r^{k-1}\downarrow} \cos(\beta (k-1) + \theta) \varepsilon(k),\; r<1$$  
     
     * 结论: 对应$h(k)$按指数规律**衰减**；  
 
@@ -3364,16 +3364,16 @@ $$P_i, \; i =1,2,\cdots, m$$
     * 在实轴上:  
     
         1. 一阶极点:  
-            $$\frac{Az}{z\pm 1}\leftrightarrow A {\color{blue}(\pm 1^k)} \varepsilon(k)$$    
+            $$\frac{Az}{z\pm 1}\leftrightarrow A \color{blue}{(\pm 1^k)} \varepsilon(k)$$    
         2. 二阶极点:  
-            $$\frac{Az}{(z\pm 1)^2}\leftrightarrow A {\color{red}k\uparrow}{\color{blue}(\pm 1^{k-1})} \varepsilon(k)$$  
+            $$\frac{Az}{(z\pm 1)^2}\leftrightarrow A \color{red}{k\uparrow}\color{blue}{(\pm 1^{k-1})} \varepsilon(k)$$  
        
     * 不在实轴上:  
     
         1. 一阶极点:  
             $$\frac{Az}{z-r e^{j\beta}} + \frac{A^*z}{z-re^{-j\beta}}\leftrightarrow 2\lvert A \rvert \cos(\beta k + \theta) \varepsilon(k),\; r<1$$  
         2. 二阶极点:  
-            $$\frac{Az}{(z-r e^{j\beta})^2} + \frac{A^*z}{(z-re^{-j\beta})^2}\leftrightarrow 2\lvert A \rvert {\color{red}k\uparrow} \cos(\beta (k-1) + \theta) \varepsilon(k),\; r<1$$  
+            $$\frac{Az}{(z-r e^{j\beta})^2} + \frac{A^*z}{(z-re^{-j\beta})^2}\leftrightarrow 2\lvert A \rvert \color{red}{k\uparrow} \cos(\beta (k-1) + \theta) \varepsilon(k),\; r<1$$  
     
     * 结论: 一阶极点对应$h(k)$为**稳态**分量；二阶及二阶以上极点对应$h(k)$**增长**。  
 
@@ -3382,16 +3382,16 @@ $$P_i, \; i =1,2,\cdots, m$$
     * 在实轴上:  
     
         1. 一阶极点:  
-            $$\frac{Az}{z-a}\leftrightarrow A {\color{blue}a^k\uparrow} \varepsilon(k),\; \lvert a \rvert >1$$   
+            $$\frac{Az}{z-a}\leftrightarrow A \color{blue}{a^k\uparrow} \varepsilon(k),\; \lvert a \rvert >1$$   
         2. 二阶极点:  
-            $$\frac{Az}{(z-a)^2}\leftrightarrow A{\color{blue}ka^k\uparrow} \varepsilon(k),\; \lvert a \rvert >1$$  
+            $$\frac{Az}{(z-a)^2}\leftrightarrow A\color{blue}{ka^k\uparrow} \varepsilon(k),\; \lvert a \rvert >1$$  
     
     * 不在实轴上:  
     
         1. 一阶极点:  
-            $$\frac{Az}{z-r e^{j\beta}} + \frac{A^*z}{z-re^{-j\beta}}\leftrightarrow 2\lvert A \rvert {\color{blue}r^k\uparrow} \cos(\beta k + \theta) \varepsilon(k),\; r>1$$  
+            $$\frac{Az}{z-r e^{j\beta}} + \frac{A^*z}{z-re^{-j\beta}}\leftrightarrow 2\lvert A \rvert \color{blue}{r^k\uparrow} \cos(\beta k + \theta) \varepsilon(k),\; r>1$$  
         2. 二阶极点:  
-            $$\frac{Az}{(z-r e^{j\beta})^2} + \frac{A^*z}{(z-re^{-j\beta})^2}\leftrightarrow 2\lvert A \rvert {\color{blue}r^{k-1}\uparrow} \cos(\beta (k-1) + \theta) \varepsilon(k),\; r>1$$  
+            $$\frac{Az}{(z-r e^{j\beta})^2} + \frac{A^*z}{(z-re^{-j\beta})^2}\leftrightarrow 2\lvert A \rvert \color{blue}{r^{k-1}\uparrow} \cos(\beta (k-1) + \theta) \varepsilon(k),\; r>1$$  
     
     * 结论: 对应$h(k)$按指数规律**增长**。  
 
