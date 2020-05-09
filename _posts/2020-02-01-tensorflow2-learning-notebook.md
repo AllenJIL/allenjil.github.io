@@ -11,7 +11,7 @@ tag: TensorFlow
 
 ---- Tensorflow 2.0 学习笔记
 
-After continuously touching Machine Learning stuffs, I want to learn it deeply. In previous, I only took others' models and just run them to get the proper answer which I expected. Currently, the large infectious disease outbreak in China, I try to use the few days break to review and learn the tensorflow to have a better understanding on it.
+After continuously touching Machine Learning stuffs, I want to learn it deeply. Currently, the large infectious disease outbreak in China, I try to use the few days break to review and learn the tensorflow to have a better understanding on it.  
 
 因为新冠 在家闲着没事，所以最近重新看了一下怎么使用Tensorflow2.0。Tensorflow 2代 相比 Tensorflow 1代 有挺多的改动，一开始有的代码也找不到，后来看了下guide，发现大多代码都移到了tf.math 数学方程, tf.linalg 线代方程, tf.signal 信号类方程(FFT 傅里叶转换) 等库里。这学习笔记是为了我自己以后更好的查找，所以相对的简约。详情可在写代码时在python里, 双`?`查看，如 `??tf.math.add`。
 
